@@ -148,7 +148,7 @@ const GenWavOS = (props) => {
                     </a>
                   </div>
                   <div style={{display:"inline"}}>
-                    <a target="_blank" href="http://tiktok.com/gen.wav" style={{textDecoration:"none"}}>
+                    <a target="_blank" href="http://tiktok.com/@gen.wav" style={{textDecoration:"none"}}>
                       <TiktokLogo style={{color: 'pink'}} size={20}></TiktokLogo>
                     </a>
                   </div>

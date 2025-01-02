@@ -182,7 +182,7 @@ const EPK = (props) => {
                   </a>
                 </div>
                 <div style={{display:"inline"}}>
-                  <a target="_blank" href="http://tiktok.com/gen.wav" style={{textDecoration:"none"}}>
+                  <a target="_blank" href="http://tiktok.com/@gen.wav" style={{textDecoration:"none"}}>
                     <TiktokLogo style={{color: 'pink'}} size={25}></TiktokLogo>
                   </a>
                 </div>
