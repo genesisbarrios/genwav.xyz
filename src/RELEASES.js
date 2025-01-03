@@ -148,6 +148,23 @@ const RELEASES = (props) => {
             {/* Add your next card here */}
 
             <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/PROBLEMAS">
+                <CardMedia
+                  component="img"
+                  alt="PROBLEMAS ALBUM ART"
+                  height="250"
+                  image="https://genwav.xyz/PROBLEMAS.png"
+                  title="PROBLEMAS"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                  Problemas - Jo Merino, KHR!S Joao, gen.wav, Dani Mako
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/3am">
                 <CardMedia
                   component="img"
