@@ -270,6 +270,24 @@ const GenWavOS = (props) => {
               <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/wangimg_130.ico" width="20px"></img> Gallery</div>
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
                      
+                    <div  className="slide">
+                          <img width="100%" height="100%" src="https://dl.dropboxusercontent.com/s/htt41nabsx1wdrmklf1s21/problemasSQ.png?rlkey=juxe1w8ououd5z9w6p3lrg07j&st=6jd4w0nn&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                      </div>
+                    <div  className="slide">
+                          <img width="100%" height="100%" src="https://dl.dropboxusercontent.com/s/4iih73rpib46ypyzax393/TEXTINMESQUARE.png?rlkey=axzwz8z7z0icxac6uxuyzwfnx&st=w6sg81be&dl=0" />
+                          <button className="legend"><a href="https://www.instagram.com/p/DDx30M1v5Rt/" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button>
+                      </div>
+                      <div  className="slide">
+                          <img width="100%" height="100%" src="https://dl.dropboxusercontent.com/s/dsool4cyr7tppol3ugq4r/lapelisquare.png?rlkey=byre0364geaqmmdonlfa0xzr6&st=1t669pqy&dl=0" />
+                          <button className="legend"><a href="https://www.instagram.com/p/DDIVH-2SpHP/" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button>
+                      </div>
+
+                      <div  className="slide">
+                          <img width="100%" height="100%" src="https://dl.dropboxusercontent.com/s/zzcvo588ghbxcst1ll135/dalemamiSQUARE.png?rlkey=2uj66ghmrytm02ysq2pk3ffkx&st=kms084go&dl=0" />
+                          <button className="legend"><a href="https://www.instagram.com/p/C-nSr1CRfXe/" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button>
+                      </div>
+
                     <div className="slide">
                           <img src="https://dl.dropboxusercontent.com/s/i2ffv7r45i797hyv0bv13/alwayslunes.JPG?rlkey=vp0qa7hnjtsj0o1xc57dbvs2k&st=ca862hzt&dl=0" />
                           <button className="legend"><a href="https://www.instagram.com/p/C9QG3JtvK5R/?img_index=1" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button>

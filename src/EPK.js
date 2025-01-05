@@ -222,12 +222,15 @@ const EPK = (props) => {
              <h5 style={{marginBottom:"2%"}}><a href="https://canvasrebel.com/meet-gen-wav/" target="_blank" style={{color:"white", textDecoration:"none"}}>Canvas Rebel Article</a></h5>
              
              <h5><a href="https://colorsxstudios.com/music" target="_blank" style={{color:"white", textDecoration:"none"}}>Colors Studios Feature</a></h5>
-            <img src="https://dl.dropboxusercontent.com/s/u5g2vwbvy5j0b8gal2dxb/IMG_9359.jpg?rlkey=54gjtg8j48p3ez4dd4jg6lyac&st=797634vq&dl=0" style={{width:"80%", height:"auto", marginTop:'20px', marginBottom:"20px"}}></img>
-            <img src="https://dl.dropboxusercontent.com/s/a6orrf4lpc5y63bpi6rkb/IMG_8524.jpg?rlkey=j9lpdb2jctrm8lqvk513u4vz8&st=n7wwoqem&dl=0" style={{width:"80%", height:"auto", marginBottom:"20px"}}></img>
-            <img src="https://dl.dropboxusercontent.com/s/cq6fa0uol5j3dn9l4qgnu/08FC3DBC-7BA3-438C-B168-6E0907F878A1.JPG?rlkey=4gacge9tz394c0jqw67luovfd&dl=0"style={{width:"80%", height:"auto", marginBottom:"20px"}}></img>
-            <img src="https://dl.dropboxusercontent.com/s/https://dl.dropboxusercontent.com/s/6aroj9lrd83ka8082t8ik/4.png?rlkey=xd4waq4ideo8z8cwbzxi75o0j&dl=0" style={{width:"80%", height:"auto", marginBottom:"20px"}}></img>
-            <img src="https://dl.dropboxusercontent.com/s/xmwxcg78osj2g5dt9nh1y/IMG_5553.JPG?rlkey=cu8pt6p0ragl0jhfymyrqyzjz&dl=0" style={{width:"80%", height:"auto"}}></img>
-            
+            <img src="https://dl.dropboxusercontent.com/s/c1k9lmk3goeidbpjllynh/gen-solo2.JPG?rlkey=pmphh2l4qy4t9swbgi1t6fiw4&st=gkgm1mo1&dl=0" style={{width:"80%", height:"auto", marginTop:'20px'}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/a6orrf4lpc5y63bpi6rkb/IMG_8524.jpg?rlkey=j9lpdb2jctrm8lqvk513u4vz8&st=n7wwoqem&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/c41ne5b0btlx1kc9urmvh/lapeli3.png?rlkey=9ni7eowvcfj9zwhjw8kxtm9d0&st=4c4y2el8&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/u2v0qvsuf2vpk7bn4b8rt/textinmelookup.JPG?rlkey=flyizkpk64y7wo72iudm1mzbm&st=y62c4vqe&dl=0"style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/s7uw298wmbe9jfqsk6vdt/problemas-GROUP.JPG?rlkey=jipihcwm657c1igo3etxsa5dq&st=z523127u&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/49v46o26vfasutsnep4sq/iremember.jpg?rlkey=hv5gfifzfahlc5zqoorxls4gp&st=pc8p90n2&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/yuf4fihlfprmon8k9hjfg/thelab2.JPG?rlkey=q3ax9nv60h1n49bxyo21im381&st=dlkxedhm&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/pcx5fqb915v3xy2t8ic9o/marsdalemami.JPG?rlkey=cogo5smiwq9be5l1ww0qdi06m&st=s3xkjzfg&dl=0" style={{width:"80%", height:"auto"}}></img>
+          
           </div>
           </div>
         </Grid>
