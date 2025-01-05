@@ -106,7 +106,7 @@ const EPK = (props) => {
 
   }
  
-  const pdfUrl = 'https://www.dropbox.com/scl/fi/85bvpfrqsdt7nj3qfiuix/ELECTRONIC-PRESS-KIT-AUG-2024.pdf?rlkey=ymr0uzseggwig90x5ntdudziv&st=jr0ow8c4&dl=0';
+  const pdfUrl = 'https://www.dropbox.com/scl/fi/4lwen7hpp9unl5nchcnk0/GENWAV-EPK-2025.pdf?rlkey=ttotkbmuunc0zzocoefmn07xv&st=kwe51n2x&dl=0';
   
   return(
     
