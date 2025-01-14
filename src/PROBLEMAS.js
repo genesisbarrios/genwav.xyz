@@ -105,7 +105,7 @@ const PROBLEMAS = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/2mbmclOmQft9YXG3dnShDc?si=bbbbc130252d4ffa"><button className="Stream-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/2mbmclOmQft9YXG3dnShDc?si=bbbbc130252d4ffa"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -113,7 +113,7 @@ const PROBLEMAS = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/problemas-single/1788235988"><button className="Stream-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/problemas-single/1788235988"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -122,7 +122,7 @@ const PROBLEMAS = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href=""><button className="Stream-button">Stream</button></a>
+            <a target="_blank" href=""><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -130,7 +130,7 @@ const PROBLEMAS = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/problemas-genwav-jo-merino-khrs-joao-dani-mao"><button className="Stream-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/problemas-genwav-jo-merino-khrs-joao-dani-mao"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -138,7 +138,7 @@ const PROBLEMAS = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://listen.stage.tidal.com/album/408851064"><button className="Stream-button">Stream</button></a>
+            <a target="_blank" href="https://listen.stage.tidal.com/album/408851064"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -147,7 +147,7 @@ const PROBLEMAS = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/691592041"><button className="Stream-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/691592041"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -155,7 +155,7 @@ const PROBLEMAS = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/jo-merino-khr-s-joao-genwav-and-dani-mako/problemas/ALjdtrlqV6xmX2q"><button className="Stream-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/jo-merino-khr-s-joao-genwav-and-dani-mako/problemas/ALjdtrlqV6xmX2q"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -163,7 +163,7 @@ const PROBLEMAS = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/album/genesis"><button className="Stream-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/album/genesis"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> */}
            <Grid container spacing={2} className="logo-button-container">
@@ -171,7 +171,7 @@ const PROBLEMAS = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J"><button className="Stream-button">Stream</button></a>
+            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>
