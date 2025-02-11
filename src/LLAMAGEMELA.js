@@ -70,13 +70,13 @@ const LLAMAGEMELA = (props) => {
             <title>Llama Gemela | KHR!S Joao, gen.wav</title>
             <meta id="meta-description" name="description" content="Llama Gemela - KHR!S Joao, gen.wav" />
             <meta id="og-title" property="og:title" content="Llama Gemela - KHR!S Joao, gen.wav" />
-            <meta id="og-image" property="og:image" content="https://genwav.xyz/LlamaGemela.png" />
+            <meta id="og-image" property="og:image" content="https://genwav.xyz/llamagemela.png" />
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
       <div id="NEWImageDiv">
         <img 
-          src="https://genwav.xyz/LlamaGemela.png"
+          src="https://genwav.xyz/llamagemela.png"
           alt="Llama Gemela" type="png"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px", marginLeft:"5%" }}></img>
       </div>
