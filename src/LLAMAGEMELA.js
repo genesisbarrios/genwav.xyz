@@ -81,7 +81,7 @@ const LLAMAGEMELA = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px", marginLeft:"5%" }}></img>
       </div>
       <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/Kjq3nJJJjvE?si=dMRHsNsvwp4Rm2zP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", paddingLeft:"5%"}}>
+      {/* <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", paddingLeft:"5%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -158,7 +158,7 @@ const LLAMAGEMELA = (props) => {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
       
       <div className="aboutNEW">
         <h2>Credits</h2>
