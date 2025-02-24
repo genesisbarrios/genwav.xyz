@@ -260,8 +260,8 @@ const GenWavOS = (props) => {
               </div>
 
               <Card className="card" style={{width:'90%', minHeight: '200px', marginBottom:"5%"}}>
-                <div className="cardHeader"><img className="image" src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/progman_30.ico" width="20px" ></img> The Wav Pack V.1 - Free Sample Pack</div>
-                  <a className="slide" target="_blank" href="https://www.beatstars.com/genwav/sound-kits/192047">
+                <div className="cardHeader"><img className="image" src="https://dl.dropboxusercontent.com/s/6vust1jdp7z9iav22r8to/WAV-PACK-VOL.-II.jpg?rlkey=jaacek14fg07zr501im1bmr5z&st=vf1ckdxb&dl=0" width="20px" ></img> The Wav Pack Vol. II - Sample Pack</div>
+                  <a className="slide" target="_blank" href="https://www.beatstars.com/genwav/sound-kits/236319">
                     <img src="/WavPack.jpg" style={{width:"100%", cursor:"pointer"}} />
                   </a>
               </Card>
