@@ -148,6 +148,23 @@ const RELEASES = (props) => {
             {/* Add your next card here */}
 
             <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/oneday">
+                <CardMedia
+                  component="img"
+                  alt="Pay Off One Day ALBUM ART"
+                  height="250"
+                  image="https://genwav.xyz/ONEDAY.png"
+                  title="Pay Off One Day"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                  Pay Off One Day - KHR!S Joao, gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/LLAMAGEMELA">
                 <CardMedia
                   component="img"
