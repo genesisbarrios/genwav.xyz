@@ -205,7 +205,7 @@ const ONEDAY = (props) => {
         <h4>Pay Off One Day</h4>
         <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>
         <p>Produced by <a href="https://www.instagram.com/0nly1flexy" target="_blank">flexible</a></p>
-        <p>Co-Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <p>Co-Prod., Mix and Master by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
 
