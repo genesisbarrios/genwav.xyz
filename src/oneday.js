@@ -48,6 +48,10 @@ import axios from "axios";
 const ONEDAY = (props) => {
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");
+  const [email, setEmail] = useState("");
+  const [fan, setFan] = useState(false);
+  const [producer, setProducer] = useState(false);
+  const [artist, setArtist] = useState(false);
 
   useEffect(() => {
     
@@ -61,6 +65,41 @@ const ONEDAY = (props) => {
   useEffect(() => {
     
   }, );
+
+  function handleSubmit() {
+    console.log('handle submit request to subscribe')
+  
+    // Check if data is valid
+    if (!email) {
+      console.log('No e-mail address provided');
+      setAlert('Please set an e-mail address~');
+      return;
+    }
+
+    const dataToSend = {
+      email,
+      producer,
+      artist,
+      fan
+    };
+  
+    // Make a POST request using Axios
+    axios.post('https://genwav-node-server.vercel.app/addUser', dataToSend, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(() => {
+        console.log('Request successful');
+        setMessage("Your e-mail has been saved!")
+        setAlert(''); // Resetting alert if necessary
+      })
+      .catch((error) => {
+        setAlert("There was an error.");
+        console.error('Error: ', error);
+        setMessage(''); // Resetting message if necessary
+      });
+  }
 
 
   return(
@@ -93,7 +132,7 @@ const ONEDAY = (props) => {
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple Music</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://music.apple.com/us/album/pay-off-one-day-single/1805030518"><button className="pre-save-button">Stream</button></a>
@@ -169,6 +208,75 @@ const ONEDAY = (props) => {
         <p>Produced by <a href="https://www.instagram.com/0nly1flexy" target="_blank">flexible</a></p>
         <p>Co-Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
+      </div>
+
+      <div className="card" style={{width:'40%', minHeight: '200px', margin:"0 auto", marginTop:"5%"}}>
+        <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico" width="20px"></img> Sign up to receive beats, loops, and news!</div>
+          <div style={{marginTop:"5%", textAlign:"center"}}>
+            <form>
+              <p>Enter Your E-mail Address</p>  
+              <input type="text" name="e-mail" style={{display:"inline-block", marginBottom:"20px", width:"50%"}}  
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              ></input>
+              <br></br>
+              <div style={{display:'inline'}}>
+                <input
+                  style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}
+                  type="checkbox"
+                  name="producer"
+                  value="0"
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setProducer(true);
+                    } else {
+                      setProducer(false);
+                    }
+                  }}
+                />
+                <p style={{display:'inline',  margin:"0 5px"}}>producer</p>
+            
+                <input
+                  style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}
+                  type="checkbox"
+                  name="artist"
+                  value="0"
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setArtist(true);
+                    } else {
+                      setArtist(false);
+                    }
+                  }}
+                />
+                <p style={{display:'inline', margin:"0 5px"}}>artist</p>
+                <input
+                style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}
+                type="checkbox"
+                name="fan"
+                value="0"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setFan(true);
+                  } else {
+                    setFan(false);
+                  }
+                }}
+              />
+              <p style={{display:'inline', margin:"0 10px"}}>supporter</p>
+                <br></br>
+                <button onClick={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }} style={{marginTop:"20px", padding:"2px 5px"}} type="submit">
+                  Submit
+                </button>
+                {message && <Alert style={{marginTop:"5%", marginBottom:"5%"}} severity="success">{message.toString()}</Alert>}
+                {alert && <Alert style={{marginTop:"5%", marginBottom:"5%"}} severity="error">{alert.toString()}</Alert>}
+              </div>
+            </form>
+          </div>
       </div>
       
     </div>
