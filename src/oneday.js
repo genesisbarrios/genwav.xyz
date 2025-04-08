@@ -215,7 +215,7 @@ const ONEDAY = (props) => {
           width: '40%',
           minHeight: '200px',
           margin: '0 auto',
-          marginTop: '5%',
+          marginTop: '3%',
         }}
       >
         <style>
