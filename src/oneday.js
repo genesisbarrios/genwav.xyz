@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -210,49 +209,90 @@ const ONEDAY = (props) => {
         <br></br>
       </div>
 
-      <div className="card" style={{width:'40%', minHeight: '200px', margin:"0 auto", marginTop:"5%"}}>
-        <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico" width="20px"></img> Sign up to receive beats, loops, and news!</div>
-          <div style={{marginTop:"5%", textAlign:"center"}}>
-            <form>
-              <p>Enter Your E-mail Address</p>  
-              <input type="text" name="e-mail" style={{display:"inline-block", marginBottom:"20px", width:"50%"}}  
-                onChange={(e) => {
-                  setEmail(e.target.value);
+      <div
+        className="card"
+        style={{
+          width: '40%',
+          minHeight: '200px',
+          margin: '0 auto',
+          marginTop: '5%',
+        }}
+      >
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .card {
+                width: 80% !important;
+              }
+            }
+          `}
+        </style>
+        <div className="cardHeader">
+          <img
+            src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico"
+            width="20px"
+          ></img>{' '}
+          Sign up to receive beats, loops, and news!
+        </div>
+        <div style={{ marginTop: '5%', textAlign: 'center' }}>
+          <form>
+            <p>Enter Your E-mail Address</p>
+            <input
+              type="text"
+              name="e-mail"
+              style={{
+                display: 'inline-block',
+                marginBottom: '20px',
+                width: '50%',
+              }}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            ></input>
+            <br></br>
+            <div style={{ display: 'inline' }}>
+              <input
+                style={{
+                  borderRadius: '10px',
+                  backgroundColor: '#CBD5E1',
+                  display: 'inline',
                 }}
-              ></input>
-              <br></br>
-              <div style={{display:'inline'}}>
-                <input
-                  style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}
-                  type="checkbox"
-                  name="producer"
-                  value="0"
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setProducer(true);
-                    } else {
-                      setProducer(false);
-                    }
-                  }}
-                />
-                <p style={{display:'inline',  margin:"0 5px"}}>producer</p>
-            
-                <input
-                  style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}
-                  type="checkbox"
-                  name="artist"
-                  value="0"
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setArtist(true);
-                    } else {
-                      setArtist(false);
-                    }
-                  }}
-                />
-                <p style={{display:'inline', margin:"0 5px"}}>artist</p>
-                <input
-                style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}
+                type="checkbox"
+                name="producer"
+                value="0"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setProducer(true);
+                  } else {
+                    setProducer(false);
+                  }
+                }}
+              />
+              <p style={{ display: 'inline', margin: '0 5px' }}>producer</p>
+              <input
+                style={{
+                  borderRadius: '10px',
+                  backgroundColor: '#CBD5E1',
+                  display: 'inline',
+                }}
+                type="checkbox"
+                name="artist"
+                value="0"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setArtist(true);
+                  } else {
+                    setArtist(false);
+                  }
+                }}
+              />
+              <p style={{ display: 'inline', margin: '0 5px' }}>artist</p>
+              <input
+                style={{
+                  borderRadius: '10px',
+                  backgroundColor: '#CBD5E1',
+                  display: 'inline',
+                }}
                 type="checkbox"
                 name="fan"
                 value="0"
@@ -264,19 +304,37 @@ const ONEDAY = (props) => {
                   }
                 }}
               />
-              <p style={{display:'inline', margin:"0 10px"}}>supporter</p>
-                <br></br>
-                <button onClick={(e) => {
+              <p style={{ display: 'inline', margin: '0 10px' }}>supporter</p>
+              <br></br>
+              <button
+                onClick={(e) => {
                   e.preventDefault();
                   handleSubmit();
-                }} style={{marginTop:"20px", padding:"2px 5px"}} type="submit">
-                  Submit
-                </button>
-                {message && <Alert style={{marginTop:"5%", marginBottom:"5%"}} severity="success">{message.toString()}</Alert>}
-                {alert && <Alert style={{marginTop:"5%", marginBottom:"5%"}} severity="error">{alert.toString()}</Alert>}
-              </div>
-            </form>
-          </div>
+                }}
+                style={{ marginTop: '20px', padding: '2px 5px' }}
+                type="submit"
+              >
+                Submit
+              </button>
+              {message && (
+                <Alert
+                  style={{ marginTop: '5%', marginBottom: '5%' }}
+                  severity="success"
+                >
+                  {message.toString()}
+                </Alert>
+              )}
+              {alert && (
+                <Alert
+                  style={{ marginTop: '5%', marginBottom: '5%' }}
+                  severity="error"
+                >
+                  {alert.toString()}
+                </Alert>
+              )}
+            </div>
+          </form>
+        </div>
       </div>
       
     </div>
