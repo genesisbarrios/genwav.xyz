@@ -156,7 +156,7 @@ const ONEDAY = (props) => {
             <a target="_blank" href="https://soundcloud.com/genwav/pay-off-one-day?si=95ef7752e9b04d9f9986ba8347d8bcda&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
@@ -178,9 +178,9 @@ const ONEDAY = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/llama-gemela/ALf3tzq49PXJht6?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A44690528&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A44690528&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=429cae4327c9a39dc64163a7214b5416&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20f6439987-0a48-44b9-a575-26116961f527&sharedId=429cae4327c9a39dc64163a7214b5416&_branch_match_id=1309723444836776967&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%20f6439987-0a48-44b9-a575-26116961f527&_branch_referrer=H4sIAAAAAAAAA62PQWvjMBCFf41zUxLLsh0VTAkphSxhCexlb2Esjy3XsqRKSg17yG%2FfSemWvfVSkMSb0Zv3STolHx82Gw%2B2cwHW4P3ajHbaPGZcdBin5PzlGkyj78as2Gf8mdayLOt%2FI8rN1IGQxphIDGgXeGN0ySYdWGQvDhz1jYEZ2IAzGqByf%2BqL9OdVyPPvHzpVK8KNLl46RH%2FnXzwk3Xwg3sQnuAU1xQQD3pGmvc5Z8ZzchDYrnvYnsglRyW3Jd%2FdAmg5u7L4x9KY0WIumOdN%2FLYaMbw%2BQwLiB1C%2BEoDSJ%2FflIJ6N9Imo%2FBlx58jemXykXQiO4VICi4LWSUMhOVSKvCqh5LtqS5Lub0n%2FCjM1nxE3B7GEc7P%2Fwa0xufpfHpw9mX4lCyl3NtiB2TIhWMijrkvEqzytZ5X3J61XUELA7dl%2B%2F5RawxxBGO1za4JaIoTnoQNC%2FCpMt4DsCAAA%3D"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/pay-off-1-day/pay-off-1-day/TR64Pj26jzdt7j6"><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
@@ -189,14 +189,14 @@ const ONEDAY = (props) => {
               <a target="_blank" href="https://genwav.bandcamp.com/track/pay-off-one-day"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> 
-           {/* <Grid container spacing={2} className="logo-button-container">
+           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.amazon.com/albums/B0DWQS8V2X?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=429cae4327c9a39dc64163a7214b5416&ref=dmm_acq_soc_us_u_lfire_lp_x_429cae4327c9a39dc64163a7214b5416"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F2RDD65P?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p78oxG1GqY0jJ0yKUHhWBG3zc&trackAsin=B0F2RJG6ZG"><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Grid> 
       
