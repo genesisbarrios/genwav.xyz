@@ -148,7 +148,7 @@ const ONEDAY = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/album/oneday"><button className="pre-save-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/pay-off-one-day"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> 
            {/* <Grid container spacing={2} className="logo-button-container">
