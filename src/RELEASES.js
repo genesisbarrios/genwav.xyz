@@ -148,6 +148,23 @@ const RELEASES = (props) => {
             {/* Add your next card here */}
 
             <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/GAFAS">
+                <CardMedia
+                  component="img"
+                  alt="GAFAS ALBUM ART"
+                  height="250"
+                  image="https://genwav.xyz/GAFAS.png"
+                  title="GAFAS"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                  GAFAS - KHR!S Joao, gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/oneday">
                 <CardMedia
                   component="img"
