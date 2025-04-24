@@ -14,6 +14,7 @@ import TEXTINME from './3am';
 import PROBLEMAS from './PROBLEMAS';
 import LLAMAGEMELA from './LLAMAGEMELA';
 import ONEDAY from './oneday';
+import GAFAS from './GAFAS';
 import Footer from "./Footer"; // Import Header component
 
 const App = () => {
@@ -83,6 +84,12 @@ const App = () => {
     );
   };
 
+  const GAFASComponent = () => {
+    return (
+      <GAFAS />
+    );
+  }
+
 
   const ShopRedirect = () => { // Define component for /SHOP route
     window.location.href = "https://enigma-labs.printify.me/products"; // Redirect to external URL
@@ -107,6 +114,7 @@ const App = () => {
           <Route path="/PROBLEMAS" element={<><Header /><PROBLEMASComponent  /><Footer /></>} />
           <Route path="/LLAMAGEMELA" element={<><Header /><LLAMAGEMELAComponent  /><Footer /></>} />
           <Route path="/oneday" element={<><Header /><OneDayComponent  /><Footer /></>} />
+          <Route path="/GAFAS" element={<><Header /><GAFASComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
         </Routes>
