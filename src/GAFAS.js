@@ -129,22 +129,22 @@ const GAFAS = (props) => {
              <a target="_blank" href="https://open.spotify.com/album/2nN9F1IMGjxLdSUTG9E7Uo?go=1&nd=1&dlsi=3dc4d0eabfb849da"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-         {/* <Grid container spacing={2} className="logo-button-container">
+         <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/pay-off-one-day-single/1805030518"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/gafas/1807881342?i=1807881349"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
-          */}
+         
 
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/osRvdIys4mo"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/-ib94hRDt7E"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            
@@ -165,12 +165,12 @@ const GAFAS = (props) => {
             </Grid>
           </Grid>
          
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/711047601"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://dzr.page.link/dGfC2W12BXEeGNNS8"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -178,26 +178,26 @@ const GAFAS = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/pay-off-1-day/pay-off-1-day/TR64Pj26jzdt7j6"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/0LV0Cr2NOSb"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          <Grid container spacing={2} className="logo-button-container">
+          {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://genwav.bandcamp.com/track/pay-off-one-day"><button className="pre-save-button">Buy</button></a>
             </Grid>
-          </Grid> 
+          </Grid>  */}
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0F2RDD65P?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p78oxG1GqY0jJ0yKUHhWBG3zc&trackAsin=B0F2RJG6ZG"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F4J5HDX2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_biEaxRWVYfQZzg2g8MtztkwqE&trackAsin=B0F4HTFBF6"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-           */}
+          
         </Grid>
       </Grid> 
       
