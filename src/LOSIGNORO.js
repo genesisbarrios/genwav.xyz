@@ -172,8 +172,8 @@ const NEW = (props) => {
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>Los Ignoro</h4>
-        <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a> x <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a> 
-        <p>Produced, Mixed, and Mastered by <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a></p>
+        <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> x <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a> 
+        <p>Produced, Mixed, and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
       

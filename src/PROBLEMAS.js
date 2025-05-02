@@ -180,7 +180,7 @@ const PROBLEMAS = (props) => {
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>Problemas</h4>
-        <a href="https://www.instagram.com/iamjomerino/" target="_blank">Jo Merino</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/itsdanimako/" target="_blank">Dani Mako</a>
+        <a href="https://www.instagram.com/iamjomerino/" target="_blank">Jo Merino</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/itsdanimako/" target="_blank">Dani Mako</a>
         <p>Produced by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
         <br></br>
