@@ -205,7 +205,7 @@ const TRIPPIN = (props) => {
         <h2>Credits</h2>
         <h4>Trippin' (feat. gen.wav)</h4>
         <p>Produced by <a href="https://www.instagram.com/srizzybeats/" target="_blank">SRI</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/srizzybeats" target="_blank">SRI/a></p>
       </div>
 
       <div
