@@ -148,14 +148,14 @@ const TRIPPIN = (props) => {
             </Grid>
           </Grid>
            
-          <Grid container spacing={2} className="logo-button-container">
+          {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://soundcloud.com/genwav/trippin-sri-feat-genwav?si=4a5cb905086e4579aeaedbd1afafecfc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" ><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid>
+          </Grid> */}
           {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
