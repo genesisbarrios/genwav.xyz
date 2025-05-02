@@ -204,7 +204,7 @@ const GAFAS = (props) => {
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>GAFAS</h4>
-        <p>Produced by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a></p>
+        <p>Produced by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
         <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <p>Artwork by <a href="https://www.instagram.com/moartmoproblemz" target="_blank">Mo Art</a></p>
         <br></br>
