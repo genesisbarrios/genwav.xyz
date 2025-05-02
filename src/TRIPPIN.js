@@ -194,7 +194,7 @@ const TRIPPIN = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0F4J5HDX2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_biEaxRWVYfQZzg2g8MtztkwqE&trackAsin=B0F4HTFBF6"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F1M1K7BT?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_64Orzti7rlliTaAKqMu5mJV32&trackAsin=B0F1M25VHJ"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           
