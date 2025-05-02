@@ -144,7 +144,7 @@ const TRIPPIN = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href=""><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/LfvH9S2u0pc"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            
