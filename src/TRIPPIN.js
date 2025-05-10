@@ -175,7 +175,7 @@ const TRIPPIN = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p></a>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://pandora.app.link/AkTSs3891Sb"><button className="pre-save-button">Stream</button></a>
