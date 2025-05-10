@@ -175,7 +175,7 @@ const TRIPPIN = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p></a>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://pandora.app.link/AkTSs3891Sb"><button className="pre-save-button">Stream</button></a>
@@ -205,7 +205,7 @@ const TRIPPIN = (props) => {
         <h2>Credits</h2>
         <h4>Trippin' (feat. gen.wav)</h4>
         <p>Produced by <a href="https://www.instagram.com/srizzybeats/" target="_blank">SRI</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/srizzybeats" target="_blank">SRI/a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/srizzybeats" target="_blank">SRI</a></p>
       </div>
 
       <div
