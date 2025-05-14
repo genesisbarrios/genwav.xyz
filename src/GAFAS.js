@@ -201,7 +201,7 @@ const GAFAS = (props) => {
         </Grid>
       </Grid> 
 
-       <h3 style={{marginTop:"2%", textAlign:"center"}}><a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">BUY MERCH!!</a></h3>
+       <h3 style={{marginTop:"2%", textAlign:"center"}}><a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">👕 BUY MERCH!! 👕</a></h3>
       
       <div className="aboutNEW">
         <h2>Credits</h2>
