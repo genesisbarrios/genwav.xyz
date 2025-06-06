@@ -106,9 +106,9 @@ const CURIOSO = (props) => {
       <div class="wrapper">
           <MetaTags>
             <title>CURIOSO | KHR!S Joao, gen.wav</title>
-            <meta id="meta-description" name="description" content="CURIOSO - KHR!S Joao, gen.wav" />
-            <meta id="og-title" property="og:title" content="CURIOSO - KHR!S Joao, gen.wav" />
-            <meta id="og-image" property="og:image" content="https://genwav.xyz/CURIOSO.jpg" />
+            <meta id="meta-description" name="description" content="CURIOSO - gen.wav, KHR!S Joao" />
+            <meta id="og-title" property="og:title" content="CURIOSO - gen.wav, KHR!S Joao" />
+            <meta id="og-image" property="og:image" content="https://genwav.xyz/CURIOSO.png" />
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
@@ -116,10 +116,10 @@ const CURIOSO = (props) => {
         <img 
           src="https://genwav.xyz/CURIOSO.jpg"
           alt="CURIOSO" type="png"
-          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px", marginLeft:"5%" }}></img>
+          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
       <iframe id="NEWVideo" style={{margin:"0 auto"}} width="50%" height="315" src="https://www.youtube.com/embed/-CgFsRCFVBQ?si=YPKW2rNpYjwHAM6t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", paddingLeft:"5%"}}>
+       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
        <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -201,11 +201,16 @@ const CURIOSO = (props) => {
         </Grid>
       </Grid> 
 
-       <h3 style={{marginTop:"2%", textAlign:"center"}}><a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">👕 BUY MERCH!! 👕</a></h3>
-      
+
+     
       <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>CURIOSO</h4>
+         <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
+           <img src="https://images-api.printify.com/mockup/684234a27a2844ab2c06b711/12148/92661/curioso-unisex-heavy-cotton-tee.jpg?camera_label=person-4&revision=1749171740730" alt="CURIOSO Merch" style={{width:"70%", height:"auto", margin:"0 auto"}}></img>
+           <h3 style={{marginTop:"2%", textAlign:"center"}}>👕 BUY MERCH!! 👕</h3>
+         </a>
+      
+        <h2 style={{marginTop:"20%"}}>Credits</h2>
+        <h4>Curioso</h4>
         <p>Produced by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
         <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <p>Artwork by <a href="https://www.instagram.com/moartmoproblemz" target="_blank">Mo Art</a></p>
