@@ -126,7 +126,7 @@ const CURIOSO = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="venice.lnk.to/curioso"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/4asV8S8lwFgnqW1YiAn9zq?si=0eb0dda7b5bf44a9"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -134,7 +134,7 @@ const CURIOSO = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="venice.lnk.to/curioso"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/song/curioso/1812760855"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
          
@@ -153,7 +153,7 @@ const CURIOSO = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="venice.lnk.to/curioso" ><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/curioso?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" ><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -161,7 +161,7 @@ const CURIOSO = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="venice.lnk.to/curioso"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/track/434311465"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -170,7 +170,7 @@ const CURIOSO = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="venice.lnk.to/curioso"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://dzr.page.link/uy9vMovczjtrPbCFA"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -178,7 +178,7 @@ const CURIOSO = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="venice.lnk.to/curioso"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/wE22DKydYTb"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -194,7 +194,7 @@ const CURIOSO = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="venice.lnk.to/curioso"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F7P3TM6J?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_KhtNk3lkg3y0Uc0MpifEZ0boX"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           
