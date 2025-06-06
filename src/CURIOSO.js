@@ -108,7 +108,7 @@ const CURIOSO = (props) => {
             <title>CURIOSO | KHR!S Joao, gen.wav</title>
             <meta id="meta-description" name="description" content="CURIOSO - KHR!S Joao, gen.wav" />
             <meta id="og-title" property="og:title" content="CURIOSO - KHR!S Joao, gen.wav" />
-            <meta id="og-image" property="og:image" content="https://genwav.xyz/ONEDAY.png" />
+            <meta id="og-image" property="og:image" content="https://genwav.xyz/CURIOSO.jpg" />
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
