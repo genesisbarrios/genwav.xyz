@@ -108,7 +108,7 @@ const SOLYMAR = (props) => {
   }
   
   return(
-    <div id="SOLYMAR">
+    <div id="GENESIS">
       <MetaTags>
         <title>SolyMar | gen.wav, KHR!S Joao</title>
         <meta id="meta-description" name="description" content="SolyMar - gen.wav, KHR!S Joao" />
@@ -122,7 +122,7 @@ const SOLYMAR = (props) => {
           alt="SOLYMAR Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
-      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"5%"}}>
+      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"2%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -134,7 +134,7 @@ const SOLYMAR = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://music.apple.com/us/album/1747470473?app=music&at=1l3vpUI&ct=LFV_7d58c687eeff1763f79f5c3638b3da52&itscg=30440&itsct=catchall_p3&lId=210713504&cId=none&sr=3&src=Linkfire&ls=1"><button className="pre-save-button">Stream</button></a>
@@ -178,7 +178,7 @@ const SOLYMAR = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/album/genesis"><button className="pre-save-button">Buy / Merch</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/album/genesis"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -194,95 +194,117 @@ const SOLYMAR = (props) => {
       <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
       <Grid container spacing={3} style={{width:"80%", margin:"0 auto"}}>
           <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/kTtfDnEF7W4?si=81ziews9ko5yMXXl" title="El Cambio - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/-CgFsRCFVBQ?si=GmYim1uTlNdvds98" title="Curioso - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
           <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3v6ZX_XowU8?si=ACM_I7z7FcTxn20u" title="Cachumbambe - gen.wav, El Igor Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/8td_ueaxld0?si=h6Ez9DRXtUWzK5x7" title="Pay Off One Day - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
           <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/bPX7_MUQr-0?si=zJLxLxCxsVCqgNr7" title="El Ingeniero - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/PWxMpte_2cA?si=PXCjluqseYJIXKyz" title="DALE MAMI - gen.wav, KHR!S João, El Igor, Nick Garcia Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
           <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3wBxgLcn4-M?si=VxC900P3cLHoeUIt" title="Corazon Frio - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Kjq3nJJJjvE?si=AsUx4RWp4PmVnFR4" title="Llama Gemela - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
-          <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/z3UoOWL7Ltg?si=NDtSnK4IlkpZgotw" title="Gucci - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </Grid>
-           <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/MZSFGwk9UaY?si=2qbljpEJC7dZljBQ" title="Tsunami - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/7Qqv5UzPEEY?si=75FK9aFLH9m_3qeY" title="Ibiza - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ie1KfxLpxeY?si=3Sh00_3EkaWr2zNB" title="I Remember - gen.wav, Claudia Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </Grid>
-           <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/FQyi0U0Hkrg?si=QvFKGQPolR5Bm20C" title="La Peli - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </Grid>
+         
       </Grid>
       
       <div className="aboutAlbum">
+      <div style={{ textAlign: "center" }}>
+        <img src="GENKHRIS.jpg" width="80%" />
+      </div>
         <h2>About the Album</h2>
-        <p></p>
+        <p>SolyMar is a collaborative album by gen.wav and KHR!S João that explores the cycles of life, partying and solitude, love and heartbreak, death and rebirth— not as contradictions, but as forces in balance. The Leo brings the fearless drive to create, to lead, to burn bright. The Cancer carries the intuitive wisdom, the emotional undercurrent, the quiet that nurtures the fire. In a time of disconnection, SolyMar is a reminder: duality is not division. It is the path to wholeness.</p>
         <br></br>
-        <p> ⭐</p>    
+        <p>SolyMar isn't just a name—it's a symbol. Sol (Sun) and Mar (Sea): two opposing elements that meet on the horizon, forever reflecting each other. Through sound, Solymar invites listeners to do the same—to see their own inner contrasts not as conflict, but as the raw material for growth and self-discovery.</p>
         <br></br>
-        <h2>Credits</h2>
-        <h4>PELIGROSA</h4>
-        <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
+        <p>Solymar's sound is equal parts celebration and a mirror—reflecting the vibrant energy of Miami's nightlife while revealing the emotional undercurrents that often move beneath the surface., Drawing from reggaetón, alt-Latin, hip-hop, and electronic textures, their music pulses with movement while holding space for reflection. The party tracks pulse with heat and freedom—nights soaked in rhythm, sweat, lust, and escape. But underneath the fun is a deeper current: a quiet recognition that indulgence, when unchecked, can pull us out of alignment. Their love songs explore that same tension—how the things we crave can sometimes lead us astray. Yet the goal is never to reject the pleasure, but to understand it. Solymar's sound is about embracing both the light and the shadow—dancing through temptation, feeling everything fully, and finding harmony somewhere in between.
+        </p>    
         <br></br>
-        <h4>Ibiza</h4>
-        <p>Produced and Written by gen.wav</p>
-        <p>Background Vocalist: <a href="https://www.instagram.com/s33kr0/" target="_blank">°S33KR0°</a></p>
-        <p>Co-Produced, Mixed, and Mastered by <a href="https://www.instagram.com/cundibeatz/?hl=en" target="_blank">CundiBeatz</a></p>
-        <br></br>
-        <h4>Bandolera Feat. <a href="https://www.instagram.com/riskrunnaricky" target="_blank">Riskrunnaricky</a></h4>
-        <p>Written by gen.wav and Riskrunnaricky</p>
-        <p>Produced, Mixed, and Mastered by gen.wav</p>
-        <br></br>
-        <h4>Cachumbambé Feat. <a href="https://www.instagram.com/igorcentrism" target="_blank">El Igor</a></h4>
-        <p>Produced and Written by gen.wav</p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/nielklopen/?hl=en" target="_blank">Niel Klopen</a></p>
-        <br></br>
-        <h4>Milán Feat. <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João,</a> <a href="https://www.instagram.com/igorcentrism" target="_blank">El Igor</a></h4>
-        <p>Produced and Written by gen.wav</p>
-        <p>Co-Produced, Mixed, and Mastered by <a href="https://www.instagram.com/cundibeatz/?hl=en" target="_blank">CundiBeatz</a></p>
-        <br></br>
-        <h4>Corazón Frío</h4>
-        <p>Produced and Written by gen.wav</p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/adrian.ajv/?hl=en" target="_blank">ADRIAN</a></p>
-        <br></br>
-        <h4>La Peli</h4>
-        <p>Produced and Written by gen.wav</p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/adrian.ajv/?hl=en" target="_blank">ADRIAN</a></p>
-        <br></br>
-        <h4>No Me Llames Más Feat. <a href="https://www.instagram.com/igorcentrism" target="_blank">El Igor</a></h4>
-        <p>Written by gen.wav and El Igor</p>
-        <p>Produced, Mixed, and Mastered by gen.wav</p>
-        <br></br>
-        <h4>El Cambio</h4>
-        <p>Produced and Written by gen.wav</p>
-        <p>Mixed and Mastered by gen.wav</p>
-        <br></br>
-        <h4>Gucci</h4>
-        <p>Produced by <a href="https://www.instagram.com/b0neb0yyy/" target="_blank">SAM0</a></p>
-        <p>Written, Mixed, and Mastered by gen.wav</p>
-        <br></br>
-        <h4>I Remember Feat. <a href="https://www.instagram.com/claudiasings/" target="_blank">Claudia</a></h4>
-        <p>Written by gen.wav and Claudia</p>
-        <p>Produced, Mixed, and Mastered by gen.wav</p>
-        <br></br>
-        <h4>It's Me Not You Feat. <a href="https://www.instagram.com/grlkrash/" target="_blank">GRLKRASH</a></h4>
-        <p>Written by gen.wav and GRLKRASH</p>
-        <p>Produced, Mixed, and Mastered by gen.wav</p>
-        <br></br>
-        <h4>Tsunami (Olvídalo) Feat. <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></h4>
-        <p>Written by gen.wav and KHR!S João</p>
-        <p>Produced, Mixed, and Mastered by gen.wav</p>
-        <br></br>
-        <p>Album Art and Animations by <a href="https://www.instagram.com/alectheaverage/" target="_blank">Alec Perez</a></p>
+        <Grid container spacing={2}>
+          <Grid item xs={12} lg={6}>
+           
+            <h2>Credits</h2>
+            <h4>PELIGROSA</h4>
+            <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p> Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4>FLOW</h4>
+            <p>Featuring <a href="https://www.instagram.com/itsdanimako/" target="_blank">Dani Mako</a></p>
+            <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Mixed, and Mastered by <a href="https://www.instagram.com/mixedbyedwn" target="_blank">Edwin Estacio</a></p>
+            <br></br>
+            <h4><a style={{textDecoration:"none"}} href="https://genwav.xyz/GAFAS" target="_blank">GAFAS</a></h4>
+            <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4>TOTO</h4>
+            <p>Written by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a> & <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4><a style={{textDecoration:"none"}} href="https://genwav.xyz/DALEMAMI" target="_blank">DALE MAMI</a></h4>
+            <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
+            <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
+            <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
+            <br></br>
+            <h4>Cosas Oscuras</h4>
+            <p>Featuring <a href="https://www.instagram.com/southsidemab/" target="_blank">Southside MAB</a></p>
+            <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4>Bodhi Interlude 432 Hz</h4>
+            <p>Featuring <a href="https://www.instagram.com/alanwattsorg/" target="_blank">Alan Watts</a></p>
+            <p>Produced by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/prodbyluz/" target="_blank">Prod by Luz</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4>Sin Rencor</h4>
+            <p>Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4><a style={{textDecoration:"none"}} href="https://genwav.xyz/LlamaGemela" target="_blank">Llama Gemela</a></h4>
+            <p>Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a>, Nicolas Cervera, Manuel Pagan</p>
+            <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4>RD</h4>
+            <p>Featuring <a href="https://www.instagram.com/yun.gdzy/" target="_blank">Yung Dzy</a></p>
+            <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4><a style={{textDecoration:"none"}} href="https://genwav.xyz/CURIOSO" target="_blank">Curioso</a></h4>
+            <p>Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4><a style={{textDecoration:"none"}} href="https://genwav.xyz/oneday" target="_blank">Pay Off One Day</a></h4>
+            <p>Produced by <a href="https://www.instagram.com/0nly1flexy/" target="_blank">flexible</a></p>
+            <p>Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Co-Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <h4>Outside My Door</h4>
+            <p>Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a></p>
+            <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+            <br></br>
+            <p>Album Art by <a href="https://www.instagram.com/agotok__/" target="_blank">Moreno Villa</a></p>
+
+            <br></br>
+
+          <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://enigma-labs.printify.me/">
+            <h3 style={{marginTop:"2%", marginBottom:"2%"}}>GET YOURS NOW!!</h3>
+            <img src="SOLYMARSHIRT.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARKEYRING1.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARKEYRING2.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARBLACKTEE.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <h3 style={{marginTop:"2%"}}>BUY MERCH</h3>
+          </a>
+
+            <img></img>
+          </Grid>
+           <Grid item xs={12} lg={6}>
+              <div style={{ textAlign: "center" }}>
+                <img src="GENSOLYMAR.jpg" width="72%" />
+                <img src="CHRISSOLYMAR.jpg" width="72%" />
+                <img src="GENKHRIS2.jpg" width="72%" />
+              </div>
+           </Grid>
+        </Grid>
       </div>
         
           

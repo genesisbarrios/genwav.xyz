@@ -107,7 +107,7 @@ const App = () => {
 
   const SOLYMARComponent = () => {
     return (
-      <CURIOSO />
+      <SOLYMAR />
     );
   }
 
