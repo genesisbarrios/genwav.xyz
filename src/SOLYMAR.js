@@ -173,20 +173,20 @@ const SOLYMAR = (props) => {
             <a target="_blank" href="https://Venice.lnk.to/solymar"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/album/solymar"><button className="pre-save-button">Buy</button></a>
-            </Grid>
-          </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://Venice.lnk.to/solymar"><button className="pre-save-button">Stream / Buy</button></a>
+            </Grid>
+          </Grid>
+           <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://genwav.bandcamp.com/album/solymar"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid>
         </Grid>
