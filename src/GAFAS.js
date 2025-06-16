@@ -204,10 +204,10 @@ const GAFAS = (props) => {
       <div className="aboutNEW">
 
        <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
-          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>👕 GET YOURS NOW!! 👕</h3>
+          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>MERCH</h3>
            <img src="GAFASKEYRING.jpg" alt="CURIOSO Merch" style={{width:"80%", height:"auto", margin:"0 auto"}}></img>
            <img src="GAFASSHIRT.jpg" alt="CURIOSO Merch" style={{width:"80%", height:"auto", margin:"0 auto"}}></img>
-           <h3 style={{marginTop:"2%", marginBottom:"10%", textAlign:"center"}}>👕 BUY MERCH!! 👕</h3>
+           <h3 style={{marginTop:"2%", marginBottom:"10%", textAlign:"center"}}>GET YOURS NOW</h3>
          </a>
 
         <h2>Credits</h2>

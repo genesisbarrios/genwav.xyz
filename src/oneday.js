@@ -202,12 +202,12 @@ const ONEDAY = (props) => {
       
       <div className="aboutNEW">
          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
-          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>👕 GET YOURS NOW!! 👕</h3>
+          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>MERCH</h3>
            <img src="ONEDAYSHIRT.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
             <img src="ONEDAYCAP.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
            <img src="ONEDAYKEYRING.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
             <img src="ONEDAYBOTTLE.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-           <h3 style={{marginTop:"2%", textAlign:"center"}}>👕 BUY MERCH!! 👕</h3>
+           <h3 style={{marginTop:"2%", textAlign:"center"}}>GET YOURS NOW</h3>
          </a>
 
         <h2>Credits</h2>

@@ -205,11 +205,11 @@ const CURIOSO = (props) => {
      
       <div className="aboutNEW">
          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
-          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>👕 GET YOURS NOW!! 👕</h3>
+          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>MERCH</h3>
            <img src="https://images-api.printify.com/mockup/684234a27a2844ab2c06b711/12148/92661/curioso-unisex-heavy-cotton-tee.jpg?camera_label=person-4&revision=1749171740730" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
             <img src="CURIOSOBOTTLEOPENER.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
            <img src="CURIOSOTANK.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-           <h3 style={{marginTop:"2%", textAlign:"center"}}>👕 BUY MERCH!! 👕</h3>
+           <h3 style={{marginTop:"2%", textAlign:"center"}}>GET YOURS NOW</h3>
          </a>
       
         <h2 style={{marginTop:"20%"}}>Credits</h2>

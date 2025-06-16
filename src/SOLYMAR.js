@@ -122,7 +122,7 @@ const SOLYMAR = (props) => {
           alt="SOLYMAR Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
-      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"2%"}}>
+      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"3%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -167,7 +167,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginBottom:"20px"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="https://Venice.lnk.to/solymar" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://Venice.lnk.to/solymar"><button className="pre-save-button">Stream</button></a>
@@ -287,12 +287,12 @@ const SOLYMAR = (props) => {
             <br></br>
 
           <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://enigma-labs.printify.me/">
-            <h3 style={{marginTop:"2%", marginBottom:"2%"}}>GET YOURS NOW!!</h3>
+            <h3 style={{marginTop:"2%", marginBottom:"2%"}}>MERCH</h3>
             <img src="SOLYMARSHIRT.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
             <img src="SOLYMARKEYRING1.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
             <img src="SOLYMARKEYRING2.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
             <img src="SOLYMARBLACKTEE.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
-            <h3 style={{marginTop:"2%"}}>BUY MERCH</h3>
+            <h3 style={{marginTop:"2%"}}>GET YOURS NOW</h3>
           </a>
 
             <img></img>
