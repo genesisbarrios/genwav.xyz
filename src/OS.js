@@ -270,6 +270,12 @@ const GenWavOS = (props) => {
               <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/wangimg_130.ico" width="20px"></img> Gallery</div>
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
                      
+
+                  <div className="slide">
+                          <img height="100%" width="auto" src="https://dl.dropboxusercontent.com/s/m2id1jav2y7dq5pasryzo/mossySQ.png?rlkey=d9cobb0m2spa3mz7egzyfrqx3&st=rvw8qncu&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                      </div>
+
                     <div  className="slide">
                           <img width="100%" height="100%" src="https://dl.dropboxusercontent.com/s/htt41nabsx1wdrmklf1s21/problemasSQ.png?rlkey=juxe1w8ououd5z9w6p3lrg07j&st=6jd4w0nn&dl=0" />
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}

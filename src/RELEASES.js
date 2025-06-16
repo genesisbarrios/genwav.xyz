@@ -147,7 +147,7 @@ const RELEASES = (props) => {
           <div style={{ display: "inline" }}>
             {/* Add your next card here */}
 
-             <Card style={{marginBottom:"2%"}}>
+             {/* <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/SOLYMAR">
                 <CardMedia
                   component="img"
@@ -162,7 +162,7 @@ const RELEASES = (props) => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-            </Card>
+            </Card> */}
 
              <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/CURIOSO">

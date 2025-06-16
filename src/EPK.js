@@ -218,11 +218,13 @@ const EPK = (props) => {
         <div style={{height:"100%", width: "100%", paddingTop:"0", marginTop:"0", textAlign:"center"}}>
           <div style={{width:"100%", margin:"0 auto"}}>
             <h1 style={{marginBottom:"3%"}}>PRESS</h1>
-             <h5 style={{marginBottom:"2%"}}><a href="https://voyagemia.com/interview/rising-stars-meet-genesis-barrios-of-little-havana" target="_blank" style={{color:"white", textDecoration:"none"}}>Voyage MIA Rising Stars Article</a></h5>
+             <h5 style={{marginBottom:"2%"}}><a href="https://somoslahoficial.com/blog/blog/7591475/los-artistas-de-miami-gen-wav-y-khr-s-joao-son-parte-de-una-nueva-ola-de-artistas-latinos-en-el-305" target="_blank" style={{color:"white", textDecoration:"none"}}>Somos La H Blog</a></h5>
              <h5 style={{marginBottom:"2%"}}><a href="https://canvasrebel.com/meet-gen-wav/" target="_blank" style={{color:"white", textDecoration:"none"}}>Canvas Rebel Article</a></h5>
+             <h5 style={{marginBottom:"2%"}}><a href="https://colorsxstudios.com/music" target="_blank" style={{color:"white", textDecoration:"none"}}>Colors Studios Feature</a></h5>
+             <h5 style={{marginBottom:"2%"}}><a href="https://voyagemia.com/interview/rising-stars-meet-genesis-barrios-of-little-havana" target="_blank" style={{color:"white", textDecoration:"none"}}>Voyage MIA Rising Stars Article</a></h5>
              
-             <h5><a href="https://colorsxstudios.com/music" target="_blank" style={{color:"white", textDecoration:"none"}}>Colors Studios Feature</a></h5>
-            <img src="https://dl.dropboxusercontent.com/s/c1k9lmk3goeidbpjllynh/gen-solo2.JPG?rlkey=pmphh2l4qy4t9swbgi1t6fiw4&st=gkgm1mo1&dl=0" style={{width:"80%", height:"auto", marginTop:'20px'}}></img>
+
+            <img  src="https://dl.dropboxusercontent.com/s/6fwh008lzxeut113hztdi/MOSSY.JPG?rlkey=rf5c59gq30lbb2f90mwextxmp&st=zergt0dk&dl=0" style={{width:"80%", height:"auto", marginTop:'20px'}} />
             <img src="https://dl.dropboxusercontent.com/s/a6orrf4lpc5y63bpi6rkb/IMG_8524.jpg?rlkey=j9lpdb2jctrm8lqvk513u4vz8&st=n7wwoqem&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/c41ne5b0btlx1kc9urmvh/lapeli3.png?rlkey=9ni7eowvcfj9zwhjw8kxtm9d0&st=4c4y2el8&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/u2v0qvsuf2vpk7bn4b8rt/textinmelookup.JPG?rlkey=flyizkpk64y7wo72iudm1mzbm&st=y62c4vqe&dl=0"style={{width:"80%", height:"auto"}}></img>
