@@ -18,6 +18,7 @@ import GAFAS from './GAFAS';
 import TRIPPIN from './TRIPPIN';
 import Footer from "./Footer"; // Import Header component
 import CURIOSO from './CURIOSO';
+import SOLYMAR from './SOLYMAR';
 
 const App = () => {
   const GenWavOSComponent = () => {
@@ -104,6 +105,12 @@ const App = () => {
     );
   }
 
+  const SOLYMARComponent = () => {
+    return (
+      <CURIOSO />
+    );
+  }
+
 
   const ShopRedirect = () => { // Define component for /SHOP route
     window.location.href = "https://enigma-labs.printify.me/products"; // Redirect to external URL
@@ -131,6 +138,7 @@ const App = () => {
           <Route path="/GAFAS" element={<><Header /><GAFASComponent  /><Footer /></>} />
           <Route path="/trippin" element={<><Header /><TRIPPINComponent  /><Footer /></>} />
           <Route path="/CURIOSO" element={<><Header /><CURIOSOComponent  /><Footer /></>} />
+          <Route path="/SOLYMAR" element={<><Header /><SOLYMARComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
         </Routes>

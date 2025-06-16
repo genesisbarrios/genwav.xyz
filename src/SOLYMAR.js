@@ -27,6 +27,7 @@ import matrix from 'react95/dist/themes/matrix';
 import rainyDay from 'react95/dist/themes/rainyDay';
 import aiee from 'react95/dist/themes/aiee';
 import slate from 'react95/dist/themes/slate';
+import { MetaTags } from "react-meta-tags";
 import shelbiTeal from 'react95/dist/themes/shelbiTeal';
 
 import { Avatar } from "react95";
@@ -35,7 +36,7 @@ import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } fr
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
 
-const GENESIS = (props) => {
+const SOLYMAR = (props) => {
   const [email, setEmail] = useState("");
   const [fan, setFan] = useState(false);
   const [producer, setProducer] = useState(false);
@@ -105,16 +106,20 @@ const GENESIS = (props) => {
     setAlert('There was an error.');
 
   }
- 
-  const pdfUrl = 'https://www.dropbox.com/scl/fi/fqwizf2o29pknnfhkxwgz/ELECTRONIC-PRESS-KIT-2.pdf?rlkey=ytaf41lgcv6fte2cgxypn78u6&dl=0';
   
   return(
-    <div id="GENESIS">
+    <div id="SOLYMAR">
+      <MetaTags>
+        <title>SolyMar | gen.wav, KHR!S Joao</title>
+        <meta id="meta-description" name="description" content="SolyMar - gen.wav, KHR!S Joao" />
+        <meta id="og-title" property="og:title" content="SolyMar - gen.wav, KHR!S Joao" />
+        <meta id="og-image" property="og:image" content="https://genwav.xyz/SOLYMAR.jpg" />
+      </MetaTags>
     <div style={{ textAlign: "center" }}>
       <div id="GenesisImageDiv">
         <img 
-          src="https://dl.dropboxusercontent.com/s/h6t8dvgtzzj8f069s0ma4/GENESIS_ANI.gif?rlkey=i1x2657yni0v3dyhhe8fjixvs&st=8dpg1ttt&dl=0"
-          alt="GENESIS Album" type="gif"
+          src="SOLYMAR.jpg"
+          alt="SOLYMAR Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
       <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"5%"}}>
@@ -219,12 +224,12 @@ const GENESIS = (props) => {
       
       <div className="aboutAlbum">
         <h2>About the Album</h2>
-        <p>I had no idea what I was getting myself into when I started this project, but it was so worth the blood, sweat, and tears. What started as an EP with a couple features on it ended up being my debut album and it wouldn’t have been possible without all my friends and colleagues. I'm not an artist that's bound to one genre, that's why this project is packed with different genres, and fusions. Although I stick true to my Cuban roots, I'm sure there's a song for everyone in it. It was created over the past year, while still releasing singles monthly and I would appreciate from the bottom of my heart if you took a listen 🙏🏽🫶🏽🌊</p>
+        <p></p>
         <br></br>
-        <p>GENESIS is about self reflection through relationship, self awareness, transformation, and coming back to yourself and your purpose. ⭐</p>    
+        <p> ⭐</p>    
         <br></br>
         <h2>Credits</h2>
-        <h4>El Ingeniero</h4>
+        <h4>PELIGROSA</h4>
         <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
         <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
         <br></br>
@@ -335,4 +340,4 @@ const GENESIS = (props) => {
         
 };
 
-export default GENESIS;
+export default SOLYMAR;
