@@ -242,7 +242,7 @@ const SOLYMAR = (props) => {
             <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
             <br></br>
             <h4><a style={{textDecoration:"none"}} href="https://genwav.xyz/DALEMAMI" target="_blank">DALE MAMI</a></h4>
-            <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
+            <p><a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a></p>
             <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
             <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
             <br></br>
