@@ -270,12 +270,34 @@ const GenWavOS = (props) => {
               <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/wangimg_130.ico" width="20px"></img> Gallery</div>
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
                      
-
+                <div className="slide">
+                      <img height="50%" width="100%" style={{objectFit:"cover"}} src="https://dl.dropboxusercontent.com/s/ur82i72cu1e3cfmyns202/genheadshot2025.jpg?rlkey=xruchuq224eqw28dkwwwj1cwe&st=tlybkvx4&dl=0" />
+                          <button className="legend"><a href="https://www.instagram.com/p/DK-SGEMvvA3/?img_index=1" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button>
+                    </div>
+                <div className="slide">
+                      <img height="auto" width="100%" src="https://dl.dropboxusercontent.com/s/fpp8gfykbfiv2vogvqdiz/genmars.JPG?rlkey=d1tqphrprhw19qrmgg3j8rdaq&st=5uygb0kg&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                    </div>
                   <div className="slide">
+                      <img height="100%" width="auto" src="https://dl.dropboxusercontent.com/s/idl15yq45pyd2hzj0qlm2/llamagemelagen.jpg?rlkey=9a152ov3026qvzpls2hmrpfc3&st=g0kw30zz&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                    </div>
+                  <div className="slide">
+                      <img height="100%" width="auto" src="https://dl.dropboxusercontent.com/s/2rl4f4uuid8ypslrem79x/guitarllamagemela.JPG?rlkey=svrpo8wmbusjsqdgs8yqva7so&st=a1jkynx4&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                    </div>
+                    <div className="slide">
+                      <img width="100%" height="auto" src="https://dl.dropboxusercontent.com/s/6qckk96enixe6fr93kw77/marsBWgen.jpg?rlkey=onqhcbeh07lbeh2o77ad4muyw&st=3z3ywwd2&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                    </div>
+                    <div className="slide">
+                          <img height="100%" width="auto" src="https://dl.dropboxusercontent.com/s/0k0dthq0harqvyhanepad/jan25marsgen.JPG?rlkey=ans55vpr6jze28hokxfjv2iyb&st=id16f2dg&dl=0" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                      </div>
+                    <div className="slide">
                           <img height="100%" width="auto" src="https://dl.dropboxusercontent.com/s/m2id1jav2y7dq5pasryzo/mossySQ.png?rlkey=d9cobb0m2spa3mz7egzyfrqx3&st=rvw8qncu&dl=0" />
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
                       </div>
-
                     <div  className="slide">
                           <img width="100%" height="100%" src="https://dl.dropboxusercontent.com/s/htt41nabsx1wdrmklf1s21/problemasSQ.png?rlkey=juxe1w8ououd5z9w6p3lrg07j&st=6jd4w0nn&dl=0" />
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}

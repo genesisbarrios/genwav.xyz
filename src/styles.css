@@ -245,6 +245,7 @@ button.legend{
 
 .slide{
   width:100% !important;
+  object-fit: cover !important;
 }
 
 .igLogo{

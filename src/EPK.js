@@ -115,11 +115,16 @@ const EPK = (props) => {
       <Grid container spacing={3} style={{padding: "0px"}}> 
         <Grid item sm={12} md={4} lg={3}> 
           <div style={{height: "100vh", position: "sticky", top: 0}}>
-          <img 
-            src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0"
-            alt="image"
-            style={{height: "100%", width: "100%", objectFit: "cover"}}
-          />  
+            <img 
+              src="https://dl.dropboxusercontent.com/s/8xsc91gqw8ptlcu74zdvz/genheadshotWHITE2025.jpg?rlkey=kqnfcd1ii8lfgjtghc5zv002v&st=64jx7pcr&dl=0"
+              alt="image"
+              style={{height: "50vh", width: "100%", objectFit: "cover"}}
+            />  
+            <img 
+              src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0"
+              alt="image"
+              style={{height: "50vh", width: "100%", objectFit: "cover"}}
+            />  
           </div>
         </Grid>
         <Grid item sm={12} md={6} lg={6}> 
@@ -223,14 +228,13 @@ const EPK = (props) => {
              <h5 style={{marginBottom:"2%"}}><a href="https://colorsxstudios.com/music" target="_blank" style={{color:"white", textDecoration:"none"}}>Colors Studios Feature</a></h5>
              <h5 style={{marginBottom:"2%"}}><a href="https://voyagemia.com/interview/rising-stars-meet-genesis-barrios-of-little-havana" target="_blank" style={{color:"white", textDecoration:"none"}}>Voyage MIA Rising Stars Article</a></h5>
              
-
-            <img  src="https://dl.dropboxusercontent.com/s/6fwh008lzxeut113hztdi/MOSSY.JPG?rlkey=rf5c59gq30lbb2f90mwextxmp&st=zergt0dk&dl=0" style={{width:"80%", height:"auto", marginTop:'20px'}} />
-            <img src="https://dl.dropboxusercontent.com/s/a6orrf4lpc5y63bpi6rkb/IMG_8524.jpg?rlkey=j9lpdb2jctrm8lqvk513u4vz8&st=n7wwoqem&dl=0" style={{width:"80%", height:"auto"}}></img>
+              <img src="https://dl.dropboxusercontent.com/s/ur82i72cu1e3cfmyns202/genheadshot2025.jpg?rlkey=xruchuq224eqw28dkwwwj1cwe&st=on6pknh5&dl=0" style={{width:"80%", height:"auto", marginTop:'20px'}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/fpp8gfykbfiv2vogvqdiz/genmars.JPG?rlkey=d1tqphrprhw19qrmgg3j8rdaq&st=pw8obfaq&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img src="https://dl.dropboxusercontent.com/s/0k0dthq0harqvyhanepad/jan25marsgen.JPG?rlkey=ans55vpr6jze28hokxfjv2iyb&st=zcxys40z&dl=0" style={{width:"80%", height:"auto"}}></img>
+            <img  src="https://dl.dropboxusercontent.com/s/wa45u8lpg3m46qb5vpb3/MOSSY.JPG?rlkey=oyo1p028d2nez5foooyxrw7cq&st=rw0kpoz1&dl=0" style={{width:"80%", height:"auto"}} />
             <img src="https://dl.dropboxusercontent.com/s/c41ne5b0btlx1kc9urmvh/lapeli3.png?rlkey=9ni7eowvcfj9zwhjw8kxtm9d0&st=4c4y2el8&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/u2v0qvsuf2vpk7bn4b8rt/textinmelookup.JPG?rlkey=flyizkpk64y7wo72iudm1mzbm&st=y62c4vqe&dl=0"style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/s7uw298wmbe9jfqsk6vdt/problemas-GROUP.JPG?rlkey=jipihcwm657c1igo3etxsa5dq&st=z523127u&dl=0" style={{width:"80%", height:"auto"}}></img>
-            <img src="https://dl.dropboxusercontent.com/s/49v46o26vfasutsnep4sq/iremember.jpg?rlkey=hv5gfifzfahlc5zqoorxls4gp&st=pc8p90n2&dl=0" style={{width:"80%", height:"auto"}}></img>
-            <img src="https://dl.dropboxusercontent.com/s/yuf4fihlfprmon8k9hjfg/thelab2.JPG?rlkey=q3ax9nv60h1n49bxyo21im381&st=dlkxedhm&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/pcx5fqb915v3xy2t8ic9o/marsdalemami.JPG?rlkey=cogo5smiwq9be5l1ww0qdi06m&st=s3xkjzfg&dl=0" style={{width:"80%", height:"auto"}}></img>
           
           </div>
