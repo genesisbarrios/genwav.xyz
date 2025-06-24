@@ -38,7 +38,9 @@ import axios from "axios";
 
 const SOLYMAR = (props) => {
   const [email, setEmail] = useState("");
-  const [fan, setFan] = useState(false);
+  const [fan, setFan] = useState(true);
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [producer, setProducer] = useState(false);
   const [artist, setArtist] = useState(false);
   const [message, setMessage] = useState("");
@@ -81,31 +83,44 @@ const SOLYMAR = (props) => {
     }
   }
 
+
   function handleSubmit() {
+    console.log('handle submit request to subscribe')
+  
+    // Check if data is valid
+    if (!email) {
+      console.log('No e-mail address provided');
+      setAlert('Please set an e-mail address~');
+      return;
+    }
+
     const dataToSend = {
-      email: email,
-      subject: producer,
-      body: artist
+      email,
+      producer,
+      artist,
+      fan,
+      name,
+      phoneNumber
     };
   
     // Make a POST request using Axios
-    axios.post('https://localhost:3001/sendEmail', dataToSend)
-      .then((response) => {
-        // Handle the response if needed
-        console.log('Request successful', response.data);
-        setMessage('Your e-mail has been saved!')
-        window.open("https://www.beatstars.com/genwav/sound-kits/179946", "_blank")
+    axios.post('https://genwav-node-server.vercel.app/addUser', dataToSend, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(() => {
+        console.log('Request successful');
+        setMessage("Your e-mail has been saved!")
+        setAlert(''); // Resetting alert if necessary
       })
       .catch((error) => {
-        // Handle errors
+        setAlert("There was an error.");
         console.error('Error: ', error);
-        window.alert(error);
-        setAlert('Error: ', error)
+        setMessage(''); // Resetting message if necessary
       });
-
-    setAlert('There was an error.');
-
   }
+
   
   return(
     <div id="GENESIS">
@@ -299,17 +314,132 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid item xs={12} lg={6}>
               <div style={{ textAlign: "center" }}>
-                <img src="GENSOLYMAR.jpg" width="72%" />
-                <img src="CHRISSOLYMAR.jpg" width="72%" />
-                <img src="GENKHRIS2.jpg" width="72%" />
+                <img src="GENSOLYMAR.jpg" width="70%" />
+                <img src="CHRISSOLYMAR.jpg" width="70%" />
+                <img src="GENKHRIS2.jpg" width="70%" />
               </div>
            </Grid>
         </Grid>
       </div>
-        
-          
-      
     </div>
+    <div
+      className="card"
+      style={{
+        width: '40%',
+        minHeight: '200px',
+        margin: '0 auto',
+        marginTop: '3%',
+      }}
+    >
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .card {
+              width: 80% !important;
+            }
+          }
+        `}
+      </style>
+      <div className="cardHeader">
+        <img
+          src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico"
+          width="20px"
+        ></img>{' '}
+        Sign up to stay in touch!
+      </div>
+      <div style={{ marginTop: '5%', textAlign: 'center' }}>
+        <form>
+          <p>E-mail</p>
+          <input
+            type="text"
+            name="e-mail"
+            style={{
+              display: 'inline-block',
+              marginBottom: '20px',
+              width: '50%',
+            }}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          ></input>
+            <p>Name</p>
+          <input
+            type="text"
+            name="name"
+            style={{
+              display: 'inline-block',
+              marginBottom: '20px',
+              width: '50%',
+            }}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          ></input>
+            <p>Phone Number</p>
+          <input
+            type="text"
+            name="phone-number"
+            style={{
+              display: 'inline-block',
+              marginBottom: '20px',
+              width: '50%',
+            }}
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
+            }}
+          ></input>
+          <br></br>
+          <div style={{ display: 'inline' }}>
+            <input
+              style={{
+                borderRadius: '10px',
+                backgroundColor: '#CBD5E1',
+                display: 'none',
+              }}
+              type="checkbox"
+              name="fan"
+              value={{fan}}
+              checked={true}
+              onChange={(e) => {
+                if (e.target.checked) {
+                  setFan(true);
+                } else {
+                  setFan(false);
+                }
+              }}
+            />
+            <br></br>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                handleSubmit();
+              }}
+              style={{ marginTop: '0px', padding: '2px 5px' }}
+              type="submit"
+            >
+              Submit
+            </button>
+            {message && (
+              <Alert
+                style={{ marginTop: '5%', marginBottom: '5%' }}
+                severity="success"
+              >
+                {message.toString()}
+              </Alert>
+            )}
+            {alert && (
+              <Alert
+                style={{ marginTop: '5%', marginBottom: '5%' }}
+                severity="error"
+              >
+                {alert.toString()}
+              </Alert>
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
+          
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
         <Grid item xs={12} sm={12}>

@@ -80,31 +80,6 @@ const GENESIS = (props) => {
     }
   }
 
-  function handleSubmit() {
-    const dataToSend = {
-      email: email,
-      subject: producer,
-      body: artist
-    };
-  
-    // Make a POST request using Axios
-    axios.post('https://localhost:3001/sendEmail', dataToSend)
-      .then((response) => {
-        // Handle the response if needed
-        console.log('Request successful', response.data);
-        setMessage('Your e-mail has been saved!')
-        window.open("https://www.beatstars.com/genwav/sound-kits/179946", "_blank")
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error('Error: ', error);
-        window.alert(error);
-        setAlert('Error: ', error)
-      });
-
-    setAlert('There was an error.');
-
-  }
  
   const pdfUrl = 'https://www.dropbox.com/scl/fi/fqwizf2o29pknnfhkxwgz/ELECTRONIC-PRESS-KIT-2.pdf?rlkey=ytaf41lgcv6fte2cgxypn78u6&dl=0';
   
