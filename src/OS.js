@@ -96,7 +96,7 @@ const GenWavOS = (props) => {
       fan,
       name, 
       phoneNumber, 
-      instagam
+      normalizedInstagram
     };
   
     // Make a POST request using Axios
