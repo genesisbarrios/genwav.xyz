@@ -202,7 +202,7 @@ const GenWavOS = (props) => {
                 <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico" width="20px"></img> Sign up to receive beats, loops, and news!</div>
                   <div style={{marginTop:"5%", textAlign:"center"}}>
                     <form>
-                      <p>Enter Your E-mail Address</p>  
+                      <p>E-mail Address</p>  
                       <input type="text" name="e-mail" style={{display:"inline-block", marginBottom:"20px", width:"50%"}}  
                         onChange={(e) => {
                           setEmail(e.target.value);
@@ -220,19 +220,6 @@ const GenWavOS = (props) => {
                           }}
                           onChange={(e) => {
                             setName(e.target.value);
-                          }}
-                        ></input>
-                         <p>E-mail</p>
-                        <input
-                          type="text"
-                          name="email"
-                          style={{
-                            display: 'inline-block',
-                            marginBottom: '20px',
-                            width: '50%',
-                          }}
-                          onChange={(e) => {
-                            setEmail(e.target.value);
                           }}
                         ></input>
                           <p>Phone Number</p>
