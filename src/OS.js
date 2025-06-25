@@ -24,6 +24,9 @@ const GenWavOS = (props) => {
   const [email, setEmail] = useState("");
   const [fan, setFan] = useState(false);
   const [producer, setProducer] = useState(false);
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [instagam, setInstagram] = useState("");
   const [artist, setArtist] = useState(false);
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");
@@ -71,7 +74,10 @@ const GenWavOS = (props) => {
       email,
       producer,
       artist,
-      fan
+      fan,
+      name, 
+      phoneNumber, 
+      instagam
     };
   
     // Make a POST request using Axios
@@ -201,6 +207,47 @@ const GenWavOS = (props) => {
                         }}
                       ></input>
                       <br></br>
+                       <p>Name</p>
+                        <input
+                          type="text"
+                          name="name"
+                          style={{
+                            display: 'inline-block',
+                            marginBottom: '20px',
+                            width: '50%',
+                          }}
+                          onChange={(e) => {
+                            setName(e.target.value);
+                          }}
+                        ></input>
+                          <p>Phone Number</p>
+                        <input
+                          type="text"
+                          name="phone-number"
+                          style={{
+                            display: 'inline-block',
+                            marginBottom: '20px',
+                            width: '50%',
+                          }}
+                          onChange={(e) => {
+                            setPhoneNumber(e.target.value);
+                          }}
+                        ></input>
+                        <br></br>
+                         <p>Instagram handle</p>
+                        <input
+                          type="text"
+                          name="instagram"
+                          style={{
+                            display: 'inline-block',
+                            marginBottom: '20px',
+                            width: '50%',
+                          }}
+                          onChange={(e) => {
+                            setInstagram(e.target.value);
+                          }}
+                        ></input>
+                        <br></br>
                       <div style={{display:'inline'}}>
                         <input
                           style={{borderRadius:"10px", backgroundColor:"#CBD5E1", display:'inline'}}

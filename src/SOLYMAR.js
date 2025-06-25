@@ -362,7 +362,7 @@ const SOLYMAR = (props) => {
               setEmail(e.target.value);
             }}
           ></input>
-            <p>Name</p>
+          <p>Name</p>
           <input
             type="text"
             name="name"
