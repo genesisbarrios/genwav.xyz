@@ -70,6 +70,23 @@ const GenWavOS = (props) => {
       return;
     }
 
+    // Instagram handle normalization
+    let normalizedInstagram = instagam.trim();
+    if (normalizedInstagram) {
+      // Remove any @ symbol
+      normalizedInstagram = normalizedInstagram.replace(/^@/, '');
+      // If it's a link, leave it (but strip @ if present)
+      if (
+        normalizedInstagram.startsWith('http://') ||
+        normalizedInstagram.startsWith('https://')
+      ) {
+        // Already a link, just ensure no @
+        normalizedInstagram = normalizedInstagram.replace('@', '');
+      } else {
+        // Not a link, prepend
+        normalizedInstagram = `https://instagram.com/${normalizedInstagram}`;
+      }
+    }
 
 
     const dataToSend = {
@@ -236,7 +253,7 @@ const GenWavOS = (props) => {
                           }}
                         ></input>
                         <br></br>
-                         <p>Instagram handle</p>
+                         <p>Instagram Handle</p>
                         <input
                           type="text"
                           name="instagram"
