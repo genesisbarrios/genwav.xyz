@@ -70,6 +70,8 @@ const GenWavOS = (props) => {
       return;
     }
 
+
+
     const dataToSend = {
       email,
       producer,
@@ -218,6 +220,19 @@ const GenWavOS = (props) => {
                           }}
                           onChange={(e) => {
                             setName(e.target.value);
+                          }}
+                        ></input>
+                         <p>E-mail</p>
+                        <input
+                          type="text"
+                          name="email"
+                          style={{
+                            display: 'inline-block',
+                            marginBottom: '20px',
+                            width: '50%',
+                          }}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
                           }}
                         ></input>
                           <p>Phone Number</p>
