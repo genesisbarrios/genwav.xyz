@@ -37,6 +37,9 @@ import axios from "axios";
 
 const GENESIS = (props) => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [instagram, setInstagram] = useState("");
   const [fan, setFan] = useState(false);
   const [producer, setProducer] = useState(false);
   const [artist, setArtist] = useState(false);
@@ -64,6 +67,44 @@ const GENESIS = (props) => {
       console.log(artist)
     }
   }, );
+
+
+  function handleSubmit() {
+    console.log('handle submit request to subscribe')
+  
+    // Check if data is valid
+    if (!email) {
+      console.log('No e-mail address provided');
+      setAlert('Please set an e-mail address~');
+      return;
+    }
+
+    const dataToSend = {
+      email,
+      producer,
+      artist,
+      fan,
+      name,
+      phoneNumber
+    };
+  
+    // Make a POST request using Axios
+    axios.post('https://genwav-node-server.vercel.app/addUser', dataToSend, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(() => {
+        console.log('Request successful');
+        setMessage("Your e-mail has been saved!")
+        setAlert(''); // Resetting alert if necessary
+      })
+      .catch((error) => {
+        setAlert("There was an error.");
+        console.error('Error: ', error);
+        setMessage(''); // Resetting message if necessary
+      });
+  }
 
   function handleOpenDialog(){
     //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>
