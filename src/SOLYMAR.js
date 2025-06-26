@@ -144,7 +144,7 @@ const SOLYMAR = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/6iCftNGKr00g8nsIhOwxe5?si=1e17831f96da4745"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/0rlvDS01Jzj8PTBht0O29E?si=e5BLgMX9Rc-ilfgwzuUIPA"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
