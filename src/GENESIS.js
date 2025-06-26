@@ -256,7 +256,124 @@ const GENESIS = (props) => {
       </div>
         
           
-      
+      <div
+            className="card"
+            style={{
+              width: '40%',
+              minHeight: '200px',
+              margin: '0 auto',
+              marginTop: '3%',
+            }}
+          >
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  .card {
+                    width: 80% !important;
+                  }
+                }
+              `}
+            </style>
+            <div className="cardHeader">
+              <img
+                src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico"
+                width="20px"
+              ></img>{' '}
+              Sign up to stay in touch!
+            </div>
+            <div style={{ marginTop: '5%', textAlign: 'center' }}>
+              <form>
+                <p>E-mail</p>
+                <input
+                  type="text"
+                  name="e-mail"
+                  style={{
+                    display: 'inline-block',
+                    marginBottom: '20px',
+                    width: '50%',
+                  }}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                ></input>
+                <p>Name</p>
+                <input
+                  type="text"
+                  name="name"
+                  style={{
+                    display: 'inline-block',
+                    marginBottom: '20px',
+                    width: '50%',
+                  }}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                ></input>
+                  <p>Phone Number</p>
+                <input
+                  type="text"
+                  name="phone-number"
+                  style={{
+                    display: 'inline-block',
+                    marginBottom: '20px',
+                    width: '50%',
+                  }}
+                  onChange={(e) => {
+                    setPhoneNumber(e.target.value);
+                  }}
+                ></input>
+                <br></br>
+                <div style={{ display: 'inline' }}>
+                  <input
+                    style={{
+                      borderRadius: '10px',
+                      backgroundColor: '#CBD5E1',
+                      display: 'none',
+                    }}
+                    type="checkbox"
+                    name="fan"
+                    value={{fan}}
+                    checked={true}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFan(true);
+                      } else {
+                        setFan(false);
+                      }
+                    }}
+                  />
+                  <br></br>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSubmit();
+                    }}
+                    style={{ marginTop: '0px', padding: '2px 5px' }}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                  {message && (
+                    <Alert
+                      style={{ marginTop: '5%', marginBottom: '5%' }}
+                      severity="success"
+                    >
+                      {message.toString()}
+                    </Alert>
+                  )}
+                  {alert && (
+                    <Alert
+                      style={{ marginTop: '5%', marginBottom: '5%' }}
+                      severity="error"
+                    >
+                      {alert.toString()}
+                    </Alert>
+                  )}
+                </div>
+              </form>
+            </div>
+          </div>
+                
     </div>
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>

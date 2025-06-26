@@ -244,7 +244,7 @@ const SOLYMAR = (props) => {
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/8td_ueaxld0?si=h6Ez9DRXtUWzK5x7" title="Pay Off One Day - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
              <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/HNegsdvMERs" title="Outside My Door- gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/HNegsdvMERs" title="Outside My Door - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
          
       </Grid>
