@@ -193,7 +193,7 @@ const SOLYMAR = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0FD7FD95M"><button className="pre-save-button">Stream / Buy</button></a>
+            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0FD7FD95M"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
