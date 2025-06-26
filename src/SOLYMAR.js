@@ -208,17 +208,43 @@ const SOLYMAR = (props) => {
       </Grid>
       <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
       <Grid container spacing={3} style={{width:"80%", margin:"0 auto"}}>
+
+         <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Pk-2SpFbovQ" title="PELIGROSA - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+        
+           <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Pzr6FyAJifI" title="FLOW - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+
+          <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/UOlfFB1MlTc" title="GAFAS - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+             <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Kp8oN9V8mR8" title="TOTO - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+          <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/PWxMpte_2cA?si=PXCjluqseYJIXKyz" title="DALE MAMI - gen.wav, KHR!S João, El Igor, Nick Garcia Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+          
+          <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ez3wv1RwE2M" title="Cosas Oscuras- gen.wav, KHR!S João, Southside MAB Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+            
+          <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/cHsVyi_DYsg" title="Bodhi Interlude 432 Hz - gen.wav, KHR!S João, Luz, Alan Watts Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+          <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Kjq3nJJJjvE?si=AsUx4RWp4PmVnFR4" title="Llama Gemela - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
           <Grid item xs={12} lg={4}>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/-CgFsRCFVBQ?si=GmYim1uTlNdvds98" title="Curioso - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
           <Grid item xs={12} lg={4}>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/8td_ueaxld0?si=h6Ez9DRXtUWzK5x7" title="Pay Off One Day - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
-          <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/PWxMpte_2cA?si=PXCjluqseYJIXKyz" title="DALE MAMI - gen.wav, KHR!S João, El Igor, Nick Garcia Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </Grid>
-          <Grid item xs={12} lg={4}>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Kjq3nJJJjvE?si=AsUx4RWp4PmVnFR4" title="Llama Gemela - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+             <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/HNegsdvMERs" title="Outside My Door- gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
          
       </Grid>
