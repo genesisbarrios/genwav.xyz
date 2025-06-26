@@ -250,9 +250,7 @@ const SOLYMAR = (props) => {
       </Grid>
       
       <div className="aboutAlbum">
-      <div style={{ textAlign: "center" }}>
-        <img src="GENKHRIS.jpg" width="80%" />
-      </div>
+      
         <h2>About the Album</h2>
         <p>SolyMar is a collaborative album by gen.wav and KHR!S João that explores the cycles of life, partying and solitude, love and heartbreak, death and rebirth— not as contradictions, but as forces in balance. The Leo brings the fearless drive to create, to lead, to burn bright. The Cancer carries the intuitive wisdom, the emotional undercurrent, the quiet that nurtures the fire. In a time of disconnection, SolyMar is a reminder: duality is not division. It is the path to wholeness.</p>
         <br></br>
@@ -261,6 +259,9 @@ const SOLYMAR = (props) => {
         <p>Solymar's sound is equal parts celebration and a mirror—reflecting the vibrant energy of Miami's nightlife while revealing the emotional undercurrents that often move beneath the surface., Drawing from reggaetón, alt-Latin, hip-hop, and electronic textures, their music pulses with movement while holding space for reflection. The party tracks pulse with heat and freedom—nights soaked in rhythm, sweat, lust, and escape. But underneath the fun is a deeper current: a quiet recognition that indulgence, when unchecked, can pull us out of alignment. Their love songs explore that same tension—how the things we crave can sometimes lead us astray. Yet the goal is never to reject the pleasure, but to understand it. Solymar's sound is about embracing both the light and the shadow—dancing through temptation, feeling everything fully, and finding harmony somewhere in between.
         </p>    
         <br></br>
+        <div style={{ textAlign: "center" }}>
+          <img src="GENKHRIS.jpg" width="80%" />
+        </div>
         <Grid container spacing={2}>
           <Grid item xs={12} lg={6}>
            
