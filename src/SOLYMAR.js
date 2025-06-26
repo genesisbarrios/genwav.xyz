@@ -152,7 +152,7 @@ const SOLYMAR = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://Venice.lnk.to/solymar"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/solymar/1820587247"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           
