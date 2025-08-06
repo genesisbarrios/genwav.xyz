@@ -89,6 +89,7 @@ const ORIGINAL = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
+      <p>ORIGINAL - gen.wav, Kiento. O</p>
       <div id="NEWImageDiv">
         <img 
           src="ORIGINAL.jpeg"
@@ -173,7 +174,7 @@ const ORIGINAL = (props) => {
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>Original</h4>
-        <a href="https://www.instagram.com/kiento.o/" target="_blank">Kiento. O</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>
+        Written and Performed by <a href="https://www.instagram.com/kiento.o/" target="_blank">Kiento. O</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>
         <p>Produced by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
         <br></br>
