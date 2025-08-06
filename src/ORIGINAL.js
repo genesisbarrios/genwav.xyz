@@ -97,8 +97,8 @@ const ORIGINAL = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
-      {/* <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/-bV7oHtR2fg?si=lPyGNjhwgAUqzkQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       */}
+      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/-yxf4Tkoq4U?si=XTkXdV3gGkY_Pq0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
 
       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
         <Grid item xs={12} sm={12}>
