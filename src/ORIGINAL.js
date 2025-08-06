@@ -126,14 +126,6 @@ const ORIGINAL = (props) => {
             <a target="_blank" href="https://youtu.be/EvL2o5nkaw0"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/problemas-genwav-jo-merino-khrs-joao-dani-mao"><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid> */}
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
