@@ -96,11 +96,8 @@ const ORIGINAL = (props) => {
           alt="ORIGINAL" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
-{/* 
-      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/-yxf4Tkoq4U?si=XTkXdV3gGkY_Pq0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       */}
 
-      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
+      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -145,8 +142,8 @@ const ORIGINAL = (props) => {
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginBottom:"20px"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://pandora.app.link/660k61LrBVb"><button className="pre-save-button">Stream</button></a>
@@ -170,6 +167,10 @@ const ORIGINAL = (props) => {
           </Grid>
         </Grid>
       </Grid>
+
+      
+      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/-yxf4Tkoq4U?si=XTkXdV3gGkY_Pq0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
       
       <div className="aboutNEW">
         <h2>Credits</h2>
