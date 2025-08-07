@@ -234,6 +234,11 @@ const SOLYMAR = (props) => {
           <Grid item xs={12} lg={4}>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/cHsVyi_DYsg" title="Bodhi Interlude 432 Hz - gen.wav, KHR!S João, Luz, Alan Watts Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
+
+         <Grid item xs={12} lg={4}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/kBPFsva5jmk?si=WEm6cXcoX1bPXYoG" title="Sin Rencor - gen.wav, KHR!S João (Official Music Video)" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Grid>
+
           <Grid item xs={12} lg={4}>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/Kjq3nJJJjvE?si=AsUx4RWp4PmVnFR4" title="Llama Gemela - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
