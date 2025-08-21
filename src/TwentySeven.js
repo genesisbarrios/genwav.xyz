@@ -89,7 +89,6 @@ const Twentyseven = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <p>27 - gen.wav</p>
       <div id="NEWImageDiv">
         <img 
           src="27art.png"
