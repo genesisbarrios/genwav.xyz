@@ -111,29 +111,29 @@ const Twentyseven = (props) => {
              <a target="_blank" href="https://open.spotify.com/album/6yIWZlYM3OEetrRBbM4xCD?go=1"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-         {/* <Grid container spacing={2} className="logo-button-container">
+         <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/original-feat-gen-wav-single/1829755778"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/27-single/1833857340"><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid>  */}
+          </Grid> 
           
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.youtube.com/playlist?list=OLAK5uy_mjsBuyXkeQ1byFiNIlET9OxrWjSxwJIKw&src=Linkfire&lId=bcbec684-db53-4579-be23-20465a071997&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/CJL9tOtW-mY"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/album/450921743"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/track/454745618"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -142,7 +142,7 @@ const Twentyseven = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://link.deezer.com/s/30Gdh2axITP1D9QIbdtRR"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://link.deezer.com/s/30OKzF1CXTvXni0eNbgJd"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -150,9 +150,9 @@ const Twentyseven = (props) => {
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/660k61LrBVb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/d15ZNDWi0Vb"><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
@@ -161,14 +161,14 @@ const Twentyseven = (props) => {
               <a target="_blank" href="https://genwav.bandcamp.com/album/genesis"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> */}
-           {/* <Grid container spacing={2} className="logo-button-container">
+           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0FMRCCQLD?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zj8rZzHZVoynFSOReI79G4BBZ"><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Grid>
       
