@@ -152,20 +152,20 @@ const Twentyseven = (props) => {
             <a target="_blank" href="https://pandora.app.link/d15ZNDWi0Vb"><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/27"><button className="pre-save-button">Buy</button></a>
-            </Grid>
-          </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://amazon.com/music/player/albums/B0FMRCCQLD?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zj8rZzHZVoynFSOReI79G4BBZ"><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/27"><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid>
         </Grid>
