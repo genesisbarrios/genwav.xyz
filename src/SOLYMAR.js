@@ -29,7 +29,7 @@ import aiee from 'react95/dist/themes/aiee';
 import slate from 'react95/dist/themes/slate';
 import { MetaTags } from "react-meta-tags";
 import shelbiTeal from 'react95/dist/themes/shelbiTeal';
-
+import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 import { Avatar } from "react95";
 import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
@@ -53,6 +53,11 @@ const SOLYMAR = (props) => {
       const welcomeBox = document.getElementById("welcomeBox");
       welcomeBox.style.display = "none";
     }
+  }, []);
+
+  useEffect(() => {
+    // Track when SOLYMAR page is viewed
+    trackReleasePageView('SOLYMAR');
   }, []);
 
   useEffect(() => {
@@ -144,7 +149,7 @@ const SOLYMAR = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/0rlvDS01Jzj8PTBht0O29E?si=e5BLgMX9Rc-ilfgwzuUIPA"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/0rlvDS01Jzj8PTBht0O29E?si=e5BLgMX9Rc-ilfgwzuUIPA" onClick={() => trackStreamingClick('SOLYMAR', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -152,7 +157,7 @@ const SOLYMAR = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/solymar/1820587247"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/solymar/1820587247" onClick={() => trackStreamingClick('SOLYMAR', 'Apple')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           
@@ -161,7 +166,7 @@ const SOLYMAR = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.youtube.com/watch?v=933mrl_VLyE&list=PLcGBMxEyx5p9cfbXNscaNm6tjNaOoWGBP"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=933mrl_VLyE&list=PLcGBMxEyx5p9cfbXNscaNm6tjNaOoWGBP" onClick={() => trackStreamingClick('SOLYMAR', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
             <Grid container spacing={2} className="logo-button-container">
@@ -169,7 +174,7 @@ const SOLYMAR = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/sets/solymar-3?si=455c02308de54148a00be23130555718&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/sets/solymar-3?si=455c02308de54148a00be23130555718&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('SOLYMAR', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -177,7 +182,7 @@ const SOLYMAR = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/album/442067668"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/album/442067668" onClick={() => trackStreamingClick('SOLYMAR', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -185,7 +190,7 @@ const SOLYMAR = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/GMQOTsZnvUb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/GMQOTsZnvUb" onClick={() => trackStreamingClick('SOLYMAR', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -193,7 +198,7 @@ const SOLYMAR = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0FD7FD95M"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0FD7FD95M" onClick={() => trackStreamingClick('SOLYMAR', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -201,7 +206,7 @@ const SOLYMAR = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/album/solymar"><button className="pre-save-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/album/solymar" onClick={() => trackMerchClick('SOLYMAR', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid>
         </Grid>
@@ -333,7 +338,7 @@ const SOLYMAR = (props) => {
 
             <br></br>
 
-          <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://enigma-labs.printify.me/">
+          <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('SOLYMAR', 'all')}>
             <h3 style={{marginTop:"2%", marginBottom:"2%"}}>MERCH</h3>
             <img src="SOLYMARSHIRT.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
             <img src="SOLYMARKEYRING1.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>

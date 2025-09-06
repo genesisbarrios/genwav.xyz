@@ -34,6 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'Problemas',
@@ -58,9 +59,10 @@ const PROBLEMAS = (props) => {
     }
   }, []);
 
-  useEffect(() => {
-    
-  }, );
+useEffect(() => {
+    // Track when PROBLEMAS page is viewed
+    trackReleasePageView('PROBLEMAS');
+  }, []);
 
   function handleOpenDialog(){
     //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>

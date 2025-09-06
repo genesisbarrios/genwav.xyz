@@ -34,16 +34,8 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 
-// export const metadata { 
-//   title: 'Problemas',
-//   description: 'Problemas - Jo Merino, KHR!S Joao, gen.wav, Dani Mako',
-//   openGraph: {
-//     title: 'Problemas - Jo Merino, KHR!S Joao, gen.wav, Dani Mako',
-//     description: 'Problemas - Jo Merino, KHR!S Joao, gen.wav, Dani Mako',
-//     images: ['DALE-MAMI-COVER-ARTWORK.jpg'], // Path to your image
-//   },
-// };
 
 const Twentyseven = (props) => {
   const [message, setMessage] = useState("");
@@ -59,8 +51,9 @@ const Twentyseven = (props) => {
   }, []);
 
   useEffect(() => {
-    
-  }, );
+    // Track when 27 page is viewed
+    trackReleasePageView('27');
+  }, []);
 
   function handleOpenDialog(){
     //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>
@@ -105,7 +98,7 @@ const Twentyseven = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/6yIWZlYM3OEetrRBbM4xCD?go=1"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/6yIWZlYM3OEetrRBbM4xCD?go=1" onClick={() => trackStreamingClick('27', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -113,7 +106,7 @@ const Twentyseven = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/27-single/1833857340"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/27-single/1833857340" onClick={() => trackStreamingClick('27', 'Apple')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -122,7 +115,7 @@ const Twentyseven = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/CJL9tOtW-mY"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/CJL9tOtW-mY"><button className="pre-save-button" onClick={() => trackStreamingClick('27', 'YouTube')}>Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -130,7 +123,7 @@ const Twentyseven = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/track/454745618"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/track/454745618" onClick={() => trackStreamingClick('27', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -139,7 +132,7 @@ const Twentyseven = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://link.deezer.com/s/30OKzF1CXTvXni0eNbgJd"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://link.deezer.com/s/30OKzF1CXTvXni0eNbgJd" onClick={() => trackStreamingClick('27', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -147,7 +140,7 @@ const Twentyseven = (props) => {
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/d15ZNDWi0Vb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/d15ZNDWi0Vb" onClick={() => trackStreamingClick('27', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -155,7 +148,7 @@ const Twentyseven = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0FMRCCQLD?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zj8rZzHZVoynFSOReI79G4BBZ"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0FMRCCQLD?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zj8rZzHZVoynFSOReI79G4BBZ" onClick={() => trackStreamingClick('27', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -163,7 +156,7 @@ const Twentyseven = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/27"><button className="pre-save-button">Free Download</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/27" onClick={() => trackStreamingClick('27', 'Bandcamp')}><button className="pre-save-button">Free Download</button></a>
             </Grid>
           </Grid>
         </Grid>

@@ -34,6 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'DALE MAMI',
@@ -59,8 +60,9 @@ const DALEMAMI = (props) => {
   }, []);
 
   useEffect(() => {
-    
-  }, );
+    // Track when DALE MAMI page is viewed
+    trackReleasePageView('DALE MAMI');
+  }, []);
 
   function handleOpenDialog(){
     //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>

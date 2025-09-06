@@ -33,6 +33,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'GAFAS',
@@ -62,8 +63,9 @@ const GAFAS = (props) => {
   }, []);
 
   useEffect(() => {
-    
-  }, );
+    // Track when GAFAS page is viewed
+    trackReleasePageView('GAFAS');
+  }, []);
 
   function handleSubmit() {
     console.log('handle submit request to subscribe')

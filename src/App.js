@@ -21,6 +21,8 @@ import CURIOSO from './CURIOSO';
 import SOLYMAR from './SOLYMAR';
 import ORIGINAL from './ORIGINAL';
 import Twentyseven from './TwentySeven';
+import MetaPixel from './MetaPixel';
+const META_PIXEL_ID = process.env.REACT_APP_META_PIXEL_ID; 
 
 const App = () => {
   const GenWavOSComponent = () => {
@@ -134,6 +136,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
+        <MetaPixel pixelId={META_PIXEL_ID} />
         {/* Include Header + Footer component */}
         <Routes>
           {/* <Route path="/" element={<><Header /><ExperienceWrapper /></>} /> */}

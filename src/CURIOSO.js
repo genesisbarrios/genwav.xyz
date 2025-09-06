@@ -33,6 +33,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'CURIOSO',
@@ -64,8 +65,9 @@ const CURIOSO = (props) => {
   }, []);
 
   useEffect(() => {
-    
-  }, );
+    // Track when CURIOSO page is viewed
+    trackReleasePageView('CURIOSO');
+  }, []);
 
   function handleSubmit() {
     console.log('handle submit request to subscribe')

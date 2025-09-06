@@ -34,6 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView, trackStreamingClick } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'Problemas',
@@ -59,8 +60,9 @@ const ORIGINAL = (props) => {
   }, []);
 
   useEffect(() => {
-    
-  }, );
+    // Track when ORIGINAL page is viewed
+    trackReleasePageView('ORIGINAL');
+  }, []);
 
   function handleOpenDialog(){
     //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>
@@ -104,7 +106,7 @@ const ORIGINAL = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/16PVhFN8u1Y7GtmWq7zra8?si=c56a9ffaf27d4a74"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/16PVhFN8u1Y7GtmWq7zra8?si=c56a9ffaf27d4a74" onClick={() => trackStreamingClick('Original', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -112,7 +114,7 @@ const ORIGINAL = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/original-feat-gen-wav-single/1829755778"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/original-feat-gen-wav-single/1829755778" onClick={() => trackStreamingClick('Original', 'Apple')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -121,7 +123,7 @@ const ORIGINAL = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/EvL2o5nkaw0"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/EvL2o5nkaw0" onClick={() => trackStreamingClick('Original', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -129,7 +131,7 @@ const ORIGINAL = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/album/450921743"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/album/450921743" onClick={() => trackStreamingClick('Original', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -138,7 +140,7 @@ const ORIGINAL = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://link.deezer.com/s/30Gdh2axITP1D9QIbdtRR"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://link.deezer.com/s/30Gdh2axITP1D9QIbdtRR" onClick={() => trackStreamingClick('Original', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -146,7 +148,7 @@ const ORIGINAL = (props) => {
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/660k61LrBVb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/660k61LrBVb" onClick={() => trackStreamingClick('Original', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -162,7 +164,7 @@ const ORIGINAL = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J" onClick={() => trackStreamingClick('Original', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>
