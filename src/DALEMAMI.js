@@ -181,20 +181,48 @@ const DALEMAMI = (props) => {
       
     </div>
 
-      <div className="aboutNEW" style={{marginTop:"2%", textAlign:"center", width:"60%"}}>
-         <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}><h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3></a>
-          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20538678/dale-mami-graphic-tee" onClick={() => trackMerchClick('DALE MAMI')}><img src="https://images-api.printify.com/mockup/68339d2eb89fa34ad501f8e5/12148/101996/dale-mami-graphic-tee.jpg?camera_label=duo-2&revision=1748213373420&s=400" alt="DALE MAMI Merch" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img></a>
-           <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12798407/dale-mami-oversized-boxy-tee-2" onClick={() => trackMerchClick('DALE MAMI')}><img src="https://images-api.printify.com/mockup/66d8f1916902ffd2f400a2d8/103520/100285/dale-mami-oversized-boxy-tee-2.jpg?camera_label=front&revision=1727638126137&s=400" alt="DALE MAMI Merch" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img></a>
-          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12799113/dale-mami-baby-tee" onClick={() => trackMerchClick('DALE MAMI')}><img src="https://images-api.printify.com/mockup/66d8f81243f52b49cd0cbdfb/110393/105022/dale-mami-baby-tee.jpg?camera_label=front&revision=1727638125438&s=400" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img></a>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}><h3 style={{marginTop:"2%", textAlign:"center"}}>GET YOURS NOW</h3></a>
+  <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .merch-container {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+        .merch-image {
+          width: 80% !important;
+          margin: 10px 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    `}
+  </style>
+  <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}>
+    <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+  </a>
+  <div className="merch-container">
+    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20538678/dale-mami-graphic-tee" onClick={() => trackMerchClick('DALE MAMI')}>
+      <img src="https://images-api.printify.com/mockup/68339d2eb89fa34ad501f8e5/12148/101996/dale-mami-graphic-tee.jpg?camera_label=duo-2&revision=1748213373420&s=400" alt="DALE MAMI Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+    </a>
+    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12798407/dale-mami-oversized-boxy-tee-2" onClick={() => trackMerchClick('DALE MAMI')}>
+      <img src="https://images-api.printify.com/mockup/66d8f1916902ffd2f400a2d8/103520/100285/dale-mami-oversized-boxy-tee-2.jpg?camera_label=front&revision=1727638126137&s=400" alt="DALE MAMI Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+    </a>
+    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12799113/dale-mami-baby-tee" onClick={() => trackMerchClick('DALE MAMI')}>
+      <img src="https://images-api.printify.com/mockup/66d8f81243f52b49cd0cbdfb/110393/105022/dale-mami-baby-tee.jpg?camera_label=front&revision=1727638125438&s=400" alt="CURIOSO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
+    </a>
+  </div>
+  <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}>
+    <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+  </a>
 
-          <h2>Credits</h2>
-          <h4>DALE MAMI</h4>
-          <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
-          <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
-          <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
-          <br></br>
-      </div>
+  <h2>Credits</h2>
+  <h4>DALE MAMI</h4>
+  <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
+  <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
+  <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
+  <br></br>
+</div>
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
         <Grid item xs={12} sm={12}>
