@@ -34,7 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView } from "./MetaPixel";
+import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'DALE MAMI',
@@ -107,7 +107,7 @@ const DALEMAMI = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/0QhyOSP1p4CaWVpnKmdyse?go=1"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/0QhyOSP1p4CaWVpnKmdyse?go=1" onClick={() => trackStreamingClick('DALE MAMI', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -115,7 +115,7 @@ const DALEMAMI = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/dale-mami/1758636150?i=1758636151"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/dale-mami/1758636150?i=1758636151" onClick={() => trackStreamingClick('DALE MAMI', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -124,7 +124,7 @@ const DALEMAMI = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/UMcWMLx1fM4?si=t9i_F0lanewgmYtm"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/UMcWMLx1fM4?si=t9i_F0lanewgmYtm" onClick={() => trackStreamingClick('DALE MAMI', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -140,7 +140,7 @@ const DALEMAMI = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/album/376586855"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/album/376586855" onClick={() => trackStreamingClick('DALE MAMI', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -149,7 +149,7 @@ const DALEMAMI = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/618670361"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/618670361" onClick={() => trackStreamingClick('DALE MAMI', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -157,7 +157,7 @@ const DALEMAMI = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/khr-s-joao-genwav-and-el-igor/dale-mami/ALKrwg49td5fhcZ"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/khr-s-joao-genwav-and-el-igor/dale-mami/ALKrwg49td5fhcZ" onClick={() => trackStreamingClick('DALE MAMI', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -173,22 +173,28 @@ const DALEMAMI = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0D9TYKP7C"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0D9TYKP7C" onClick={() => trackStreamingClick('DALE MAMI', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       
-      <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>DALE MAMI</h4>
-        <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
-        <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
-        <br></br>
-      </div>
-      
     </div>
+
+      <div className="aboutNEW" style={{marginTop:"2%", textAlign:"center", width:"60%"}}>
+         <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}><h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3></a>
+          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20538678/dale-mami-graphic-tee" onClick={() => trackMerchClick('DALE MAMI')}><img src="https://images-api.printify.com/mockup/68339d2eb89fa34ad501f8e5/12148/101996/dale-mami-graphic-tee.jpg?camera_label=duo-2&revision=1748213373420&s=400" alt="DALE MAMI Merch" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img></a>
+           <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12798407/dale-mami-oversized-boxy-tee-2" onClick={() => trackMerchClick('DALE MAMI')}><img src="https://images-api.printify.com/mockup/66d8f1916902ffd2f400a2d8/103520/100285/dale-mami-oversized-boxy-tee-2.jpg?camera_label=front&revision=1727638126137&s=400" alt="DALE MAMI Merch" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img></a>
+          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12799113/dale-mami-baby-tee" onClick={() => trackMerchClick('DALE MAMI')}><img src="https://images-api.printify.com/mockup/66d8f81243f52b49cd0cbdfb/110393/105022/dale-mami-baby-tee.jpg?camera_label=front&revision=1727638125438&s=400" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img></a>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}><h3 style={{marginTop:"2%", textAlign:"center"}}>GET YOURS NOW</h3></a>
+
+          <h2>Credits</h2>
+          <h4>DALE MAMI</h4>
+          <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
+          <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
+          <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
+          <br></br>
+      </div>
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
         <Grid item xs={12} sm={12}>
