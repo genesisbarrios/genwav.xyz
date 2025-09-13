@@ -59,7 +59,7 @@ const LLAMAGEMELA = (props) => {
     }
   }, []);
 
-  uuseEffect(() => {
+  useEffect(() => {
     // Track when LLAMA GEMELA page is viewed
     trackReleasePageView('LLAMA GEMELA');
   }, []);
