@@ -34,7 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView } from "./MetaPixel";
+import { trackReleasePageView, trackStreamingClick, trackMerchClick } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'Hiking Por Mi Mente',
@@ -107,7 +107,7 @@ const NEW = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/0tYdO8T98gQQorusQs98eX?go=1"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/0tYdO8T98gQQorusQs98eX?go=1" onClick={() => trackStreamingClick('LOS IGNORO', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -115,7 +115,7 @@ const NEW = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/los-ignoro-single/1774130821?at=1l3vpUI&ct=LFV_23843f014d653a354d05cd84947a7b70&itsct=catchall_p3&itscg=30440&ls=1"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/los-ignoro-single/1774130821?at=1l3vpUI&ct=LFV_23843f014d653a354d05cd84947a7b70&itsct=catchall_p3&itscg=30440&ls=1" onClick={() => trackStreamingClick('LOS IGNORO', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -124,7 +124,7 @@ const NEW = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.youtube.com/watch?v=yHeAn_iziDQ&feature=youtu.be"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=yHeAn_iziDQ&feature=youtu.be" onClick={() => trackStreamingClick('LOS IGNORO', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -132,7 +132,7 @@ const NEW = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/los-ignoro?si=dd7994b0233944ffb69e68b860353be6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/los-ignoro?si=dd7994b0233944ffb69e68b860353be6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('LOS IGNORO', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -140,7 +140,7 @@ const NEW = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/album/393535526"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/album/393535526" onClick={() => trackStreamingClick('LOS IGNORO', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -157,7 +157,7 @@ const NEW = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/los-ignoro/ALcnj5pZwcv5fdm?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=23843f014d653a354d05cd84947a7b70&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&sharedId=23843f014d653a354d05cd84947a7b70&_branch_match_id=1246765915340556405&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&_branch_referrer=H4sIAAAAAAAAA62QT0vEMBDFP033lt3YpF1XKLIowsIigjcvyzSZ%2FrFtEibZ7W0%2Fu1NR8eZFSMLL5M37JelSCvFuswngrCdYQwjrsXfD5j7LtcU4JB9OZxqrbjFmap%2FlTzzmeV5%2Ftxg%2FcQUo9TGxaNHNcBF8KIaORBTvHjzXRx9F3zpPy2Z%2FNO69CG%2BzuRSNnVYM6308WcSw0E8BUld9AS76B1uDGWKCFhfgWJ%2BnTD0lP6DL1OP%2ByDYtldL5Ti6B3E2%2Bt%2F8YejUdOIdj9cKvdUhZLh8gwehbVq8IZDoW%2B5cDr4LnkalNT7gK7K%2FGZmU8UZWrW60aeaNtWShQhbayMPZW7%2FQWtvVWfro5%2FRkmrH4irgamAPyBv%2BHnmPz0KQ%2BPX0woS4UKpSj1TgptrBU1yFyYAmrb2NLu8ptV7IDQHuzfd7kSNkjUu%2FZUk58jUvXQEUM%2FAKDA%2F9w5AgAA"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/los-ignoro/ALcnj5pZwcv5fdm?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=23843f014d653a354d05cd84947a7b70&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&sharedId=23843f014d653a354d05cd84947a7b70&_branch_match_id=1246765915340556405&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&_branch_referrer=H4sIAAAAAAAAA62QT0vEMBDFP033lt3YpF1XKLIowsIigjcvyzSZ%2FrFtEibZ7W0%2Fu1NR8eZFSMLL5M37JelSCvFuswngrCdYQwjrsXfD5j7LtcU4JB9OZxqrbjFmap%2FlTzzmeV5%2Ftxg%2FcQUo9TGxaNHNcBF8KIaORBTvHjzXRx9F3zpPy2Z%2FNO69CG%2BzuRSNnVYM6308WcSw0E8BUld9AS76B1uDGWKCFhfgWJ%2BnTD0lP6DL1OP%2ByDYtldL5Ti6B3E2%2Bt%2F8YejUdOIdj9cKvdUhZLh8gwehbVq8IZDoW%2B5cDr4LnkalNT7gK7K%2FGZmU8UZWrW60aeaNtWShQhbayMPZW7%2FQWtvVWfro5%2FRkmrH4irgamAPyBv%2BHnmPz0KQ%2BPX0woS4UKpSj1TgptrBU1yFyYAmrb2NLu8ptV7IDQHuzfd7kSNkjUu%2FZUk58jUvXQEUM%2FAKDA%2F9w5AgAA" onClick={() => trackStreamingClick('LOS IGNORO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -165,13 +165,43 @@ const NEW = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.amazon.com/albums/B0DK4L3J74?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=23843f014d653a354d05cd84947a7b70&ref=dmm_acq_soc_us_u_lfire_lp_x_23843f014d653a354d05cd84947a7b70"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0DK4L3J74?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=23843f014d653a354d05cd84947a7b70&ref=dmm_acq_soc_us_u_lfire_lp_x_23843f014d653a354d05cd84947a7b70" onClick={() => trackStreamingClick('LOS IGNORO', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       
-      <div className="aboutNEW">
+     
+    <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+          <style>
+            {`
+              @media (max-width: 768px) {
+                .merch-container {
+                  display: flex !important;
+                  flex-direction: column !important;
+                  align-items: center !important;
+                }
+                .merch-image {
+                  width: 80% !important;
+                  margin: 10px 0 !important;
+                  margin-right: 0 !important;
+                }
+              }
+            `}
+          </style>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('LOS IGNORO')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+          </a>
+          <div className="merch-container">
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/14727232/los-ignoro-boxy-tee-2" onClick={() => trackMerchClick('LOS IGNORO', 'Graphic Tee')}>
+              <img src="https://images-api.printify.com/mockup/671d58d96a6345124c0f1a46/103522/100285/los-ignoro-boxy-tee-2.jpg?camera_label=front&revision=1743812752046&s=400" alt="LOS IGNORO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+        
+          </div>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('LOS IGNORO')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+          </a>
+         
         <h2>Credits</h2>
         <h4>Los Ignoro</h4>
         <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> x <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a> 

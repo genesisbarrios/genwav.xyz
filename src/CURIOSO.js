@@ -130,7 +130,7 @@ const CURIOSO = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/4asV8S8lwFgnqW1YiAn9zq?si=0eb0dda7b5bf44a9"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/4asV8S8lwFgnqW1YiAn9zq?si=0eb0dda7b5bf44a9" onClick={() => trackStreamingClick('CURIOSO', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -138,7 +138,7 @@ const CURIOSO = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/song/curioso/1812760855"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/song/curioso/1812760855" onClick={() => trackStreamingClick('CURIOSO', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
          
@@ -148,7 +148,7 @@ const CURIOSO = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/LSvpDv6h1wI"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/LSvpDv6h1wI" onClick={() => trackStreamingClick('CURIOSO', 'YouTube')} ><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            
@@ -157,7 +157,7 @@ const CURIOSO = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/curioso?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" ><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/curioso?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('CURIOSO', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -165,7 +165,7 @@ const CURIOSO = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/track/434311465"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/track/434311465" onClick={() => trackStreamingClick('CURIOSO', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -174,7 +174,7 @@ const CURIOSO = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://dzr.page.link/uy9vMovczjtrPbCFA"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://dzr.page.link/uy9vMovczjtrPbCFA" onClick={() => trackStreamingClick('CURIOSO', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -182,7 +182,7 @@ const CURIOSO = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/wE22DKydYTb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/wE22DKydYTb" onClick={() => trackStreamingClick('CURIOSO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -190,7 +190,7 @@ const CURIOSO = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/curioso"><button className="pre-save-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/curioso" onClick={() => trackStreamingClick('CURIOSO', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> 
            <Grid container spacing={2} className="logo-button-container">
@@ -198,7 +198,7 @@ const CURIOSO = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0F7P3TM6J?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_KhtNk3lkg3y0Uc0MpifEZ0boX"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F7P3TM6J?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_KhtNk3lkg3y0Uc0MpifEZ0boX" onClick={() => trackStreamingClick('CURIOSO', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           
@@ -207,14 +207,41 @@ const CURIOSO = (props) => {
 
 
      
-      <div className="aboutNEW">
-         <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
-          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>MERCH</h3>
-           <img src="https://images-api.printify.com/mockup/684234a27a2844ab2c06b711/12148/92661/curioso-unisex-heavy-cotton-tee.jpg?camera_label=person-4&revision=1749171740730" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-            <img src="CURIOSOBOTTLEOPENER.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-           <img src="CURIOSOTANK.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-           <h3 style={{marginTop:"2%", textAlign:"center"}}>GET YOURS NOW</h3>
-         </a>
+       <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  .merch-container {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                  }
+                  .merch-image {
+                    width: 80% !important;
+                    margin: 10px 0 !important;
+                    margin-right: 0 !important;
+                  }
+                }
+              `}
+            </style>
+            <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('CURIOSO')}>
+              <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+            </a>
+            <div className="merch-container">
+              <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20801058/curioso-unisex-heavy-cotton-tank-top" onClick={() => trackMerchClick('CURIOSO', 'Graphic Tee')}>
+                <img src="https://images-api.printify.com/mockup/6842370b27abc9360a0ed618/76986/105321/curioso-unisex-heavy-cotton-tank-top.jpg?camera_label=on-person-2&revision=1750726891012&s=400" alt="CURIOSO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+              </a>
+              <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20801438/curioso-bottle-opener" onClick={() => trackMerchClick('CURIOSO', 'Accessories')}>
+                <img src="https://images-api.printify.com/mockup/68423ad6bf9d7f6bf0027246/72401/16133/curioso-bottle-opener.jpg?camera_label=context-3&revision=1749171597513&s=400" alt="CURIOSO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+              </a>
+                <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20800953/curioso-unisex-heavy-cotton-tee" onClick={() => trackMerchClick('CURIOSO', 'Graphic Tee')}>
+                <img src="https://images-api.printify.com/mockup/684234a27a2844ab2c06b711/12148/92661/curioso-unisex-heavy-cotton-tee.jpg?camera_label=person-4&revision=1750727745828&s=400" alt="CURIOSO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+              </a>
+            </div>
+            <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('CURIOSO')}>
+              <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+            </a>
+    
       
         <h2 style={{marginTop:"20%"}}>Credits</h2>
         <h4>Curioso</h4>

@@ -90,7 +90,7 @@ const LLAMAGEMELA = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/1mF8IXTr7YLihY2MR2Y9MM?si=ug7giTqoSfGu5klG__R-4w&context=spotify%3Aalbum%3A3C6irYsZLnKycU1PK61igu"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/1mF8IXTr7YLihY2MR2Y9MM?si=ug7giTqoSfGu5klG__R-4w&context=spotify%3Aalbum%3A3C6irYsZLnKycU1PK61igu" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -98,7 +98,7 @@ const LLAMAGEMELA = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/llama-gemela-single/1795557308"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/llama-gemela-single/1795557308" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
          
@@ -108,7 +108,7 @@ const LLAMAGEMELA = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/cYjOcN5XzjY"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/cYjOcN5XzjY" onClick={() => trackStreamingClick('LLAMA GEMELA', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            
@@ -117,7 +117,7 @@ const LLAMAGEMELA = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/llama-gemela?si=56502da010fb4f09b62a1895ebfca4b3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/llama-gemela?si=56502da010fb4f09b62a1895ebfca4b3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -125,7 +125,7 @@ const LLAMAGEMELA = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/album/426697319"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/album/426697319" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -134,7 +134,7 @@ const LLAMAGEMELA = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/734127551"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/734127551" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -142,7 +142,7 @@ const LLAMAGEMELA = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/llama-gemela/llama-gemela/TRJZzb4c9Jt4Xq4"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/llama-gemela/llama-gemela/TRJZzb4c9Jt4Xq4" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -150,7 +150,7 @@ const LLAMAGEMELA = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/album/llamagemela"><button className="pre-save-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/album/llamagemela" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> 
            <Grid container spacing={2} className="logo-button-container">
@@ -158,7 +158,7 @@ const LLAMAGEMELA = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.amazon.com/albums/B0DWQS8V2X?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=429cae4327c9a39dc64163a7214b5416&ref=dmm_acq_soc_us_u_lfire_lp_x_429cae4327c9a39dc64163a7214b5416"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0DWQS8V2X?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=429cae4327c9a39dc64163a7214b5416&ref=dmm_acq_soc_us_u_lfire_lp_x_429cae4327c9a39dc64163a7214b5416" onClick={() => trackStreamingClick('LLAMA GEMELA', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>

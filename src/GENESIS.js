@@ -11,29 +11,9 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Alert, SliderThumb } from "@material-ui/core";
 import '@react95/icons/icons.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import {Card, CardContent, div, Paper} from "@material-ui/core";
-import { Carousel } from 'react-responsive-carousel';
-/* Pick a theme of your choice */
-import brick from 'react95/dist/themes/brick';
-import blue from 'react95/dist/themes/blue';
-import original from 'react95/dist/themes/original';
-import millenium from 'react95/dist/themes/millenium';
-import vaporTeal from 'react95/dist/themes/vaporTeal';
-import modernDark from 'react95/dist/themes/modernDark';
-import azureOrange from 'react95/dist/themes/azureOrange';
-import denim from 'react95/dist/themes/denim';
-import coldGray from 'react95/dist/themes/coldGray';
-import matrix from 'react95/dist/themes/matrix';
-import rainyDay from 'react95/dist/themes/rainyDay';
-import aiee from 'react95/dist/themes/aiee';
-import slate from 'react95/dist/themes/slate';
-import shelbiTeal from 'react95/dist/themes/shelbiTeal';
-import { trackReleasePageView } from "./MetaPixel";
-import { Avatar } from "react95";
-import React from "react";
-import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 
 const GENESIS = (props) => {
   const [email, setEmail] = useState("");
@@ -238,11 +218,45 @@ const GENESIS = (props) => {
           </Grid>
       </Grid>
       
-      <div className="aboutAlbum">
+          <div className="aboutAlbum" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+          <style>
+            {`
+              @media (max-width: 768px) {
+                .merch-container {
+                  display: flex !important;
+                  flex-direction: column !important;
+                  align-items: center !important;
+                }
+                .merch-image {
+                  width: 80% !important;
+                  margin: 10px 0 !important;
+                  margin-right: 0 !important;
+                }
+              }
+            `}
+          </style>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+          </a>
+          <div className="merch-container">
+             <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13729055/genesis-heads-trucker-caps" onClick={() => trackMerchClick('GENESIS', 'Hat')}>
+              <img src="https://images-api.printify.com/mockup/66f9dbf2dd969d5af3041583/84650/56211/genesis-heads-trucker-caps.jpg?camera_label=on-person-2&revision=1727650911010&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20536208/genesis-graphic-tee" onClick={() => trackMerchClick('GENESIS', 'Graphic Tee')}>
+              <img src="https://images-api.printify.com/mockup/683380ed7860a870dc0c7993/12124/92570/genesis-graphic-tee.jpg?camera_label=front&revision=1748205998233&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13556335/genesis-mouse-pad" onClick={() => trackMerchClick('GENESIS',  'Accessories')}>
+              <img src="https://images-api.printify.com/mockup/66f3a4df049f17caae0f4911/71665/12298/genesis-mouse-pad.jpg?camera_label=context-1&revision=1727636620526&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
+            </a>
+          </div>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+          </a>
         <h2>About the Album</h2>
         <p>I had no idea what I was getting myself into when I started this project, but it was so worth the blood, sweat, and tears. What started as an EP with a couple features on it ended up being my debut album and it wouldn’t have been possible without all my friends and colleagues. I'm not an artist that's bound to one genre, that's why this project is packed with different genres, and fusions. Although I stick true to my Cuban roots, I'm sure there's a song for everyone in it. It was created over the past year, while still releasing singles monthly and I would appreciate from the bottom of my heart if you took a listen 🙏🏽🫶🏽🌊</p>
         <br></br>
         <p>GENESIS is about self reflection through relationship, self awareness, transformation, and coming back to yourself and your purpose. ⭐</p>    
+        <p> gen.wav (5.30.24)</p>    
         <br></br>
         <h2>Credits</h2>
         <h4>El Ingeniero</h4>

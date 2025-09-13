@@ -33,7 +33,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView } from "./MetaPixel";
+import { trackMerchClick, trackReleasePageView, trackStreamingClick } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'GAFAS',
@@ -128,7 +128,7 @@ const GAFAS = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/2nN9F1IMGjxLdSUTG9E7Uo?go=1&nd=1&dlsi=3dc4d0eabfb849da"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/2nN9F1IMGjxLdSUTG9E7Uo?go=1&nd=1&dlsi=3dc4d0eabfb849da" onClick={() => trackStreamingClick('GAFAS', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -136,7 +136,7 @@ const GAFAS = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/gafas/1807881342?i=1807881349"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/gafas/1807881342?i=1807881349" onClick={() => trackStreamingClick('GAFAS', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
          
@@ -146,7 +146,7 @@ const GAFAS = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/-ib94hRDt7E"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/-ib94hRDt7E" onClick={() => trackStreamingClick('GAFAS', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            
@@ -155,7 +155,7 @@ const GAFAS = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/gafas?si=e113f77d96d24cfe84a4013188f325eb&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" ><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/gafas?si=e113f77d96d24cfe84a4013188f325eb&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('GAFAS', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -163,7 +163,7 @@ const GAFAS = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/album/429388373"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/album/429388373" onClick={() => trackStreamingClick('GAFAS', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -172,7 +172,7 @@ const GAFAS = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://dzr.page.link/dGfC2W12BXEeGNNS8"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://dzr.page.link/dGfC2W12BXEeGNNS8" onClick={() => trackStreamingClick('GAFAS', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -180,7 +180,7 @@ const GAFAS = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/0LV0Cr2NOSb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/0LV0Cr2NOSb " onClick={() => trackStreamingClick('GAFAS', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -196,21 +196,45 @@ const GAFAS = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0F4J5HDX2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_biEaxRWVYfQZzg2g8MtztkwqE&trackAsin=B0F4HTFBF6"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F4J5HDX2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_biEaxRWVYfQZzg2g8MtztkwqE&trackAsin=B0F4HTFBF6" onClick={() => trackStreamingClick('GAFAS', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           
         </Grid>
       </Grid> 
       
-      <div className="aboutNEW">
-
-       <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
-          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>MERCH</h3>
-           <img src="GAFASKEYRING.jpg" alt="CURIOSO Merch" style={{width:"80%", height:"auto", margin:"0 auto"}}></img>
-           <img src="GAFASSHIRT.jpg" alt="CURIOSO Merch" style={{width:"80%", height:"auto", margin:"0 auto"}}></img>
-           <h3 style={{marginTop:"2%", marginBottom:"10%", textAlign:"center"}}>GET YOURS NOW</h3>
-         </a>
+      
+        <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .merch-container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+              }
+              .merch-image {
+                width: 80% !important;
+                margin: 10px 0 !important;
+                margin-right: 0 !important;
+              }
+            }
+          `}
+        </style>
+        <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GAFAS')}>
+          <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+        </a>
+        <div className="merch-container">
+          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20538157/gafas-graphic-tee" onClick={() => trackMerchClick('GAFAS', 'Graphic Tee')}>
+            <img src="https://images-api.printify.com/mockup/683394871c570ad91d0e37f0/11866/92662/gafas-graphic-tee.jpg?camera_label=lifestyle&revision=1748211806809&s=400" alt="GAFAS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+          </a>
+          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20279028/gafas-keyring" onClick={() => trackMerchClick('GAFAS', 'Accessories')}>
+            <img src="https://images-api.printify.com/mockup/682434e79c4aa669bd089082/72762/16497/gafas-keyring.jpg?camera_label=front&revision=1749172338393&s=400" alt="GAFAS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+          </a>
+        </div>
+        <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GAFAS')}>
+          <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+        </a>
 
         <h2>Credits</h2>
         <h4>GAFAS</h4>

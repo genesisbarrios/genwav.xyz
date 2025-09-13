@@ -202,14 +202,14 @@ const DALEMAMI = (props) => {
     <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
   </a>
   <div className="merch-container">
-    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20538678/dale-mami-graphic-tee" onClick={() => trackMerchClick('DALE MAMI')}>
+    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20538678/dale-mami-graphic-tee" onClick={() => trackMerchClick('DALE MAMI', 'Graphic Tee')}>
       <img src="https://images-api.printify.com/mockup/68339d2eb89fa34ad501f8e5/12148/101996/dale-mami-graphic-tee.jpg?camera_label=duo-2&revision=1748213373420&s=400" alt="DALE MAMI Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
     </a>
-    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12798407/dale-mami-oversized-boxy-tee-2" onClick={() => trackMerchClick('DALE MAMI')}>
+    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12798407/dale-mami-oversized-boxy-tee-2" onClick={() => trackMerchClick('DALE MAMI', 'Graphic Tee')}>
       <img src="https://images-api.printify.com/mockup/66d8f1916902ffd2f400a2d8/103520/100285/dale-mami-oversized-boxy-tee-2.jpg?camera_label=front&revision=1727638126137&s=400" alt="DALE MAMI Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
     </a>
-    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12799113/dale-mami-baby-tee" onClick={() => trackMerchClick('DALE MAMI')}>
-      <img src="https://images-api.printify.com/mockup/66d8f81243f52b49cd0cbdfb/110393/105022/dale-mami-baby-tee.jpg?camera_label=front&revision=1727638125438&s=400" alt="CURIOSO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
+    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/12799113/dale-mami-baby-tee" onClick={() => trackMerchClick('DALE MAMI', 'Baby Tee')}>
+      <img src="https://images-api.printify.com/mockup/66d8f81243f52b49cd0cbdfb/110393/105022/dale-mami-baby-tee.jpg?camera_label=front&revision=1727638125438&s=400" alt="DALE MAMI Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
     </a>
   </div>
   <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('DALE MAMI')}>

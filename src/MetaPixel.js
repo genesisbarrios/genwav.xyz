@@ -57,7 +57,7 @@ export const trackStreamingClick = (releaseName, platform) => {
 };
 
 // Helper function to track merch clicks
-export const trackMerchClick = (releaseName, merchType = 'general') => {
+export const trackMerchClick = (releaseName, merchType) => {
   if (typeof window !== 'undefined' && window.fbq) {
     // Just use custom event since it's an outbound link
     window.fbq('trackCustom', 'MerchWebsiteClick', {

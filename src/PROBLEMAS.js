@@ -34,7 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView } from "./MetaPixel";
+import { trackReleasePageView , trackMerchClick, trackStreamingClick} from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'Problemas',
@@ -107,7 +107,7 @@ useEffect(() => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/2mbmclOmQft9YXG3dnShDc?si=bbbbc130252d4ffa"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/2mbmclOmQft9YXG3dnShDc?si=bbbbc130252d4ffa" onClick={() => trackStreamingClick('PROBLEMAS', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -115,7 +115,7 @@ useEffect(() => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/problemas-single/1788235988"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/problemas-single/1788235988" onClick={() => trackStreamingClick('PROBLEMAS', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -124,7 +124,7 @@ useEffect(() => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/ePWbipWfWnc"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/ePWbipWfWnc" onClick={() => trackStreamingClick('PROBLEMAS', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -132,7 +132,7 @@ useEffect(() => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/problemas-genwav-jo-merino-khrs-joao-dani-mao"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/problemas-genwav-jo-merino-khrs-joao-dani-mao" onClick={() => trackStreamingClick('PROBLEMAS', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -140,7 +140,7 @@ useEffect(() => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://listen.stage.tidal.com/album/408851064"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://listen.stage.tidal.com/album/408851064" onClick={() => trackStreamingClick('PROBLEMAS', 'Tidal')} ><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -149,7 +149,7 @@ useEffect(() => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/691592041"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/691592041"><button className="pre-save-button" onClick={() => trackStreamingClick('PROBLEMAS', 'Deezer')}>Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -157,7 +157,7 @@ useEffect(() => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/jo-merino-khr-s-joao-genwav-and-dani-mako/problemas/ALjdtrlqV6xmX2q"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/jo-merino-khr-s-joao-genwav-and-dani-mako/problemas/ALjdtrlqV6xmX2q" onClick={() => trackStreamingClick('PROBLEMAS', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -173,13 +173,45 @@ useEffect(() => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DS1KTB3J" onClick={() => trackStreamingClick('PROBLEMAS', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       
-      <div className="aboutNEW">
+    
+    <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .merch-container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+              }
+              .merch-image {
+                width: 80% !important;
+                margin: 10px 0 !important;
+                margin-right: 0 !important;
+              }
+            }
+          `}
+        </style>
+        <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('PROBLEMAS')}>
+          <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+        </a>
+        <div className="merch-container">
+          <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/16809977/problemas-graphic-tee-unisex-cotton-crew-tee" onClick={() => trackMerchClick('PROBLEMAS', 'Graphic Tee')}>
+            <img src="https://images-api.printify.com/mockup/6779ef11bbbed2545f0dd3f7/17645/103295/problemas-graphic-tee-unisex-cotton-crew-tee.jpg?camera_label=front&revision=1743810875347&s=400" alt="PROBLEMAS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+          </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/16810194/problemas-magnets" onClick={() => trackMerchClick('PROBLEMAS', 'Accessories')}>
+            <img src="https://images-api.printify.com/mockup/6779f1f9376607057e0c84d9/62035/3379/problemas-magnets.jpg?camera_label=front&revision=1743810549523&s=400" alt="PROBLEMAS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+          </a>
+        </div>
+        <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('PROBLEMAS')}>
+          <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+        </a>
+  
         <h2>Credits</h2>
         <h4>Problemas</h4>
         <a href="https://www.instagram.com/iamjomerino/" target="_blank">Jo Merino</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/itsdanimako/" target="_blank">Dani Mako</a>

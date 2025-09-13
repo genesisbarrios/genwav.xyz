@@ -33,7 +33,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView } from "./MetaPixel";
+import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'Pay Off One Day',
@@ -128,7 +128,7 @@ const ONEDAY = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/7vPLrkpjqEl4dfI5zEf0Jn?go=1&nd=1&dlsi=369da14867bc4f26"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/7vPLrkpjqEl4dfI5zEf0Jn?go=1&nd=1&dlsi=369da14867bc4f26" onClick={() => trackStreamingClick('Pay Off One Day', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -136,7 +136,7 @@ const ONEDAY = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/pay-off-one-day-single/1805030518"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/pay-off-one-day-single/1805030518" onClick={() => trackStreamingClick('Pay Off One Day', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
          
@@ -146,7 +146,7 @@ const ONEDAY = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/osRvdIys4mo"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/osRvdIys4mo" onClick={() => trackStreamingClick('Pay Off One Day', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            
@@ -155,7 +155,7 @@ const ONEDAY = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/pay-off-one-day?si=95ef7752e9b04d9f9986ba8347d8bcda&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/pay-off-one-day?si=95ef7752e9b04d9f9986ba8347d8bcda&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('Pay Off One Day', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -163,7 +163,7 @@ const ONEDAY = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/album/417146877"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/album/417146877" onClick={() => trackStreamingClick('Pay Off One Day', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -172,7 +172,7 @@ const ONEDAY = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/711047601"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/711047601" onClick={() => trackStreamingClick('Pay Off One Day', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -180,7 +180,7 @@ const ONEDAY = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/pay-off-1-day/pay-off-1-day/TR64Pj26jzdt7j6"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/pay-off-1-day/pay-off-1-day/TR64Pj26jzdt7j6" onClick={() => trackStreamingClick('Pay Off One Day', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -188,29 +188,56 @@ const ONEDAY = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/pay-off-one-day"><button className="pre-save-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/pay-off-one-day" onClick={() => trackStreamingClick('Pay Off One Day', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid> 
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}} onClick={() => trackStreamingClick('Pay Off One Day', 'Amazon')}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0F2RDD65P?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p78oxG1GqY0jJ0yKUHhWBG3zc&trackAsin=B0F2RJG6ZG"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0F2RDD65P?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p78oxG1GqY0jJ0yKUHhWBG3zc&trackAsin=B0F2RJG6ZG" onClick={() => trackStreamingClick('Pay Off One Day', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>
       </Grid> 
       
-      <div className="aboutNEW">
-         <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/">
-          <h3 style={{marginTop:"2%", marginBottom:"2%", textAlign:"center"}}>MERCH</h3>
-           <img src="ONEDAYSHIRT.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-            <img src="ONEDAYCAP.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-           <img src="ONEDAYKEYRING.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-            <img src="ONEDAYBOTTLE.jpg" alt="CURIOSO Merch" style={{width:"30%", height:"auto", margin:"0 auto"}}></img>
-           <h3 style={{marginTop:"2%", textAlign:"center"}}>GET YOURS NOW</h3>
-         </a>
+      
+             <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+                  <style>
+                    {`
+                      @media (max-width: 768px) {
+                        .merch-container {
+                          display: flex !important;
+                          flex-direction: column !important;
+                          align-items: center !important;
+                        }
+                        .merch-image {
+                          width: 80% !important;
+                          margin: 10px 0 !important;
+                          margin-right: 0 !important;
+                        }
+                      }
+                    `}
+                  </style>
+                  <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('Pay Off One Day')}>
+                    <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+                  </a>
+                  <div className="merch-container">
+                    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20996224/one-day-keyring" onClick={() => trackMerchClick('Pay Off One Day', 'Accessories')}>
+                      <img src="https://images-api.printify.com/mockup/684e4de8047ae76743046344/72762/16498/one-day-keyring.jpg?camera_label=context-2&revision=1749962399073&s=400" alt="Pay Off One Day Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+                    </a>
+                    <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/19339968/one-day-trucker-caps" onClick={() => trackMerchClick('Pay Off One Day', 'Hat')}>
+                      <img src="https://images-api.printify.com/mockup/67f0549e2e5a1414390872db/104276/102305/one-day-trucker-caps.jpg?camera_label=on-person-2&revision=1743803715107&s=400" alt="Pay Off One Day Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+                    </a>
+                      <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/19339727/one-day-unisex-heavy-cotton-tee" onClick={() => trackMerchClick('Pay Off One Day', 'Graphic Tee')}>
+                      <img src="https://images-api.printify.com/mockup/67f04ebecfe6b81efc0c9d3a/11998/92661/one-day-unisex-heavy-cotton-tee.jpg?camera_label=person-4&revision=1743803230869&s=400" alt="Pay Off One Day Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+                    </a>
+                  </div>
+                  <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('Pay Off One Day')}>
+                    <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+                  </a>
+          
 
         <h2>Credits</h2>
         <h4>Pay Off One Day</h4>
