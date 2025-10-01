@@ -63,6 +63,13 @@ export default function ConstituentTemplate() {
   };
 
   return (
+    <div>
+     <MetaTags>
+    <title>Anti Trans Legislation Outreach Template</title>
+    <meta id="meta-description" name="description" content="Anti Trans Legislation Outreach Template" />
+    <meta id="og-title" property="og:title" content="Anti Trans Legislation Outreach Template" />
+    <meta id="og-image" property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Transgender_Pride_flag.svg/1200px-Transgender_Pride_flag.svg.png" />
+    </MetaTags>
     <Paper style={{ maxWidth: '800px', margin: '2% auto', padding: '24px' }}>
      <Typography variant="h4" component="h1" gutterBottom>
         Anti-Trans Law Outreach Template
@@ -200,5 +207,6 @@ export default function ConstituentTemplate() {
         Tip: Fill in the recipient and location fields to replace placeholders, then copy & paste the result into your representative's contact form or email client.
       </Typography>
     </Paper>
+    </div>
   );
 }
