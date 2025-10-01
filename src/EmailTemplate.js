@@ -25,19 +25,21 @@ export default function ConstituentTemplate() {
   const [includeShort, setIncludeShort] = useState(false);
 
   // Use custom title if "Other" is selected, otherwise use the selected title
-  const actualRecipientTitle = recipientTitle === "Other" ? customRecipientTitle : recipientTitle;
+  const actualRecipientTitle = useMemo(
+    () => (recipientTitle === "Other" ? customRecipientTitle : recipientTitle),
+    [recipientTitle, customRecipientTitle]
+  );
 
   const template = useMemo(() => {
+  const body = `Dear ${actualRecipientTitle} ${recipientLastName || "[Last Name]"},\n\n` +
+    `My name is ${yourName || "[Your Name]"}, and I am writing to you because I am deeply concerned about the wave of legislation targeting transgender people in our country.\n\n` +
+    `As a constituent of ${state || "[Your State]"}, I expect my elected officials to protect *all* their constituents. I want to urge you to oppose any anti-trans laws that are targeting trans adults, as we are free, tax-paying U.S. citizens.\n\n` +
+    `Leadership means protecting the vulnerable. Even Jesus taught us to care for the poor and marginalized, yet policies being advanced seek to take away social programs and strip people of their rights. This is not what true public service looks like.\n\n` +
+    `I am asking you to stand on the side of justice and equality. Please protect the rights of your transgender constituents and reject harmful legislation.\n\n` +
+    `Sincerely,\n${yourName || "[Your Full Name]"}\n${city || "[Your City]"}, ${state || "[Your State]"}`;
 
-    const body = `Dear ${actualRecipientTitle} ${recipientLastName || "[Last Name]"},\n\n` +
-      `My name is ${yourName || "[Your Name]"}, and I am writing to you because I am deeply concerned about the wave of legislation targeting transgender people in our country.\n\n` +
-      `As a constituent of ${state || "[Your State]"}, I expect my elected officials to protect *all* their constituents. I want to urge you to oppose any anti-trans laws that are targeting trans adults, as we are free, tax-paying U.S. citizens.\n\n` +
-      `Leadership means protecting the vulnerable. Even Jesus taught us to care for the poor and marginalized, yet policies being advanced seek to take away social programs and strip people of their rights. This is not what true public service looks like.\n\n` +
-      `I am asking you to stand on the side of justice and equality. Please protect the rights of your transgender constituents and reject harmful legislation.\n\n` +
-      `Sincerely,\n${yourName || "[Your Full Name]"}\n${city || "[Your City]"}, ${state || "[Your State]"}`;
-
-    return (body);
-  }, [recipientTitle, recipientLastName, yourName, city, state, includeShort]);
+  return (body);
+}, [actualRecipientTitle, customRecipientTitle, recipientTitle, recipientLastName, yourName, city, state, includeShort]);
 
   const copyToClipboard = async () => {
     try {
