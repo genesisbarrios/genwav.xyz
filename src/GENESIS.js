@@ -11,7 +11,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Alert, SliderThumb } from "@material-ui/core";
 import '@react95/icons/icons.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
+import { GlobeSimple, InstagramLogo, PatreonLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
 import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 
@@ -479,6 +479,11 @@ const GENESIS = (props) => {
                     <DiscordLogo style={{color: 'purple'}} size={20}></DiscordLogo>
                   </a>
                 </div>
+                 <div style={{display:"inline"}}>
+                    <a target="_blank" href="https://patreon.com/genwav?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" style={{textDecoration:"none"}}>
+                      <PatreonLogo style={{color: 'white'}} size={20}></PatreonLogo>
+                    </a>
+                  </div>
               </div>
             </Grid>
           </Grid>

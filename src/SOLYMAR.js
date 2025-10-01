@@ -33,7 +33,7 @@ import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./Me
 import { Avatar } from "react95";
 import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
-import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
+import { GlobeSimple, InstagramLogo, PatreonLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
 
 const SOLYMAR = (props) => {
@@ -521,6 +521,11 @@ const SOLYMAR = (props) => {
                     <DiscordLogo style={{color: 'purple'}} size={20}></DiscordLogo>
                   </a>
                 </div>
+                 <div style={{display:"inline"}}>
+                    <a target="_blank" href="https://patreon.com/genwav?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" style={{textDecoration:"none"}}>
+                      <PatreonLogo style={{color: 'white'}} size={20}></PatreonLogo>
+                    </a>
+                  </div>
               </div>
             </Grid>
           </Grid>

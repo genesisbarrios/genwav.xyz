@@ -211,7 +211,7 @@ const GenWavOS = (props) => {
                   </div>
                    <div style={{display:"inline"}}>
                     <a target="_blank" href="https://patreon.com/genwav?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" style={{textDecoration:"none"}}>
-                     <PatreonLogo style={{color: 'purple'}} size={20}></PatreonLogo>
+                     <PatreonLogo style={{color: 'white'}} size={20}></PatreonLogo>
                     </a>
                   </div>
                 </div>

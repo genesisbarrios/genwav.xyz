@@ -72,7 +72,7 @@ export default function ConstituentTemplate() {
     </MetaTags>
     <Paper style={{ maxWidth: '800px', margin: '2% auto', padding: '24px' }}>
      <Typography variant="h4" component="h1" gutterBottom>
-        Anti-Trans Law Outreach Template
+        Anti-Trans Law Outreach Template 🏳️‍⚧️
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom style={{ marginBottom: '24px', color: '#666' }}>
         Contact Your Lawmakers to Oppose Anti-Trans Legislation
