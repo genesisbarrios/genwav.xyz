@@ -66,7 +66,7 @@ export default function ConstituentTemplate() {
         Anti-Trans Law Outreach Template
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom style={{ marginBottom: '24px', color: '#666' }}>
-        Contact Your Lawmakers
+        Contact Your Lawmakers to Oppose Anti-Trans Legislation
         </Typography>
 
       <Grid container spacing={3} style={{ marginBottom: '16px' }}>
@@ -119,6 +119,16 @@ export default function ConstituentTemplate() {
         </Grid>
 
         <Grid item xs={12} md={6}>
+          <TextField
+            fullWidth
+            label="City"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            placeholder="[Your City]"
+          />
+        </Grid>
+
+        <Grid item xs={12}>
           <TextField
             fullWidth
             label="State"
