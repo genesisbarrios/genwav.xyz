@@ -121,16 +121,6 @@ export default function ConstituentTemplate() {
         <Grid item xs={12} md={6}>
           <TextField
             fullWidth
-            label="City"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            placeholder="[Your City]"
-          />
-        </Grid>
-
-        <Grid item xs={12}>
-          <TextField
-            fullWidth
             label="State"
             value={state}
             onChange={(e) => setState(e.target.value)}
