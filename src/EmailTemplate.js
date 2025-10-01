@@ -14,7 +14,7 @@ import {
   Grid, 
   Paper 
 } from '@material-ui/core';
-
+import { MetaTags } from "react-meta-tags";
 export default function ConstituentTemplate() {
   const [recipientTitle, setRecipientTitle] = useState("Representative");
   const [customRecipientTitle, setCustomRecipientTitle] = useState("");

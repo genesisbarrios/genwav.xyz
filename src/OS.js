@@ -13,7 +13,7 @@ import ReactModal from 'react-modal';
 import { Avatar } from "react95";
 import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
-import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo  } from "@phosphor-icons/react";
+import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, PatreonLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
 import {Card, CardContent, div, Paper} from "@material-ui/core";
 
@@ -207,6 +207,11 @@ const GenWavOS = (props) => {
                   <div style={{display:"inline"}}>
                     <a target="_blank" href="https://discord.com/invite/2MdNjbHnBR" style={{textDecoration:"none"}}>
                       <DiscordLogo style={{color: 'purple'}} size={20}></DiscordLogo>
+                    </a>
+                  </div>
+                   <div style={{display:"inline"}}>
+                    <a target="_blank" href="https://patreon.com/genwav?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" style={{textDecoration:"none"}}>
+                     <PatreonLogo style={{color: 'purple'}} size={20}></PatreonLogo>
                     </a>
                   </div>
                 </div>
