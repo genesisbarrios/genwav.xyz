@@ -141,7 +141,14 @@ const GenWavOS = (props) => {
               </CardContent>
             </Card>
           
-              <Card className="card" style={{width:'90%', minHeight: '200px'}}>
+             <Card className="card" style={{width:'90%', minHeight: '200px', marginBottom:"5%"}}>
+                <div className="cardHeader"><img className="image" src="https://dl.dropboxusercontent.com/s/6vust1jdp7z9iav22r8to/WAV-PACK-VOL.-II.jpg?rlkey=jaacek14fg07zr501im1bmr5z&st=vf1ckdxb&dl=0" width="20px" ></img> The Wav Pack Vol. II - Sample Pack</div>
+                  <a className="slide" target="_blank" href="https://www.beatstars.com/genwav/sound-kits/236319">
+                    <img src="/WavPack.jpg" style={{width:"100%", cursor:"pointer"}} />
+                  </a>
+              </Card>
+              
+              {/* <Card className="card" style={{width:'90%', minHeight: '200px'}}>
                   <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_120.ico" width="25" height="25" className="image" /> Services</div>
                   <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} showIndicators={false} infiniteLoop showThumbs={false} className="custom-carousel">
                       <div className="slide" style={{cursor:"pointer"}}>
@@ -157,7 +164,7 @@ const GenWavOS = (props) => {
                           </a>
                       </div>
                   </Carousel>
-              </Card>
+              </Card> */}
         </Grid>
        
           <Grid item xs={12} sm={12} md={4} order={{ xs: 1, sm: 1 }} style={{ width: "80%" }}>
@@ -325,13 +332,6 @@ const GenWavOS = (props) => {
                   </div>
               </div>
 
-              <Card className="card" style={{width:'90%', minHeight: '200px', marginBottom:"5%"}}>
-                <div className="cardHeader"><img className="image" src="https://dl.dropboxusercontent.com/s/6vust1jdp7z9iav22r8to/WAV-PACK-VOL.-II.jpg?rlkey=jaacek14fg07zr501im1bmr5z&st=vf1ckdxb&dl=0" width="20px" ></img> The Wav Pack Vol. II - Sample Pack</div>
-                  <a className="slide" target="_blank" href="https://www.beatstars.com/genwav/sound-kits/236319">
-                    <img src="/WavPack.jpg" style={{width:"100%", cursor:"pointer"}} />
-                  </a>
-              </Card>
-              
               <Card className="card" style={{width:'90%', minHeight: '200px', marginTop:"5%"}}>
               <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/wangimg_130.ico" width="20px"></img> Gallery</div>
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
@@ -421,10 +421,9 @@ const GenWavOS = (props) => {
                       </div>
                   </Carousel>
               </Card>
+              
+          </Grid>
 
-             
-          </Grid>   
-         
           <Grid item sm={12} md={4} order={{ xs: 2, md: 3 }} style={{marginTop:"6%"}}>
               <Card className="card" style={{width:'90%', minHeight: '200px', marginBottom:"20px"}}>
               <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_116.ico" width="20" height="20" className="inage"/> Stream My Music</div>
@@ -443,7 +442,7 @@ const GenWavOS = (props) => {
                   ></iframe>
                 </CardContent>
               </Card>
-            <Card className="card" style={{width:'90%', minHeight: '800px'}}>
+            <Card className="card" style={{width:'90%', minHeight: '500px'}}>
             <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/cd_music.ico" width="25" height="25" className="inage" /> Digital Collectibles - Music NFTs</div>
               <CardContent>
                 <Paper style={{marginBottom:"10px"}}>
@@ -470,7 +469,9 @@ const GenWavOS = (props) => {
                   <Paper style={{marginTop:"10px"}}>
                     <a href="https://beta.catalog.works/gendotwav/soltero" target="_blank" style={{textDecoration:"none", color:"black"}}>Soltero feat. El Igor on Catalog</a>
                   </Paper>
-                  <br></br>
+                  <Paper style={{marginTop:"10px"}}>
+                    <a href="https://www.ninaprotocol.com/releases/gen-wav-27?ref=genwav" target="_blank" style={{textDecoration:"none", color:"black"}}>27 on Nina Protocol</a>
+                  </Paper>
                 </div>
                 {/* <Frame style={{marginBottom:"10px"}}>
                 <a href="https://www.sound.xyz/user/genwav.eth" target="_blank" style={{textDecoration:"none"}}><Button>sound.xyz</Button></a>

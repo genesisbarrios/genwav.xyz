@@ -34,7 +34,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView } from "./MetaPixel";
+import { trackReleasePageView, trackStreamingClick } from "./MetaPixel";
 
 // export const metadata { 
 //   title: 'Hiking Por Mi Mente',
@@ -107,7 +107,7 @@ const HIKING = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/3E1F5TefEhhJ2OlGDxh0A8?si=484bfd6de2704e6c"><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/3E1F5TefEhhJ2OlGDxh0A8?si=484bfd6de2704e6c" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -115,7 +115,7 @@ const HIKING = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/do/album/hiking-por-mi-mente-feat-gen-wav/1769614834?i=1769614835"><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/do/album/hiking-por-mi-mente-feat-gen-wav/1769614834?i=1769614835" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -124,7 +124,7 @@ const HIKING = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/dGg3WreeDT0"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://youtu.be/dGg3WreeDT0" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'YouTube')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           {/* <Grid container spacing={2} className="logo-button-container">
@@ -140,7 +140,7 @@ const HIKING = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/track/388570348"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/browse/track/388570348" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          
@@ -149,7 +149,7 @@ const HIKING = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/618670361"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/618670361" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -157,7 +157,7 @@ const HIKING = (props) => {
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://pandora.app.link/HrnsghmxpNb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/HrnsghmxpNb" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -165,7 +165,7 @@ const HIKING = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0DHLC85V2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_qyMedrIgwoiTnXjAcIVQx1cwb"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0DHLC85V2?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_qyMedrIgwoiTnXjAcIVQx1cwb" onClick={() => trackStreamingClick('Hiking Por Mi Mente', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
         </Grid>

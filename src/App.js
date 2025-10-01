@@ -22,6 +22,7 @@ import SOLYMAR from './SOLYMAR';
 import ORIGINAL from './ORIGINAL';
 import Twentyseven from './TwentySeven';
 import MetaPixel from './MetaPixel';
+import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
 const META_PIXEL_ID = process.env.REACT_APP_META_PIXEL_ID; 
 
 const App = () => {
@@ -127,6 +128,12 @@ const App = () => {
     )
   }
 
+  const EmailTemplateComponent = () => { // Define component for /email-template route
+    return (
+      <EmailTemplate />
+    );
+  }
+
   const ShopRedirect = () => { // Define component for /SHOP route
     window.location.href = "https://enigma-labs.printify.me/products"; // Redirect to external URL
     return null; // Since we're redirecting, return null
@@ -159,6 +166,7 @@ const App = () => {
           <Route path="/27" element={<><Header /><TwentySevenComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
+          <Route path="/emailtemplate" element={<><Header /><EmailTemplateComponent /><Footer /></>} /> 
         </Routes>
         
       </div>
