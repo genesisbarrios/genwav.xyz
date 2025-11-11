@@ -34,7 +34,7 @@ export default function ConstituentTemplate() {
   const body = `Dear ${actualRecipientTitle} ${recipientLastName || "[Last Name]"},\n\n` +
     `My name is ${yourName || "[Your Name]"}, and I am writing to you because I am deeply concerned about the wave of legislation targeting transgender people in our country.\n\n` +
     `As a constituent of ${state || "[Your State]"}, I expect my elected officials to protect *all* their constituents. I want to urge you to oppose any anti-trans laws that are targeting trans people, as we are free, tax-paying U.S. citizens.\n\n` +
-    `Leadership means protecting the vulnerable. Even Jesus taught us to care for the poor and marginalized, yet policies being advanced seek to take away social programs and strip people of their rights. This is not what true public service looks like.\n\n` +
+    `Leadership means protecting the vulnerable. Even Jesus taught us to care for the poor and marginalized, yet policies being advanced seek to take away social programs, erase history and statistics and strip people of their rights. This is not what true public service looks like.\n\n` +
     `I am asking you to stand on the side of justice and equality. Please protect the rights of your transgender constituents and reject harmful legislation.\n\n` +
     `Sincerely,\n${yourName || "[Your Full Name]"}\n${city || "[Your City]"}, ${state || "[Your State]"}`;
 
