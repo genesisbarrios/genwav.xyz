@@ -153,8 +153,8 @@ const RELEASES = (props) => {
                   component="img"
                   alt="22 Artwork"
                   height="250"
-                  image="https://genwav.xyz/22.png"
-                  title="27"
+                  image="https://genwav.xyz/22art.png"
+                  title="22"
                 />
                 <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
                   <Typography variant="h6" component="h6">
