@@ -136,14 +136,14 @@ const Twentyseven = (props) => {
             <a target="_blank" href="https://amazon.com/music/player/albums/B0FYNB2QP4?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_cB2MQZ0taIt8RIINwUG0C3umt" onClick={() => trackStreamingClick('22', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/27" onClick={() => trackStreamingClick('22', 'Bandcamp')}><button className="pre-save-button">Free Download</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/22" onClick={() => trackStreamingClick('22', 'Bandcamp')}><button className="pre-save-button">Free Download</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Grid>
       
