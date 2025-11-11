@@ -111,7 +111,14 @@ const Twentyseven = (props) => {
             <a target="_blank" href="https://tidal.com/track/470647890/u" onClick={() => trackStreamingClick('22', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-         
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+            <a target="_blank" href="https://soundcloud.com/genwav/22a1?si=442a2fa2d60f4fbe809170ebfe7bb280&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('22', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
@@ -141,7 +148,7 @@ const Twentyseven = (props) => {
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/22" onClick={() => trackStreamingClick('22', 'Bandcamp')}><button className="pre-save-button">Free Download</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/22" onClick={() => trackStreamingClick('22', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid>
         </Grid>
