@@ -156,8 +156,9 @@ const Twentyseven = (props) => {
       
       <div className="aboutNEW">
         <h2>Credits</h2>
-        <h4>27</h4>
-        <p>Written and Produced by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <h4>22</h4>
+        <p>Written and Performed by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/cueemusic" target="_blank">Cuee</a></p>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
       
