@@ -70,7 +70,7 @@ const Twentyseven = (props) => {
       <div id="NEWImageDiv">
         <img 
           src="22art.png"
-          alt="22" type="gif"
+          alt="22" type="img"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
