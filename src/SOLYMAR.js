@@ -142,7 +142,7 @@ const SOLYMAR = (props) => {
           alt="SOLYMAR Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
-      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"3%"}}>
+      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"3%", marginBottom:"8%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -210,8 +210,34 @@ const SOLYMAR = (props) => {
             </Grid>
           </Grid>
         </Grid>
+       
       </Grid>
-      <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
+
+         <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/anFyHr6d" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
+             <style>
+            {`
+              /* make the two merch h3s smaller on mobile */
+              @media (max-width: 768px) {
+                .solymar-mini-h3 {
+                  font-size: 14px !important;
+                  margin-top: 8px !important;
+                  margin-bottom: 8px !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .solymar-mini-h3 {
+                  font-size: 12px !important;
+                }
+              }
+            `}
+           </style>
+            <h3 className="solymar-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>SolyMar MINI CD NFC Keychain</h3>
+           <img src="/SolyMar-BOX AND CD-square.jpg" width="30%" style={{borderRadius:"10px"}}></img>
+            <h3 className="solymar-mini-h3" style={{marginTop:"2%"}}>Instant download of all 13 tracks on the album 🎵</h3>
+          </a>
+
+
+      <h2 style={{paddingTop:"10%"}}>Music Videos</h2>
       <Grid container spacing={3} style={{width:"80%", margin:"0 auto"}}>
 
          <Grid item xs={12} lg={4}>
@@ -256,7 +282,6 @@ const SOLYMAR = (props) => {
              <Grid item xs={12} lg={4}>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/HNegsdvMERs" title="Outside My Door - gen.wav, KHR!S João Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
-         
       </Grid>
       
       <div className="aboutAlbum">
