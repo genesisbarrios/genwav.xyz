@@ -187,6 +187,31 @@ const GENESIS = (props) => {
           </Grid>
         </Grid>
       </Grid>
+
+     <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/bB1nh5QB" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
+             <style>
+            {`
+              /* make the two merch h3s smaller on mobile */
+              @media (max-width: 768px) {
+                .genesis-mini-h3 {
+                  font-size: 14px !important;
+                  margin-top: 8px !important;
+                  margin-bottom: 8px !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .genesis-mini-h3 {
+                  font-size: 12px !important;
+                }
+              }
+            `}
+           </style>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GENESIS MINI CD NFC Keychain</h3>
+           <img src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%"}}>Tap to download of all 13 tracks on the album 🎵</h3>
+          </a>
+
+
       <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
       <Grid container spacing={3} style={{width:"80%", margin:"0 auto"}}>
           <Grid item xs={12} lg={4}>
