@@ -198,6 +198,10 @@ const GENESIS = (props) => {
                   margin-top: 8px !important;
                   margin-bottom: 8px !important;
                 }
+                    .mini-cd {
+                  width: 50% !important;
+                  border-radius: 10px !important;
+                }
               }
               @media (max-width: 480px) {
                 .genesis-mini-h3 {
@@ -207,7 +211,7 @@ const GENESIS = (props) => {
             `}
            </style>
             <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GET YOUR MINI CD Keychain 🔑🔗</h3>
-           <img src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
+            <img className="mini-cd" src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
             <h3 className="genesis-mini-h3" style={{marginTop:"2%"}}>Tap to download of all 13 tracks on the album 🎵</h3>
           </a>
 

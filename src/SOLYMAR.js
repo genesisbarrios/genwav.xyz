@@ -223,6 +223,10 @@ const SOLYMAR = (props) => {
                   margin-top: 8px !important;
                   margin-bottom: 8px !important;
                 }
+                  .mini-cd {
+                  width: 50% !important;
+                  border-radius: 10px !important;
+                }
               }
               @media (max-width: 480px) {
                 .solymar-mini-h3 {
@@ -232,7 +236,7 @@ const SOLYMAR = (props) => {
             `}
            </style>
             <h3 className="solymar-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>SolyMar MINI CD NFC Keychain 🔑🔗</h3>
-           <img src="/SolyMar-BOX AND CD-square.jpg" width="30%" style={{borderRadius:"10px"}}></img>
+           <img className="mini-cd" src="/SolyMar-BOX AND CD-square.jpg" width="30%" style={{borderRadius:"10px"}}></img>
             <h3 className="solymar-mini-h3" style={{marginTop:"2%"}}>Tap to download of all 13 tracks on the album 🎵</h3>
           </a>
 
