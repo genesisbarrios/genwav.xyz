@@ -206,7 +206,7 @@ const GENESIS = (props) => {
               }
             `}
            </style>
-            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GENESIS MINI CD NFC Keychain</h3>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GET YOUR MINI CD Keychain 🔑🔗</h3>
            <img src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
             <h3 className="genesis-mini-h3" style={{marginTop:"2%"}}>Tap to download of all 13 tracks on the album 🎵</h3>
           </a>
