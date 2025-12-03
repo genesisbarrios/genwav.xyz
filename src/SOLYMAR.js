@@ -237,7 +237,7 @@ const SOLYMAR = (props) => {
            </style>
             <h3 className="solymar-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>SolyMar MINI CD NFC Keychain 🔑🔗</h3>
            <img className="mini-cd" src="/SolyMar-BOX AND CD-square.jpg" width="30%" style={{borderRadius:"10px"}}></img>
-            <h3 className="solymar-mini-h3" style={{marginTop:"2%"}}>Tap to download of all 13 tracks on the album 🎵</h3>
+            <h3 className="solymar-mini-h3" style={{marginTop:"2%"}}>Tap to download all 13 tracks on the album 🎵</h3>
           </a>
 
 
