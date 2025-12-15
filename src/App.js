@@ -22,6 +22,7 @@ import SOLYMAR from './SOLYMAR';
 import ORIGINAL from './ORIGINAL';
 import Twentyseven from './TwentySeven';
 import TwentyTwo from './TwentyTwo';
+import TURO from './TURO';
 import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
 const META_PIXEL_ID = process.env.REACT_APP_META_PIXEL_ID; 
@@ -135,6 +136,12 @@ const App = () => {
     )
   }
 
+  const TUROComponent = () => {
+    return (
+      <TURO></TURO>
+    )
+  } 
+
   const EmailTemplateComponent = () => { // Define component for /email-template route
     return (
       <EmailTemplate />
@@ -172,6 +179,7 @@ const App = () => {
           <Route path="/ORIGINAL" element={<><Header /><ORIGINALComponent  /><Footer /></>} />
           <Route path="/27" element={<><Header /><TwentySevenComponent  /><Footer /></>} />
           <Route path="/22" element={<><Header /><TwentyTwoComponent  /><Footer /></>} />
+          <Route path="/TURO" element={<><Header /><TUROComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
           <Route path="/emailtemplate" element={<><Header /><EmailTemplateComponent /><Footer /></>} /> 
