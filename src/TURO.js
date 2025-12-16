@@ -300,7 +300,7 @@ const TURO = (props) => {
                 e.preventDefault();
                 handleSubmit();
               }}
-              style={{ marginTop: '0px', padding: '2px 5px' }}
+              style={{ marginTop: '0px', marginBottom:"10px", padding: '2px 5px' }}
               type="submit"
             >
               Submit
