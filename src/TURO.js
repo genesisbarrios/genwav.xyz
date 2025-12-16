@@ -189,14 +189,14 @@ const TURO = (props) => {
             <a target="_blank" href="https://www.amazon.com/ap/oa?response_type=code&client_id=amzn1.application-oa2-client.b1b26a26335a46e79c2ff62d19ed6ace&scope=profile&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Famazon&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9NTMxNzQ3YzEtZDI3NS00Yzc3LThhMzItYmM5MjZhYTcxNTI0JnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D&tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=9d4b5380fca4ea10c28fb641dc0c93e1&ref=dmm_acq_soc_us_u_lfire_lp_x_9d4b5380fca4ea10c28fb641dc0c93e1" onClick={() => trackStreamingClick('TURO', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/22" onClick={() => trackStreamingClick('TURO', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/turo" onClick={() => trackStreamingClick('TURO', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Grid>
       
