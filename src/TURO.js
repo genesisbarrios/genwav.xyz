@@ -203,7 +203,7 @@ const TURO = (props) => {
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>TURO</h4>
-        <p>Written, Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
     </div>
