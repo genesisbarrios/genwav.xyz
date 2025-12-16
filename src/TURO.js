@@ -128,18 +128,18 @@ const TURO = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://accounts.spotify.com/authorize?response_type=code&client_id=5a14783d79444ee9babd9176b256979e&scope=user-follow-modify+user-library-modify+playlist-modify-public+playlist-modify-private+user-read-email+user-read-private&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fspotify&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9ZjBlYjk2NTUtYjFkZS00OWE2LWI4OGQtN2ZlNGFlMTFhYTU1JnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D" onClick={() => trackStreamingClick('TURO', 'Spotify')}><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/7smVFxW51xkO24wuuzzqkI?si=6dafe1fd8eae43bd" onClick={() => trackStreamingClick('TURO', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
 
-         {/* <Grid container spacing={2} className="logo-button-container">
+         <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/22-single/1849840037" onClick={() => trackStreamingClick('TURO', 'Apple')}><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/song/turo/1859859040" onClick={() => trackStreamingClick('TURO', 'Apple')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid>  */}
+          </Grid> 
           
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -154,7 +154,7 @@ const TURO = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://login.tidal.com/authorize?client_id=sgHF2jeIMrbuvJ9l&response_type=code&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Ftidal&lang=en&restrictSignup=true&geo=US&campaignId=default&scope=r_usr&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9Y2M4ZWJhMTYtYzMzMC00OGVjLWJlYTItMmY3YTk4Y2JkMWMxJnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D" onClick={() => trackStreamingClick('TURO', 'Tidal')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/track/480269234/u" onClick={() => trackStreamingClick('TURO', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -170,23 +170,23 @@ const TURO = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fdeezer&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9ZmFlOTc2YzAtZWI0Ni00YjNlLWI4YWQtMGJlOTFlYWMxZDcwJnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D" onClick={() => trackStreamingClick('TURO', 'Deezer')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://link.deezer.com/s/31TsJXPPvYWHeJC0jghgM" onClick={() => trackStreamingClick('TURO', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-           {/* <Grid container spacing={2} className="logo-button-container">
+           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-cuee/22/22/TR7qbwfnZ5pfmrk?part=ug-desktop&corr=160031720547034956" onClick={() => trackStreamingClick('TURO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/genwav/turo/turo/TR77jVpkcjz3qKc?part=ug-desktop&corr=160031720547034956" onClick={() => trackStreamingClick('TURO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/ap/oa?response_type=code&client_id=amzn1.application-oa2-client.b1b26a26335a46e79c2ff62d19ed6ace&scope=profile&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Famazon&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9NTMxNzQ3YzEtZDI3NS00Yzc3LThhMzItYmM5MjZhYTcxNTI0JnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D&tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=9d4b5380fca4ea10c28fb641dc0c93e1&ref=dmm_acq_soc_us_u_lfire_lp_x_9d4b5380fca4ea10c28fb641dc0c93e1" onClick={() => trackStreamingClick('TURO', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://amazon.com/music/player/albums/B0G5WHQKBJ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_9DEt18cj5AchNH1B1geiISNqm" onClick={() => trackStreamingClick('TURO', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
