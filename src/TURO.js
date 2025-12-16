@@ -74,7 +74,7 @@ const TURO = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/ygPPhauuNCY?si=XvUa0LERdMzXNjJ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
+      <iframe id="NEWVideo" width="50%" height="315" src="https://youtu.be/r9IH7G8MlcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
 
       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <Grid item xs={12} sm={12}>
@@ -101,7 +101,7 @@ const TURO = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=772283799845-9ni04mapb0pafg0mhtro97t6f2rk5jhu.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fmusic&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fyoutube&access_type=offline&prompt=consent&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9NWU0YzQyMzQtY2M3Mi00NDU0LWE2MGItMjg1YzM1ZGY0YjgwJnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D"><button className="pre-save-button" onClick={() => trackStreamingClick('TURO', 'YouTube')}>Stream</button></a>
+            <a target="_blank" href="https://youtu.be/d76s1UUpe90"><button className="pre-save-button" onClick={() => trackStreamingClick('TURO', 'YouTube')}>Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -162,7 +162,7 @@ const TURO = (props) => {
         <br></br>
       </div>
     </div>
-    
+
     <div
       className="card"
       style={{
