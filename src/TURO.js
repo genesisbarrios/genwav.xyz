@@ -40,6 +40,12 @@ import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./Me
 const TURO = (props) => {
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");
+   const [email, setEmail] = useState("");
+    const [fan, setFan] = useState(true);
+    const [name, setName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [producer, setProducer] = useState(false);
+    const [artist, setArtist] = useState(false);
 
   useEffect(() => {
     
@@ -51,9 +57,48 @@ const TURO = (props) => {
   }, []);
 
   useEffect(() => {
-    // Track when 22 page is viewed
-    trackReleasePageView('22');
+    // Track when TURO page is viewed
+    trackReleasePageView('TURO');
   }, []);
+
+  function handleSubmit() {
+      console.log('handle submit request to subscribe')
+    
+      // Check if data is valid
+      if (!email) {
+        console.log('No e-mail address provided');
+        setAlert('Please set an e-mail address~');
+        return;
+      }
+  
+      const dataToSend = {
+        email,
+        producer,
+        artist,
+        fan,
+        name,
+        phoneNumber
+      };
+    
+      // Make a POST request using Axios
+      axios.post('https://genwav-node-server.vercel.app/addUser', dataToSend, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(() => {
+          console.log('Request successful');
+          setMessage("Your e-mail has been saved!")
+          setAlert(''); // Resetting alert if necessary
+        })
+        .catch((error) => {
+          setAlert("There was an error.");
+          console.error('Error: ', error);
+          setMessage(''); // Resetting message if necessary
+        });
+    }
+  
+    
 
  
   return(
@@ -117,7 +162,7 @@ const TURO = (props) => {
               <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/22a1?si=442a2fa2d60f4fbe809170ebfe7bb280&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('TURO', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/turo?si=cc1bc73dcde74f1ba5b77b9871523126&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('TURO', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -128,14 +173,14 @@ const TURO = (props) => {
             <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fdeezer&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdHVybyZzSWQ9ZmFlOTc2YzAtZWI0Ni00YjNlLWI4YWQtMGJlOTFlYWMxZDcwJnRJZD01Mjk3ZGUzZi1mZmNhLTRlNDEtYjJkYy1jNWRlODNlMWZlYmYmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZ0dXJvJnZ0PTlkNGI1MzgwZmNhNGVhMTBjMjhmYjY0MWRjMGM5M2UxJnZ1PTY5M2I1Y2YxMGQwYmM3Ljg4NDM5MTU3JnJmPWRpcmVjdA%3D%3D" onClick={() => trackStreamingClick('TURO', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-           <Grid container spacing={2} className="logo-button-container">
+           {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
             <a target="_blank" href="https://www.pandora.com/artist/genwav-and-cuee/22/22/TR7qbwfnZ5pfmrk?part=ug-desktop&corr=160031720547034956" onClick={() => trackStreamingClick('TURO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid>
+          </Grid> */}
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
@@ -332,4 +377,4 @@ const TURO = (props) => {
         
 };
 
-export default Twentyseven;
+export default TURO;
