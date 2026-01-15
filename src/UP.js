@@ -186,7 +186,7 @@ const UP = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.amazon.com/ap/oa?response_type=code&client_id=amzn1.application-oa2-client.b1b26a26335a46e79c2ff62d19ed6ace&scope=profile&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Famazon&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPTUzMTc0N2MxLWQyNzUtNGM3Ny04YTMyLWJjOTI2YWE3MTUyNCZ0SWQ9Zjg2Y2EyNTItM2YxNC00OWM4LTk1Y2UtMjk3MzMyMmViODVlJnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9ZTg4OWVkZTczMmU1NTNlZjYwZDMxZDA1YmM1ZGI2ZTAmdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0&tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=e889ede732e553ef60d31d05bc5db6e0&ref=dmm_acq_soc_us_u_lfire_lp_x_e889ede732e553ef60d31d05bc5db6e0" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Pre-Save</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0GDS9D3G3?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=4d21a1ece2610bdf3912bcaa475f9915&ref=dmm_acq_soc_us_u_lfire_lp_x_4d21a1ece2610bdf3912bcaa475f9915" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Pre-Save</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
