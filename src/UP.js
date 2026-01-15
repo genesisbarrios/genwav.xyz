@@ -170,7 +170,7 @@ const UP = (props) => {
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fdeezer&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPWZhZTk3NmMwLWViNDYtNGIzZS1iOGFkLTBiZTkxZWFjMWQ3MCZ0SWQ9ODgzNTg0YmQtODI0Yi00OWY4LTg1NmQtMDI0MDUxOTlkMTU4JnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9YzZmNzJiZWVkMGRlMzA0OGYyYWVmYzE3Mzk5M2FhMWImdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0" onClick={() => trackStreamingClick('UP', 'Deezer')}><button className="pre-save-button">Pre-Save</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/889763842" onClick={() => trackStreamingClick('UP', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -186,7 +186,7 @@ const UP = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.amazon.com/albums/B0GDS9D3G3?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=4d21a1ece2610bdf3912bcaa475f9915&ref=dmm_acq_soc_us_u_lfire_lp_x_4d21a1ece2610bdf3912bcaa475f9915" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Pre-Save</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0GDS9D3G3?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=4d21a1ece2610bdf3912bcaa475f9915&ref=dmm_acq_soc_us_u_lfire_lp_x_4d21a1ece2610bdf3912bcaa475f9915" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
