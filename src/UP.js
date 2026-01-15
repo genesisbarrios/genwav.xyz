@@ -128,7 +128,7 @@ const UP = (props) => {
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://accounts.spotify.com/authorize?response_type=code&client_id=5a14783d79444ee9babd9176b256979e&scope=user-follow-modify+user-library-modify+playlist-modify-public+playlist-modify-private+user-read-email+user-read-private&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fspotify&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPWYwZWI5NjU1LWIxZGUtNDlhNi1iODhkLTdmZTRhZTExYWE1NSZ0SWQ9ODgzNTg0YmQtODI0Yi00OWY4LTg1NmQtMDI0MDUxOTlkMTU4JnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9YzZmNzJiZWVkMGRlMzA0OGYyYWVmYzE3Mzk5M2FhMWImdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0" onClick={() => trackStreamingClick('UP', 'Spotify')}><button className="pre-save-button">Pre-Save</button></a>
+             <a target="_blank" href="https://open.spotify.com/album/7cMR5xD6ueMhPItkG7oWwI?go=1" onClick={() => trackStreamingClick('UP', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
 
@@ -137,7 +137,7 @@ const UP = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://venice.lnk.to/up" onClick={() => trackStreamingClick('UP', 'Apple')}><button className="pre-save-button">Pre-Save</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/1866067348?app=music&at=1l3vpUI&ct=LFV_e889ede732e553ef60d31d05bc5db6e0&itscg=30440&itsct=catchall_p3&lId=214982091&cId=none&sr=3&src=Linkfire&ls=1" onClick={() => trackStreamingClick('UP', 'Apple')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid> 
           
@@ -146,7 +146,7 @@ const UP = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=772283799845-9ni04mapb0pafg0mhtro97t6f2rk5jhu.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fmusic&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fyoutube&access_type=offline&prompt=consent&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPTVlNGM0MjM0LWNjNzItNDQ1NC1hNjBiLTI4NWMzNWRmNGI4MCZ0SWQ9ODgzNTg0YmQtODI0Yi00OWY4LTg1NmQtMDI0MDUxOTlkMTU4JnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9YzZmNzJiZWVkMGRlMzA0OGYyYWVmYzE3Mzk5M2FhMWImdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0"><button className="pre-save-button" onClick={() => trackStreamingClick('UP', 'YouTube')}>Pre-Save</button></a>
+            <a target="_blank" href="https://music.youtube.com/playlist?list=OLAK5uy_lFBCe5qARpsqwWxHS5322GCzoETXYBHos&src=Linkfire&lId=278a2816-dfa9-401b-a3db-c48f009683cb&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751"><button className="pre-save-button" onClick={() => trackStreamingClick('UP', 'YouTube')}>Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -154,17 +154,17 @@ const UP = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://login.tidal.com/authorize?client_id=sgHF2jeIMrbuvJ9l&response_type=code&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Ftidal&lang=en&restrictSignup=true&geo=US&campaignId=default&scope=r_usr&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPWNjOGViYTE2LWMzMzAtNDhlYy1iZWEyLTJmN2E5OGNiZDFjMSZ0SWQ9ODgzNTg0YmQtODI0Yi00OWY4LTg1NmQtMDI0MDUxOTlkMTU4JnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9YzZmNzJiZWVkMGRlMzA0OGYyYWVmYzE3Mzk5M2FhMWImdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0" onClick={() => trackStreamingClick('UP', 'Tidal')}><button className="pre-save-button">Pre-Save</button></a>
+            <a target="_blank" href="http://www.tidal.com/album/486627712" onClick={() => trackStreamingClick('UP', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/UP?si=cc1bc73dcde74f1ba5b77b9871523126&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('UP', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/up?si=1ecb75e396c848dba7ea47ac4ed79dca&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('UP', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
@@ -173,12 +173,12 @@ const UP = (props) => {
             <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Fdeezer&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPWZhZTk3NmMwLWViNDYtNGIzZS1iOGFkLTBiZTkxZWFjMWQ3MCZ0SWQ9ODgzNTg0YmQtODI0Yi00OWY4LTg1NmQtMDI0MDUxOTlkMTU4JnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9YzZmNzJiZWVkMGRlMzA0OGYyYWVmYzE3Mzk5M2FhMWImdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0" onClick={() => trackStreamingClick('UP', 'Deezer')}><button className="pre-save-button">Pre-Save</button></a>
             </Grid>
           </Grid>
-           {/* <Grid container spacing={2} className="logo-button-container">
+           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav/UP/UP/TR77jVpkcjz3qKc?part=ug-desktop&corr=160031720547034956" onClick={() => trackStreamingClick('UP', 'Pandora')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Fgenwav%2Fup%2FAL6t9qZnv53pr66&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A59008853&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A59008853&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=e889ede732e553ef60d31d05bc5db6e0&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20278a2816-dfa9-401b-a3db-c48f009683cb&sharedId=e889ede732e553ef60d31d05bc5db6e0" onClick={() => trackStreamingClick('UP', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -186,7 +186,7 @@ const UP = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0G5WHQKBJ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_9DEt18cj5AchNH1B1geiISNqm" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.amazon.com/ap/oa?response_type=code&client_id=amzn1.application-oa2-client.b1b26a26335a46e79c2ff62d19ed6ace&scope=profile&redirect_uri=https%3A%2F%2Flnk.to%2F~%2Fprerelease%2Famazon&state=bFVybD12ZW5pY2UubG5rLnRvJTJGdXAmc0lkPTUzMTc0N2MxLWQyNzUtNGM3Ny04YTMyLWJjOTI2YWE3MTUyNCZ0SWQ9Zjg2Y2EyNTItM2YxNC00OWM4LTk1Y2UtMjk3MzMyMmViODVlJnU9aHR0cHMlM0ElMkYlMkZ2ZW5pY2UubG5rLnRvJTJGdXAmdnQ9ZTg4OWVkZTczMmU1NTNlZjYwZDMxZDA1YmM1ZGI2ZTAmdnU9NjkzYjVjZjEwZDBiYzcuODg0MzkxNTcmcmY9ZGlyZWN0&tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=e889ede732e553ef60d31d05bc5db6e0&ref=dmm_acq_soc_us_u_lfire_lp_x_e889ede732e553ef60d31d05bc5db6e0" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Pre-Save</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -196,7 +196,7 @@ const UP = (props) => {
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://genwav.bandcamp.com/track/up" onClick={() => trackStreamingClick('UP', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Grid>
       
