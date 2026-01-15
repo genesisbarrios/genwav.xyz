@@ -146,7 +146,7 @@ const UP = (props) => {
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.youtube.com/playlist?list=OLAK5uy_lFBCe5qARpsqwWxHS5322GCzoETXYBHos&src=Linkfire&lId=278a2816-dfa9-401b-a3db-c48f009683cb&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751"><button className="pre-save-button" onClick={() => trackStreamingClick('UP', 'YouTube')}>Stream</button></a>
+            <a target="_blank" href="https://youtu.be/HviqRXhpktg"><button className="pre-save-button" onClick={() => trackStreamingClick('UP', 'YouTube')}>Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
