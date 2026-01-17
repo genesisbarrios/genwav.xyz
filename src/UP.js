@@ -119,7 +119,7 @@ const UP = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
-      {/* <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/r9IH7G8MlcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        */}
+      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/73bsecH1N2c?si=UmfGlBOqOxoiMv9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
 
       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <Grid item xs={12} sm={12}>
