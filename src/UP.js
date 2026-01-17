@@ -1,7 +1,8 @@
 
 import { useState } from "react";
-import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect } from 'react';
+import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
+import gsap from 'gsap';
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -61,6 +62,98 @@ const UP = (props) => {
     trackReleasePageView('UP');
   }, []);
 
+  useEffect(() => {
+    // Initialize GSAP carousel after DOM is ready
+    const initCarousel = () => {
+      let xPos = 0;
+      const imageCount = 10;
+      const rotationDegrees = 360 / imageCount; // 36 degrees per image
+
+      const getBgPos = (i) => {
+        return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * rotationDegrees) / 360 * 500) + 'px 0px';
+      };
+
+      const dragStart = (e) => {
+        if (e.touches) e.clientX = e.touches[0].clientX;
+        xPos = Math.round(e.clientX);
+        gsap.set('.ring', { cursor: 'grabbing' });
+        window.addEventListener('mousemove', drag);
+        window.addEventListener('touchmove', drag);
+      };
+
+      const drag = (e) => {
+        if (e.touches) e.clientX = e.touches[0].clientX;
+
+        gsap.set('.ring', {
+          rotationY: '-=' + ((Math.round(e.clientX) - xPos) % 360),
+        });
+        gsap.set('.img', { backgroundPosition: (i) => getBgPos(i) });
+
+        xPos = Math.round(e.clientX);
+      };
+
+      const dragEnd = (e) => {
+        window.removeEventListener('mousemove', drag);
+        window.removeEventListener('touchmove', drag);
+        gsap.set('.ring', { cursor: 'grab' });
+      };
+
+      // Initialize carousel
+      gsap.timeline()
+        .set('.ring', { rotationY: 140, cursor: 'grab' })
+        .set('.img', {
+          rotateY: (i) => i * -rotationDegrees,
+          transformOrigin: '50% 50% 500px',
+          z: -500,
+          backgroundPosition: (i) => getBgPos(i),
+          backfaceVisibility: 'hidden',
+          opacity: 1
+        })
+        .add(() => {
+          const imgElements = document.querySelectorAll('.img');
+          imgElements.forEach((img) => {
+            img.addEventListener('mouseenter', (e) => {
+              let current = e.currentTarget;
+              gsap.to('.img', {
+                opacity: (i, t) => (t === current) ? 1 : 0.5,
+                ease: 'power3'
+              });
+            });
+            img.addEventListener('mouseleave', (e) => {
+              gsap.to('.img', { opacity: 1, ease: 'power2.inOut' });
+            });
+          });
+        });
+
+      // Add drag listeners
+      window.addEventListener('mousedown', dragStart);
+      window.addEventListener('touchstart', dragStart);
+      window.addEventListener('mouseup', dragEnd);
+      window.addEventListener('touchend', dragEnd);
+
+      // Return cleanup function
+      return () => {
+        window.removeEventListener('mousedown', dragStart);
+        window.removeEventListener('touchstart', dragStart);
+        window.removeEventListener('mouseup', dragEnd);
+        window.removeEventListener('touchend', dragEnd);
+        window.removeEventListener('mousemove', drag);
+        window.removeEventListener('touchmove', drag);
+      };
+    };
+
+    // Wait for DOM to be ready
+    const timer = setTimeout(() => {
+      const cleanup = initCarousel();
+      // Store cleanup in a ref or variable that can be accessed later
+      return cleanup;
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   function handleSubmit() {
       console.log('handle submit request to subscribe')
     
@@ -114,7 +207,7 @@ const UP = (props) => {
     <div style={{ textAlign: "center" }}>
       <div id="NEWImageDiv">
         <img 
-          src="UPCoverArt.png"
+          src="/UPCoverArt.png"
           alt="UP" type="img"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
@@ -167,7 +260,7 @@ const UP = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.deezer.com/us/album/889763842" onClick={() => trackStreamingClick('UP', 'Deezer')}><button className="pre-save-button">Stream</button></a>
@@ -175,7 +268,7 @@ const UP = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
-             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
             <a target="_blank" href="https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Fgenwav%2Fup%2FAL6t9qZnv53pr66&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A59008853&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A59008853&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=e889ede732e553ef60d31d05bc5db6e0&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20278a2816-dfa9-401b-a3db-c48f009683cb&sharedId=e889ede732e553ef60d31d05bc5db6e0" onClick={() => trackStreamingClick('UP', 'Pandora')}><button className="pre-save-button">Stream</button></a>
@@ -191,7 +284,7 @@ const UP = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://genwav.bandcamp.com/track/up" onClick={() => trackStreamingClick('UP', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
@@ -199,6 +292,21 @@ const UP = (props) => {
           </Grid>
         </Grid>
       </Grid>
+
+      <div className="carouselContainer">
+        <div className="ring">
+          <div className="img" style={{backgroundImage: "url(/UpCarousel1.jpg)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel2.png)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel3.jpg)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel4.jpg)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel5.jpg)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel6.jpg)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel7.jpg)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel8.png)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel9.png)"}}></div>
+          <div className="img" style={{backgroundImage: "url(/UpCarousel10.png)"}}></div>
+        </div>
+      </div>
       
       <div className="aboutNEW">
         <h2>Credits</h2>

@@ -383,6 +383,33 @@ button.legend{
   }
 }
 
+.ring, .img {
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select:none;
+}
+
+.ring {
+  position: absolute;
+}
+
+.img {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.carouselContainer {
+  perspective: 1500px;
+  width: 25%;
+  height: 700px;  
+  position: relative;
+  margin: 40px auto;
+}
+
 @media (max-width: 600px){
 
   
