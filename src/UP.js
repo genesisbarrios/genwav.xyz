@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
-import gsap from 'gsap';
+import useEmblaCarousel from 'embla-carousel-react';
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -62,97 +62,11 @@ const UP = (props) => {
     trackReleasePageView('UP');
   }, []);
 
-  useEffect(() => {
-    // Initialize GSAP carousel after DOM is ready
-    const initCarousel = () => {
-      let xPos = 0;
-      const imageCount = 10;
-      const rotationDegrees = 360 / imageCount; // 36 degrees per image
-
-      const getBgPos = (i) => {
-        return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * rotationDegrees) / 360 * 500) + 'px 0px';
-      };
-
-      const dragStart = (e) => {
-        if (e.touches) e.clientX = e.touches[0].clientX;
-        xPos = Math.round(e.clientX);
-        gsap.set('.ring', { cursor: 'grabbing' });
-        window.addEventListener('mousemove', drag);
-        window.addEventListener('touchmove', drag);
-      };
-
-      const drag = (e) => {
-        if (e.touches) e.clientX = e.touches[0].clientX;
-
-        gsap.set('.ring', {
-          rotationY: '-=' + ((Math.round(e.clientX) - xPos) % 360),
-        });
-        gsap.set('.img', { backgroundPosition: (i) => getBgPos(i) });
-
-        xPos = Math.round(e.clientX);
-      };
-
-      const dragEnd = (e) => {
-        window.removeEventListener('mousemove', drag);
-        window.removeEventListener('touchmove', drag);
-        gsap.set('.ring', { cursor: 'grab' });
-      };
-
-      // Initialize carousel
-      gsap.timeline()
-        .set('.ring', { rotationY: 140, cursor: 'grab' })
-        .set('.img', {
-          rotateY: (i) => i * -rotationDegrees,
-          transformOrigin: '50% 50% 500px',
-          z: -500,
-          backgroundPosition: (i) => getBgPos(i),
-          backfaceVisibility: 'hidden',
-          opacity: 1
-        })
-        .add(() => {
-          const imgElements = document.querySelectorAll('.img');
-          imgElements.forEach((img) => {
-            img.addEventListener('mouseenter', (e) => {
-              let current = e.currentTarget;
-              gsap.to('.img', {
-                opacity: (i, t) => (t === current) ? 1 : 0.5,
-                ease: 'power3'
-              });
-            });
-            img.addEventListener('mouseleave', (e) => {
-              gsap.to('.img', { opacity: 1, ease: 'power2.inOut' });
-            });
-          });
-        });
-
-      // Add drag listeners
-      window.addEventListener('mousedown', dragStart);
-      window.addEventListener('touchstart', dragStart);
-      window.addEventListener('mouseup', dragEnd);
-      window.addEventListener('touchend', dragEnd);
-
-      // Return cleanup function
-      return () => {
-        window.removeEventListener('mousedown', dragStart);
-        window.removeEventListener('touchstart', dragStart);
-        window.removeEventListener('mouseup', dragEnd);
-        window.removeEventListener('touchend', dragEnd);
-        window.removeEventListener('mousemove', drag);
-        window.removeEventListener('touchmove', drag);
-      };
-    };
-
-    // Wait for DOM to be ready
-    const timer = setTimeout(() => {
-      const cleanup = initCarousel();
-      // Store cleanup in a ref or variable that can be accessed later
-      return cleanup;
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
+  const [emblaRef] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'center',
+    containScroll: 'trimSnaps'
+  });
 
   function handleSubmit() {
       console.log('handle submit request to subscribe')
@@ -293,18 +207,38 @@ const UP = (props) => {
         </Grid>
       </Grid>
 
-      <div className="carouselContainer">
-        <div className="ring">
-          <div className="img" style={{backgroundImage: "url(/UpCarousel1.jpg)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel2.png)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel3.jpg)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel4.jpg)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel5.jpg)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel6.jpg)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel7.jpg)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel8.png)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel9.png)"}}></div>
-          <div className="img" style={{backgroundImage: "url(/UpCarousel10.png)"}}></div>
+      <div className="embla" ref={emblaRef}>
+        <div className="embla__container">
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel1.jpg" alt="UP 1" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel2.png" alt="UP 2" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel3.jpg" alt="UP 3" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel4.jpg" alt="UP 4" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel5.jpg" alt="UP 5" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel6.jpg" alt="UP 6" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel7.jpg" alt="UP 7" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UpCarousel8.jpg" alt="UP 8" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UP/UpCarousel9.jpg" alt="UP 9" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/UpCarousel10.jpg" alt="UP 10" className="embla__slide__img" style={{marginRight:"20px"}} />
+          </div>
         </div>
       </div>
       

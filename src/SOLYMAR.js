@@ -35,6 +35,7 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, PatreonLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
+import useEmblaCarousel from 'embla-carousel-react'
 
 const SOLYMAR = (props) => {
   const [email, setEmail] = useState("");
@@ -73,21 +74,11 @@ const SOLYMAR = (props) => {
     }
   }, );
 
-  function handleOpenDialog(){
-    //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>
-    if(document){
-      const dialog = document.querySelector("dialog")
-      dialog.showModal();
-    }
-  }
-
-  function handleCloseSignUp() {
-    if(document){
-      const dialog = document.querySelector("dialog")
-      dialog.close();
-    }
-  }
-
+  const [emblaRef] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'center',
+    containScroll: 'trimSnaps'
+  });
 
   function handleSubmit() {
     console.log('handle submit request to subscribe')
@@ -298,8 +289,42 @@ const SOLYMAR = (props) => {
         <p>Solymar's sound is equal parts celebration and a mirror—reflecting the vibrant energy of Miami's nightlife while revealing the emotional undercurrents that often move beneath the surface., Drawing from reggaetón, alt-Latin, hip-hop, and electronic textures, their music pulses with movement while holding space for reflection. The party tracks pulse with heat and freedom—nights soaked in rhythm, sweat, lust, and escape. But underneath the fun is a deeper current: a quiet recognition that indulgence, when unchecked, can pull us out of alignment. Their love songs explore that same tension—how the things we crave can sometimes lead us astray. Yet the goal is never to reject the pleasure, but to understand it. Solymar's sound is about embracing both the light and the shadow—dancing through temptation, feeling everything fully, and finding harmony somewhere in between.
         </p>    
         <br></br>
-        <div style={{ textAlign: "center" }}>
-          <img src="GENKHRIS.jpg" width="80%" />
+        <div className="embla" ref={emblaRef}>
+            <div className="embla__container">
+              <div className="embla__slide">
+                <img src="/Solymar/GENKHRIS.jpg" alt="UP 1" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/GenChris2.jpg " alt="UP 2" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/Sun.jpg" alt="UP 3" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/moon.jpg" alt="UP 4" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/GenSolo.jpg" alt="UP 6" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/ChrisSolo.jpg" alt="UP 5" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/genkhris3.jpg" alt="UP 7" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/whoweare.png" alt="UP 8" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/thesound.png" alt="UP 9" className="embla__slide__img" />
+              </div>
+              <div className="embla__slide">
+                <img src="/Solymar/collage.png" alt="UP 10" className="embla__slide__img" style={{marginRight:"20px"}} />
+              </div>
+               <div className="embla__slide">
+                <img src="/Solymar/listennow.png" alt="UP 10" className="embla__slide__img" style={{marginRight:"20px"}} />
+              </div>
+            </div>
         </div>
         <Grid container spacing={2}>
           <Grid item xs={12} lg={6}>
@@ -369,10 +394,10 @@ const SOLYMAR = (props) => {
 
           <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('SOLYMAR', 'all')}>
             <h3 style={{marginTop:"2%", marginBottom:"2%"}}>MERCH</h3>
-            <img src="SOLYMARSHIRT.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
-            <img src="SOLYMARKEYRING1.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
-            <img src="SOLYMARKEYRING2.jpeg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
-            <img src="SOLYMARBLACKTEE.jpg" alt="CURIOSO Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARSHIRT.jpg" alt="solymar Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARKEYRING1.jpeg" alt="solymar Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARKEYRING2.jpeg" alt="solymar Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
+            <img src="SOLYMARBLACKTEE.jpg" alt="solymar Merch" style={{width:"50%", height:"auto", margin:"0 auto"}}></img>
             <h3 style={{marginTop:"2%"}}>GET YOURS NOW</h3>
           </a>
 
@@ -380,9 +405,9 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid item xs={12} lg={6}>
               <div style={{ textAlign: "center" }}>
-                <img src="GENSOLYMAR.jpg" width="70%" />
-                <img src="CHRISSOLYMAR.jpg" width="70%" />
-                <img src="GENKHRIS2.jpg" width="70%" />
+                <img src="/Solymar/GENSOLYMAR.jpg" width="70%" />
+                <img src="/Solymar/CHRISSOLYMAR.jpg" width="70%" />
+                <img src="/Solymar/GENKHRIS2.jpg" width="70%" />
               </div>
            </Grid>
         </Grid>

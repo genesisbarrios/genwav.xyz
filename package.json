@@ -20,6 +20,7 @@
     "@testing-library/user-event": "^13.5.0",
     "deso-protocol": "^0.1.6",
     "dotenv": "^10.0.0",
+    "embla-carousel-react": "^8.6.0",
     "fs": "*",
     "gsap": "^3.11.5",
     "jspdf": "^3.0.3",
