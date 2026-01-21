@@ -231,17 +231,19 @@ const UP = (props) => {
             <img src="/UP/UpCarousel7.jpg" alt="UP 7" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
-            <img src="/UpCarousel8.jpg" alt="UP 8" className="embla__slide__img" />
+            <img src="/UP/UpCarousel8.jpg" alt="UP 8" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
             <img src="/UP/UpCarousel9.jpg" alt="UP 9" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
-            <img src="/UpCarousel10.jpg" alt="UP 10" className="embla__slide__img" style={{marginRight:"20px"}} />
+            <img src="/UP/UpCarousel10.jpg" alt="UP 10" className="embla__slide__img" style={{marginRight:"20px"}} />
           </div>
         </div>
       </div>
-      
+
+      <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2240742677&color=%23997a59&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: 10, color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif", fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/up" title="UP" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>UP</a></div>
+
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>UP</h4>

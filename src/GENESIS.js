@@ -14,6 +14,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { GlobeSimple, InstagramLogo, PatreonLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
 import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
+import useEmblaCarousel from 'embla-carousel-react'
 
 const GENESIS = (props) => {
   const [email, setEmail] = useState("");
@@ -53,6 +54,13 @@ const GENESIS = (props) => {
     }
   }, );
 
+   const [emblaRef] = useEmblaCarousel({ 
+      loop: true, 
+      align: 'center',
+      containScroll: 'trimSnaps'
+    });
+  
+
 
   function handleSubmit() {
     console.log('handle submit request to subscribe')
@@ -90,22 +98,6 @@ const GENESIS = (props) => {
         setMessage(''); // Resetting message if necessary
       });
   }
-
-  function handleOpenDialog(){
-    //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>
-    if(document){
-      const dialog = document.querySelector("dialog")
-      dialog.showModal();
-    }
-  }
-
-  function handleCloseSignUp() {
-    if(document){
-      const dialog = document.querySelector("dialog")
-      dialog.close();
-    }
-  }
-
  
   const pdfUrl = 'https://www.dropbox.com/scl/fi/fqwizf2o29pknnfhkxwgz/ELECTRONIC-PRESS-KIT-2.pdf?rlkey=ytaf41lgcv6fte2cgxypn78u6&dl=0';
   
@@ -246,8 +238,86 @@ const GENESIS = (props) => {
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/FQyi0U0Hkrg?si=QvFKGQPolR5Bm20C" title="La Peli - gen.wav Official Music Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; full-screen; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Grid>
       </Grid>
+
+      <div className="aboutAlbum" style={{marginTop:"0%", textAlign:"center", width:"60%"}}>
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .merch-container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+              }
+              .merch-image {
+                width: 80% !important;
+                margin: 10px 0 !important;
+                margin-right: 0 !important;
+              }
+            }
+          `}
+        </style>
       
-          <div className="aboutAlbum" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
+      <h2>About the Album</h2>
+      <p>I had no idea what I was getting myself into when I started this project, but it was so worth the blood, sweat, and tears. What started as an EP with a couple features on it ended up being my debut album and it wouldn’t have been possible without all my friends and colleagues. I'm not an artist that's bound to one genre, that's why this project is packed with different genres, and fusions. Although I stick true to my Cuban roots, I'm sure there's a song for everyone in it. It was created over the past year, while still releasing singles monthly and I would appreciate from the bottom of my heart if you took a listen 🙏🏽🫶🏽🌊</p>
+      <br></br>
+      <p>GENESIS is about self reflection through relationship, self awareness, transformation, and coming back to yourself and your purpose. ⭐</p>    
+      <p> gen.wav (5.30.24)</p>    
+      <br></br>
+    </div>
+
+       <div className="embla" ref={emblaRef}>
+          <div className="embla__container">
+             <div className="embla__slide">
+              <img src="/GENESIS/rabbits.jpg" alt="rabbits 1" className="embla__slide__img" />
+            </div>
+             <div className="embla__slide">
+              <img src="/GENESIS/ELCAMBIO.png" alt="el cambio 1" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/La Peli.png" alt="La Peli 1" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/cachumbambe.JPG" alt="UP 1" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/ElIngeniero.JPG" alt="UP 2" className="embla__slide__img" />
+            </div>
+             <div className="embla__slide">
+              <img src="/GENESIS/tn1.png" alt="tn1 1" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/5-DSC01096.jpg" alt="UP 3" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/6-DSC01095.jpg" alt="UP 4" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/9-DSC01085.jpg" alt="UP 5" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/11-DSC01081.jpg" alt="UP 6" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/14-DSC01075.jpg" alt="UP 7" className="embla__slide__img"/>
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/coraFrio.png" alt="UP 3" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/releaseparty.png" alt="UP 4" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/releaseparty2.png" alt="UP 5" className="embla__slide__img" />
+            </div>
+            <div className="embla__slide">
+              <img src="/GENESIS/tsunami.png" alt="UP 7" className="embla__slide__img"  style={{marginRight:"20px"}}/>
+            </div>
+          </div>
+        </div>
+
+        <iframe width="90%" height="300" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1827273363&color=%234c647c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif", fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/sets/genesis-414993647" title="GENESIS" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>GENESIS</a></div>
+      
+      <div className="aboutAlbum" style={{marginTop:"5%", textAlign:"center", width:"60%"}}>
           <style>
             {`
               @media (max-width: 768px) {
@@ -264,29 +334,6 @@ const GENESIS = (props) => {
               }
             `}
           </style>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
-          </a>
-          <div className="merch-container">
-             <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13729055/genesis-heads-trucker-caps" onClick={() => trackMerchClick('GENESIS', 'Hat')}>
-              <img src="https://images-api.printify.com/mockup/66f9dbf2dd969d5af3041583/84650/56211/genesis-heads-trucker-caps.jpg?camera_label=on-person-2&revision=1727650911010&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
-            </a>
-            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20536208/genesis-graphic-tee" onClick={() => trackMerchClick('GENESIS', 'Graphic Tee')}>
-              <img src="https://images-api.printify.com/mockup/683380ed7860a870dc0c7993/12124/92570/genesis-graphic-tee.jpg?camera_label=front&revision=1748205998233&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
-            </a>
-            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13556335/genesis-mouse-pad" onClick={() => trackMerchClick('GENESIS',  'Accessories')}>
-              <img src="https://images-api.printify.com/mockup/66f3a4df049f17caae0f4911/71665/12298/genesis-mouse-pad.jpg?camera_label=context-1&revision=1727636620526&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
-            </a>
-          </div>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
-          </a>
-        <h2>About the Album</h2>
-        <p>I had no idea what I was getting myself into when I started this project, but it was so worth the blood, sweat, and tears. What started as an EP with a couple features on it ended up being my debut album and it wouldn’t have been possible without all my friends and colleagues. I'm not an artist that's bound to one genre, that's why this project is packed with different genres, and fusions. Although I stick true to my Cuban roots, I'm sure there's a song for everyone in it. It was created over the past year, while still releasing singles monthly and I would appreciate from the bottom of my heart if you took a listen 🙏🏽🫶🏽🌊</p>
-        <br></br>
-        <p>GENESIS is about self reflection through relationship, self awareness, transformation, and coming back to yourself and your purpose. ⭐</p>    
-        <p> gen.wav (5.30.24)</p>    
-        <br></br>
         <h2>Credits</h2>
         <h4>El Ingeniero</h4>
         <p>Produced and Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
@@ -342,6 +389,24 @@ const GENESIS = (props) => {
         <p>Produced, Mixed, and Mastered by gen.wav</p>
         <br></br>
         <p>Album Art and Animations by <a href="https://www.instagram.com/alectheaverage/" target="_blank">Alec Perez</a></p>
+      
+         <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+          </a>
+          <div className="merch-container">
+             <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13729055/genesis-heads-trucker-caps" onClick={() => trackMerchClick('GENESIS', 'Hat')}>
+              <img src="https://images-api.printify.com/mockup/66f9dbf2dd969d5af3041583/84650/56211/genesis-heads-trucker-caps.jpg?camera_label=on-person-2&revision=1727650911010&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20536208/genesis-graphic-tee" onClick={() => trackMerchClick('GENESIS', 'Graphic Tee')}>
+              <img src="https://images-api.printify.com/mockup/683380ed7860a870dc0c7993/12124/92570/genesis-graphic-tee.jpg?camera_label=front&revision=1748205998233&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13556335/genesis-mouse-pad" onClick={() => trackMerchClick('GENESIS',  'Accessories')}>
+              <img src="https://images-api.printify.com/mockup/66f3a4df049f17caae0f4911/71665/12298/genesis-mouse-pad.jpg?camera_label=context-1&revision=1727636620526&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
+            </a>
+          </div>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+          </a>
       </div>
         
           
