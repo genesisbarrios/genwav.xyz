@@ -123,7 +123,7 @@ const MATRIX = (props) => {
         <img 
           src="/RENACI.png"
           alt="THE MATRIX" type="img"
-          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
+          style={{ height: "auto", width: "auto", maxWidth: "20%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
       {/* <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/73bsecH1N2c?si=UmfGlBOqOxoiMv9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        */}
@@ -214,9 +214,8 @@ const MATRIX = (props) => {
         </Grid>
       </Grid>
 
-        <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>THE MATRIX</h4>
+        <div className="aboutNEW" style={{margin:"0 auto", marginBottom:"50px"}}>
+        <h3>THE MATRIX</h3>
         <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
