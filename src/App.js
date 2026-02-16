@@ -26,6 +26,7 @@ import TURO from './TURO';
 import UP from './UP';
 import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
+import MATRIX from './MATRIX';
 const META_PIXEL_ID = process.env.REACT_APP_META_PIXEL_ID; 
 
 const App = () => {
@@ -155,6 +156,12 @@ const App = () => {
     );
   }
 
+  const MATRIXComponent = () => {
+    return (
+      <MATRIX />
+    );
+  }
+
   const ShopRedirect = () => { // Define component for /SHOP route
     window.location.href = "https://enigma-labs.printify.me/products"; // Redirect to external URL
     return null; // Since we're redirecting, return null
@@ -188,6 +195,7 @@ const App = () => {
           <Route path="/22" element={<><Header /><TwentyTwoComponent  /><Footer /></>} />
           <Route path="/TURO" element={<><Header /><TUROComponent  /><Footer /></>} />
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
+          <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
           <Route path="/emailtemplate" element={<><Header /><EmailTemplateComponent /><Footer /></>} /> 
