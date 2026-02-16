@@ -130,12 +130,12 @@ const MATRIX = (props) => {
 
       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <Grid item xs={12} sm={12}>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/7cMR5xD6ueMhPItkG7oWwI?go=1" onClick={() => trackStreamingClick('UP', 'Spotify')}><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/6Z5gCewbH5CSAcQzxTleCj?si=d003eaba59934ffa" onClick={() => trackStreamingClick('UP', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
 
@@ -144,40 +144,40 @@ const MATRIX = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/1866067348?app=music&at=1l3vpUI&ct=LFV_e889ede732e553ef60d31d05bc5db6e0&itscg=30440&itsct=catchall_p3&lId=214982091&cId=none&sr=3&src=Linkfire&ls=1" onClick={() => trackStreamingClick('UP', 'Apple')}><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/the-matrix-single/1875819115" onClick={() => trackStreamingClick('UP', 'Apple')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid>  */}
+          </Grid> 
           
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.youtube.com/playlist?list=OLAK5uy_l9F1KLiSKqA9Sg_u2Noh-_mCCfDO9khpU"><button className="pre-save-button" onClick={() => trackStreamingClick('UP', 'YouTube')}>Pre-Save</button></a>
+            <a target="_blank" href="https://music.youtube.com/playlist?list=OLAK5uy_l9F1KLiSKqA9Sg_u2Noh-_mCCfDO9khpU"><button className="pre-save-button" onClick={() => trackStreamingClick('UP', 'YouTube')}>Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="http://www.tidal.com/album/486627712" onClick={() => trackStreamingClick('UP', 'Tidal')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://tidal.com/album/497377122/u" onClick={() => trackStreamingClick('UP', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/the-matrix?si=5aeddcf97a5a47a4ab547b1872684240&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('UP', 'SoundCloud')}><button className="pre-save-button">Pre-Save</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/the-matrix?si=5aeddcf97a5a47a4ab547b1872684240&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('UP', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          {/* <Grid container spacing={2} className="logo-button-container">
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.deezer.com/us/album/889763842" onClick={() => trackStreamingClick('UP', 'Deezer')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/us/album/914784031" onClick={() => trackStreamingClick('UP', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -185,7 +185,7 @@ const MATRIX = (props) => {
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
-            <a target="_blank" href="https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Fgenwav%2Fup%2FAL6t9qZnv53pr66&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A59008853&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A59008853&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=e889ede732e553ef60d31d05bc5db6e0&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20278a2816-dfa9-401b-a3db-c48f009683cb&sharedId=e889ede732e553ef60d31d05bc5db6e0" onClick={() => trackStreamingClick('UP', 'Pandora')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/genwav/the-matrix/ALk7pJgcjtJwPdP" onClick={() => trackStreamingClick('UP', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -193,9 +193,9 @@ const MATRIX = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.amazon.com/albums/B0GDS9D3G3?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=4d21a1ece2610bdf3912bcaa475f9915&ref=dmm_acq_soc_us_u_lfire_lp_x_4d21a1ece2610bdf3912bcaa475f9915" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0GMG25XLM?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_ADs0m3IuCUeCPPwkxKwDPa1EN&trackAsin=B0GMFW4MJR" onClick={() => trackStreamingClick('UP', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
