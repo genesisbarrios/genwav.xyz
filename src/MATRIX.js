@@ -156,19 +156,19 @@ const MATRIX = (props) => {
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/album/497377122/u" onClick={() => trackStreamingClick('UP', 'Tidal')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
-          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/qobuz.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Qobuz</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://open.qobuz.com/album/se4sp753q358e" onClick={() => trackStreamingClick('MATRIX', 'Qobuz')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+           <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+            <a target="_blank" href="https://tidal.com/album/497377122/u" onClick={() => trackStreamingClick('UP', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
