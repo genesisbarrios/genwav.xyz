@@ -179,14 +179,6 @@ const MATRIX = (props) => {
             <a target="_blank" href="https://soundcloud.com/genwav/the-matrix?si=5aeddcf97a5a47a4ab547b1872684240&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('UP', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-           <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/the-matrix" onClick={() => trackStreamingClick('MATRIX', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
-            </Grid>
-          </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
@@ -209,6 +201,14 @@ const MATRIX = (props) => {
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://music.amazon.com/albums/B0GMG25XLM?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_ADs0m3IuCUeCPPwkxKwDPa1EN&trackAsin=B0GMFW4MJR" onClick={() => trackStreamingClick('MATRIX', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+           <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://genwav.bandcamp.com/track/the-matrix" onClick={() => trackStreamingClick('MATRIX', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
             </Grid>
           </Grid>
         </Grid>
