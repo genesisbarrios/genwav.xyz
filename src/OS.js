@@ -219,8 +219,20 @@ const GenWavOS = (props) => {
               <Card className="card" style={{width:'90%', minHeight: '200px', marginBottom:"20px", marginTop:'10%'}}>
                 <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/vvexe32_1.ico" width="25" height="25" className="inage" /> About</div>
                   <CardContent>
+                    {/* <div style={{textAlign:"center"}}> 
+                      <Avatar size={125} src='https://dl.dropboxusercontent.com/s/m2id1jav2y7dq5pasryzo/mossySQ.png?rlkey=d9cobb0m2spa3mz7egzyfrqx3&st=rvw8qncu&dl=0' />
+                    </div> */}
                     <div style={{textAlign:"center"}}> 
-                      <Avatar size={125} src='https://dl.dropboxusercontent.com/s/aw5uvuev357azdlo72og2/Screenshot-2024-04-18-at-2.18.45-AM.png?rlkey=waj1wtalo8qvyjddhyf768jw0&dl=0' />
+                      <img
+                        src='https://dl.dropboxusercontent.com/s/8xsc91gqw8ptlcu74zdvz/genheadshotWHITE2025.jpg?rlkey=kqnfcd1ii8lfgjtghc5zv002v&st=w2kqq8j2&dl=0'
+                        style={{
+                          width: '125px',
+                          height: '125px',
+                          borderRadius: '50%',
+                          objectFit: 'cover',
+                          objectPosition: 'center'
+                        }}
+                      />
                     </div>
                     <Paper style={{fontSize:"0.8rem"}}> Hi, my name is gen.wav. I'm a Cuban-American Artist, Producer, Multi-Instrumentalist, Audio and Software Engineer. 👨‍💻 A lifelong musician with over 10 years of experience writing, recording, producing and performing music. Featured in Spotify Editorial Playlists, and Colors Studios. Take a look around and the site, you can stream my music, music videos, buy beats, Music NFTS, or just vibe. 🌊</Paper>
                   </CardContent>
