@@ -214,14 +214,14 @@ const MATRIX = (props) => {
         </Grid>
       </Grid>
 
-        <div className="aboutNEW" style={{margin:"0 auto", marginBottom:"50px"}}>
+      <div className="aboutNEW" style={{margin:"0 auto", marginBottom:"50px"}}>
         <h3>THE MATRIX</h3>
         <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
 
-      <iframe width="90%" height="300" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2262768005&color=%2300f3ff&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: 10, color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/the-matrix" title="THE MATRIX" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>THE MATRIX</a></div>
-     
+      <iframe width="90%" height="300" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2262768005&color=%2300f3ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      
     </div>
 
     <div
