@@ -194,6 +194,14 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <img className="logoSize" style={{marginRight: "5px" }} src="deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+            <a target="_blank" href="https://www.deezer.com/en/album/772485441" onClick={() => trackStreamingClick('SOLYMAR', 'Deezer')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+           <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>

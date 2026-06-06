@@ -37,7 +37,6 @@ import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, Di
 import axios from "axios"; 
 import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 
-
 const MATRIX = (props) => {
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");

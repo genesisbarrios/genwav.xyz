@@ -30,13 +30,12 @@ import aiee from 'react95/dist/themes/aiee';
 import slate from 'react95/dist/themes/slate';
 import shelbiTeal from 'react95/dist/themes/shelbiTeal';
 import MetaTags from 'react-meta-tags';
+import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
 import { Avatar } from "react95";
 import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
-
 
 const UP = (props) => {
   const [message, setMessage] = useState("");
