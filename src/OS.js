@@ -483,9 +483,9 @@ const GenWavOS = (props) => {
                 </Grid>
 
                 <div style={{width:"100%", textAlign:"center"}}>
-                  <Paper style={{marginTop:"10px"}}>
+                  {/* <Paper style={{marginTop:"10px"}}>
                     <a href="https://beta.catalog.works/gendotwav/soltero" target="_blank" style={{textDecoration:"none", color:"black"}}>Soltero feat. El Igor on Catalog</a>
-                  </Paper>
+                  </Paper> */}
                   <Paper style={{marginTop:"10px"}}>
                     <a href="https://www.ninaprotocol.com/releases/gen-wav-27?ref=genwav" target="_blank" style={{textDecoration:"none", color:"black"}}>27 on Nina Protocol</a>
                   </Paper>
