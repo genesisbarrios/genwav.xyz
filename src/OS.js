@@ -465,34 +465,19 @@ const GenWavOS = (props) => {
                 <Paper style={{marginBottom:"10px"}}>
                   For those that don't know about Music NFTs, they are digital collectibles. You can collect(or mint) to own a rare, and unique copy of one of my songs. These collectibles will give you access to different features on my website.. It may be free beats, sample packs, or sneak peeks!
                 </Paper>
+
+                <Paper style={{marginBottom:"10px", marginTop:"30px"}}>
+                  Music NFTs have died down over the years and all the platforms I used to sell them on have shut down, but I will have NFTs availble soon through my platform <a href="https://influanto.com" target="_blank" style={{textDecoration:"none", color:"blue"}}>influanto</a> If you want to be the first to know when they drop, and when I launch this feature be sure to sign up for a free account at: <a href="https://checkout.stripe.com/c/pay/cs_live_b1xKsOT4yUnB24LrmZht8gosKChTOvik1YnUT7KE9WqJYB3Y7Q2T7SRf1R#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JwZGZkaGppYFNkd2xka3EnPydmamtxd2ppJyknZHVsTmB8Jz8ndW5aaWxzYFowNFVRTVBfTVxuPEFQcUdVNn1hQVVtUDZhT3FoYl18Z3JVUGJPbzB8TV1BSFNCZDY3dmRHNERdY3N3dWp1MHY3UzZqS1REdGpmS2FJZmtgMXQwU283bWQzSDU1UG9uVn9iYXEnKSdjd2poVmB3c2B3Jz9xd3BgKSdnZGZuYndqcGthRmppancnPycmNTUzMz01JyknaWR8anBxUXx1YCc%2FJ2hwaXFsWmxxYGgnKSdga2RnaWBVaWRmYG1qaWFgd3YnP3F3cGB4JSUl" target="_blank" style={{textDecoration:"none", color:"blue"}}> influanto.com</a>
+                </Paper>
                 
                 <Grid container spacing={2} style={{textAlign:"center"}}>
-                  {/* <Grid item sm={12} md={12}>
-                  <iframe src="https://embed.sound.xyz/v1/release/6d9ec0ae-d689-4b11-9e4e-27216a6fcf10?referral=0x5dec3d6810fd96ac03593b862639ff32d7d1c78e&referral_source=embed-sound" style={{borderRadius: "8px"}} width="100%" height="188px"  allow="clipboard-write" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
-                    <iframe src="https://embed.sound.xyz/v1/release/4cb29261-df3e-4b43-8c37-8af5e9f0f3cf?referral=0x5dec3d6810fd96ac03593b862639ff32d7d1c78e&referral_source=embed-sound" style={{borderRadius: "8px"}} width="100%" height="188px"  allow="clipboard-write" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
-                  </Grid> */}
-                  {/* <Grid item sm={12} md={6}>
-                    <iframe style={{border:"none"}} width="100%" height="250px" src="https://zora.co/collect/zora:0x4dd517d52618a2c5d90699b5fd49e28e4041ddfd/6/frame?padding=20px&mediaPadding=20px&showDetails=false&theme=%7B%22foreground%22%3A%22%23000000%22%2C%22background%22%3A%22%23f3f3f3%22%2C%22accent%22%3A%22%2307ff3b%22%2C%22onAccent%22%3A%22%23000000%22%2C%22border%22%3A%22%23f3f3f3%22%2C%22background2%22%3A%22%23f3f3f3%22%2C%22positive%22%3A%22%231CB687%22%2C%22negative%22%3A%22%23F03232%22%2C%22warning%22%3A%22%23F5A623%22%7D&showMedia=true&showCollectors=false&showMintingUI=true"></iframe>
-                    <iframe style={{border:"none"}} width="100%" height="250px" src="https://zora.co/collect/oeth:0xe5a213495a6186bc85b6411c35286a858cb3675f/1/frame?padding=20px&mediaPadding=20px&showDetails=false&theme=%7B%22foreground%22%3A%22%23000000%22%2C%22background%22%3A%22%23f3f3f3%22%2C%22accent%22%3A%22%2307ff3b%22%2C%22onAccent%22%3A%22%23000000%22%2C%22border%22%3A%22%23f3f3f3%22%2C%22background2%22%3A%22%23f3f3f3%22%2C%22positive%22%3A%22%231CB687%22%2C%22negative%22%3A%22%23F03232%22%2C%22warning%22%3A%22%23F5A623%22%7D&showMedia=true&showCollectors=false&showMintingUI=true"></iframe>
-                   
-                  </Grid>
-                  <Grid item sm={12} md={6}>
-                      <iframe style={{border:"none"}} id="embed" width="100%" height="250px" src="https://zora.co/editions/eth:0x5bc30e809aed2ff3c3bede9804419488e305b258/1/frame?padding=20px&mediaPadding=20px&showDetails=false&theme=%7B%22foreground%22%3A%22%23000000%22%2C%22background%22%3A%22%23f3f3f3%22%2C%22accent%22%3A%22%2307ff3b%22%2C%22onAccent%22%3A%22%23000000%22%2C%22border%22%3A%22%23f3f3f3%22%2C%22background2%22%3A%22%23f3f3f3%22%2C%22positive%22%3A%22%231CB687%22%2C%22negative%22%3A%22%23F03232%22%2C%22warning%22%3A%22%23F5A623%22%7D&showMedia=true&showCollectors=false&showMintingUI=true"></iframe>
-                      <iframe style={{border:"none"}} width="100%" height="250px" src="https://zora.co/collect/oeth:0xb45cd602810c48df0e36c1c292c51b4dd21f8e9d/1/frame?padding=20px&mediaPadding=20px&showDetails=false&theme=%7B%22foreground%22%3A%22%23000000%22%2C%22background%22%3A%22%23f3f3f3%22%2C%22accent%22%3A%22%2307ff3b%22%2C%22onAccent%22%3A%22%23000000%22%2C%22border%22%3A%22%23f3f3f3%22%2C%22background2%22%3A%22%23f3f3f3%22%2C%22positive%22%3A%22%231CB687%22%2C%22negative%22%3A%22%23F03232%22%2C%22warning%22%3A%22%23F5A623%22%7D&showMedia=true&showCollectors=false&showMintingUI=true"></iframe> 
-                  </Grid> */}
+                     {/* 
+                  <Paper style={{marginTop:"10px"}}>
+                    <img src="https://nina.imgix.net/https%3A%2F%2Fgateway.irys.xyz%2FKcacjagaLNNILAsmQl0l9TXgDb6NVf398plVHaC9Y18?ixlib=js-3.8.0&w=640&fm=webp&s=c8c0dc1b06ae2c487c7a9de6075136c1" alt="GenWav 27" style={{maxWidth:"200px", height:"auto", marginTop:"10px"}} />
+                    <div><a href="https://www.ninaprotocol.com/releases/gen-wav-27?ref=genwav" target="_blank" style={{textDecoration:"none", color:"black"}}>27 on Nina Protocol</a></div>
+                  </Paper> */}
                 </Grid>
 
-                <div style={{width:"100%", textAlign:"center"}}>
-                  {/* <Paper style={{marginTop:"10px"}}>
-                    <a href="https://beta.catalog.works/gendotwav/soltero" target="_blank" style={{textDecoration:"none", color:"black"}}>Soltero feat. El Igor on Catalog</a>
-                  </Paper> */}
-                  <Paper style={{marginTop:"10px"}}>
-                    <a href="https://www.ninaprotocol.com/releases/gen-wav-27?ref=genwav" target="_blank" style={{textDecoration:"none", color:"black"}}>27 on Nina Protocol</a>
-                  </Paper>
-                </div>
-                {/* <Frame style={{marginBottom:"10px"}}>
-                <a href="https://www.sound.xyz/user/genwav.eth" target="_blank" style={{textDecoration:"none"}}><Button>sound.xyz</Button></a>
-                </Frame> */}
               </CardContent>
             </Card>
           </Grid>
