@@ -467,10 +467,10 @@ const GenWavOS = (props) => {
                 </Paper>
                 
                 <Grid container spacing={2} style={{textAlign:"center"}}>
-                  <Grid item sm={12} md={12}>
+                  {/* <Grid item sm={12} md={12}>
                   <iframe src="https://embed.sound.xyz/v1/release/6d9ec0ae-d689-4b11-9e4e-27216a6fcf10?referral=0x5dec3d6810fd96ac03593b862639ff32d7d1c78e&referral_source=embed-sound" style={{borderRadius: "8px"}} width="100%" height="188px"  allow="clipboard-write" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
                     <iframe src="https://embed.sound.xyz/v1/release/4cb29261-df3e-4b43-8c37-8af5e9f0f3cf?referral=0x5dec3d6810fd96ac03593b862639ff32d7d1c78e&referral_source=embed-sound" style={{borderRadius: "8px"}} width="100%" height="188px"  allow="clipboard-write" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
-                  </Grid>
+                  </Grid> */}
                   {/* <Grid item sm={12} md={6}>
                     <iframe style={{border:"none"}} width="100%" height="250px" src="https://zora.co/collect/zora:0x4dd517d52618a2c5d90699b5fd49e28e4041ddfd/6/frame?padding=20px&mediaPadding=20px&showDetails=false&theme=%7B%22foreground%22%3A%22%23000000%22%2C%22background%22%3A%22%23f3f3f3%22%2C%22accent%22%3A%22%2307ff3b%22%2C%22onAccent%22%3A%22%23000000%22%2C%22border%22%3A%22%23f3f3f3%22%2C%22background2%22%3A%22%23f3f3f3%22%2C%22positive%22%3A%22%231CB687%22%2C%22negative%22%3A%22%23F03232%22%2C%22warning%22%3A%22%23F5A623%22%7D&showMedia=true&showCollectors=false&showMintingUI=true"></iframe>
                     <iframe style={{border:"none"}} width="100%" height="250px" src="https://zora.co/collect/oeth:0xe5a213495a6186bc85b6411c35286a858cb3675f/1/frame?padding=20px&mediaPadding=20px&showDetails=false&theme=%7B%22foreground%22%3A%22%23000000%22%2C%22background%22%3A%22%23f3f3f3%22%2C%22accent%22%3A%22%2307ff3b%22%2C%22onAccent%22%3A%22%23000000%22%2C%22border%22%3A%22%23f3f3f3%22%2C%22background2%22%3A%22%23f3f3f3%22%2C%22positive%22%3A%22%231CB687%22%2C%22negative%22%3A%22%23F03232%22%2C%22warning%22%3A%22%23F5A623%22%7D&showMedia=true&showCollectors=false&showMintingUI=true"></iframe>
