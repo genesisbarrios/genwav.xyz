@@ -234,7 +234,7 @@ const GenWavOS = (props) => {
                         }}
                       />
                     </div>
-                    <Paper style={{fontSize:"0.8rem"}}> Hi, my name is gen.wav. I'm a Cuban-American Artist, Producer, Multi-Instrumentalist, Audio and Software Engineer. 👨‍💻 A lifelong musician with over 10 years of experience writing, recording, producing and performing music. Featured in Spotify Editorial Playlists, and Colors Studios. Take a look around and the site, you can stream my music, music videos, buy beats, Music NFTS, or just vibe. 🌊</Paper>
+                    <Paper style={{fontSize:"0.8rem"}}> gen.wav is a Trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer rooted in Miami, FL, where his bilingual upbringing shapes every corner of his work. A decade of classical training across piano, cello, violin, and music theory sits beneath a self-taught command of guitar, bass, and production, giving his Latin R&B and hip-hop sound a harmonic depth that sets him apart in Miami's independent scene. Writing freely in both Spanish and English, he draws on his Cuban and Nicaraguan heritage to craft music that refuses to separate cultural identity from personal and political honesty. Featured in Spotify Editorial Playlists, and Colors Studios. Take a look around and the site, you can stream my music, music videos, buy beats, Music NFTS, or just vibe. 🌊</Paper>
                   </CardContent>
               </Card>
           
