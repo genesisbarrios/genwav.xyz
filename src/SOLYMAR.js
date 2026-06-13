@@ -499,6 +499,7 @@ const SOLYMAR = (props) => {
             </Grid>
           </Grid>
       </div>
+      </div>
     );
         
 };

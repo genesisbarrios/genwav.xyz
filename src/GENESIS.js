@@ -314,10 +314,29 @@ const GENESIS = (props) => {
             </div>
           </div>
         </div>
+        <div>
+           <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
+          </a>
+          <div className="merch-container">
+             <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13729055/genesis-heads-trucker-caps" onClick={() => trackMerchClick('GENESIS', 'Hat')}>
+              <img src="https://images-api.printify.com/mockup/66f9dbf2dd969d5af3041583/84650/56211/genesis-heads-trucker-caps.jpg?camera_label=on-person-2&revision=1727650911010&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20536208/genesis-graphic-tee" onClick={() => trackMerchClick('GENESIS', 'Graphic Tee')}>
+              <img src="https://images-api.printify.com/mockup/683380ed7860a870dc0c7993/12124/92570/genesis-graphic-tee.jpg?camera_label=front&revision=1748205998233&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
+            </a>
+            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13556335/genesis-mouse-pad" onClick={() => trackMerchClick('GENESIS',  'Accessories')}>
+              <img src="https://images-api.printify.com/mockup/66f3a4df049f17caae0f4911/71665/12298/genesis-mouse-pad.jpg?camera_label=context-1&revision=1727636620526&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
+            </a>
+          </div>
+          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
+            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
+          </a>
+        </div>
 
         <iframe width="90%" height="300" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1827273363&color=%234c647c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif", fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/sets/genesis-414993647" title="GENESIS" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>GENESIS</a></div>
       
-      <div className="aboutAlbum" style={{marginTop:"5%", textAlign:"center", width:"60%"}}>
+      <div className="aboutAlbum" style={{marginTop:"2%", textAlign:"center", width:"60%"}}>
           <style>
             {`
               @media (max-width: 768px) {
@@ -389,24 +408,6 @@ const GENESIS = (props) => {
         <p>Produced, Mixed, and Mastered by gen.wav</p>
         <br></br>
         <p>Album Art and Animations by <a href="https://www.instagram.com/alectheaverage/" target="_blank">Alec Perez</a></p>
-      
-         <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
-          </a>
-          <div className="merch-container">
-             <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13729055/genesis-heads-trucker-caps" onClick={() => trackMerchClick('GENESIS', 'Hat')}>
-              <img src="https://images-api.printify.com/mockup/66f9dbf2dd969d5af3041583/84650/56211/genesis-heads-trucker-caps.jpg?camera_label=on-person-2&revision=1727650911010&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
-            </a>
-            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/20536208/genesis-graphic-tee" onClick={() => trackMerchClick('GENESIS', 'Graphic Tee')}>
-              <img src="https://images-api.printify.com/mockup/683380ed7860a870dc0c7993/12124/92570/genesis-graphic-tee.jpg?camera_label=front&revision=1748205998233&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
-            </a>
-            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/13556335/genesis-mouse-pad" onClick={() => trackMerchClick('GENESIS',  'Accessories')}>
-              <img src="https://images-api.printify.com/mockup/66f3a4df049f17caae0f4911/71665/12298/genesis-mouse-pad.jpg?camera_label=context-1&revision=1727636620526&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
-            </a>
-          </div>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
-          </a>
       </div>
         
           
