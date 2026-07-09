@@ -24,6 +24,7 @@ import Twentyseven from './TwentySeven';
 import TwentyTwo from './TwentyTwo';
 import TURO from './TURO';
 import UP from './UP';
+import WORLD from './WORLD';
 import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
 import MATRIX from './MATRIX';
@@ -162,6 +163,12 @@ const App = () => {
     );
   }
 
+  const WORLDComponent = () => {
+    return (
+      <WORLD />
+    );
+  }
+
   const ShopRedirect = () => { // Define component for /SHOP route
     window.location.href = "https://enigma-labs.printify.me/products"; // Redirect to external URL
     return null; // Since we're redirecting, return null
@@ -196,6 +203,7 @@ const App = () => {
           <Route path="/TURO" element={<><Header /><TUROComponent  /><Footer /></>} />
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
+          <Route path="/WORLD" element={<><Header /><WORLDComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
           <Route path="/emailtemplate" element={<><Header /><EmailTemplateComponent /><Footer /></>} /> 
