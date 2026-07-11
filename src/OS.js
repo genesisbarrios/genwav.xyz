@@ -126,7 +126,7 @@ const GenWavOS = (props) => {
           <Card className="card" style={{width:'90%', marginBottom:"5%"}}>
             <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_111.ico" width="25" height="25" className="image" />  Music Videos </div>
             <CardContent>
-              <iframe style={{borderRadius:"12px"}} width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q&controls=1" title="YouTube video player" showControls allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe style={{borderRadius:"12px"}} width="100%" height="415" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q&controls=1" title="YouTube video player" showControls allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </CardContent>
           </Card>
           <Card className="card" style={{width:'90%', minHeight: '700px', marginBottom:"5%"}}>
