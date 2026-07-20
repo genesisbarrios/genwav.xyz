@@ -22,6 +22,8 @@ import SOLYMAR from './SOLYMAR';
 import ORIGINAL from './ORIGINAL';
 import Twentyseven from './TwentySeven';
 import TwentyTwo from './TwentyTwo';
+import SINDESTINO from './SINDESTINO';
+import AFTERALL from './AFTERALL';
 import TURO from './TURO';
 import UP from './UP';
 import WORLD from './WORLD';
@@ -40,6 +42,18 @@ const App = () => {
   const EPKComponent = () => {
     return (
       <EPK />
+    );
+  };
+
+  const SINDESTINOComponent = () => {
+    return (
+      <SINDESTINO />
+    );
+  };
+
+  const AFTERALLComponent = () => {
+    return (
+      <AFTERALL />
     );
   };
 
@@ -185,6 +199,8 @@ const App = () => {
           <Route path="/" element={<><Header /><GenWavOSComponent /><Footer /></>} />
           <Route path="/OS" element={<><Header /><GenWavOSComponent /><Footer /></>} />
           <Route path="/RELEASES" element={<><Header /><RELEASESComponent/><Footer /></>} />
+          <Route path="/SINDESTINO" element={<><Header /><SINDESTINOComponent  /><Footer /></>} />
+          <Route path="/AFTERALL" element={<><Header /><AFTERALLComponent  /><Footer /></>} />
           <Route path="/LOSIGNORO" element={<><Header /><LOSIGNOROComponent  /><Footer /></>} />
           <Route path="/3am" element={<><Header /><TEXTINMEComponent  /><Footer /></>} />
           <Route path="/HIKING" element={<><Header /><HIKINGComponent /><Footer /></>} />

@@ -455,7 +455,7 @@ const RELEASES = (props) => {
             </Card>
 
             <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://ffm.to/rko8r4l">
+              <CardActionArea href="https://genwav.xyz/AFTERALL">
                 <CardMedia
                   component="img"
                   alt="After All ALBUM ART"
@@ -489,7 +489,7 @@ const RELEASES = (props) => {
             </Card>
 
             <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://ffm.to/sindestino">
+              <CardActionArea href="https://genwav.xyz/SINDESTINO">
                 <CardMedia
                   component="img"
                   alt="Sin Destino ALBUM ART"

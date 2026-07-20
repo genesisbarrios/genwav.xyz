@@ -164,6 +164,10 @@ const LLAMAGEMELA = (props) => {
         </Grid>
       </Grid> 
       
+<div className="cardHeader">
+            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+        </div>
+
       <div className="aboutNEW">
         <h2>Credits</h2>
         <h4>Llama Gemela</h4>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -37,18 +36,24 @@ import axios from "axios";
 import { trackReleasePageView, trackStreamingClick, trackMerchClick } from "./MetaPixel";
 
 // export const metadata { 
-//   title: 'Hiking Por Mi Mente',
-//   description: 'Hiking Por Mi Mente - KHR!S Joao, gen.wav, Nick Garcia, El Igor',
+//   title: 'CURIOSO',
+//   description: 'CURIOSO - KHR!S Joao, gen.wav',
 //   openGraph: {
-//     title: 'Hiking Por Mi Mente - KHR!S Joao, gen.wav, Nick Garcia, El Igor',
-//     description: 'Hiking Por Mi Mente - KHR!S Joao, gen.wav, Nick Garcia, El Igor',
-//     images: ['DALE-MAMI-COVER-ARTWORK.jpg'], // Path to your image
+//     title: 'CURIOSO - KHR!S Joao, gen.wav',
+//     description: 'CURIOSO - KHR!S Joao, gen.wav',
+//     images: ['llamagemela.jpg'], // Path to your image
 //   },
 // };
 
-const NEW = (props) => {
+const SINDESTINO = (props) => {
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [fan, setFan] = useState(false);
+  const [producer, setProducer] = useState(false);
+  const [artist, setArtist] = useState(false);
 
   useEffect(() => {
     
@@ -60,79 +65,99 @@ const NEW = (props) => {
   }, []);
 
   useEffect(() => {
-    // Track when LOS IGNORO page is viewed
-    trackReleasePageView('LOS IGNORO');
+    // Track when SIN DESTINO page is viewed
+    trackReleasePageView('SIN DESTINO');
   }, []);
 
-  function handleOpenDialog(){
-    //<a href="https://www.beatstars.com/genwav/sound-kits/179946" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}></a>
-    if(document){
-      const dialog = document.querySelector("dialog")
-      dialog.showModal();
-    }
-  }
-
-  function handleCloseSignUp() {
-    if(document){
-      const dialog = document.querySelector("dialog")
-      dialog.close();
-    }
-  }
-
- 
-  const pdfUrl = 'https://www.dropbox.com/scl/fi/fqwizf2o29pknnfhkxwgz/ELECTRONIC-PRESS-KIT-2.pdf?rlkey=ytaf41lgcv6fte2cgxypn78u6&dl=0';
+  function handleSubmit() {
+    console.log('handle submit request to subscribe')
   
+    // Check if data is valid
+    if (!email) {
+      console.log('No e-mail address provided');
+      setAlert('Please set an e-mail address~');
+      return;
+    }
+
+    const dataToSend = {
+      email,
+      producer,
+      artist,
+      fan
+    };
+  
+    // Make a POST request using Axios
+    axios.post('https://genwav-node-server.vercel.app/addUser', dataToSend, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(() => {
+        console.log('Request successful');
+        setMessage("Your e-mail has been saved!")
+        setAlert(''); // Resetting alert if necessary
+      })
+      .catch((error) => {
+        setAlert("There was an error.");
+        console.error('Error: ', error);
+        setMessage(''); // Resetting message if necessary
+      });
+  }
+
+
   return(
     <div id="NEW">
       <div class="wrapper">
           <MetaTags>
-            <title>Los Ignoro | KHR!S Joao x gen.wav</title>
-            <meta id="meta-description" name="description" content="Los Ignoro - KHR!S Joao x gen.wav" />
-            <meta id="og-title" property="og:title" content="Los Ignoro - KHR!S Joao x gen.wav" />
-            <meta id="og-image" property="og:image" content="https://genwav.xyz/LOSIGNOROCOVER.jpg" />
+            <title>SIN DESTINO | KHR!S Joao, gen.wav</title>
+            <meta id="meta-description" name="description" content="Sin Destino - KHR!S Joao, gen.wav" />
+            <meta id="og-title" property="og:title" content="Sin Destino - KHR!S Joao, gen.wav" />
+            <meta id="og-image" property="og:image" content="https://genwav.xyz/sindestinoart.png" />
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
       <div id="NEWImageDiv">
-        <img 
-          src="https://genwav.xyz/LOSIGNOROCOVER.jpg"
-          alt="Los Ignoro Artwork" type="image"
-          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
+        <img
+          src="https://genwav.xyz/sindestinoart.png"
+          alt="Sin Destino" type="png"
+          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
-      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/wd8PSlmjOFk?si=NKoKiHWJ8BlcCFhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", paddingLeft:"5%"}}>
-        <Grid item xs={12} sm={12}>
+      <iframe id="NEWVideo" style={{margin:"0 auto"}} width="50%" height="315" src="https://www.youtube.com/embed/b8hyh6OtdIk?si=SynW1jtbtkRrzmIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
+       <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/album/0tYdO8T98gQQorusQs98eX?go=1" onClick={() => trackStreamingClick('LOS IGNORO', 'Spotify')}><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/1EQITbrikMP5LKZwyoq82W" onClick={() => trackStreamingClick('SIN DESTINO', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/los-ignoro-single/1774130821?at=1l3vpUI&ct=LFV_23843f014d653a354d05cd84947a7b70&itsct=catchall_p3&itscg=30440&ls=1" onClick={() => trackStreamingClick('LOS IGNORO', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://music.apple.com/us/album/sin-destino/1734504080" onClick={() => trackStreamingClick('SIN DESTINO', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> 
-          
+          </Grid>
+
+
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.youtube.com/watch?v=yHeAn_iziDQ&feature=youtu.be" onClick={() => trackStreamingClick('LOS IGNORO', 'YouTube')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://music.youtube.com/watch?v=k8dis7WeE0I" onClick={() => trackStreamingClick('SIN DESTINO', 'YouTube')} ><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
+
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/los-ignoro?si=dd7994b0233944ffb69e68b860353be6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('LOS IGNORO', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://soundcloud.com/genwav/sin-destino-khrs-joao-genwav" onClick={() => trackStreamingClick('SIN DESTINO', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
@@ -140,24 +165,24 @@ const NEW = (props) => {
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/browse/album/393535526" onClick={() => trackStreamingClick('LOS IGNORO', 'Tidal')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.tidal.com/track/350079328" onClick={() => trackStreamingClick('SIN DESTINO', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-         
-          {/* <Grid container spacing={2} className="logo-button-container">
+
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F%7E%2Fprerelease%2Fdeezer&state=bFVybD1WZW5pY2UubG5rLnRvJTJGbG9zLWlnbm9ybyZzSWQ9ZmFlOTc2YzAtZWI0Ni00YjNlLWI4YWQtMGJlOTFlYWMxZDcwJnRJZD0wYmU4N2RhNS01NTFjLTRjMGItYTVkZC0xMGE1ZDc5NWYyNGMmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZsb3MtaWdub3JvJnZ0PWNlOWMxZmVhOWY4ODUwZWQ1NjhkM2IzNDRlYjE4Yjg3JnZ1PTY3MTY5NTY5ZWJhZjc2LjQzNjc1Mjcy"><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.deezer.com/track/269094306" onClick={() => trackStreamingClick('SIN DESTINO', 'Deezer')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> */}
+          </Grid>
            <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginBottom:"20px", marginTop:"10px"}}>
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
              <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/los-ignoro/ALcnj5pZwcv5fdm?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=23843f014d653a354d05cd84947a7b70&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&sharedId=23843f014d653a354d05cd84947a7b70&_branch_match_id=1246765915340556405&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&_branch_referrer=H4sIAAAAAAAAA62QT0vEMBDFP033lt3YpF1XKLIowsIigjcvyzSZ%2FrFtEibZ7W0%2Fu1NR8eZFSMLL5M37JelSCvFuswngrCdYQwjrsXfD5j7LtcU4JB9OZxqrbjFmap%2FlTzzmeV5%2Ftxg%2FcQUo9TGxaNHNcBF8KIaORBTvHjzXRx9F3zpPy2Z%2FNO69CG%2BzuRSNnVYM6308WcSw0E8BUld9AS76B1uDGWKCFhfgWJ%2BnTD0lP6DL1OP%2ByDYtldL5Ti6B3E2%2Bt%2F8YejUdOIdj9cKvdUhZLh8gwehbVq8IZDoW%2B5cDr4LnkalNT7gK7K%2FGZmU8UZWrW60aeaNtWShQhbayMPZW7%2FQWtvVWfro5%2FRkmrH4irgamAPyBv%2BHnmPz0KQ%2BPX0woS4UKpSj1TgptrBU1yFyYAmrb2NLu8ptV7IDQHuzfd7kSNkjUu%2FZUk58jUvXQEUM%2FAKDA%2F9w5AgAA" onClick={() => trackStreamingClick('LOS IGNORO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Fkhr-s-joao-and-genwav%2Fsin-destino-khrs-joao-genwav%2Fsin-destino%2FTRJthj2Kht92qKq" onClick={() => trackStreamingClick('SIN DESTINO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
@@ -165,55 +190,62 @@ const NEW = (props) => {
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://music.amazon.com/albums/B0DK4L3J74?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=23843f014d653a354d05cd84947a7b70&ref=dmm_acq_soc_us_u_lfire_lp_x_23843f014d653a354d05cd84947a7b70" onClick={() => trackStreamingClick('LOS IGNORO', 'Amazon')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0CX726Q4X" onClick={() => trackStreamingClick('SIN DESTINO', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
-      
-     
-    <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>
-          <style>
-            {`
-              @media (max-width: 768px) {
-                .merch-container {
-                  display: flex !important;
-                  flex-direction: column !important;
-                  align-items: center !important;
-                }
-                .merch-image {
-                  width: 80% !important;
-                  margin: 10px 0 !important;
-                  margin-right: 0 !important;
-                }
-              }
-            `}
-          </style>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('LOS IGNORO')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"20px"}}>MERCH</h3>
-          </a>
-          <div className="merch-container">
-            <a target="_blank" style={{color:"white", margin:"0 auto"}} href="https://enigma-labs.printify.me/product/14727232/los-ignoro-boxy-tee-2" onClick={() => trackMerchClick('LOS IGNORO', 'Graphic Tee')}>
-              <img src="https://images-api.printify.com/mockup/671d58d96a6345124c0f1a46/103522/100285/los-ignoro-boxy-tee-2.jpg?camera_label=front&revision=1743812752046&s=400" alt="LOS IGNORO Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px", marginRight:"4px"}}></img>
-            </a>
-        
-          </div>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('LOS IGNORO')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
-          </a>
 
-          <div className="cardHeader">
+        </Grid>
+      </Grid> 
+
+      <div
+            className="card"
+            style={{
+              width: '40%',
+              minHeight: '200px',
+              margin: '0 auto',
+              marginTop: '2%',
+            }}
+          >
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  .card {
+                    width: 80% !important;
+                  }
+                }
+              `}
+            </style>
+           <div className="cardHeader">
             <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
         </div>
-         
-        <h2>Credits</h2>
-        <h4>Los Ignoro</h4>
-        <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a> x <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a> 
-        <p>Produced, Mixed, and Mastered by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+        </div> 
+    </div>
+      <div className="aboutNEW" style={{marginTop:"10px", textAlign:"center", width:"60%"}}>
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  .merch-container {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                  }
+                  .merch-image {
+                    width: 80% !important;
+                    margin: 10px 0 !important;
+                    margin-right: 0 !important;
+                  }
+                }
+              `}
+            </style>
+      
+        <h2 style={{marginTop:"20px"}}>Credits</h2>
+        <h4>Sin Destino</h4>
+        <p>Written by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <p>Artwork by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
-      
-    </div>
+
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
         <Grid item xs={12} sm={12}>
@@ -266,4 +298,4 @@ const NEW = (props) => {
         
 };
 
-export default NEW;
+export default SINDESTINO;

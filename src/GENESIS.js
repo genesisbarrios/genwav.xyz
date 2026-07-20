@@ -110,7 +110,7 @@ const GENESIS = (props) => {
           alt="GENESIS Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
-      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"2%", marginBottom:"8%"}}>
+      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"2%", marginBottom:"2%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -179,34 +179,6 @@ const GENESIS = (props) => {
           </Grid>
         </Grid>
       </Grid>
-
-     <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/bB1nh5QB" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
-             <style>
-            {`
-              /* make the two merch h3s smaller on mobile */
-              @media (max-width: 768px) {
-                .genesis-mini-h3 {
-                  font-size: 14px !important;
-                  margin-top: 8px !important;
-                  margin-bottom: 8px !important;
-                }
-                    .mini-cd {
-                  width: 50% !important;
-                  border-radius: 10px !important;
-                }
-              }
-              @media (max-width: 480px) {
-                .genesis-mini-h3 {
-                  font-size: 12px !important;
-                }
-              }
-            `}
-           </style>
-            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GET YOUR MINI CD Keychain 🔑🔗</h3>
-            <img className="mini-cd" src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
-            <h3 className="genesis-mini-h3" style={{marginTop:"2%"}}>Tap to download all 13 tracks on the album 🎵</h3>
-          </a>
-
 
       <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
       <Grid container spacing={3} style={{width:"80%", margin:"0 auto"}}>
@@ -329,14 +301,63 @@ const GENESIS = (props) => {
               <img src="https://images-api.printify.com/mockup/66f3a4df049f17caae0f4911/71665/12298/genesis-mouse-pad.jpg?camera_label=context-1&revision=1727636620526&s=400" alt="GENESIS Merch" className="merch-image" style={{width:"30%", height:"auto", margin:"0 auto", borderRadius:"10px"}}></img>
             </a>
           </div>
-          <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('GENESIS')}>
-            <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
-          </a>
         </div>
+
+         <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/bB1nh5QB" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
+             <style>
+            {`
+              /* make the two merch h3s smaller on mobile */
+              @media (max-width: 768px) {
+                .genesis-mini-h3 {
+                  font-size: 14px !important;
+                  margin-top: 8px !important;
+                  margin-bottom: 8px !important;
+                }
+                    .mini-cd {
+                  width: 50% !important;
+                  border-radius: 10px !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .genesis-mini-h3 {
+                  font-size: 12px !important;
+                }
+              }
+            `}
+           </style>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GET YOUR MINI CD Keychain 🔑🔗</h3>
+            <img className="mini-cd" src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>Tap to download all 13 tracks on the album 🎵</h3>
+          </a>
 
         <iframe width="90%" height="300" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1827273363&color=%234c647c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif", fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/sets/genesis-414993647" title="GENESIS" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>GENESIS</a></div>
       
-      <div className="aboutAlbum" style={{marginTop:"2%", textAlign:"center", width:"60%"}}>
+
+      <div
+          className="card"
+          style={{
+            width: '40%',
+            minHeight: '200px',
+            margin: '0 auto',
+            marginTop: '3%',
+            marginBottom:'0'
+          }}
+        >
+          <style>
+            {`
+              @media (max-width: 768px) {
+                .card {
+                  width: 80% !important;
+                }
+              }
+            `}
+          </style>
+          <div className="cardHeader">
+            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+        </div>
+      </div> 
+
+      <div className="aboutAlbum" style={{marginTop:"10px", textAlign:"center", width:"60%"}}>
           <style>
             {`
               @media (max-width: 768px) {
@@ -409,126 +430,7 @@ const GENESIS = (props) => {
         <br></br>
         <p>Album Art and Animations by <a href="https://www.instagram.com/alectheaverage/" target="_blank">Alec Perez</a></p>
       </div>
-        
           
-      <div
-            className="card"
-            style={{
-              width: '40%',
-              minHeight: '200px',
-              margin: '0 auto',
-              marginTop: '3%',
-            }}
-          >
-            <style>
-              {`
-                @media (max-width: 768px) {
-                  .card {
-                    width: 80% !important;
-                  }
-                }
-              `}
-            </style>
-            <div className="cardHeader">
-              <img
-                src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mailnews_8.ico"
-                width="20px"
-              ></img>{' '}
-              Sign up to stay in touch!
-            </div>
-            <div style={{ marginTop: '5%', textAlign: 'center' }}>
-              <form>
-                <p>E-mail</p>
-                <input
-                  type="text"
-                  name="e-mail"
-                  style={{
-                    display: 'inline-block',
-                    marginBottom: '20px',
-                    width: '50%',
-                  }}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                ></input>
-                <p>Name</p>
-                <input
-                  type="text"
-                  name="name"
-                  style={{
-                    display: 'inline-block',
-                    marginBottom: '20px',
-                    width: '50%',
-                  }}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
-                ></input>
-                  <p>Phone Number</p>
-                <input
-                  type="text"
-                  name="phone-number"
-                  style={{
-                    display: 'inline-block',
-                    marginBottom: '20px',
-                    width: '50%',
-                  }}
-                  onChange={(e) => {
-                    setPhoneNumber(e.target.value);
-                  }}
-                ></input>
-                <br></br>
-                <div style={{ display: 'inline' }}>
-                  <input
-                    style={{
-                      borderRadius: '10px',
-                      backgroundColor: '#CBD5E1',
-                      display: 'none',
-                    }}
-                    type="checkbox"
-                    name="fan"
-                    value={{fan}}
-                    checked={true}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setFan(true);
-                      } else {
-                        setFan(false);
-                      }
-                    }}
-                  />
-                  <br></br>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleSubmit();
-                    }}
-                    style={{ marginTop: '0px', padding: '2px 5px' }}
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-                  {message && (
-                    <Alert
-                      style={{ marginTop: '5%', marginBottom: '5%' }}
-                      severity="success"
-                    >
-                      {message.toString()}
-                    </Alert>
-                  )}
-                  {alert && (
-                    <Alert
-                      style={{ marginTop: '5%', marginBottom: '5%' }}
-                      severity="error"
-                    >
-                      {alert.toString()}
-                    </Alert>
-                  )}
-                </div>
-              </form>
-            </div>
-          </div>
-                
     </div>
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>

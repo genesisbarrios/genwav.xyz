@@ -211,6 +211,10 @@ useEffect(() => {
         <a target="_blank" style={{color:"white", margin:"0 auto", textDecoration:"none"}} href="https://enigma-labs.printify.me/" onClick={() => trackMerchClick('PROBLEMAS')}>
           <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
         </a>
+
+        <div className="cardHeader">
+            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+        </div>
   
         <h2>Credits</h2>
         <h4>Problemas</h4>

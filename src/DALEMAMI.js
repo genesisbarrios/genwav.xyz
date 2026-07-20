@@ -216,6 +216,10 @@ const DALEMAMI = (props) => {
     <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
   </a>
 
+  <div className="cardHeader">
+            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+        </div>
+
   <h2>Credits</h2>
   <h4>DALE MAMI</h4>
   <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>

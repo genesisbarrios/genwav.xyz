@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -34,12 +33,27 @@ import React from "react";
 import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
-import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
+import { trackReleasePageView, trackStreamingClick, trackMerchClick } from "./MetaPixel";
 
+// export const metadata { 
+//   title: 'CURIOSO',
+//   description: 'CURIOSO - KHR!S Joao, gen.wav',
+//   openGraph: {
+//     title: 'CURIOSO - KHR!S Joao, gen.wav',
+//     description: 'CURIOSO - KHR!S Joao, gen.wav',
+//     images: ['llamagemela.jpg'], // Path to your image
+//   },
+// };
 
-const Twentyseven = (props) => {
+const AFTERALL = (props) => {
   const [message, setMessage] = useState("");
   const [alert, setAlert] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [fan, setFan] = useState(false);
+  const [producer, setProducer] = useState(false);
+  const [artist, setArtist] = useState(false);
 
   useEffect(() => {
     
@@ -51,39 +65,73 @@ const Twentyseven = (props) => {
   }, []);
 
   useEffect(() => {
-    // Track when 22 page is viewed
-    trackReleasePageView('22');
+    // Track when AFTER ALL page is viewed
+    trackReleasePageView('AFTER ALL');
   }, []);
 
- 
+  function handleSubmit() {
+    console.log('handle submit request to subscribe')
+  
+    // Check if data is valid
+    if (!email) {
+      console.log('No e-mail address provided');
+      setAlert('Please set an e-mail address~');
+      return;
+    }
+
+    const dataToSend = {
+      email,
+      producer,
+      artist,
+      fan
+    };
+  
+    // Make a POST request using Axios
+    axios.post('https://genwav-node-server.vercel.app/addUser', dataToSend, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(() => {
+        console.log('Request successful');
+        setMessage("Your e-mail has been saved!")
+        setAlert(''); // Resetting alert if necessary
+      })
+      .catch((error) => {
+        setAlert("There was an error.");
+        console.error('Error: ', error);
+        setMessage(''); // Resetting message if necessary
+      });
+  }
+
+
   return(
     <div id="NEW">
       <div class="wrapper">
           <MetaTags>
-            <title>22 | gen.wav & Cuee</title>
-            <meta id="meta-description" name="description" content="22 - gen.wav, Cuee" />
-            <meta id="og-title" property="og:title" content="22 - gen.wav, Cuee" />
-            <meta id="og-image" property="og:image" content="https://genwav.xyz/22art.png" />
+            <title>AFTER ALL | gen.wav, GrimeGrrrl</title>
+            <meta id="meta-description" name="description" content="AFTER ALL - gen.wav, GrimeGrrrl" />
+            <meta id="og-title" property="og:title" content="AFTER ALL - gen.wav, GrimeGrrrl" />
+            <meta id="og-image" property="og:image" content="https://genwav.xyz/AFTERALLART.png" />
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
       <div id="NEWImageDiv">
-        <img 
-          src="22art.png"
-          alt="22" type="img"
+        <img
+          src="https://genwav.xyz/AFTERALLART.png"
+          alt="AFTER ALL" type="png"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
+      <iframe id="NEWVideo" style={{margin:"0 auto"}} width="50%" height="315" src="https://www.youtube.com/embed/pEHGHf4OoGs?si=Vv7Iq4_wJk1jq5Tu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-      <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/ygPPhauuNCY?si=XvUa0LERdMzXNjJ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
-
-      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
-        <Grid item xs={12} sm={12}>
+       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
+       <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-             <a target="_blank" href="https://open.spotify.com/track/0nyV5aWom4fNYlXNPkxHAL?si=345187bc18b748ec" onClick={() => trackStreamingClick('22', 'Spotify')}><button className="pre-save-button">Stream</button></a>
+             <a target="_blank" href="https://open.spotify.com/track/0aImBwncqUTWmecqQiRneU?si=1dc0bde78adb4089" onClick={() => trackStreamingClick('AFTER ALL', 'Spotify')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
@@ -91,81 +139,99 @@ const Twentyseven = (props) => {
               <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/22-single/1849840037" onClick={() => trackStreamingClick('22', 'Apple')}><button className="pre-save-button">Stream</button></a>
+              <a target="_blank" href="https://geo.music.apple.com/us/album/after-all-feat-gen-wav/1754661520?i=1754661526&app=music&ls=1" onClick={() => trackStreamingClick('AFTER ALL', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
             </Grid>
-          </Grid> 
-          
+          </Grid>
+
+
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://youtu.be/ygPPhauuNCY?si=XvUa0LERdMzXNjJ2"><button className="pre-save-button" onClick={() => trackStreamingClick('22', 'YouTube')}>Stream</button></a>
+            <a target="_blank" href="https://music.youtube.com/watch?v=LZ5Ya8OJLrc" onClick={() => trackStreamingClick('AFTER ALL', 'YouTube')} ><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
+
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://tidal.com/track/470647890/u" onClick={() => trackStreamingClick('22', 'Tidal')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://www.tidal.com/track/371927669" onClick={() => trackStreamingClick('AFTER ALL', 'Tidal')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://soundcloud.com/genwav/22a1?si=442a2fa2d60f4fbe809170ebfe7bb280&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('22', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://link.deezer.com/s/31zwSW3322nyvc21FF1Qv" onClick={() => trackStreamingClick('2', 'Deezer')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
-           <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
-             <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
-            </Grid>
-            <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
-            <a target="_blank" href="https://www.pandora.com/artist/genwav-and-cuee/22/22/TR7qbwfnZ5pfmrk?part=ug-desktop&corr=160031720547034956" onClick={() => trackStreamingClick('22', 'Pandora')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-            <a target="_blank" href="https://amazon.com/music/player/albums/B0FYNB2QP4?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_cB2MQZ0taIt8RIINwUG0C3umt" onClick={() => trackStreamingClick('22', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+            <a target="_blank" href="https://music.amazon.com/albums/B0D885RVXF?trackAsin=B0D88G425C" onClick={() => trackStreamingClick('AFTER ALL', 'Amazon')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
+
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://genwav.bandcamp.com/track/22" onClick={() => trackStreamingClick('22', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
+            <a target="_blank" href="https://www.pandora.com/artist/grimegrrrl/9-15-21/after-all-feat-genwav/TRKkcnk4qcJxv3K?part=ug-desktop&corr=175280847312663819" onClick={() => trackStreamingClick('AFTER ALL', 'Pandora')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
 
-      <div className="cardHeader">
-            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
-        </div>
+        </Grid>
+      </Grid> 
+
+
+     
+       <div className="aboutNEW" style={{marginTop:"2%", textAlign:"center", width:"60%"}}>
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  .merch-container {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                  }
+                  .merch-image {
+                    width: 80% !important;
+                    margin: 10px 0 !important;
+                    margin-right: 0 !important;
+                  }
+                }
+              `}
+            </style>
       
-      <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>22</h4>
-        <p>Written by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/cueemusic" target="_blank">Cuee</a></p>
-        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <h2 style={{marginTop:"20px"}}>Credits</h2>
+        <h4>After All</h4>
+        <p>Written by <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/_xgrimegrrrlx_" target="_blank">GrimeGrrrl</a></p>
         <br></br>
       </div>
-      
+
+      <div
+            className="card"
+            style={{
+              width: '40%',
+              minHeight: '200px',
+              margin: '0 auto',
+              marginTop: '3%',
+            }}
+          >
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  .card {
+                    width: 80% !important;
+                  }
+                }
+              `}
+            </style>
+           <div className="cardHeader">
+            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+        </div>
+        </div> 
     </div>
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
@@ -219,4 +285,4 @@ const Twentyseven = (props) => {
         
 };
 
-export default Twentyseven;
+export default AFTERALL;
