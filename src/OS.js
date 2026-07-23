@@ -354,14 +354,14 @@ const GenWavOS = (props) => {
                 </CardContent>
               </Card>
             <Card className="card" style={{width:'90%', minHeight: '500px'}}>
-            <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/cd_music.ico" width="25" height="25" className="inage" /> Digital Collectibles & Music Tools</div>
+            <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/cd_music.ico" width="25" height="25" className="inage" /> Influanto - Music Marketing Tools</div>
               <CardContent>
                 <Paper style={{marginBottom:"10px"}}>
-                  For those that don't know about Music NFTs, they are digital collectibles. You can collect(or mint) to own a rare, and unique copy of one of my songs. These collectibles will give you access to different features on my website.. It may be free beats, sample packs, or sneak peeks!
+                  As a Software Engineer and Independent Artist grinding on my music alone I've learned so much, and still need the right tools and resources to help me grow my music career. Influanto is a platform that helps independent artists like myself with marketing tools, and resources to help us grow our music careers.
                 </Paper>
 
                 <Paper style={{marginBottom:"10px", marginTop:"30px"}}>
-                  Music NFTs have died down over the years and all the platforms I used to sell them on have shut down, but I will have NFTs availble soon through my platform <a href="https://influanto.com" target="_blank" style={{textDecoration:"none", color:"blue"}}>influanto</a> If you want to be the first to know when they drop, and when I launch this feature be sure to sign up for a free account at: <a href="https://checkout.stripe.com/c/pay/cs_live_b1xKsOT4yUnB24LrmZht8gosKChTOvik1YnUT7KE9WqJYB3Y7Q2T7SRf1R#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JwZGZkaGppYFNkd2xka3EnPydmamtxd2ppJyknZHVsTmB8Jz8ndW5aaWxzYFowNFVRTVBfTVxuPEFQcUdVNn1hQVVtUDZhT3FoYl18Z3JVUGJPbzB8TV1BSFNCZDY3dmRHNERdY3N3dWp1MHY3UzZqS1REdGpmS2FJZmtgMXQwU283bWQzSDU1UG9uVn9iYXEnKSdjd2poVmB3c2B3Jz9xd3BgKSdnZGZuYndqcGthRmppancnPycmNTUzMz01JyknaWR8anBxUXx1YCc%2FJ2hwaXFsWmxxYGgnKSdga2RnaWBVaWRmYG1qaWFgd3YnP3F3cGB4JSUl" target="_blank" style={{textDecoration:"none", color:"blue"}}> influanto.com</a>
+                  If you need a Link in Bio, Split Sheet Template, QR Code Generator, or a Playlist Curator Contact Tool be sure to sign up for a free account at: <a href="https://www.influanto.com/api/auth/signin?callbackUrl=%2Fdashboard" target="_blank" style={{textDecoration:"none", color:"blue"}}> influanto.com</a>
                 </Paper>
 
                 <Paper style={{marginBottom:"10px", marginTop:"30px"}}>
