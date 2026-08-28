@@ -15,20 +15,33 @@ const NEWSLETTER = () => {
           <h1>NEWSLETTER</h1>
           <p style={{ marginBottom: "3%" }}>Sign up to get updates on new releases, shows, and drops straight to your inbox.</p>
 
-          <div style={{ maxWidth: "460px", margin: "0 auto" }}>
-            <iframe
-              title="gen.wav newsletter signup"
-              src="https://influanto.com/embed/newsletter/genwav"
-              width="100%"
-              height="520"
-              frameBorder="0"
-              style={{ border: "none" }}
-            ></iframe>
+          <div
+            className="card"
+            style={{ width: "460px", maxWidth: "90%", minHeight: "200px", margin: "0 auto" }}
+          >
+            <style>
+              {`
+                @media (max-width: 768px) {
+                  #NEWSLETTER .card {
+                    width: 80% !important;
+                  }
+                }
+              `}
+            </style>
+            <div className="cardHeader">
+              <iframe
+                title="gen.wav newsletter signup"
+                src="https://influanto.com/embed/newsletter/genwav"
+                width="100%"
+                height="520"
+                frameBorder="0"
+                style={{ border: "none", maxWidth: "100%" }}
+              ></iframe>
+            </div>
           </div>
 
-          <Grid className="linksContainer" container spacing={3} style={{ maxWidth: "35%", margin: "5% auto 0", paddingBottom: "2%" }}>
+          <Grid className="linksContainer" container spacing={3} style={{ maxWidth: "35%", margin: "1.5% auto 0", paddingBottom: "2%" }}>
             <Grid item xs={12} sm={12}>
-              <h1>LINKS</h1>
               <div id="socials" style={{ paddingTop: "10px", display: "flex", justifyContent: "space-between" }}>
                 <div style={{ display: "inline" }}>
                   <a target="_blank" href="http://instagram.com/gen.wav" style={{ textDecoration: "none" }}>
