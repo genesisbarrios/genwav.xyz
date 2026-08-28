@@ -17,6 +17,7 @@ import ONEDAY from './oneday';
 import GAFAS from './GAFAS';
 import TRIPPIN from './TRIPPIN';
 import Footer from "./Footer"; // Import Header component
+import NEWSLETTER from './NEWSLETTER';
 import CURIOSO from './CURIOSO';
 import SOLYMAR from './SOLYMAR';
 import ORIGINAL from './ORIGINAL';
@@ -183,6 +184,12 @@ const App = () => {
     );
   }
 
+  const NEWSLETTERComponent = () => {
+    return (
+      <NEWSLETTER />
+    );
+  }
+
   const ShopRedirect = () => { // Define component for /SHOP route
     window.location.href = "https://enigma-labs.printify.me/products"; // Redirect to external URL
     return null; // Since we're redirecting, return null
@@ -221,6 +228,7 @@ const App = () => {
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
           <Route path="/WORLD" element={<><Header /><WORLDComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
+          <Route path="/newsletter" element={<><Header /><NEWSLETTERComponent /><Footer /></>} />
           <Route path="/SHOP" element={<ShopRedirect />} />
           <Route path="/emailtemplate" element={<><Header /><EmailTemplateComponent /><Footer /></>} /> 
         </Routes>

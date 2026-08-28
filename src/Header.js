@@ -22,6 +22,7 @@ const Header = () => {
           <li style={{ marginRight: '10px'}}><Link style={{color:"white", textDecoration:"none" }} to="/RELEASES">RELEASES</Link></li>
           <li style={{ marginRight: '10px'}}><Link style={{color:"white", textDecoration:"none" }}  to="/SHOP">SHOP</Link></li>
           <li style={{ marginRight: '10px'}}><Link style={{color:"white", textDecoration:"none" }} to="/EPK">EPK</Link></li>
+          <li style={{ marginRight: '10px'}}><Link style={{color:"white", textDecoration:"none" }} to="/newsletter">NEWSLETTER</Link></li>
           </ul>
         </nav>
       </Toolbar>
