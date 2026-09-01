@@ -174,6 +174,32 @@ const EPK = (props) => {
             style={{marginTop:"5%", borderRadius:"10px"}}
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1657973560&color=%235ab7ce&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
           ></iframe>
+            <h1 style={{marginTop:"5%"}}>NEWSLETTER</h1>
+            <div
+              className="card"
+              style={{ width: "460px", maxWidth: "90%", minHeight: "200px", margin: "0 auto" }}
+            >
+              <style>
+                {`
+                  @media (max-width: 768px) {
+                    #EPK .card {
+                      width: 80% !important;
+                    }
+                  }
+                `}
+              </style>
+              <div className="cardHeader">
+                <iframe
+                  title="gen.wav newsletter signup"
+                  src="https://influanto.com/embed/newsletter/genwav"
+                  width="100%"
+                  height="520"
+                  frameBorder="0"
+                  style={{ border: "none", maxWidth: "100%" }}
+                ></iframe>
+              </div>
+            </div>
+
             <h1 style={{marginTop:"5%"}}>LINKS</h1>
            <div id="socials" style={{paddingTop:"10px", display:"flex", justifyContent:"space-between"}}>
                 <div style={{display:"inline"}}>

@@ -248,6 +248,10 @@ const GenWavOS = (props) => {
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
                      
                     <div className="slide">
+                      <img height="50%" width="100%" style={{objectFit:"cover"}} src="/EQ-headshot-Gen.jpg" />
+                          {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
+                    </div>
+                    <div className="slide">
                       <img height="100%" width="auto" src="/WORLD/WORLD9.JPG" />
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
                     </div>
