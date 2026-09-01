@@ -222,19 +222,21 @@ const GenWavOS = (props) => {
                     {/* <div style={{textAlign:"center"}}> 
                       <Avatar size={125} src='https://dl.dropboxusercontent.com/s/m2id1jav2y7dq5pasryzo/mossySQ.png?rlkey=d9cobb0m2spa3mz7egzyfrqx3&st=rvw8qncu&dl=0' />
                     </div> */}
-                    <div style={{textAlign:"center"}}> 
-                      <img
-                        src='https://dl.dropboxusercontent.com/s/8xsc91gqw8ptlcu74zdvz/genheadshotWHITE2025.jpg?rlkey=kqnfcd1ii8lfgjtghc5zv002v&st=w2kqq8j2&dl=0'
-                        style={{
-                          width: '125px',
-                          height: '125px',
-                          borderRadius: '50%',
-                          objectFit: 'cover',
-                          objectPosition: 'center'
-                        }}
-                      />
+                    <div style={{textAlign:"center"}}>
+                      <div style={{width: '125px', height: '125px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto'}}>
+                        <img
+                          src='/KEEPGRINDING/DSC01454.jpg'
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: '55% 35%',
+                            transform: 'scale(1.6)'
+                          }}
+                        />
+                      </div>
                     </div>
-                    <Paper style={{fontSize:"0.8rem"}}> gen.wav is a Trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer rooted in Miami, FL, where his bilingual upbringing shapes every corner of his work. A decade of classical training across piano, cello, violin, and music theory sits beneath a self-taught command of guitar, bass, and production, giving his Latin R&B and hip-hop sound a harmonic depth that sets him apart in Miami's independent scene. Writing freely in both Spanish and English, he draws on his Cuban and Nicaraguan heritage to craft music that refuses to separate cultural identity from personal and political honesty. Featured in Spotify Editorial Playlists, and Colors Studios. Take a look around and the site, you can stream my music, music videos, buy beats, Music NFTS, or just vibe. 🌊</Paper>
+                    <Paper style={{fontSize:"0.8rem"}}> gen.wav is a Trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer rooted in Miami, FL, where his bilingual upbringing shapes every corner of his work. A decade of classical training across piano, cello, violin, and music theory sits beneath a self-taught command of guitar, bass, and production, giving his Latin R&B and hip-hop sound a harmonic depth that sets him apart in Miami's independent scene. Writing freely in both Spanish and English, he draws on his Cuban and Nicaraguan heritage to craft music that refuses to separate cultural identity from personal and political honesty. Featured in Spotify Editorial Playlists, and Colors Studios. Take a look around the site, you can stream my music, music videos, buy beats, check out my app or just vibe. 🌊</Paper>
                   </CardContent>
               </Card>
           

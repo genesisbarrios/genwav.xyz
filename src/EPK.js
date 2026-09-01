@@ -115,11 +115,11 @@ const EPK = (props) => {
       <Grid container spacing={3} style={{padding: "0px"}}> 
         <Grid item sm={12} md={4} lg={3}> 
           <div style={{height: "100vh", position: "sticky", top: 0}}>
-            <img 
-              src="https://dl.dropboxusercontent.com/s/8xsc91gqw8ptlcu74zdvz/genheadshotWHITE2025.jpg?rlkey=kqnfcd1ii8lfgjtghc5zv002v&st=64jx7pcr&dl=0"
+            <img
+              src="/KEEPGRINDING/DSC01454.jpg"
               alt="image"
-              style={{height: "50vh", width: "100%", objectFit: "cover"}}
-            />  
+              style={{height: "50vh", width: "100%", objectFit: "cover", objectPosition: "55% 40%"}}
+            />
             <img 
               src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0"
               alt="image"
@@ -133,7 +133,7 @@ const EPK = (props) => {
           <p style={{marginBottom:"2%"}}>Miami based Independent Artist, and Producer - Latin, Hip Hop, R&B, Alternative</p>
           
           <h1>ABOUT</h1>
-          <p style={{marginBottom:"2%"}}>gen.wav is a Cuban-American Singer, Multi-Instrumentalist, and Producer based in Miami, Florida. Experimenting with many Latin, Urban and electronic genres, while sticking true to his Latin roots in Miami, and writing in both Spanish and English. He’s heavily influenced by R&B, Hip Hop, Reggaeton, Jazz, and House. gen is traditionally a classical musician receiving 10 years of classical training piano, cello, violin, voice, and music theory. Also a self-taught guitarist and bass player, with over ten years of experience in music production who has now been producing, engineering, and writing original music seriously for 4 years.</p>
+          <p style={{marginBottom:"2%"}}>gen.wav is a Trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer rooted in Miami, FL, where his bilingual upbringing shapes every corner of his work. A decade of classical training across piano, cello, violin, and music theory sits beneath a self-taught command of guitar, bass, and production, giving his Latin R&B and hip-hop sound a harmonic depth that sets him apart in Miami's independent scene. Writing freely in both Spanish and English, he draws on his Cuban and Nicaraguan heritage to craft music that refuses to separate cultural identity from personal and political honesty. Featured in Spotify Editorial Playlists, and Colors Studios.</p>
           <p style={{marginBottom:"2%"}}>gen.wav es un cantante, multi-instrumentista y productor cubano-estadounidense que vive en Miami, Florida. Experimenta con muchos géneros latinos, urbanos y electrónicos, manteniéndose fiel a sus raíces latinas en Miami y escribiendo tanto en español como en inglés. Está fuertemente influenciado por el R&B, el Hip Hop, Salsa, Bachata, Reggaeton, Jazz y House. gen es tradicionalmente un músico clásico con más de 10 años de formación clásica en piano, violonchelo y voz, y lleva más de una década produciendo y escribiendo música original.</p>
           
           <h1>ACCOMPLISHMENTS</h1>
@@ -255,7 +255,10 @@ const EPK = (props) => {
              <h5 style={{marginBottom:"2%"}}><a href="https://voyagemia.com/interview/rising-stars-meet-genesis-barrios-of-little-havana" target="_blank" style={{color:"white", textDecoration:"none"}}>Voyage MIA Rising Stars Article</a></h5>
             <h5 style={{marginBottom:"2%"}}><a href="https://shoutoutmiami.com/meet-gen-wav-producer-engineer/" target="_blank" style={{color:"white", textDecoration:"none"}}>Shoutout Miami Article</a></h5>
              
-              <img src="https://dl.dropboxusercontent.com/s/ur82i72cu1e3cfmyns202/genheadshot2025.jpg?rlkey=xruchuq224eqw28dkwwwj1cwe&st=on6pknh5&dl=0" style={{width:"80%", height:"auto", marginTop:'20px'}}></img>
+              <div style={{width:"80%", margin:"20px auto 0", aspectRatio:"4001 / 5580", overflow:"hidden", position:"relative"}}>
+                <img src="https://dl.dropboxusercontent.com/s/8xsc91gqw8ptlcu74zdvz/genheadshotWHITE2025.jpg?rlkey=kqnfcd1ii8lfgjtghc5zv002v&st=64jx7pcr&dl=0" style={{position:"absolute", bottom:0, left:0, width:"100%", height:"auto"}}></img>
+              </div>
+              <img src="https://dl.dropboxusercontent.com/s/ur82i72cu1e3cfmyns202/genheadshot2025.jpg?rlkey=xruchuq224eqw28dkwwwj1cwe&st=on6pknh5&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/fpp8gfykbfiv2vogvqdiz/genmars.JPG?rlkey=d1tqphrprhw19qrmgg3j8rdaq&st=pw8obfaq&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img src="https://dl.dropboxusercontent.com/s/0k0dthq0harqvyhanepad/jan25marsgen.JPG?rlkey=ans55vpr6jze28hokxfjv2iyb&st=zcxys40z&dl=0" style={{width:"80%", height:"auto"}}></img>
             <img  src="https://dl.dropboxusercontent.com/s/wa45u8lpg3m46qb5vpb3/MOSSY.JPG?rlkey=oyo1p028d2nez5foooyxrw7cq&st=rw0kpoz1&dl=0" style={{width:"80%", height:"auto"}} />
