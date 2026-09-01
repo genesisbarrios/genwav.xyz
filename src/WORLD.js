@@ -118,7 +118,7 @@ const WORLD = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="/RENACI.png"
           alt="The World is a Stage" type="img"

@@ -112,7 +112,7 @@ const TURO = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="TuroArt.png"
           alt="TURO" type="img"

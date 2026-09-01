@@ -114,7 +114,7 @@ const ONEDAY = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="https://genwav.xyz/ONEDAY.png"
           alt="Pay Off One Day" type="png"

@@ -91,7 +91,7 @@ const RELEASES = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
        <h3>RELEASES</h3>
       </div>
 

@@ -118,14 +118,14 @@ const KEEPGRINDING = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img
           src="/KEEPGRINDING/keepgrindingart.png"
           alt="KEEP GRINDING" type="img"
-          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
+          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h3 style={{margin:"0 0 10px", fontWeight:"600"}}>KEEP GRINDING - gen.wav</h3>
+      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDING - gen.wav</h4>
 
       <p style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Sign up to pre-save
@@ -217,6 +217,7 @@ const KEEPGRINDING = (props) => {
         <h2>Credits</h2>
         <h4>KEEP GRINDING</h4>
         <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+         <p>Visuals by <a href="https://www.instagram.com/khrisjoao" target="_blank">KHR!S João</a> & <a href="https://www.instagram.com/_enigmalabs" target="_blank">Enigma Labs</a> </p>
         <br></br>
       </div>
     </div>

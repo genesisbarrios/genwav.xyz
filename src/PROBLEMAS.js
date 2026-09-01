@@ -93,7 +93,7 @@ useEffect(() => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="https://dl.dropboxusercontent.com/s/omt3zurkh90gk4sbonqia/PROBLEMAS-ARTFINAL.png?rlkey=6qwyi5ofxnu9s1joki49wqd7i&st=rcelsd27&dl=0"
           alt="Problemas" type="gif"
@@ -212,8 +212,22 @@ useEffect(() => {
           <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
         </a>
 
-        <div className="cardHeader">
+        <div
+          className="card"
+          style={{ width: '40%', minHeight: '200px', margin: '0 auto', marginTop: '3%' }}
+        >
+          <style>
+            {`
+              @media (max-width: 768px) {
+                .card {
+                  width: 80% !important;
+                }
+              }
+            `}
+          </style>
+          <div className="cardHeader">
             <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+          </div>
         </div>
   
         <h2>Credits</h2>

@@ -92,7 +92,7 @@ const ORIGINAL = (props) => {
         </div>
     <div style={{ textAlign: "center" }}>
       <p>ORIGINAL - gen.wav, Kiento. O</p>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="ORIGINAL.jpeg"
           alt="ORIGINAL" type="gif"

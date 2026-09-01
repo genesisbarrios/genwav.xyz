@@ -67,7 +67,7 @@ const Twentyseven = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="22art.png"
           alt="22" type="img"
@@ -154,9 +154,23 @@ const Twentyseven = (props) => {
         </Grid>
       </Grid>
 
-      <div className="cardHeader">
-            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+      <div
+        className="card"
+        style={{ width: '40%', minHeight: '200px', margin: '0 auto', marginTop: '3%' }}
+      >
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .card {
+                width: 80% !important;
+              }
+            }
+          `}
+        </style>
+        <div className="cardHeader">
+          <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
         </div>
+      </div>
       
       <div className="aboutNEW">
         <h2>Credits</h2>

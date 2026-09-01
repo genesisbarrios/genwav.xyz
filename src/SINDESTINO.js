@@ -116,7 +116,7 @@ const SINDESTINO = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img
           src="https://genwav.xyz/sindestinoart.png"
           alt="Sin Destino" type="png"

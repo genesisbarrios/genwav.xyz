@@ -114,7 +114,7 @@ const TRIPPIN = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="https://genwav.xyz/TRIPPIN.JPG"
           alt="TRIPPIN" type="jpeg"

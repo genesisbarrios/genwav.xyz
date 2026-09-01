@@ -118,7 +118,7 @@ const UP = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="/UPCoverArt.png"
           alt="UP" type="img"

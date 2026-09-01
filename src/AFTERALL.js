@@ -116,7 +116,7 @@ const AFTERALL = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img
           src="https://genwav.xyz/AFTERALLART.png"
           alt="AFTER ALL" type="png"

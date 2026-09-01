@@ -82,7 +82,7 @@ const Twentyseven = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img 
           src="27art.png"
           alt="ORIGINAL" type="gif"
