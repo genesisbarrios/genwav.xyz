@@ -27,6 +27,7 @@ import SINDESTINO from './SINDESTINO';
 import AFTERALL from './AFTERALL';
 import TURO from './TURO';
 import UP from './UP';
+import KEEPGRINDING from './KEEPGRINDING';
 import WORLD from './WORLD';
 import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
@@ -166,6 +167,12 @@ const App = () => {
     )
   }
 
+  const KEEPGRINDINGComponent = () => {
+    return (
+      <KEEPGRINDING></KEEPGRINDING>
+    )
+  }
+
   const EmailTemplateComponent = () => { // Define component for /email-template route
     return (
       <EmailTemplate />
@@ -225,6 +232,7 @@ const App = () => {
           <Route path="/22" element={<><Header /><TwentyTwoComponent  /><Footer /></>} />
           <Route path="/TURO" element={<><Header /><TUROComponent  /><Footer /></>} />
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
+          <Route path="/KEEPGRINDING" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
           <Route path="/WORLD" element={<><Header /><WORLDComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
