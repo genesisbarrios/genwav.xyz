@@ -225,13 +225,13 @@ const GenWavOS = (props) => {
                     <div style={{textAlign:"center"}}>
                       <div style={{width: '125px', height: '125px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto'}}>
                         <img
-                          src='/KEEPGRINDING/DSC01454.jpg'
+                          src='/KEEPGRINDING/DSC01332.jpg'
                           style={{
                             width: '100%',
                             height: '100%',
                             objectFit: 'cover',
-                            objectPosition: '55% 35%',
-                            transform: 'scale(1.6)'
+                            objectPosition: '50% 55%',
+                            transform: 'scale(1.3)'
                           }}
                         />
                       </div>
@@ -250,7 +250,9 @@ const GenWavOS = (props) => {
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
                      
                     <div className="slide">
-                      <img height="50%" width="100%" style={{objectFit:"cover"}} src="/EQ-headshot-Gen.jpg" />
+                      <div style={{width:"60%", aspectRatio:"3 / 4", margin:"0 auto", overflow:"hidden", position:"relative"}}>
+                        <img style={{width:"100%", height:"100%", objectFit:"cover", objectPosition:"55% 40%"}} src="/KEEPGRINDING/DSC01454.jpg" />
+                      </div>
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
                     </div>
                     <div className="slide">

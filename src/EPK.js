@@ -116,9 +116,9 @@ const EPK = (props) => {
         <Grid item sm={12} md={4} lg={3}> 
           <div style={{height: "100vh", position: "sticky", top: 0}}>
             <img
-              src="/KEEPGRINDING/DSC01454.jpg"
+              src="/KEEPGRINDING/DSC01332.jpg"
               alt="image"
-              style={{height: "50vh", width: "100%", objectFit: "cover", objectPosition: "55% 40%"}}
+              style={{height: "50vh", width: "100%", objectFit: "cover", objectPosition: "50% 35%"}}
             />
             <img 
               src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0"
