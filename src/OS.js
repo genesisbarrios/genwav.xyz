@@ -242,7 +242,7 @@ const GenWavOS = (props) => {
           
 
               <div className="card" style={{width:'90%', minHeight: '200px', margin:"5% 0"}}>
-                 <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+                 <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
               </div>
 
               <Card className="card" style={{width:'90%', minHeight: '200px', marginTop:"5%"}}>

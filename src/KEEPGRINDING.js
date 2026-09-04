@@ -148,7 +148,7 @@ const KEEPGRINDING = (props) => {
             }
           `}
         </style>
-            <iframe src="https://influanto.com/embed/newsletter/genwav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
+            <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
       </div>
 
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>

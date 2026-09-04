@@ -191,7 +191,7 @@ const EPK = (props) => {
               <div className="cardHeader">
                 <iframe
                   title="gen.wav newsletter signup"
-                  src="https://influanto.com/embed/newsletter/genwav"
+                  src="https://influanto.com/embed/newsletter/gen.wav"
                   width="100%"
                   height="520"
                   frameBorder="0"
