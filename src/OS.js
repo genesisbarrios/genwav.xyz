@@ -230,7 +230,7 @@ const GenWavOS = (props) => {
                             width: '100%',
                             height: '100%',
                             objectFit: 'cover',
-                            objectPosition: '50% 55%',
+                            objectPosition: '50% 25%',
                             transform: 'scale(1.3)'
                           }}
                         />
