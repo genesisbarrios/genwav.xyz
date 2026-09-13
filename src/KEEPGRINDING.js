@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
