@@ -233,6 +233,7 @@ const App = () => {
           <Route path="/TURO" element={<><Header /><TUROComponent  /><Footer /></>} />
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
           <Route path="/KEEPGRINDING" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
+          <Route path="/syre" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
           <Route path="/WORLD" element={<><Header /><WORLDComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />
