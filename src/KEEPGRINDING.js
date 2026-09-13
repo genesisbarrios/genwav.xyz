@@ -1,39 +1,12 @@
 
 import { useState } from "react";
-import { Key, ReactChild, ReactFragment, ReactPortal, useCallback, useEffect, useMemo, useLayoutEffect, useRef } from 'react';
-import { useNavigate } from "react-router-dom";
 import useEmblaCarousel from 'embla-carousel-react';
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle, faWallet } from '@fortawesome/free-solid-svg-icons'
-import { MenuList, MenuListItem, Separator, styleReset, Window, WindowHeader, WindowContent, Frame, Button } from 'react95';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { Alert, SliderThumb } from "@material-ui/core";
 import '@react95/icons/icons.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import {Card, CardContent, div, Paper} from "@material-ui/core";
-import { Carousel } from 'react-responsive-carousel';
-/* Pick a theme of your choice */
-import brick from 'react95/dist/themes/brick';
-import blue from 'react95/dist/themes/blue';
-import original from 'react95/dist/themes/original';
-import millenium from 'react95/dist/themes/millenium';
-import vaporTeal from 'react95/dist/themes/vaporTeal';
-import modernDark from 'react95/dist/themes/modernDark';
-import azureOrange from 'react95/dist/themes/azureOrange';
-import denim from 'react95/dist/themes/denim';
-import coldGray from 'react95/dist/themes/coldGray';
-import matrix from 'react95/dist/themes/matrix';
-import rainyDay from 'react95/dist/themes/rainyDay';
-import aiee from 'react95/dist/themes/aiee';
-import slate from 'react95/dist/themes/slate';
-import shelbiTeal from 'react95/dist/themes/shelbiTeal';
 import MetaTags from 'react-meta-tags';
 import { trackReleasePageView, trackMerchClick, trackStreamingClick } from "./MetaPixel";
-import { Avatar } from "react95";
-import React from "react";
-import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } from '@react95/icons';
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo, AmazonLogo, TidalLogo  } from "@phosphor-icons/react";
 import axios from "axios";
 
@@ -111,9 +84,9 @@ const KEEPGRINDING = (props) => {
     <div id="NEW">
       <div class="wrapper">
           <MetaTags>
-            <title>KEEP GRINDING | gen.wav</title>
-            <meta id="meta-description" name="description" content="KEEP GRINDING - gen.wav" />
-            <meta id="og-title" property="og:title" content="KEEP GRINDING - gen.wav" />
+            <title>KEEP GRINDIN (SYRE) | gen.wav</title>
+            <meta id="meta-description" name="description" content="KEEP GRINDIN (SYRE) - gen.wav" />
+            <meta id="og-title" property="og:title" content="KEEP GRINDIN (SYRE) - gen.wav" />
             <meta id="og-image" property="og:image" content="https://genwav.xyz/KEEPGRINDING/keepgrindingart.png" />
           </MetaTags>
         </div>
@@ -121,11 +94,11 @@ const KEEPGRINDING = (props) => {
       <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img
           src="/KEEPGRINDING/keepgrindingart.png"
-          alt="KEEP GRINDING" type="img"
+          alt="KEEP GRINDIN" type="img"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDING - gen.wav</h4>
+      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) - gen.wav</h4>
 
       <p style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Sign up to pre-save
@@ -215,9 +188,8 @@ const KEEPGRINDING = (props) => {
 
       <div className="aboutNEW">
         <h2>Credits</h2>
-        <h4>KEEP GRINDING</h4>
+        <h4>KEEP GRINDIN (SYRE)</h4>
         <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
-         <p>Visuals by <a href="https://www.instagram.com/khrisjoao" target="_blank">KHR!S João</a> & <a href="https://www.instagram.com/_enigmalabs" target="_blank">Enigma Labs</a> </p>
         <br></br>
       </div>
     </div>
