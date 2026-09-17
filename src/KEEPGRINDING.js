@@ -122,6 +122,11 @@ const KEEPGRINDING = (props) => {
         </div>
 
         <div className="logo-button-container">
+          <div className="logo-label"><YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>YouTube</p></div>
+          <a target="_blank" href="https://www.youtube.com/watch?v=R-TIAj2xXfo&list=OLAK5uy_m4KqfqbJieqihtWL4dqjSYrUx_U5bQ3Ik" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'YouTube')}><button className="pre-save-button">Stream</button></a>
+        </div>
+
+        <div className="logo-button-container">
           <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Deezer</p></div>
           <a target="_blank" href="https://www.deezer.com/us/album/1070969142" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Deezer')}><button className="pre-save-button">Stream</button></a>
         </div>
