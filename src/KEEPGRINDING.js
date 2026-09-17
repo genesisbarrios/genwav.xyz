@@ -84,9 +84,9 @@ const KEEPGRINDING = (props) => {
     <div id="NEW">
       <div class="wrapper">
           <MetaTags>
-            <title>KEEP GRINDIN (SYRE) | gen.wav</title>
-            <meta id="meta-description" name="description" content="KEEP GRINDIN (SYRE) - gen.wav" />
-            <meta id="og-title" property="og:title" content="KEEP GRINDIN (SYRE) - gen.wav" />
+            <title>KEEP GRINDIN (SYRE) - EP | gen.wav</title>
+            <meta id="meta-description" name="description" content="KEEP GRINDIN (SYRE) - EP - gen.wav" />
+            <meta id="og-title" property="og:title" content="KEEP GRINDIN (SYRE) - EP - gen.wav" />
             <meta id="og-image" property="og:image" content="https://genwav.xyz/KEEPGRINDING/keepgrindingart.png" />
           </MetaTags>
         </div>
@@ -98,31 +98,47 @@ const KEEPGRINDING = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) - gen.wav</h4>
+      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) - EP - gen.wav</h4>
 
-      <p style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
-        Sign up to pre-save
-      </p>
+      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
+        <Grid item xs={12} sm={12}>
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://open.spotify.com/album/5BRFGMIjFhjR77ku4EAkos" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Spotify')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
 
-      <div
-        className="card"
-        style={{
-          width: '40%',
-          minHeight: '200px',
-          margin: '0 auto',
-        }}
-      >
-        <style>
-          {`
-            @media (max-width: 768px) {
-              .card {
-                width: 80% !important;
-              }
-            }
-          `}
-        </style>
-            <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
-      </div>
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://music.apple.com/us/album/keep-grindin-syre-ep/6808668965" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Apple')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://tidal.com/album/558467339" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Tidal')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://soundcloud.com/genwav/sets/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
 
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>
         <div className="embla__container">
@@ -186,11 +202,36 @@ const KEEPGRINDING = (props) => {
         </div>
       </div>
 
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/genwav/sets/keep-grindin-syre&color=%237c9cac&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc",lineBreak: "anywhere",wordBreak: "normal",overflow: "hidden",whiteSpace: "nowrap",textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/sets/keep-grindin-syre" title="KEEP GRINDIN (SYRE)" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>KEEP GRINDIN (SYRE)</a></div>
+
       <div className="aboutNEW">
         <h2>Credits</h2>
-        <h4>KEEP GRINDIN (SYRE)</h4>
+        <h4>KEEP GRINDIN (SYRE) - EP</h4>
         <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
+      </div>
+    </div>
+
+    <div
+      className="card"
+      style={{
+        width: '40%',
+        minHeight: '200px',
+        margin: '0 auto',
+        marginTop: '3%',
+      }}
+    >
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .card {
+              width: 80% !important;
+            }
+          }
+        `}
+      </style>
+      <div className="cardHeader">
+        <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Newsletter signup"></iframe>
       </div>
     </div>
 
