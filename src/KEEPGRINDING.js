@@ -98,7 +98,8 @@ const KEEPGRINDING = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h4 style={{margin:"0 20px 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4>
+      {/* <h4 style={{margin:"0 20px 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4> */}
+       <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/UHvLtJjzu7A?si=FjzyIlI5P6xoaF74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
 
       <div className="linksContainer" style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <div className="logo-button-container">
