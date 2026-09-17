@@ -140,6 +140,11 @@ const KEEPGRINDING = (props) => {
           <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Amazon</p></div>
           <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HHSD8W62" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
         </div>
+
+        <div className="logo-button-container">
+          <div className="logo-label"><BandcampLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Bandcamp</p></div>
+          <a target="_blank" href="https://genwav.bandcamp.com/album/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
+        </div>
       </div>
 
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>
