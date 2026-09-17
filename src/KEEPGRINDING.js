@@ -84,7 +84,7 @@ const KEEPGRINDING = (props) => {
     <div id="NEW">
       <div class="wrapper">
           <MetaTags>
-            <title>KEEP GRINDIN (SYRE) - EP | gen.wav</title>
+            <title>KEEP GRINDIN (SYRE) | gen.wav</title>
             <meta id="meta-description" name="description" content="KEEP GRINDIN (SYRE) - EP - gen.wav" />
             <meta id="og-title" property="og:title" content="KEEP GRINDIN (SYRE) - EP - gen.wav" />
             <meta id="og-image" property="og:image" content="https://genwav.xyz/KEEPGRINDING/keepgrindingart.png" />
@@ -98,7 +98,7 @@ const KEEPGRINDING = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) - EP - gen.wav</h4>
+      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4>
 
       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <Grid item xs={12} sm={12}>
@@ -233,7 +233,7 @@ const KEEPGRINDING = (props) => {
 
       <div className="aboutNEW">
         <h2>Credits</h2>
-        <h4>KEEP GRINDIN (SYRE) - EP</h4>
+        <h4>KEEP GRINDIN (SYRE)</h4>
         <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <br></br>
       </div>
