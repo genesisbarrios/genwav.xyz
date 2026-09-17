@@ -137,6 +137,24 @@ const KEEPGRINDING = (props) => {
               <a target="_blank" href="https://soundcloud.com/genwav/sets/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
             </Grid>
           </Grid>
+
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://www.deezer.com/us/album/1070969142" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Deezer')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HHSD8W62" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
 
