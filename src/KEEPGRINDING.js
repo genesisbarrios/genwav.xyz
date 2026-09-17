@@ -98,7 +98,7 @@ const KEEPGRINDING = (props) => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4>
+      <h4 style={{margin:"0 20px 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4>
 
       <div className="linksContainer" style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <div className="logo-button-container">
