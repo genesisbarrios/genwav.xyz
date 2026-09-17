@@ -173,9 +173,6 @@ const KEEPGRINDING = (props) => {
             <img src="/KEEPGRINDING/DSC01210.jpg" alt="KEEP GRINDING 1" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
-            <img src="/KEEPGRINDING/DSC01222.jpg" alt="KEEP GRINDING 2" className="embla__slide__img" />
-          </div>
-          <div className="embla__slide">
             <img src="/KEEPGRINDING/DSC01225.jpg" alt="KEEP GRINDING 3" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
