@@ -148,6 +148,15 @@ const KEEPGRINDING = (props) => {
           </Grid>
 
           <Grid container spacing={2} className="logo-button-container">
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
+              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/qobuz.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Qobuz</p>
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <a target="_blank" href="https://www.qobuz.com/us-en/album/keep-grindin-syre-genwav/vhgazw75l8u4v" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Qobuz')}><button className="pre-save-button">Stream</button></a>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
               <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
