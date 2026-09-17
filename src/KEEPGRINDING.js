@@ -87,13 +87,13 @@ const KEEPGRINDING = (props) => {
             <title>KEEP GRINDIN (SYRE) | gen.wav</title>
             <meta id="meta-description" name="description" content="KEEP GRINDIN (SYRE) - EP - gen.wav" />
             <meta id="og-title" property="og:title" content="KEEP GRINDIN (SYRE) - EP - gen.wav" />
-            <meta id="og-image" property="og:image" content="https://genwav.xyz/KEEPGRINDING/keepgrindingart.png" />
+            <meta id="og-image" property="og:image" content="https://genwav.xyz/KEEPGRINDING/keepgrindingart.jpg" />
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
       <div id="NEWImageDiv" style={{padding:"1% 0"}}>
         <img
-          src="/KEEPGRINDING/keepgrindingart.png"
+          src="/KEEPGRINDING/keepgrindingart.jpg"
           alt="KEEP GRINDIN" type="img"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "1% 0", borderRadius:"15px"}}></img>
       </div>

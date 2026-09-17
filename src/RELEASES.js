@@ -153,7 +153,7 @@ const RELEASES = (props) => {
                   component="img"
                   alt="KEEP GRINDING Artwork"
                   height="250"
-                  image="https://genwav.xyz/KEEPGRINDING/keepgrindingart.png"
+                  image="https://genwav.xyz/KEEPGRINDING/keepgrindingart.jpg"
                   title="KEEP GRINDING"
                 />
                 <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
