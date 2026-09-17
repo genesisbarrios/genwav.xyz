@@ -100,72 +100,42 @@ const KEEPGRINDING = (props) => {
 
       <h4 style={{margin:"0 0 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4>
 
-      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
-        <Grid item xs={12} sm={12}>
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://open.spotify.com/album/5BRFGMIjFhjR77ku4EAkos" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Spotify')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+      <div className="linksContainer" style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
+        <div className="logo-button-container">
+          <div className="logo-label"><SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "8px" }} size={50} /><p style={{ color: '#1DD15E', fontWeight:"600", margin:0}}>Spotify</p></div>
+          <a target="_blank" href="https://open.spotify.com/album/5BRFGMIjFhjR77ku4EAkos" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Spotify')}><button className="pre-save-button">Stream</button></a>
+        </div>
 
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://music.apple.com/us/album/keep-grindin-syre-ep/6808668965" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Apple')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+        <div className="logo-button-container">
+          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", fontSize:"0.8em", margin:0}}>Apple</p></div>
+          <a target="_blank" href="https://music.apple.com/us/album/keep-grindin-syre-ep/6808668965" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Apple')}><button className="pre-save-button">Stream</button></a>
+        </div>
 
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Tidal</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://tidal.com/album/558467339" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Tidal')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+        <div className="logo-button-container">
+          <div className="logo-label"><TidalLogo className="logoSize" style={{ color: 'white', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Tidal</p></div>
+          <a target="_blank" href="https://tidal.com/album/558467339" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Tidal')}><button className="pre-save-button">Stream</button></a>
+        </div>
 
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>SoundCloud</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://soundcloud.com/genwav/sets/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+        <div className="logo-button-container">
+          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>SoundCloud</p></div>
+          <a target="_blank" href="https://soundcloud.com/genwav/sets/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
+        </div>
 
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50}></img> <p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://www.deezer.com/us/album/1070969142" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Deezer')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+        <div className="logo-button-container">
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Deezer</p></div>
+          <a target="_blank" href="https://www.deezer.com/us/album/1070969142" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Deezer')}><button className="pre-save-button">Stream</button></a>
+        </div>
 
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
-              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/qobuz.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Qobuz</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://www.qobuz.com/us-en/album/keep-grindin-syre-genwav/vhgazw75l8u4v" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Qobuz')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
+        <div className="logo-button-container">
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/qobuz.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Qobuz</p></div>
+          <a target="_blank" href="https://www.qobuz.com/us-en/album/keep-grindin-syre-genwav/vhgazw75l8u4v" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Qobuz')}><button className="pre-save-button">Stream</button></a>
+        </div>
 
-          <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
-            </Grid>
-            <Grid item xs={6} sm={6}>
-              <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HHSD8W62" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+        <div className="logo-button-container">
+          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Amazon</p></div>
+          <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HHSD8W62" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
+        </div>
+      </div>
 
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>
         <div className="embla__container">

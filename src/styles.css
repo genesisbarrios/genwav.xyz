@@ -275,7 +275,14 @@ button.legend{
   display: flex;
   align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
+  gap: 12px;
   margin-bottom: 10px; /* Adjust as needed */
+}
+
+.logo-label {
+  display: flex;
+  align-items: center;
+  width: 140px;
 }
 
 .pre-save-button {
