@@ -171,9 +171,6 @@ const KEEPGRINDING = (props) => {
             <img src="/KEEPGRINDING/DSC01332.jpg" alt="KEEP GRINDING 10" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
-            <img src="/KEEPGRINDING/DSC01338.jpg" alt="KEEP GRINDING 11" className="embla__slide__img" />
-          </div>
-          <div className="embla__slide">
             <img src="/KEEPGRINDING/DSC01340.jpg" alt="KEEP GRINDING 12" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
@@ -183,16 +180,7 @@ const KEEPGRINDING = (props) => {
             <img src="/KEEPGRINDING/DSC01353.jpg" alt="KEEP GRINDING 14" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
-            <img src="/KEEPGRINDING/DSC01377.jpg" alt="KEEP GRINDING 15" className="embla__slide__img" />
-          </div>
-          <div className="embla__slide">
             <img src="/KEEPGRINDING/DSC01446.jpg" alt="KEEP GRINDING 16" className="embla__slide__img" />
-          </div>
-          <div className="embla__slide">
-            <img src="/KEEPGRINDING/DSC01449.jpg" alt="KEEP GRINDING 17" className="embla__slide__img" />
-          </div>
-          <div className="embla__slide">
-            <img src="/KEEPGRINDING/DSC01452.jpg" alt="KEEP GRINDING 18" className="embla__slide__img" />
           </div>
           <div className="embla__slide">
             <img src="/KEEPGRINDING/DSC01454.jpg" alt="KEEP GRINDING 19" className="embla__slide__img" style={{marginRight:"20px"}} />
