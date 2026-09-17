@@ -142,7 +142,7 @@ const KEEPGRINDING = (props) => {
         </div>
 
         <div className="logo-button-container">
-          <div className="logo-label"><BandcampLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Bandcamp</p></div>
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/Bandcamp.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Bandcamp</p></div>
           <a target="_blank" href="https://genwav.bandcamp.com/album/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
         </div>
       </div>
