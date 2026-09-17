@@ -99,9 +99,9 @@ const KEEPGRINDING = (props) => {
       </div>
 
       {/* <h4 style={{margin:"0 20px 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4> */}
-       <iframe id="NEWVideo" width="50%" height="315" src="https://www.youtube.com/embed/UHvLtJjzu7A?si=FjzyIlI5P6xoaF74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
+       <iframe id="NEWVideo" width="50%" height="515" src="https://www.youtube.com/embed/UHvLtJjzu7A?si=FjzyIlI5P6xoaF74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
 
-      <div className="linksContainer" style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
+      <div className="linksContainer" style={{width: "25%", margin:"20px auto"}}>
         <div className="logo-button-container">
           <div className="logo-label"><SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "8px" }} size={50} /><p style={{ color: '#1DD15E', fontWeight:"600", margin:0}}>Spotify</p></div>
           <a target="_blank" href="https://open.spotify.com/album/5BRFGMIjFhjR77ku4EAkos" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Spotify')}><button className="pre-save-button">Stream</button></a>
