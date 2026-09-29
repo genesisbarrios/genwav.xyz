@@ -275,8 +275,11 @@ button.legend{
   display: flex;
   align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
-  gap: 32px;
   margin-bottom: 10px; /* Adjust as needed */
+}
+
+.logo-row {
+  gap: 32px;
 }
 
 .logo-label {
@@ -347,7 +350,7 @@ button.legend{
     width:25px;
   }
 
-  .logo-button-container {
+  .logo-row {
     gap: 12px;
   }
 
