@@ -95,7 +95,7 @@ const RELEASES = (props) => {
        <h3>RELEASES</h3>
       </div>
 
-      <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"1%"}}>
+      <Grid className="linksContainer" container style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"1%"}}>
         <Grid item xs={12} sm={12}>
           <div id="socials" style={{paddingTop:"10px", display:"flex", justifyContent:"space-between"}}>
             <div style={{display:"inline"}}>
@@ -142,7 +142,7 @@ const RELEASES = (props) => {
         </Grid>
       </Grid>
     
-      <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
+      <Grid className="linksContainer" container style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
         <Grid item xs={12} sm={12}>
           <div style={{ display: "inline" }}>
             {/* Add your next card here */}
