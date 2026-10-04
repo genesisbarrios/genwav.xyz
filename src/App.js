@@ -32,7 +32,8 @@ import WORLD from './WORLD';
 import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
 import MATRIX from './MATRIX';
-const META_PIXEL_ID = process.env.REACT_APP_META_PIXEL_ID; 
+// Public ID (it's visible in page source anyway), kept here so it doesn't depend on Vercel env vars
+const META_PIXEL_ID = '1077030558456212';
 
 const App = () => {
   const GenWavOSComponent = () => {
