@@ -1,3 +1,10 @@
+// Attached to every event so they can be told apart in Events Manager
+// (the same pixel is also used on influanto.com/gen.wav).
+const pageParams = () => ({
+  page_name: document.title,
+  page_path: window.location.pathname,
+});
+
 const MetaPixel = ({ pixelId }) => {
   if (typeof window !== 'undefined' && pixelId && !window.fbq) {
     (function(f,b,e,v,n,t,s)
@@ -10,7 +17,7 @@ const MetaPixel = ({ pixelId }) => {
     'https://connect.facebook.net/en_US/fbevents.js');
 
     window.fbq('init', pixelId);
-    window.fbq('track', 'PageView');
+    window.fbq('track', 'PageView', pageParams());
   }
 
   return null;
@@ -21,6 +28,7 @@ export const trackReleasePageView = (releaseName) => {
   if (typeof window !== 'undefined' && window.fbq) {
     // Use standard ViewContent event for Facebook's algorithm
     window.fbq('track', 'ViewContent', {
+      ...pageParams(),
       content_name: releaseName,
       content_category: 'Music Release',
       content_type: 'product'
@@ -28,6 +36,7 @@ export const trackReleasePageView = (releaseName) => {
     
     // Optional: Add custom event for detailed analytics
     window.fbq('trackCustom', 'ReleasePageView', {
+      ...pageParams(),
       release_name: releaseName
     });
   }
@@ -38,12 +47,14 @@ export const trackStreamingClick = (releaseName, platform) => {
   if (typeof window !== 'undefined' && window.fbq) {
     // Use Lead event - better for streaming conversions
     window.fbq('track', 'Lead', {
+      ...pageParams(),
       content_name: `${releaseName} - ${platform}`,
       content_category: 'Music Stream'
     });
     
     // Custom event for platform-specific analytics
     window.fbq('trackCustom', 'StreamingClick', {
+      ...pageParams(),
       release_name: releaseName,
       platform: platform
     });
@@ -55,6 +66,7 @@ export const trackMerchClick = (releaseName, merchType) => {
   if (typeof window !== 'undefined' && window.fbq) {
     // Just use custom event since it's an outbound link
     window.fbq('trackCustom', 'MerchWebsiteClick', {
+      ...pageParams(),
       release_name: releaseName,
       merch_type: merchType,
       destination: 'printify_store'
