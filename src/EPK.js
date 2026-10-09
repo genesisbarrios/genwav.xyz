@@ -137,9 +137,9 @@ const EPK = (props) => {
           <p style={{marginBottom:"2%"}}>gen.wav es un cantante, multi-instrumentista y productor cubano-estadounidense que vive en Miami, Florida. Experimenta con muchos géneros latinos, urbanos y electrónicos, manteniéndose fiel a sus raíces latinas en Miami y escribiendo tanto en español como en inglés. Está fuertemente influenciado por el R&B, el Hip Hop, Salsa, Bachata, Reggaeton, Jazz y House. gen es tradicionalmente un músico clásico con más de 10 años de formación clásica en piano, violonchelo y voz, y lleva más de una década produciendo y escribiendo música original.</p>
           
           <h1>ACCOMPLISHMENTS</h1>
-          <p style={{marginBottom:"2%"}}>Featured on Spotify's Editorial Playlist New Music Friday Latin</p>
-          <p style={{marginBottom:"2%"}}>Featured on Spotify's Editorial Playlist Spotify Novedades Viernes Latinoamerica</p>
-          <p style={{marginBottom:"2%"}}>1 Million Streams on Soundcloud</p>
+          <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist New Music Friday Latin</p>
+          <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist Spotify Novedades Viernes Latinoamerica</p>
+          <p style={{marginBottom:"1%"}}>1 Million Streams on Soundcloud</p>
           <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and reached 10,000 streams in August 2024.</p>
 
           <h1>LIVE PERFORMANCES</h1>
