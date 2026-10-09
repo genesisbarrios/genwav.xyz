@@ -229,7 +229,7 @@ const EPK = (props) => {
           <p style={{marginBottom:"2%"}}>gen.wav is a Trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer rooted in Miami, FL, where his bilingual upbringing shapes every corner of his work. A decade of classical training across piano, cello, violin, and music theory sits beneath a self-taught command of guitar, bass, and production, giving his Latin R&B and hip-hop sound a harmonic depth that sets him apart in Miami's independent scene. Writing freely in both Spanish and English, he draws on his Cuban and Nicaraguan heritage to craft music that refuses to separate cultural identity from personal and political honesty. Featured in Spotify Editorial Playlists, and Colors Studios.</p>
           <p style={{marginBottom:"2%"}}>gen.wav es un cantante, multi-instrumentista y productor cubano-estadounidense que vive en Miami, Florida. Experimenta con muchos géneros latinos, urbanos y electrónicos, manteniéndose fiel a sus raíces latinas en Miami y escribiendo tanto en español como en inglés. Está fuertemente influenciado por el R&B, el Hip Hop, Salsa, Bachata, Reggaeton, Jazz y House. gen es tradicionalmente un músico clásico con más de 10 años de formación clásica en piano, violonchelo y voz, y lleva más de una década produciendo y escribiendo música original.</p>
           
-          <h1>ACCOMPLISHMENTS</h1>
+          <h1>HIGHLIGHTS</h1>
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist New Music Friday Latin</p>
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist Spotify Novedades Viernes Latinoamerica</p>
           <p style={{marginBottom:"1%"}}>1 Million Streams on Soundcloud</p>
