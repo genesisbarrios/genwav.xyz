@@ -151,7 +151,19 @@ const EPK = (props) => {
           <p style={{marginBottom:"1%"}}>Unseen Creatures Brewery</p>
           <p style={{marginBottom:"1%"}}>Unbranded Brewery</p>
           <p style={{marginBottom:"1%"}}>Dear Eleanor</p>
-          <p style={{marginBottom:"2%"}}>The Sound Library</p>
+          <p style={{marginBottom:"1%"}}>The Sound Library</p>
+          <p style={{marginBottom:"2%"}}>The Pride Center at Equality Park</p>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?list=PLFVcs9Ufxr3M"
+            title="gen.wav Live Performances"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{marginBottom:"3%"}}
+          ></iframe>
 
           <h1>BOOKINGS & PRESS INQUIRIES</h1>
           <p style={{marginBottom:"5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
