@@ -291,12 +291,14 @@ const EPK = (props) => {
             <h5 style={{marginBottom:"2%"}}><a href="https://shoutoutmiami.com/meet-gen-wav-producer-engineer/" target="_blank" style={{color:"white", textDecoration:"none"}}>Shoutout Miami Article</a></h5>
 
           <h1 style={{marginTop:"8%", marginBottom:"3%"}}>LIVE PERFORMANCES</h1>
-          {LIVE_PERFORMANCES.map((v) => (
-            <div key={v.name} style={{marginBottom:"3%"}}>
-              <p style={{margin:0}}>{v.name}</p>
-              <p style={{margin:0, fontSize:"0.8em", opacity:0.7}}>{v.city} · {v.year}</p>
-            </div>
-          ))}
+          <div style={{display:"grid", gridTemplateColumns:"repeat(2, minmax(0, 1fr))", columnGap:"12px", rowGap:"14px", marginBottom:"3%"}}>
+            {[...LIVE_PERFORMANCES].sort((a, b) => Number(b.year) - Number(a.year)).map((v) => (
+              <div key={v.name}>
+                <p style={{margin:0}}>{v.name}</p>
+                <p style={{margin:0, fontSize:"0.8em", opacity:0.7}}>{v.city} · {v.year}</p>
+              </div>
+            ))}
+          </div>
 
               {/* On mobile the left photo column is hidden and its photos start the gallery here */}
               <div className="epk-mobile-photos">
