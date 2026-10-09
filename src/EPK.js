@@ -140,7 +140,7 @@ const EPK = (props) => {
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist New Music Friday Latin</p>
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist Spotify Novedades Viernes Latinoamerica</p>
           <p style={{marginBottom:"1%"}}>1 Million Streams on Soundcloud</p>
-          <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and reached 10,000 streams in August 2024.</p>
+          <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and has surpassed 30K streams.</p>
 
           <h1>LIVE PERFORMANCES</h1>
           <p style={{marginBottom:"1%"}}>Dolphin Mall</p>
