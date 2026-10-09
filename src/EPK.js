@@ -113,9 +113,6 @@ const EPK = (props) => {
     <div id="EPK" style={{paddingBottom:"5%"}}>
       <style>{`
         .epk-mobile-photos { display: none; }
-        @media (min-width: 960px) {
-          .epk-socials { justify-content: center !important; gap: 28px; }
-        }
         @media (max-width: 959.95px) {
           .epk-side-photos { display: none !important; }
           .epk-mobile-photos { display: block; }
@@ -150,19 +147,24 @@ const EPK = (props) => {
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist New Music Friday Latin</p>
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist Spotify Novedades Viernes Latinoamerica</p>
           <p style={{marginBottom:"1%"}}>1 Million Streams on Soundcloud</p>
+          <p style={{marginBottom:"1%"}}>1 Million Views on YouTube</p>
           <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and has surpassed 30K streams.</p>
 
-          <h1>LIVE PERFORMANCES</h1>
-          <p style={{marginBottom:"1%"}}>Dolphin Mall</p>
-          <p style={{marginBottom:"1%"}}>Calle 8 Ecuadorian Festival</p>
-          <p style={{marginBottom:"1%"}}>Esquina de Abuela</p>
-          <p style={{marginBottom:"1%"}}>America Teve Minuto de Fama</p>
-          <p style={{marginBottom:"1%"}}>Young Arts</p>
-          <p style={{marginBottom:"1%"}}>Unseen Creatures Brewery</p>
-          <p style={{marginBottom:"1%"}}>Unbranded Brewery</p>
-          <p style={{marginBottom:"1%"}}>Dear Eleanor</p>
-          <p style={{marginBottom:"1%"}}>The Sound Library</p>
-          <p style={{marginBottom:"2%"}}>The Pride Center at Equality Park</p>
+          <h1 style={{marginTop:"5%"}}>MUSIC</h1>
+          <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+       
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q"
+            title="gen.wav Official Music Videos"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{marginTop:"5%"}}
+          ></iframe>
           <iframe
             width="100%"
             height="315"
@@ -172,13 +174,8 @@ const EPK = (props) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            style={{marginBottom:"3%"}}
+            style={{marginTop:"5%"}}
           ></iframe>
-
-          <h1 style={{marginTop:"5%"}}>MUSIC</h1>
-          <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-       
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <iframe
             title="SoundCloud Player"
             width="100%"
@@ -209,17 +206,8 @@ const EPK = (props) => {
 
             <div
               className="card"
-              style={{ width: "460px", maxWidth: "90%", minHeight: "200px", margin: "5% auto 0" }}
+              style={{ width: "100%", boxSizing: "border-box", minHeight: "200px", margin: "5% 0 0" }}
             >
-              <style>
-                {`
-                  @media (max-width: 768px) {
-                    #EPK .card {
-                      width: 80% !important;
-                    }
-                  }
-                `}
-              </style>
               <div className="cardHeader">
                 <iframe
                   title="gen.wav newsletter signup"
@@ -285,6 +273,18 @@ const EPK = (props) => {
              <h5 style={{marginBottom:"2%"}}><a href="https://colorsxstudios.com/music" target="_blank" style={{color:"white", textDecoration:"none"}}>Colors Studios Feature</a></h5>
              <h5 style={{marginBottom:"2%"}}><a href="https://voyagemia.com/interview/rising-stars-meet-genesis-barrios-of-little-havana" target="_blank" style={{color:"white", textDecoration:"none"}}>Voyage MIA Rising Stars Article</a></h5>
             <h5 style={{marginBottom:"2%"}}><a href="https://shoutoutmiami.com/meet-gen-wav-producer-engineer/" target="_blank" style={{color:"white", textDecoration:"none"}}>Shoutout Miami Article</a></h5>
+
+          <h1 style={{marginTop:"8%", marginBottom:"3%"}}>LIVE PERFORMANCES</h1>
+          <p style={{marginBottom:"1%"}}>Dolphin Mall</p>
+          <p style={{marginBottom:"1%"}}>Calle 8 Ecuadorian Festival</p>
+          <p style={{marginBottom:"1%"}}>Esquina de Abuela</p>
+          <p style={{marginBottom:"1%"}}>America Teve Minuto de Fama</p>
+          <p style={{marginBottom:"1%"}}>Young Arts</p>
+          <p style={{marginBottom:"1%"}}>Unseen Creatures Brewery</p>
+          <p style={{marginBottom:"1%"}}>Unbranded Brewery</p>
+          <p style={{marginBottom:"1%"}}>Dear Eleanor</p>
+          <p style={{marginBottom:"1%"}}>The Sound Library</p>
+          <p style={{marginBottom:"2%"}}>The Pride Center at Equality Park</p>
 
               {/* On mobile the left photo column is hidden and its photos start the gallery here */}
               <div className="epk-mobile-photos">
