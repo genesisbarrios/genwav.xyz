@@ -111,9 +111,19 @@ const EPK = (props) => {
   return(
     
     <div id="EPK" style={{paddingBottom:"5%"}}>
+      <style>{`
+        .epk-mobile-photos { display: none; }
+        @media (min-width: 960px) {
+          .epk-socials { justify-content: center !important; gap: 28px; }
+        }
+        @media (max-width: 959.95px) {
+          .epk-side-photos { display: none !important; }
+          .epk-mobile-photos { display: block; }
+        }
+      `}</style>
           
       <Grid container spacing={3} style={{padding: "0px"}}> 
-        <Grid item sm={12} md={4} lg={3}> 
+        <Grid item sm={12} md={4} lg={3} className="epk-side-photos"> 
           <div style={{height: "100vh", position: "sticky", top: 0}}>
             <img
               src="/KEEPGRINDING/DSC01332.jpg"
@@ -165,7 +175,19 @@ const EPK = (props) => {
             style={{marginBottom:"3%"}}
           ></iframe>
 
-          <h1>BOOKINGS & PRESS INQUIRIES</h1>
+          <h1 style={{marginTop:"5%"}}>MUSIC</h1>
+          <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+       
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            title="SoundCloud Player"
+            width="100%"
+            height="300"
+            allow="autoplay"
+            style={{marginTop:"5%", borderRadius:"10px"}}
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1657973560&color=%235ab7ce&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          ></iframe>
+          <h1 style={{marginTop:"5%"}}>BOOKINGS & PRESS INQUIRIES</h1>
           <p style={{marginBottom:"5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
 
           <a
@@ -185,22 +207,9 @@ const EPK = (props) => {
               DOWNLOAD ELECTRONIC PRESS KIT
             </a>
 
-          <h1 style={{marginTop:"5%"}}>MUSIC</h1>
-          <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-       
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <iframe
-            title="SoundCloud Player"
-            width="100%"
-            height="300"
-            allow="autoplay"
-            style={{marginTop:"5%", borderRadius:"10px"}}
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1657973560&color=%235ab7ce&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-          ></iframe>
-            <h1 style={{marginTop:"5%"}}>NEWSLETTER</h1>
             <div
               className="card"
-              style={{ width: "460px", maxWidth: "90%", minHeight: "200px", margin: "0 auto" }}
+              style={{ width: "460px", maxWidth: "90%", minHeight: "200px", margin: "5% auto 0" }}
             >
               <style>
                 {`
@@ -223,8 +232,7 @@ const EPK = (props) => {
               </div>
             </div>
 
-            <h1 style={{marginTop:"5%"}}>LINKS</h1>
-           <div id="socials" style={{paddingTop:"10px", display:"flex", justifyContent:"space-between"}}>
+           <div id="socials" className="epk-socials" style={{paddingTop:"10px", marginTop:"3%", display:"flex", justifyContent:"space-between"}}>
                 <div style={{display:"inline"}}>
                   <a target="_blank" href="http://instagram.com/gen.wav" style={{textDecoration:"none"}}>
                     <InstagramLogo style={{color: 'purple'}} size={25}></InstagramLogo>
@@ -277,6 +285,12 @@ const EPK = (props) => {
              <h5 style={{marginBottom:"2%"}}><a href="https://colorsxstudios.com/music" target="_blank" style={{color:"white", textDecoration:"none"}}>Colors Studios Feature</a></h5>
              <h5 style={{marginBottom:"2%"}}><a href="https://voyagemia.com/interview/rising-stars-meet-genesis-barrios-of-little-havana" target="_blank" style={{color:"white", textDecoration:"none"}}>Voyage MIA Rising Stars Article</a></h5>
             <h5 style={{marginBottom:"2%"}}><a href="https://shoutoutmiami.com/meet-gen-wav-producer-engineer/" target="_blank" style={{color:"white", textDecoration:"none"}}>Shoutout Miami Article</a></h5>
+
+              {/* On mobile the left photo column is hidden and its photos start the gallery here */}
+              <div className="epk-mobile-photos">
+                <img src="/KEEPGRINDING/DSC01332.jpg" alt="gen.wav" style={{width:"80%", height:"auto", marginTop:"20px"}} />
+                <img src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0" alt="gen.wav" style={{width:"80%", height:"auto"}} />
+              </div>
              
               <div style={{width:"80%", margin:"20px auto 0", aspectRatio:"4001 / 5580", overflow:"hidden", position:"relative"}}>
                 <img src="https://dl.dropboxusercontent.com/s/8xsc91gqw8ptlcu74zdvz/genheadshotWHITE2025.jpg?rlkey=kqnfcd1ii8lfgjtghc5zv002v&st=64jx7pcr&dl=0" style={{position:"absolute", bottom:0, left:0, width:"100%", height:"auto"}}></img>
