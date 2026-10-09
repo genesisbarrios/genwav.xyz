@@ -156,25 +156,23 @@ const EPK = (props) => {
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <iframe
             width="100%"
-            height="315"
             src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q"
             title="gen.wav Official Music Videos"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            style={{marginTop:"5%"}}
+            style={{marginTop:"5%", aspectRatio:"16 / 9", height:"auto", display:"block"}}
           ></iframe>
           <iframe
             width="100%"
-            height="315"
             src="https://www.youtube.com/embed/videoseries?list=PLFVcs9Ufxr3M"
             title="gen.wav Live Performances"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            style={{marginTop:"5%"}}
+            style={{marginTop:"5%", aspectRatio:"16 / 9", height:"auto", display:"block"}}
           ></iframe>
           <iframe
             title="SoundCloud Player"
