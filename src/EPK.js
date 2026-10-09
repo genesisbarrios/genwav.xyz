@@ -123,16 +123,85 @@ const EPK = (props) => {
  
   const pdfUrl = 'https://www.dropbox.com/scl/fi/4lwen7hpp9unl5nchcnk0/GENWAV-EPK-2025.pdf?rlkey=ttotkbmuunc0zzocoefmn07xv&st=kwe51n2x&dl=0';
   
+  // Newsletter signup + social links: shown in the middle column on desktop, and
+  // at the bottom (after Press / Live Performances, before the photos) on mobile
+  const signupAndLinks = (
+    <>
+            <div
+              className="card epk-newsletter"
+              style={{ boxSizing: "border-box", minHeight: "200px", margin: "5% auto 0" }}
+            >
+              <div className="cardHeader">
+                <iframe
+                  title="gen.wav newsletter signup"
+                  loading="lazy"
+                  src="https://influanto.com/embed/newsletter/gen.wav"
+                  width="100%"
+                  height="520"
+                  frameBorder="0"
+                  style={{ border: "none", maxWidth: "100%" }}
+                ></iframe>
+              </div>
+            </div>
+
+           <div className="epk-socials" style={{paddingTop:"10px", marginTop:"3%", display:"flex", justifyContent:"space-between"}}>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="http://instagram.com/gen.wav" style={{textDecoration:"none"}}>
+                    <InstagramLogo style={{color: 'purple'}} size={25}></InstagramLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="http://twitter.com/gendotwav" style={{textDecoration:"none"}}>
+                    <TwitterLogo style={{color: '#A6CAF0'}} size={25}></TwitterLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="http://tiktok.com/@gen.wav" style={{textDecoration:"none"}}>
+                    <TiktokLogo style={{color: 'pink'}} size={25}></TiktokLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="https://soundcloud.com/genwav" style={{textDecoration:"none"}}>
+                    <SoundcloudLogo style={{color: 'orange'}} size={25}></SoundcloudLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="https://www.youtube.com/@genwav" style={{textDecoration:"none"}}>
+                    <YoutubeLogo style={{color: 'red'}} size={25}></YoutubeLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="https://open.spotify.com/artist/3YihJDU9YETUNDWO6pDuQG?si=VmY6439rRLS5mw8uC0nHYg" style={{textDecoration:"none"}}>
+                    <SpotifyLogo style={{color: 'green'}} size={25}></SpotifyLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="https://music.apple.com/us/artist/genesis-barrios/1194186719" style={{textDecoration:"none"}}>
+                    <AppleLogo style={{color: 'pink'}} size={25}></AppleLogo>
+                  </a>
+                </div>
+                <div style={{display:"inline"}}>
+                  <a target="_blank" href="https://discord.com/invite/2MdNjbHnBR" style={{textDecoration:"none"}}>
+                    <DiscordLogo style={{color: 'purple'}} size={25}></DiscordLogo>
+                  </a>
+                </div>
+              </div>
+    </>
+  );
+
   return(
     
     <div id="EPK" style={{paddingBottom:"5%"}}>
       <style>{`
         .epk-mobile-photos { display: none; }
         .epk-newsletter { width: 50%; }
+        .epk-signup-mobile { display: none; }
         @media (max-width: 959.95px) {
           .epk-side-photos { display: none !important; }
           .epk-mobile-photos { display: block; }
           .epk-newsletter { width: 100%; }
+          .epk-signup-desktop { display: none; }
+          .epk-signup-mobile { display: block; margin-top: 6%; text-align: left; }
         }
       `}</style>
           
@@ -220,64 +289,7 @@ const EPK = (props) => {
               DOWNLOAD ELECTRONIC PRESS KIT
             </a>
 
-            <div
-              className="card epk-newsletter"
-              style={{ boxSizing: "border-box", minHeight: "200px", margin: "5% auto 0" }}
-            >
-              <div className="cardHeader">
-                <iframe
-                  title="gen.wav newsletter signup"
-                  src="https://influanto.com/embed/newsletter/gen.wav"
-                  width="100%"
-                  height="520"
-                  frameBorder="0"
-                  style={{ border: "none", maxWidth: "100%" }}
-                ></iframe>
-              </div>
-            </div>
-
-           <div id="socials" className="epk-socials" style={{paddingTop:"10px", marginTop:"3%", display:"flex", justifyContent:"space-between"}}>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="http://instagram.com/gen.wav" style={{textDecoration:"none"}}>
-                    <InstagramLogo style={{color: 'purple'}} size={25}></InstagramLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="http://twitter.com/gendotwav" style={{textDecoration:"none"}}>
-                    <TwitterLogo style={{color: '#A6CAF0'}} size={25}></TwitterLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="http://tiktok.com/@gen.wav" style={{textDecoration:"none"}}>
-                    <TiktokLogo style={{color: 'pink'}} size={25}></TiktokLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="https://soundcloud.com/genwav" style={{textDecoration:"none"}}>
-                    <SoundcloudLogo style={{color: 'orange'}} size={25}></SoundcloudLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="https://www.youtube.com/@genwav" style={{textDecoration:"none"}}>
-                    <YoutubeLogo style={{color: 'red'}} size={25}></YoutubeLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="https://open.spotify.com/artist/3YihJDU9YETUNDWO6pDuQG?si=VmY6439rRLS5mw8uC0nHYg" style={{textDecoration:"none"}}>
-                    <SpotifyLogo style={{color: 'green'}} size={25}></SpotifyLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="https://music.apple.com/us/artist/genesis-barrios/1194186719" style={{textDecoration:"none"}}>
-                    <AppleLogo style={{color: 'pink'}} size={25}></AppleLogo>
-                  </a>
-                </div>
-                <div style={{display:"inline"}}>
-                  <a target="_blank" href="https://discord.com/invite/2MdNjbHnBR" style={{textDecoration:"none"}}>
-                    <DiscordLogo style={{color: 'purple'}} size={25}></DiscordLogo>
-                  </a>
-                </div>
-              </div>
+            <div className="epk-signup-desktop">{signupAndLinks}</div>
          </div>
         </Grid>
         <Grid item sm={12} md={3} lg={3}> 
@@ -299,6 +311,8 @@ const EPK = (props) => {
               </div>
             ))}
           </div>
+
+              <div className="epk-signup-mobile">{signupAndLinks}</div>
 
               {/* On mobile the left photo column is hidden and its photos start the gallery here */}
               <div className="epk-mobile-photos">
