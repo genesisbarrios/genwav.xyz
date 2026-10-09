@@ -34,6 +34,21 @@ import { Mail, Mail2, CdMusic, cdMusicData, MediaVideo, mediaVideoData, Mic } fr
 import { GlobeSimple, InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, GithubLogo  } from "@phosphor-icons/react";
 import axios from "axios"; 
 
+const LIVE_PERFORMANCES = [
+  { name: "Dolphin Mall", city: "Miami, FL", year: "2026" },
+  { name: "The Sound Library", city: "Miami, FL", year: "2026" },
+  { name: "Calle 8 Ecuadorian Festival", city: "Miami, FL", year: "2025" },
+  { name: "Young Arts", city: "Miami, FL", year: "2024" },
+  { name: "America Teve Minuto de Fama", city: "Miami, FL", year: "2010" },
+  { name: "Dear Eleanor", city: "Miami, FL", year: "2025" },
+  { name: "Unseen Creatures Brewery", city: "Miami, FL", year: "2023" },
+  { name: "Unbranded Brewery", city: "Miami, FL", year: "2024" },
+  { name: "Tea & Poets", city: "Miami, FL", year: "2018" },
+  { name: "The Pride Center at Equality Park", city: "Fort Lauderdale, FL", year: "2026" },
+  { name: "Esquina de Abuela", city: "Miami, FL", year: "2021" },
+  { name: "Thank You Miami", city: "Miami, FL", year: "2026" },
+];
+
 const EPK = (props) => {
   const [email, setEmail] = useState("");
   const [fan, setFan] = useState(false);
@@ -113,9 +128,11 @@ const EPK = (props) => {
     <div id="EPK" style={{paddingBottom:"5%"}}>
       <style>{`
         .epk-mobile-photos { display: none; }
+        .epk-newsletter { width: 50%; }
         @media (max-width: 959.95px) {
           .epk-side-photos { display: none !important; }
           .epk-mobile-photos { display: block; }
+          .epk-newsletter { width: 100%; }
         }
       `}</style>
           
@@ -123,9 +140,9 @@ const EPK = (props) => {
         <Grid item sm={12} md={4} lg={3} className="epk-side-photos"> 
           <div style={{height: "100vh", position: "sticky", top: 0}}>
             <img
-              src="/KEEPGRINDING/DSC01332.jpg"
-              alt="image"
-              style={{height: "50vh", width: "100%", objectFit: "cover", objectPosition: "50% 35%"}}
+              src="/KEEPGRINDING/DSC01454-web.jpg"
+              alt="gen.wav"
+              style={{height: "50vh", width: "100%", objectFit: "cover", objectPosition: "55% 50%"}}
             />
             <img 
               src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0"
@@ -183,7 +200,7 @@ const EPK = (props) => {
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1657973560&color=%235ab7ce&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
           ></iframe>
           <h1 style={{marginTop:"5%"}}>BOOKINGS & PRESS INQUIRIES</h1>
-          <p style={{marginBottom:"5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
+          <p style={{marginBottom:"1.5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
 
           <a
               href={pdfUrl}
@@ -195,7 +212,8 @@ const EPK = (props) => {
                 border: '1px solid white',
                 borderRadius: '5px',
                 padding: '10px 20px',
-                margin: '5% auto',
+                display: 'inline-block',
+                margin: '0',
                 textDecoration: 'none' // Removes underline from anchor element
               }}
             >
@@ -203,8 +221,8 @@ const EPK = (props) => {
             </a>
 
             <div
-              className="card"
-              style={{ width: "100%", boxSizing: "border-box", minHeight: "200px", margin: "5% 0 0" }}
+              className="card epk-newsletter"
+              style={{ boxSizing: "border-box", minHeight: "200px", margin: "5% auto 0" }}
             >
               <div className="cardHeader">
                 <iframe
@@ -273,20 +291,16 @@ const EPK = (props) => {
             <h5 style={{marginBottom:"2%"}}><a href="https://shoutoutmiami.com/meet-gen-wav-producer-engineer/" target="_blank" style={{color:"white", textDecoration:"none"}}>Shoutout Miami Article</a></h5>
 
           <h1 style={{marginTop:"8%", marginBottom:"3%"}}>LIVE PERFORMANCES</h1>
-          <p style={{marginBottom:"1%"}}>Dolphin Mall</p>
-          <p style={{marginBottom:"1%"}}>Calle 8 Ecuadorian Festival</p>
-          <p style={{marginBottom:"1%"}}>Esquina de Abuela</p>
-          <p style={{marginBottom:"1%"}}>America Teve Minuto de Fama</p>
-          <p style={{marginBottom:"1%"}}>Young Arts</p>
-          <p style={{marginBottom:"1%"}}>Unseen Creatures Brewery</p>
-          <p style={{marginBottom:"1%"}}>Unbranded Brewery</p>
-          <p style={{marginBottom:"1%"}}>Dear Eleanor</p>
-          <p style={{marginBottom:"1%"}}>The Sound Library</p>
-          <p style={{marginBottom:"2%"}}>The Pride Center at Equality Park</p>
+          {LIVE_PERFORMANCES.map((v) => (
+            <div key={v.name} style={{marginBottom:"3%"}}>
+              <p style={{margin:0}}>{v.name}</p>
+              <p style={{margin:0, fontSize:"0.8em", opacity:0.7}}>{v.city} · {v.year}</p>
+            </div>
+          ))}
 
               {/* On mobile the left photo column is hidden and its photos start the gallery here */}
               <div className="epk-mobile-photos">
-                <img src="/KEEPGRINDING/DSC01332.jpg" alt="gen.wav" style={{width:"80%", height:"auto", marginTop:"20px"}} />
+                <img src="/KEEPGRINDING/DSC01454-web.jpg" alt="gen.wav" style={{width:"80%", height:"auto", marginTop:"20px"}} />
                 <img src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0" alt="gen.wav" style={{width:"80%", height:"auto"}} />
               </div>
              
