@@ -151,9 +151,6 @@ const EPK = (props) => {
           <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and has surpassed 30K streams.</p>
 
           <h1 style={{marginTop:"5%"}}>MUSIC</h1>
-          <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-       
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <iframe
             width="100%"
             src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q"
@@ -162,7 +159,7 @@ const EPK = (props) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            style={{marginTop:"5%", aspectRatio:"16 / 9", height:"auto", display:"block"}}
+            style={{marginTop:"0", aspectRatio:"16 / 9", height:"auto", display:"block"}}
           ></iframe>
           <iframe
             width="100%"
@@ -174,6 +171,9 @@ const EPK = (props) => {
             allowFullScreen
             style={{marginTop:"5%", aspectRatio:"16 / 9", height:"auto", display:"block"}}
           ></iframe>
+          <iframe style={{marginTop:"5%"}} src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+       
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&si=r8E1lj8nOVJFXF7t&controls=1" title="YouTube video player" showControls frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <iframe
             title="SoundCloud Player"
             width="100%"
