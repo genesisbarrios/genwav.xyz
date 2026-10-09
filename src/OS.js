@@ -370,7 +370,7 @@ const GenWavOS = (props) => {
                 </Paper>
 
                 <Paper style={{marginBottom:"10px", marginTop:"30px"}}>
-                  If you need a Link in Bio, Split Sheet Template, QR Code Generator, or a Playlist Curator Contact Tool be sure to sign up for a free account at: <a href="https://www.influanto.com/api/auth/signin?callbackUrl=%2Fdashboard" target="_blank" style={{textDecoration:"none", color:"blue"}}> influanto.com</a>
+                  If you need a Link in Bio, an EPK (Electronic Press Kit), Release Pages, a Newsletter & Mailing List, a Split Sheet Template, a QR Code Generator, or a Playlist Curator Contact Tool, be sure to sign up for a free account at: <a href="https://www.influanto.com/api/auth/signin?callbackUrl=%2Fdashboard" target="_blank" style={{textDecoration:"none", color:"blue"}}> influanto.com</a>
                 </Paper>
 
                 <Paper style={{marginBottom:"10px", marginTop:"30px"}}>
