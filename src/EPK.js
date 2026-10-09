@@ -142,8 +142,19 @@ const EPK = (props) => {
           <p style={{marginBottom:"2%"}}>1 Million Streams on Soundcloud</p>
           <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and reached 10,000 streams in August 2024.</p>
 
+          <h1>LIVE PERFORMANCES</h1>
+          <p style={{marginBottom:"1%"}}>Dolphin Mall</p>
+          <p style={{marginBottom:"1%"}}>Calle 8 Ecuadorian Festival</p>
+          <p style={{marginBottom:"1%"}}>Esquina de Abuela</p>
+          <p style={{marginBottom:"1%"}}>America Teve Minuto de Fama</p>
+          <p style={{marginBottom:"1%"}}>Young Arts</p>
+          <p style={{marginBottom:"1%"}}>Unseen Creatures Brewery</p>
+          <p style={{marginBottom:"1%"}}>Unbranded Brewery</p>
+          <p style={{marginBottom:"1%"}}>Dear Eleanor</p>
+          <p style={{marginBottom:"2%"}}>The Sound Library</p>
+
           <h1>BOOKINGS & PRESS INQUIRIES</h1>
-          <p style={{marginBottom:"5%"}}><a style={{color:"white", textDecoration:"none"}} href="beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
+          <p style={{marginBottom:"5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
 
           <a
               href={pdfUrl}
