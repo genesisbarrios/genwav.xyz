@@ -129,14 +129,14 @@ const GenWavOS = (props) => {
               <iframe style={{borderRadius:"12px"}} width="100%" height="415" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q&controls=1" title="YouTube video player" showControls allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </CardContent>
           </Card>
-          <Card className="card" style={{width:'90%', minHeight: '700px', marginBottom:"5%"}}>
+          <Card className="card" style={{width:'90%', minHeight: '590px', marginBottom:"5%"}}>
             <div>
               <img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20"/> Beats</div>
               <CardContent>
                 <iframe 
                     src="https://player.beatstars.com/?storeId=140652" 
                     width="100%" 
-                    height="650">
+                    height="540">
                 </iframe>
               </CardContent>
             </Card>
