@@ -143,7 +143,7 @@ const GenWavOS = (props) => {
                     title="gen.wav beats on BeatStars"
                     src="https://player.beatstars.com/?storeId=140652"
                     width="100%"
-                    height="400"
+                    height="760"
                     frameBorder="0"
                     style={{border: 0, borderRadius: "10px", display: "block"}}>
                 </iframe>
