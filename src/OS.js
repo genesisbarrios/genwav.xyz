@@ -129,47 +129,27 @@ const GenWavOS = (props) => {
               <iframe style={{borderRadius:"12px"}} width="100%" height="415" src="https://www.youtube.com/embed/videoseries?list=PLcGBMxEyx5p8Wknn5d3dhCnj4noeArd3Q&controls=1" title="YouTube video player" showControls allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </CardContent>
           </Card>
-          <Card className="card" style={{width:'90%', minHeight: '590px', marginBottom:"5%"}}>
+          <Card className="card" style={{width:'90%', marginBottom:"5%"}}>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
               <a href="https://www.beatstars.com/genwav/tracks" target="_blank" rel="noopener noreferrer" style={{color:"inherit", textDecoration:"none", display:"flex", alignItems:"center", gap:"4px"}}>
-                <img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20"/> Beats (BUY 2 GET 1 FREE)
+                <img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20"/> Beats (BUY 1 GET 1 FREE)
               </a>
               <a href="https://www.beatstars.com/genwav/tracks" target="_blank" rel="noopener noreferrer" aria-label="gen.wav on BeatStars" style={{display:"flex", marginRight:"6px"}}>
                 <img src="/beatstars.png" alt="BeatStars" width="20" height="20" style={{borderRadius:"4px"}} />
               </a>
             </div>
               <CardContent>
-                <iframe 
-                    src="https://player.beatstars.com/?storeId=140652" 
-                    width="100%" 
-                    height="540">
+                <iframe
+                    title="gen.wav beats on BeatStars"
+                    src="https://player.beatstars.com/?storeId=140652"
+                    width="100%"
+                    height="400"
+                    frameBorder="0"
+                    style={{border: 0, borderRadius: "10px", display: "block"}}>
                 </iframe>
               </CardContent>
             </Card>
 
-            <Card className="card" style={{width:'90%', marginBottom:"5%"}}>
-              <div className="cardHeader" style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
-                <span><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20" className="image" /> DEALS</span>
-                <a href="https://www.beatstars.com/genwav/tracks" target="_blank" rel="noopener noreferrer" aria-label="gen.wav on BeatStars" style={{display:"flex", marginRight:"6px"}}>
-                  <img src="/beatstars.png" alt="BeatStars" width="20" height="20" style={{borderRadius:"4px"}} />
-                </a>
-              </div>
-              <CardContent>
-                {[
-                  { name: "Trap Pack", desc: "5 Trap Beats for $50", url: "https://www.beatstars.com/collection/208968" },
-                  { name: "Reggaeton Pack", desc: "5 Beats for $50", url: "https://www.beatstars.com/collection/208970" },
-                ].map((deal) => (
-                  <a key={deal.name} href={deal.url} target="_blank" rel="noopener noreferrer"
-                    style={{display:"flex", alignItems:"center", justifyContent:"space-between", gap:"10px", padding:"10px 12px", marginBottom:"8px", border:"1px solid #73ecff", borderRadius:"10px", color:"inherit", textDecoration:"none"}}>
-                    <span>
-                      <span style={{display:"block", fontWeight:700}}>{deal.name}</span>
-                      <span style={{display:"block", fontSize:"0.85em", opacity:0.8}}>{deal.desc}</span>
-                    </span>
-                    <span style={{background:"#e8322f", color:"#fff", fontWeight:700, fontSize:"0.85em", padding:"6px 14px", borderRadius:"8px", whiteSpace:"nowrap"}}>Buy</span>
-                  </a>
-                ))}
-              </CardContent>
-            </Card>
           
              <Card className="card" style={{width:'90%', minHeight: '200px', marginBottom:"5%"}}>
                 <div className="cardHeader"><img className="image" src="https://dl.dropboxusercontent.com/s/6vust1jdp7z9iav22r8to/WAV-PACK-VOL.-II.jpg?rlkey=jaacek14fg07zr501im1bmr5z&st=vf1ckdxb&dl=0" width="20px" ></img> The Wav Pack Vol. II - Sample Pack</div>
