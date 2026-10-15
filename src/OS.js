@@ -130,14 +130,44 @@ const GenWavOS = (props) => {
             </CardContent>
           </Card>
           <Card className="card" style={{width:'90%', minHeight: '590px', marginBottom:"5%"}}>
-            <div>
-              <img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20"/> Beats</div>
+            <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+              <a href="https://www.beatstars.com/genwav/tracks" target="_blank" rel="noopener noreferrer" style={{color:"inherit", textDecoration:"none", display:"flex", alignItems:"center", gap:"4px"}}>
+                <img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20"/> Beats (BUY 2 GET 1 FREE)
+              </a>
+              <a href="https://www.beatstars.com/genwav/tracks" target="_blank" rel="noopener noreferrer" aria-label="gen.wav on BeatStars" style={{display:"flex", marginRight:"6px"}}>
+                <img src="/beatstars.png" alt="BeatStars" width="20" height="20" style={{borderRadius:"4px"}} />
+              </a>
+            </div>
               <CardContent>
                 <iframe 
                     src="https://player.beatstars.com/?storeId=140652" 
                     width="100%" 
                     height="540">
                 </iframe>
+              </CardContent>
+            </Card>
+
+            <Card className="card" style={{width:'90%', marginBottom:"5%"}}>
+              <div className="cardHeader" style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+                <span><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/mmsys_105.ico" width="20" height="20" className="image" /> DEALS</span>
+                <a href="https://www.beatstars.com/genwav/tracks" target="_blank" rel="noopener noreferrer" aria-label="gen.wav on BeatStars" style={{display:"flex", marginRight:"6px"}}>
+                  <img src="/beatstars.png" alt="BeatStars" width="20" height="20" style={{borderRadius:"4px"}} />
+                </a>
+              </div>
+              <CardContent>
+                {[
+                  { name: "Trap Pack", desc: "5 Trap Beats for $50", url: "https://www.beatstars.com/collection/208968" },
+                  { name: "Reggaeton Pack", desc: "5 Beats for $50", url: "https://www.beatstars.com/collection/208970" },
+                ].map((deal) => (
+                  <a key={deal.name} href={deal.url} target="_blank" rel="noopener noreferrer"
+                    style={{display:"flex", alignItems:"center", justifyContent:"space-between", gap:"10px", padding:"10px 12px", marginBottom:"8px", border:"1px solid #73ecff", borderRadius:"10px", color:"inherit", textDecoration:"none"}}>
+                    <span>
+                      <span style={{display:"block", fontWeight:700}}>{deal.name}</span>
+                      <span style={{display:"block", fontSize:"0.85em", opacity:0.8}}>{deal.desc}</span>
+                    </span>
+                    <span style={{background:"#e8322f", color:"#fff", fontWeight:700, fontSize:"0.85em", padding:"6px 14px", borderRadius:"8px", whiteSpace:"nowrap"}}>Buy</span>
+                  </a>
+                ))}
               </CardContent>
             </Card>
           
