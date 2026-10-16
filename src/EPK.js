@@ -265,7 +265,8 @@ const EPK = (props) => {
           <p style={{marginBottom:"1%"}}>Featured on Spotify's Editorial Playlist Spotify Novedades Viernes Latinoamerica</p>
           <p style={{marginBottom:"1%"}}>1 Million Streams on Soundcloud</p>
           <p style={{marginBottom:"1%"}}>1 Million Views on YouTube</p>
-          <p style={{marginBottom:"2%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and has surpassed 30K streams.</p>
+          <p style={{marginBottom:"1%"}}>Debut Album Released on May 30th 2024, featured in Colors Studios and has surpassed 30K streams.</p>
+          <p style={{marginBottom:"2%"}}>45,000+ Followers on Social Media</p>
 
           <h1 style={{marginTop:"5%"}}>MUSIC</h1>
           <iframe
