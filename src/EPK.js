@@ -226,7 +226,7 @@ const EPK = (props) => {
         @media (max-width: 959.95px) {
           .epk-side-photos { display: none !important; }
           .epk-mobile-photos { display: block; }
-          .epk-mobile-hero { display: block; width: 100%; height: 40vh; max-height: 360px; object-fit: cover; object-position: 55% 35%; border-radius: 8px; margin-bottom: 16px; }
+          .epk-mobile-hero { display: block; width: 100%; height: 20vh; max-height: 180px; object-fit: cover; object-position: 55% 35%; border-radius: 8px; margin-bottom: 16px; }
           .epk-newsletter { width: 100%; }
           .epk-signup-desktop { display: none; }
           .epk-bookings-desktop { display: none; }
