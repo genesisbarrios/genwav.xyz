@@ -38,7 +38,7 @@ const LIVE_PERFORMANCES = [
   { name: "Dolphin Mall", city: "Miami, FL", year: "2026" },
   { name: "The Sound Library", city: "Miami, FL", year: "2026" },
   { name: "Calle 8 Ecuadorian Festival", city: "Miami, FL", year: "2025" },
-  { name: "Young Arts", city: "Miami, FL", year: "2024" },
+  { name: "Young Arts", city: "Miami, FL", year: "2014" },
   { name: "America Teve Minuto de Fama", city: "Miami, FL", year: "2010" },
   { name: "Dear Eleanor", city: "Miami, FL", year: "2025" },
   { name: "Unseen Creatures Brewery", city: "Miami, FL", year: "2023" },
