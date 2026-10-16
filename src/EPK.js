@@ -189,6 +189,31 @@ const EPK = (props) => {
     </>
   );
 
+  const bookings = (
+    <>
+          <h1 style={{marginTop:"5%"}}>BOOKINGS & PRESS INQUIRIES</h1>
+          <p style={{marginBottom:"1.5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
+
+          <a
+              href={pdfUrl}
+              target="_blank" // Opens the link in a new tab
+              rel="noopener noreferrer" // Required for security reasons when using target="_blank"
+              style={{
+                backgroundColor: 'black',
+                color: 'white',
+                border: '1px solid white',
+                borderRadius: '5px',
+                padding: '10px 20px',
+                display: 'inline-block',
+                margin: '0',
+                textDecoration: 'none' // Removes underline from anchor element
+              }}
+            >
+              DOWNLOAD ELECTRONIC PRESS KIT
+            </a>
+    </>
+  );
+
   return(
     
     <div id="EPK" style={{paddingBottom:"5%"}}>
@@ -196,11 +221,16 @@ const EPK = (props) => {
         .epk-mobile-photos { display: none; }
         .epk-newsletter { width: 50%; }
         .epk-signup-mobile { display: none; }
+        .epk-mobile-hero { display: none; }
+        .epk-bookings-mobile { display: none; }
         @media (max-width: 959.95px) {
           .epk-side-photos { display: none !important; }
           .epk-mobile-photos { display: block; }
+          .epk-mobile-hero { display: block; width: 100%; height: 40vh; max-height: 360px; object-fit: cover; object-position: 55% 35%; border-radius: 8px; margin-bottom: 16px; }
           .epk-newsletter { width: 100%; }
           .epk-signup-desktop { display: none; }
+          .epk-bookings-desktop { display: none; }
+          .epk-bookings-mobile { display: block; margin-top: 8%; }
           .epk-signup-mobile { display: block; margin-top: 6%; text-align: left; }
         }
       `}</style>
@@ -222,6 +252,7 @@ const EPK = (props) => {
         </Grid>
         <Grid item sm={12} md={6} lg={6}> 
          <div style={{height:"100%", width: "100%"}}>
+          <img className="epk-mobile-hero" src="/KEEPGRINDING/DSC01454-web.jpg" alt="gen.wav" />
           <h1>gen.wav</h1>
           <p style={{marginBottom:"2%"}}>Miami based Independent Artist, and Producer - Latin, Hip Hop, R&B, Alternative</p>
           
@@ -268,26 +299,7 @@ const EPK = (props) => {
             style={{marginTop:"5%", borderRadius:"10px"}}
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1657973560&color=%235ab7ce&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
           ></iframe>
-          <h1 style={{marginTop:"5%"}}>BOOKINGS & PRESS INQUIRIES</h1>
-          <p style={{marginBottom:"1.5%"}}><a style={{color:"white", textDecoration:"none"}} href="mailto:beatsbygenwav@gmail.com">beatsbygenwav@gmail.com</a></p>
-
-          <a
-              href={pdfUrl}
-              target="_blank" // Opens the link in a new tab
-              rel="noopener noreferrer" // Required for security reasons when using target="_blank"
-              style={{
-                backgroundColor: 'black',
-                color: 'white',
-                border: '1px solid white',
-                borderRadius: '5px',
-                padding: '10px 20px',
-                display: 'inline-block',
-                margin: '0',
-                textDecoration: 'none' // Removes underline from anchor element
-              }}
-            >
-              DOWNLOAD ELECTRONIC PRESS KIT
-            </a>
+          <div className="epk-bookings-desktop">{bookings}</div>
 
             <div className="epk-signup-desktop">{signupAndLinks}</div>
          </div>
@@ -312,12 +324,13 @@ const EPK = (props) => {
             ))}
           </div>
 
+              <div className="epk-bookings-mobile">{bookings}</div>
+
               <div className="epk-signup-mobile">{signupAndLinks}</div>
 
-              {/* On mobile the left photo column is hidden and its photos start the gallery here */}
+              {/* On mobile the left photo column is hidden: its top photo becomes the hero, the other starts the gallery here */}
               <div className="epk-mobile-photos">
-                <img src="/KEEPGRINDING/DSC01454-web.jpg" alt="gen.wav" style={{width:"80%", height:"auto", marginTop:"20px"}} />
-                <img src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0" alt="gen.wav" style={{width:"80%", height:"auto"}} />
+                <img src="https://dl.dropboxusercontent.com/s/lgduzrail9tglaoo4orpg/IMG_5547.jpg?rlkey=mk5oacojh1yr23ij8s7vcyflt&dl=0" alt="gen.wav" style={{width:"80%", height:"auto", marginTop:"20px"}} />
               </div>
              
               <div style={{width:"80%", margin:"20px auto 0", aspectRatio:"4001 / 5580", overflow:"hidden", position:"relative"}}>
