@@ -17,11 +17,22 @@ const SITE = "https://genwav.xyz";
 const BUILD = path.join(__dirname, "..", "build");
 
 const ARTIST_BIO =
-  "gen.wav is a Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer from Miami making Latin R&B and hip-hop.";
+  "gen.wav is a trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer from Miami — an LGBTQ+ Latin R&B and hip-hop artist.";
+
+const KEYWORDS = [
+  "gen.wav", "genwav", "trans artist", "trans musician", "trans singer", "trans producer",
+  "transgender artist", "transgender musician", "transgender singer", "trans man", "transman",
+  "transman artist", "trans man musician", "transmasc", "transmasc artist", "transmasc musician", "transmasc singer", "LGBT artist", "LGBTQ artist",
+  "LGBTQ+ musician", "queer artist", "queer Latin artist", "trans Latino artist", "Latinx artist",
+  "Cuban American artist", "Cuban American singer", "Cuban Nicaraguan artist", "Cuban-Nicaraguan-American",
+  "Nicaraguan artist", "Nicaraguan American singer", "Cuban artist", "Latin R&B", "Latin hip hop",
+  "bilingual artist", "Spanish English music", "Miami artist", "Miami singer", "Miami music producer",
+  "Miami independent artist", "independent artist",
+].join(", ");
 
 const release = (title, artists, image, extra = {}) => ({
   title: `${title} — ${artists}`,
-  description: `Stream ${title} by ${artists} on Spotify, Apple Music, YouTube, SoundCloud, and more.`,
+  description: `Stream ${title} by ${artists} on Spotify, Apple Music, YouTube, SoundCloud, and more. gen.wav is a trans Cuban-Nicaraguan-American artist from Miami.`,
   image: `/og/${image}.jpg`,
   imageSize: [1200, 1200],
   type: "music.song",
@@ -31,7 +42,7 @@ const release = (title, artists, image, extra = {}) => ({
 
 const ROUTES = {
   "/": {
-    title: "gen.wav — Miami Latin R&B Artist & Producer",
+    title: "gen.wav — Trans Latino R&B Artist & Producer from Miami",
     description: `${ARTIST_BIO} Stream new music, watch videos, and shop merch.`,
     image: "/og/genwav.jpg",
     imageSize: [1200, 630],
@@ -40,7 +51,7 @@ const ROUTES = {
   "/OS": { alias: "/" },
   "/RELEASES": {
     title: "Music by gen.wav — All Releases",
-    description: "Every single, EP, and album by gen.wav — stream Latin R&B, hip-hop, and more on your favorite platform.",
+    description: "Every single, EP, and album by gen.wav, a trans Cuban-Nicaraguan-American LGBTQ+ artist from Miami — stream Latin R&B, hip-hop, and more on your favorite platform.",
     image: "/og/genwav.jpg",
     imageSize: [1200, 630],
     type: "website",
@@ -61,7 +72,7 @@ const ROUTES = {
   },
   "/GENESIS": release("GENESIS", "gen.wav", "GENESIS", {
     title: "GENESIS — gen.wav (Debut Album)",
-    description: "Stream GENESIS, the debut album by gen.wav, on Spotify, Apple Music, YouTube, SoundCloud, and more.",
+    description: "Stream GENESIS, the debut album by trans Cuban-Nicaraguan-American artist gen.wav, on Spotify, Apple Music, YouTube, SoundCloud, and more.",
     type: "music.album",
   }),
   "/SINDESTINO": release("SIN DESTINO", "KHR!S Joao, gen.wav", "SINDESTINO"),
@@ -102,11 +113,34 @@ function headTags(route, m) {
         byArtist: { "@type": "MusicGroup", name: m.release.artists },
         image,
         url,
+        description: m.description,
+        genre: ["Latin R&B", "Hip Hop"],
       }
-    : { "@context": "https://schema.org", "@type": "MusicGroup", name: "gen.wav", url: `${SITE}/`, image: `${SITE}/og/genwav.jpg`, genre: ["Latin R&B", "Hip Hop"] };
+    : {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        name: "gen.wav",
+        alternateName: "genwav",
+        url: `${SITE}/`,
+        image: `${SITE}/og/genwav.jpg`,
+        description: ARTIST_BIO,
+        genre: ["Latin R&B", "Hip Hop", "R&B", "Latin"],
+        foundingLocation: { "@type": "Place", name: "Miami, Florida" },
+        keywords: KEYWORDS,
+        member: {
+          "@type": "Person",
+          name: "gen.wav",
+          description: ARTIST_BIO,
+          nationality: [{ "@type": "Country", name: "United States" }, { "@type": "Country", name: "Cuba" }, { "@type": "Country", name: "Nicaragua" }],
+          homeLocation: { "@type": "Place", name: "Miami, Florida" },
+          knowsLanguage: ["en", "es"],
+          jobTitle: ["Singer", "Multi-instrumentalist", "Music Producer"],
+        },
+      };
   return [
     `<title>${esc(m.title)}</title>`,
     `<meta name="description" content="${esc(m.description)}">`,
+    `<meta name="keywords" content="${esc(KEYWORDS)}">`,
     `<link rel="canonical" href="${url}">`,
     `<meta property="og:type" content="${m.type}">`,
     `<meta property="og:site_name" content="gen.wav">`,
@@ -127,11 +161,37 @@ function headTags(route, m) {
   ].join("");
 }
 
+// Static, crawlable page body. ChatGPT/Perplexity/Claude crawlers (and Google's
+// first pass) don't run JavaScript, so without this they see an empty <div id="root">.
+// React replaces it on mount, so visitors never see it.
+const LONG_BIO = [
+  "gen.wav is a trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer rooted in Miami, Florida — an openly transgender man (transmasc), LGBTQ+ Latino artist making Latin R&B and hip-hop in both Spanish and English.",
+  "A decade of classical training across piano, cello, violin, and music theory sits beneath a self-taught command of guitar, bass, and production. Drawing on his Cuban and Nicaraguan heritage, gen.wav writes music that refuses to separate cultural identity from personal and political honesty. His work has been featured in Spotify editorial playlists and on COLORS.",
+  "gen.wav es un cantante trans, multi-instrumentista y productor cubano-nicaragüense-estadounidense de Miami — un artista latino LGBTQ+ que hace R&B latino y hip-hop en español e inglés.",
+];
+
+function bodyHtml(route, m) {
+  const releases = Object.entries(ROUTES)
+    .filter(([, e]) => e.release)
+    .map(([r, e]) => `<li><a href="${r}">${esc(e.title)}</a></li>`)
+    .join("");
+  const bio = LONG_BIO.map((p) => `<p>${esc(p)}</p>`).join("");
+  return [
+    `<main>`,
+    `<h1>${esc(m.title)}</h1>`,
+    `<p>${esc(m.description)}</p>`,
+    m.release ? `<p>${esc(ARTIST_BIO)}</p>` : bio,
+    `<nav><a href="/">gen.wav</a> · <a href="/EPK">EPK / Bio</a> · <a href="/RELEASES">Releases</a> · <a href="/newsletter">Newsletter</a></nav>`,
+    m.release ? "" : `<h2>Music by gen.wav</h2><ul>${releases}</ul>`,
+    `</main>`,
+  ].join("");
+}
+
 // Strip whatever title/description/canonical/OG/Twitter tags index.html shipped with
 function stripSeo(html) {
   return html
     .replace(/<title>[\s\S]*?<\/title>/gi, "")
-    .replace(/<meta\b[^>]*\b(?:property|name)=["']?(?:og:[^"'\s>]*|twitter:[^"'\s>]*|description)["']?[^>]*>/gi, "")
+    .replace(/<meta\b[^>]*\b(?:property|name)=["']?(?:og:[^"'\s>]*|twitter:[^"'\s>]*|description|keywords)["']?[^>]*>/gi, "")
     .replace(/<link\b[^>]*\brel=["']?canonical["']?[^>]*>/gi, "");
 }
 
@@ -144,11 +204,14 @@ function absolutizeAssets(html) {
 
 const template = absolutizeAssets(stripSeo(fs.readFileSync(path.join(BUILD, "index.html"), "utf8")));
 if (!template.includes("</head>")) throw new Error("prerender-meta: no </head> in build/index.html");
+if (!template.includes('<div id="root"></div>')) throw new Error('prerender-meta: no <div id="root"></div> in build/index.html');
 
 let written = 0;
 for (const [route, entry] of Object.entries(ROUTES)) {
   const meta = entry.alias ? ROUTES[entry.alias] : entry;
-  const html = template.replace("</head>", `${headTags(route, meta)}</head>`);
+  const html = template
+    .replace("</head>", `${headTags(route, meta)}</head>`)
+    .replace('<div id="root"></div>', `<div id="root">${bodyHtml(route, meta)}</div>`);
   const file = route === "/" ? path.join(BUILD, "index.html") : path.join(BUILD, route.slice(1), "index.html");
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, html);
@@ -156,3 +219,13 @@ for (const [route, entry] of Object.entries(ROUTES)) {
   written++;
 }
 console.log(`prerender-meta: wrote link-preview tags for ${written} routes`);
+
+// Sitemap of every canonical (non-alias) route so search engines find release pages
+const urls = Object.entries(ROUTES)
+  .filter(([, e]) => !e.alias)
+  .map(([route]) => `  <url><loc>${route === "/" ? `${SITE}/` : `${SITE}${route}`}</loc></url>`);
+fs.writeFileSync(
+  path.join(BUILD, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`
+);
+console.log(`prerender-meta: wrote sitemap.xml with ${urls.length} URLs`);
