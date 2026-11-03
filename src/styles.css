@@ -250,12 +250,19 @@ button.legend{
 
 /* Homepage gallery: every slide gets the same frame, and each photo is shown
    whole (no cropping) and centered both ways, whatever its orientation. */
+/* The frame is a square as wide as the gallery column (container query
+   units), plus room underneath for the slide dots. An explicit height keeps
+   tall photos from stretching every slide. */
+.gallery-carousel .slider-wrapper{
+  container-type:inline-size;
+}
+
 .gallery-carousel .slide{
   display:flex !important;
   align-items:center;
   justify-content:center;
-  aspect-ratio:1 / 1;
-  /* Room under the photo for the slide dots, which sit over the bottom edge. */
+  height:440px;
+  height:calc(100cqw + 56px);
   padding-bottom:56px;
   box-sizing:border-box;
   background:#000;
