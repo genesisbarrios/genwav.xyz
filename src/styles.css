@@ -248,6 +248,30 @@ button.legend{
   object-fit: cover !important;
 }
 
+/* Homepage gallery: every slide gets the same frame, and each photo is shown
+   whole (no cropping) and centered both ways, whatever its orientation. */
+.gallery-carousel .slide{
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  height:480px;
+  background:#000;
+}
+
+.gallery-carousel .slide img{
+  width:auto !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+}
+
+@media (max-width: 600px){
+  .gallery-carousel .slide{
+    height:340px;
+  }
+}
+
 .igLogo{
   color:white;
 }

@@ -256,7 +256,7 @@ const GenWavOS = (props) => {
 
               <Card className="card" style={{width:'90%', minHeight: '200px', marginTop:"5%"}}>
               <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/wangimg_130.ico" width="20px"></img> Gallery</div>
-                    <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
+                    <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel gallery-carousel">
                      
                     <div className="slide">
                       <img src="/RUNAWAY/DSC09101-web.jpg" alt="gen.wav - Run Away photoshoot" />
@@ -271,9 +271,7 @@ const GenWavOS = (props) => {
                       <img src="/RUNAWAY/DSC09346-web.jpg" alt="gen.wav - Run Away photoshoot" />
                     </div>
                     <div className="slide">
-                      <div style={{width:"60%", aspectRatio:"3 / 4", margin:"0 auto", overflow:"hidden", position:"relative"}}>
-                        <img style={{width:"100%", height:"100%", objectFit:"cover", objectPosition:"53% 40%"}} src="/KEEPGRINDING/DSC01452-web.jpg" alt="gen.wav" />
-                      </div>
+                      <img src="/KEEPGRINDING/DSC01454-web.jpg" alt="gen.wav" />
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
                     </div>
                     <div className="slide">
