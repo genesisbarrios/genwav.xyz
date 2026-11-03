@@ -86,6 +86,9 @@ const RUNAWAY = () => {
 
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>
         <div className="embla__container">
+           <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09101-web.jpg" alt="Run Away 4" className="embla__slide__img" />
+          </div>
           <div className="embla__slide">
             <img src="/RUNAWAY/DSC08724-web.jpg" alt="Run Away 1" className="embla__slide__img" />
           </div>
@@ -95,9 +98,7 @@ const RUNAWAY = () => {
           <div className="embla__slide">
             <img src="/RUNAWAY/DSC09033-web.jpg" alt="Run Away 3" className="embla__slide__img" />
           </div>
-          <div className="embla__slide">
-            <img src="/RUNAWAY/DSC09101-web.jpg" alt="Run Away 4" className="embla__slide__img" />
-          </div>
+         
           <div className="embla__slide">
             <img src="/RUNAWAY/DSC09346-web.jpg" alt="Run Away 5" className="embla__slide__img" />
           </div>
