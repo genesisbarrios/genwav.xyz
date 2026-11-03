@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import useEmblaCarousel from 'embla-carousel-react';
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
 import MetaTags from 'react-meta-tags';
@@ -19,6 +20,12 @@ const RUNAWAY = () => {
     // Track when Run Away page is viewed
     trackReleasePageView('Run Away');
   }, []);
+
+  const [emblaRef] = useEmblaCarousel({
+    loop: true,
+    align: 'center',
+    containScroll: 'trimSnaps'
+  });
 
   return(
     <div id="NEW">
@@ -74,6 +81,35 @@ const RUNAWAY = () => {
         </style>
         <div className="cardHeader">
           <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Pre-save Run Away"></iframe>
+        </div>
+      </div>
+
+      <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>
+        <div className="embla__container">
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC08724-web.jpg" alt="Run Away 1" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC08863-web.jpg" alt="Run Away 2" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09033-web.jpg" alt="Run Away 3" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09101-web.jpg" alt="Run Away 4" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09346-web.jpg" alt="Run Away 5" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09535-web.jpg" alt="Run Away 6" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09587-web.jpg" alt="Run Away 7" className="embla__slide__img" />
+          </div>
+          <div className="embla__slide">
+            <img src="/RUNAWAY/DSC09717-web.jpg" alt="Run Away 8" className="embla__slide__img" />
+          </div>
         </div>
       </div>
     </div>
