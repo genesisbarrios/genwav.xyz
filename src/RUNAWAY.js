@@ -38,8 +38,6 @@ const RUNAWAY = () => {
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <h3 style={{margin:"0 0 10px", fontWeight:"600"}}>Run Away - gen.wav</h3>
-
       <p style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Sign up to pre-save
       </p>
