@@ -233,15 +233,15 @@ const GenWavOS = (props) => {
                       <Avatar size={125} src='/avatar-genwav.jpg' />
                     </div> */}
                     <div style={{textAlign:"center"}}>
-                      <div style={{width: '125px', height: '125px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto'}}>
+                      <div style={{width: '125px', height: '125px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px'}}>
                         <img
-                          src='/KEEPGRINDING/DSC01332.jpg'
+                          src='/avatar-genwav.jpg'
+                          alt='gen.wav'
                           style={{
                             width: '100%',
                             height: '100%',
                             objectFit: 'cover',
-                            objectPosition: '50% 25%',
-                            transform: 'scale(1.3)'
+                            objectPosition: '50% 20%'
                           }}
                         />
                       </div>
