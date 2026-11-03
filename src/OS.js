@@ -272,7 +272,7 @@ const GenWavOS = (props) => {
                     </div>
                     <div className="slide">
                       <div style={{width:"60%", aspectRatio:"3 / 4", margin:"0 auto", overflow:"hidden", position:"relative"}}>
-                        <img style={{width:"100%", height:"100%", objectFit:"cover", objectPosition:"55% 40%"}} src="/KEEPGRINDING/DSC01454.jpg" />
+                        <img style={{width:"100%", height:"100%", objectFit:"cover", objectPosition:"53% 40%"}} src="/KEEPGRINDING/DSC01452-web.jpg" alt="gen.wav" />
                       </div>
                           {/* <button className="legend"><a href="" target="_blank" style={{textDecoration:"none", cursor:"pointer"}}><InstagramLogo width={25} className="igLogo"></InstagramLogo></a></button> */}
                     </div>
