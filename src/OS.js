@@ -259,6 +259,18 @@ const GenWavOS = (props) => {
                     <Carousel centerMode={true} dynamicHeight={false} centerSlidePercentage={100} infiniteLoop showThumbs={false} className="custom-carousel">
                      
                     <div className="slide">
+                      <img src="/RUNAWAY/DSC09101-web.jpg" alt="gen.wav - Run Away photoshoot" />
+                    </div>
+                    <div className="slide">
+                      <img src="/RUNAWAY/DSC09033-web.jpg" alt="gen.wav - Run Away photoshoot" />
+                    </div>
+                    <div className="slide">
+                      <img src="/RUNAWAY/DSC08863-web.jpg" alt="gen.wav - Run Away photoshoot" />
+                    </div>
+                    <div className="slide">
+                      <img src="/RUNAWAY/DSC09346-web.jpg" alt="gen.wav - Run Away photoshoot" />
+                    </div>
+                    <div className="slide">
                       <div style={{width:"60%", aspectRatio:"3 / 4", margin:"0 auto", overflow:"hidden", position:"relative"}}>
                         <img style={{width:"100%", height:"100%", objectFit:"cover", objectPosition:"55% 40%"}} src="/KEEPGRINDING/DSC01454.jpg" />
                       </div>
