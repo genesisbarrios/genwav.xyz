@@ -32,13 +32,26 @@ const RUNAWAY = () => {
         </div>
     <div style={{ textAlign: "center" }}>
       <div id="NEWImageDiv">
+        <style>
+          {`
+            @media (min-width: 769px) {
+              #runawayCover {
+                margin: 2% 0 0.5% !important;
+              }
+              #runawayPresave {
+                margin: 0 0 0.75% !important;
+              }
+            }
+          `}
+        </style>
         <img
+          id="runawayCover"
           src="/RUNAWAY/runawayart.jpg"
           alt="Run Away by gen.wav cover art" type="img"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
-      <p style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
+      <p id="runawayPresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Sign up to pre-save
       </p>
 
