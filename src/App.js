@@ -32,6 +32,7 @@ import WORLD from './WORLD';
 import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
 import MATRIX from './MATRIX';
+import RUNAWAY from './RUNAWAY';
 // Public ID (it's visible in page source anyway), kept here so it doesn't depend on Vercel env vars
 const META_PIXEL_ID = '1077030558456212';
 
@@ -180,6 +181,12 @@ const App = () => {
     );
   }
 
+  const RUNAWAYComponent = () => {
+    return (
+      <RUNAWAY />
+    );
+  }
+
   const MATRIXComponent = () => {
     return (
       <MATRIX />
@@ -235,6 +242,7 @@ const App = () => {
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
           <Route path="/KEEPGRINDING" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/syre" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
+          <Route path="/RUNAWAY" element={<><Header /><RUNAWAYComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
           <Route path="/WORLD" element={<><Header /><WORLDComponent  /><Footer /></>} />
           <Route path="/EPK" element={<><Header /><EPKComponent /><Footer /></>} />

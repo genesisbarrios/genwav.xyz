@@ -95,6 +95,10 @@ const ROUTES = {
   "/UP": release("UP", "gen.wav", "UP"),
   "/KEEPGRINDING": release("KEEP GRINDIN (SYRE)", "gen.wav", "KEEPGRINDING"),
   "/syre": { alias: "/KEEPGRINDING" },
+  "/RUNAWAY": release("Run Away", "gen.wav", "RUNAWAY", {
+    description: "Pre-save Run Away, the new single by gen.wav, a trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer from Miami.",
+  }),
+  "/runaway": { alias: "/RUNAWAY" },
   "/MATRIX": release("THE MATRIX", "gen.wav", "RENACI"),
   "/WORLD": release("The World is a Stage", "gen.wav", "RENACI"),
 };
