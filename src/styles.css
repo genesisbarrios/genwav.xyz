@@ -254,7 +254,10 @@ button.legend{
   display:flex !important;
   align-items:center;
   justify-content:center;
-  height:480px;
+  aspect-ratio:1 / 1;
+  /* Room under the photo for the slide dots, which sit over the bottom edge. */
+  padding-bottom:56px;
+  box-sizing:border-box;
   background:#000;
 }
 
@@ -266,11 +269,6 @@ button.legend{
   object-fit:contain !important;
 }
 
-@media (max-width: 600px){
-  .gallery-carousel .slide{
-    height:340px;
-  }
-}
 
 .igLogo{
   color:white;
