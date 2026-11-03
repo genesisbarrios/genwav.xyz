@@ -230,18 +230,17 @@ const GenWavOS = (props) => {
                 <div className="cardHeader"><img src="https://raw.githubusercontent.com/React95/React95/40e774b5e208822d206d9f6bc202ec1d7c3b0680/packages/icons/src/icons/vvexe32_1.ico" width="25" height="25" className="inage" /> About</div>
                   <CardContent>
                     {/* <div style={{textAlign:"center"}}> 
-                      <Avatar size={125} src='/avatar-genwav.jpg' />
+                      <Avatar size={125} src='/avatar-headshot.jpg' />
                     </div> */}
                     <div style={{textAlign:"center"}}>
                       <div style={{width: '125px', height: '125px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px'}}>
                         <img
-                          src='/avatar-genwav.jpg'
+                          src='/avatar-headshot.jpg'
                           alt='gen.wav'
                           style={{
                             width: '100%',
                             height: '100%',
-                            objectFit: 'cover',
-                            objectPosition: '50% 20%'
+                            objectFit: 'cover'
                           }}
                         />
                       </div>
