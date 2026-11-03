@@ -35,7 +35,7 @@ const RUNAWAY = () => {
         <img
           src="/RUNAWAY/runawayart.jpg"
           alt="Run Away by gen.wav cover art" type="img"
-          style={{ height: "auto", width: "100%", maxWidth: "min(320px, 70%)", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
+          style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
 
       <h3 style={{margin:"0 0 10px", fontWeight:"600"}}>Run Away - gen.wav</h3>
