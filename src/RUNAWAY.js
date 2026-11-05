@@ -76,6 +76,14 @@ const RUNAWAY = () => {
           <Grid item xs={12} sm={12}>
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} /><p style={{ color: '#1DD15E', marginRight: "5px", fontWeight:"600"}}>Spotify</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://open.spotify.com/track/0VuRfWYPoRGUVXswBzJGpf"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
                 <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
               </Grid>
               <Grid item xs={6} sm={6}>
