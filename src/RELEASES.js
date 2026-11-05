@@ -158,7 +158,7 @@ const RELEASES = (props) => {
                 />
                 <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
                   <Typography variant="h6" component="h6">
-                  Run Away - gen.wav (Pre-save)
+                  Run Away - gen.wav
                   </Typography>
                 </CardContent>
               </CardActionArea>
