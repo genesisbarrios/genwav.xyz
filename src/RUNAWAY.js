@@ -84,6 +84,14 @@ const RUNAWAY = () => {
             </Grid>
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://music.apple.com/us/album/run-away-single/6826551457"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
                 <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
               </Grid>
               <Grid item xs={6} sm={6}>
