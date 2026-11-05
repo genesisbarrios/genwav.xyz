@@ -146,28 +146,6 @@ const RUNAWAY = () => {
         </Grid>
 
 
-      <div
-        className="card"
-        style={{
-          width: '40%',
-          minHeight: '200px',
-          margin: '0 auto',
-        }}
-      >
-        <style>
-          {`
-            @media (max-width: 768px) {
-              .card {
-                width: 80% !important;
-              }
-            }
-          `}
-        </style>
-        <div className="cardHeader">
-          <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Pre-save Run Away"></iframe>
-        </div>
-      </div>
-
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>
         <div className="embla__container">
            <div className="embla__slide">
@@ -195,6 +173,28 @@ const RUNAWAY = () => {
           <div className="embla__slide">
             <img src="/RUNAWAY/DSC09717-web.jpg" alt="Run Away 8" className="embla__slide__img" />
           </div>
+        </div>
+      </div>
+
+      <div
+        className="card"
+        style={{
+          width: '40%',
+          minHeight: '200px',
+          margin: '5% auto 0',
+        }}
+      >
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .card {
+                width: 80% !important;
+              }
+            }
+          `}
+        </style>
+        <div className="cardHeader">
+          <iframe src="https://influanto.com/embed/newsletter/gen.wav" width="100%" height="440" style={{border:"none", maxWidth:"100%"}} title="Pre-save Run Away"></iframe>
         </div>
       </div>
     </div>
