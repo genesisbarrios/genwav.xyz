@@ -6,7 +6,7 @@ import MetaTags from 'react-meta-tags';
 import { trackReleasePageView } from "./MetaPixel";
 import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, TidalLogo, AmazonLogo } from "@phosphor-icons/react";
 
-// The video and stream links go live Nov 5, 2026 at 12:00 PM Eastern; hidden until then
+// The YouTube video and YouTube Music link go live Nov 5, 2026 at 12:00 PM Eastern; hidden until then
 const VIDEO_LIVE_AT = new Date("2026-11-05T12:00:00-05:00").getTime();
 
 const RUNAWAY = () => {
@@ -71,7 +71,6 @@ const RUNAWAY = () => {
       {showVideo && (
         <iframe id="NEWVideo" style={{margin:"0 auto"}} width="50%" height="315" src="https://www.youtube.com/embed/xBFecfOcsjw" title="Run Away - gen.wav" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       )}
-      {showVideo && (
         <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", paddingLeft:"5%"}}>
           <Grid item xs={12} sm={12}>
             <Grid container spacing={2} className="logo-button-container">
@@ -106,6 +105,7 @@ const RUNAWAY = () => {
                 <a target="_blank" href="https://tidal.com/track/572786406/u"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
+            {showVideo && (
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
                 <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>YouTube Music</p>
@@ -114,6 +114,7 @@ const RUNAWAY = () => {
                 <a target="_blank" href="https://www.youtube.com/watch?v=fIFhfJdBlVU&list=OLAK5uy_nQdJ62goPRpqmxLRl_-h1Hp1WuSmSwnYU"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
+            )}
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
                 <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50} alt="Deezer"></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
@@ -148,7 +149,6 @@ const RUNAWAY = () => {
             </Grid>
           </Grid>
         </Grid>
-      )}
 
       <p id="runawayPresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Sign up to pre-save
