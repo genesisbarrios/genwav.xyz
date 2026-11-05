@@ -114,6 +114,14 @@ const RUNAWAY = () => {
                 <a target="_blank" href="https://www.youtube.com/watch?v=fIFhfJdBlVU&list=OLAK5uy_nQdJ62goPRpqmxLRl_-h1Hp1WuSmSwnYU"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/deezer.png" width={50} alt="Deezer"></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://www.deezer.com/us/album/1129562431"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       )}
