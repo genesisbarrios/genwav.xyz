@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
@@ -6,7 +6,18 @@ import MetaTags from 'react-meta-tags';
 import { trackReleasePageView } from "./MetaPixel";
 import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo } from "@phosphor-icons/react";
 
+// The video goes live Nov 5, 2026 at 12:00 PM Eastern; hidden until then
+const VIDEO_LIVE_AT = new Date("2026-11-05T12:00:00-05:00").getTime();
+
 const RUNAWAY = () => {
+  const [showVideo, setShowVideo] = useState(() => Date.now() >= VIDEO_LIVE_AT);
+
+  useEffect(() => {
+    // Reveal it on its own if the page is open when it goes live
+    if (showVideo) return;
+    const t = setTimeout(() => setShowVideo(true), Math.min(VIDEO_LIVE_AT - Date.now(), 2147483647));
+    return () => clearTimeout(t);
+  }, [showVideo]);
 
   useEffect(() => {
     //hide elements
@@ -57,6 +68,9 @@ const RUNAWAY = () => {
           alt="Run Away by gen.wav cover art" type="img"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
+      {showVideo && (
+        <iframe id="NEWVideo" style={{margin:"0 auto"}} width="50%" height="315" src="https://www.youtube.com/embed/xBFecfOcsjw" title="Run Away - gen.wav" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      )}
 
       <p id="runawayPresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Sign up to pre-save
