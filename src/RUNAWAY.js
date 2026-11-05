@@ -52,12 +52,14 @@ const RUNAWAY = () => {
       <div id="NEWImageDiv">
         <style>
           {`
+            .ytm-short { display: none; }
+            @media (max-width: 768px) {
+              .ytm-full { display: none; }
+              .ytm-short { display: inline; }
+            }
             @media (min-width: 769px) {
               #runawayCover {
                 margin: 2% 0 0.5% !important;
-              }
-              #runawayPresave {
-                margin: 0 0 0.75% !important;
               }
             }
           `}
@@ -107,7 +109,7 @@ const RUNAWAY = () => {
             </Grid>
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-                <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>YouTube Music</p>
+                <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}><span className="ytm-full">YouTube Music</span><span className="ytm-short">YouTube</span></p>
               </Grid>
               <Grid item xs={6} sm={6}>
                 <a target="_blank" href="https://www.youtube.com/watch?v=fIFhfJdBlVU&list=OLAK5uy_nQdJ62goPRpqmxLRl_-h1Hp1WuSmSwnYU"><button className="pre-save-button">Stream</button></a>
@@ -148,9 +150,6 @@ const RUNAWAY = () => {
           </Grid>
         </Grid>
 
-      <p id="runawayPresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
-        Sign up to pre-save
-      </p>
 
       <div
         className="card"
