@@ -4,7 +4,7 @@ import './styles.css'
 import Grid from '@material-ui/core/Grid'
 import MetaTags from 'react-meta-tags';
 import { trackReleasePageView } from "./MetaPixel";
-import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, TidalLogo } from "@phosphor-icons/react";
+import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, TidalLogo, AmazonLogo } from "@phosphor-icons/react";
 
 // The video and stream links go live Nov 5, 2026 at 12:00 PM Eastern; hidden until then
 const VIDEO_LIVE_AT = new Date("2026-11-05T12:00:00-05:00").getTime();
@@ -128,6 +128,14 @@ const RUNAWAY = () => {
               </Grid>
               <Grid item xs={6} sm={6}>
                 <a target="_blank" href="https://www.pandora.com/artist/genwav/run-away/ALtk2gJKvJmr2bX"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HP6BVVVG"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
           </Grid>
