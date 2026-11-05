@@ -122,6 +122,14 @@ const RUNAWAY = () => {
                 <a target="_blank" href="https://www.deezer.com/us/album/1129562431"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <img className="logoSize" style={{marginRight: "5px" }} src="/pandora.png" width={50} alt="Pandora"></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://www.pandora.com/artist/genwav/run-away/ALtk2gJKvJmr2bX"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       )}
