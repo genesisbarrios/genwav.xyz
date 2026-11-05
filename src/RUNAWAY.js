@@ -138,6 +138,14 @@ const RUNAWAY = () => {
                 <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HP6BVVVG"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50} alt="Bandcamp"></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://genwav.bandcamp.com/track/run-away"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       )}
