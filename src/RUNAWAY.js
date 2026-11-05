@@ -52,11 +52,6 @@ const RUNAWAY = () => {
       <div id="NEWImageDiv">
         <style>
           {`
-            .ytm-short { display: none; }
-            @media (max-width: 768px) {
-              .ytm-full { display: none; }
-              .ytm-short { display: inline; }
-            }
             @media (min-width: 769px) {
               #runawayCover {
                 margin: 2% 0 0.5% !important;
@@ -85,7 +80,7 @@ const RUNAWAY = () => {
             </Grid>
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-                <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
+                <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple</p>
               </Grid>
               <Grid item xs={6} sm={6}>
                 <a target="_blank" href="https://music.apple.com/us/album/run-away-single/6826551457"><button className="pre-save-button">Stream</button></a>
@@ -109,7 +104,7 @@ const RUNAWAY = () => {
             </Grid>
             <Grid container spacing={2} className="logo-button-container">
               <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-                <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}><span className="ytm-full">YouTube Music</span><span className="ytm-short">YouTube</span></p>
+                <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>YouTube</p>
               </Grid>
               <Grid item xs={6} sm={6}>
                 <a target="_blank" href="https://www.youtube.com/watch?v=fIFhfJdBlVU&list=OLAK5uy_nQdJ62goPRpqmxLRl_-h1Hp1WuSmSwnYU"><button className="pre-save-button">Stream</button></a>
