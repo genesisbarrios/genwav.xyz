@@ -106,6 +106,14 @@ const RUNAWAY = () => {
                 <a target="_blank" href="https://tidal.com/track/572786406/u"><button className="pre-save-button">Stream</button></a>
               </Grid>
             </Grid>
+            <Grid container spacing={2} className="logo-button-container">
+              <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>YouTube Music</p>
+              </Grid>
+              <Grid item xs={6} sm={6}>
+                <a target="_blank" href="https://www.youtube.com/watch?v=fIFhfJdBlVU&list=OLAK5uy_nQdJ62goPRpqmxLRl_-h1Hp1WuSmSwnYU"><button className="pre-save-button">Stream</button></a>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       )}
