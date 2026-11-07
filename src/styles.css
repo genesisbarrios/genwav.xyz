@@ -315,6 +315,12 @@ button.legend{
   flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+  .logo-button-container {
+    margin-bottom: 20px;
+  }
+}
+
 .logo-row {
   gap: 32px;
 }
