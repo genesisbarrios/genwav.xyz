@@ -307,6 +307,14 @@ button.legend{
   margin-bottom: 10px; /* Adjust as needed */
 }
 
+/* Same-height logo box on every streaming row (icons are 50px tall, but the
+   Deezer/Pandora/Bandcamp images were shorter), so every row is spaced evenly */
+.logo-button-container .logoSize {
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .logo-row {
   gap: 32px;
 }

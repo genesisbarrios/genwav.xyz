@@ -155,7 +155,7 @@ const MATRIX = (props) => {
             </Grid>
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/qobuz.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Qobuz</p>
             </Grid>
             <Grid item xs={6} sm={6}>
@@ -187,7 +187,7 @@ const MATRIX = (props) => {
             </Grid>
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
-            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center", marginTop:"10px"}}>
+            <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
              <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="/pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6} style={{ marginTop:"10px"}}>
