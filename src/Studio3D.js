@@ -759,7 +759,7 @@ export default function Studio3D() {
       // Neon signs either side of the monitor, level with the first row of foam
       const signSize = tw * 0.128;
       const signY = firstRow;
-      const signX = tw * 0.52;
+      const signX = step * 2; // on the foam grid: two columns out from the center
       const alien = alienSign(signSize);
       alien.position.set(-signX, signY, wallZ + 0.03);
       const bolt = boltSign(signSize);
