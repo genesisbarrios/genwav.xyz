@@ -6,11 +6,12 @@ import * as Tone from "tone";
 
 // The 3D studio homepage. The desk comes from the original workspace model; the
 // room around it (wall, foam, window, neon signs, guitars, plants, lamp) is built
-// here. Click the keys to play, the pads for drums, the speakers for "UP", and
-// the monitor to open genwavOS.
+// here. Click the keys to play, the pads for drums, the guitars to strum them
+// (hover strums too, once audio is unlocked), the speakers for "UP", and the
+// monitor to open genwavOS.
 
 const MODEL_URL = "/models/workspace2.glb";
-const UP_TRACK = "https://api.soundcloud.com/tracks/soundcloud%3Atracks%3A2240742677"; // "UP" by gen.wav (as on /UP)
+const UP_AUDIO = "/UP/UP%20-%20gen.wav%20(Master).mp3"; // "UP" by gen.wav, served from public/UP
 
 // Objects from the model that the original scene showed; the rest are hidden
 const VISIBLE = new Set([
@@ -388,13 +389,22 @@ function guitar(size, { body, acoustic }) {
   const head = new THREE.Mesh(new THREE.BoxGeometry(0.13, 0.24, 0.04), std(0x1b1b1b));
   head.position.set(0, 1.58, front - 0.03);
   g.add(bridge, neck, head);
-  g.add(new THREE.LineSegments(
-    new THREE.BufferGeometry().setFromPoints([...Array(6)].flatMap((_, i) => {
-      const x = -0.03 + i * 0.012;
-      return [new THREE.Vector3(x, -0.25, front + 0.035), new THREE.Vector3(x, 1.47, front + 0.008)];
-    })),
-    new THREE.LineBasicMaterial({ color: 0xcfcfcf })
-  ));
+  // Strings run bridge → nut, each split into short segments so they can
+  // vibrate (see the render loop). userData.strings keeps the rest positions.
+  const STRING_SEGMENTS = 16;
+  const pts = [];
+  for (let i = 0; i < 6; i++) {
+    const x = -0.03 + i * 0.012;
+    const a = new THREE.Vector3(x, -0.25, front + 0.035), b = new THREE.Vector3(x, 1.47, front + 0.008);
+    for (let k = 0; k < STRING_SEGMENTS; k++) {
+      pts.push(a.clone().lerp(b, k / STRING_SEGMENTS), a.clone().lerp(b, (k + 1) / STRING_SEGMENTS));
+    }
+  }
+  const stringGeo = new THREE.BufferGeometry().setFromPoints(pts);
+  const strings = new THREE.LineSegments(stringGeo, new THREE.LineBasicMaterial({ color: 0xcfcfcf }));
+  strings.frustumCulled = false; // the moving vertices can leave the original bounds
+  g.add(strings);
+  g.userData.strings = { geo: stringGeo, rest: stringGeo.attributes.position.array.slice(), segments: STRING_SEGMENTS };
   g.scale.setScalar(size);
   g.traverse((o) => { if (o.isMesh) o.castShadow = true; });
   return g;
@@ -607,6 +617,37 @@ export default function Studio3D() {
     front.shadow.bias = -0.0004;
     scene.add(front, front.target);
 
+    // Objects that should sit at a preferred x but never be cut off by the
+    // screen edge: { obj, homeX, fallbackX }. After each camera placement, each
+    // goes to homeX, or as close to it as fits (searching toward fallbackX).
+    const keepOnScreen = [];
+    const _corner = new THREE.Vector3();
+    const fitsOnScreen = (obj) => {
+      obj.updateMatrixWorld(true);
+      const box = new THREE.Box3().setFromObject(obj);
+      const MARGIN = 0.94; // stay a little inside the edges (NDC)
+      for (let i = 0; i < 8; i++) {
+        _corner.set(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z).project(camera);
+        if (_corner.x < -MARGIN || _corner.x > MARGIN) return false;
+      }
+      return true;
+    };
+    const fitOnScreen = () => {
+      camera.updateMatrixWorld(true);
+      for (const { obj, homeX, fallbackX } of keepOnScreen) {
+        obj.position.x = homeX;
+        if (fitsOnScreen(obj)) continue;
+        // Binary search between home (doesn't fit) and fallback (assumed to fit)
+        let lo = homeX, hi = fallbackX;
+        for (let k = 0; k < 14; k++) {
+          const mid = (lo + hi) / 2;
+          obj.position.x = mid;
+          if (fitsOnScreen(obj)) hi = mid; else lo = mid;
+        }
+        obj.position.x = hi;
+      }
+    };
+
     const placeCamera = () => {
       const w = mount.clientWidth, h = mount.clientHeight;
       camera.aspect = w / h;
@@ -620,6 +661,7 @@ export default function Studio3D() {
       }
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
+      fitOnScreen();
     };
     placeCamera();
     window.addEventListener("resize", placeCamera);
@@ -636,7 +678,7 @@ export default function Studio3D() {
 
     // ── audio ──
     const audioNodes = [];
-    let synth = null, drums = null;
+    let synth = null, drums = null, strummers = null;
     const startAudio = async () => {
       if (synth) return;
       await Tone.start();
@@ -669,41 +711,76 @@ export default function Studio3D() {
         () => openHat.triggerAttackRelease(300, "8n"),
         () => crash.triggerAttackRelease(250, "2n"),
       ];
-      audioNodes.push(reverb, synth, bus, kick, tom, snareFilter, snare, snareBody, clapFilter, clap, hat, openHat, crash);
+      // Guitars: six plucked strings each (Karplus-Strong), strummed a few ms apart.
+      // Acoustic is clean with a little body; electric goes through an amp-ish
+      // distortion and a cab-like low-pass.
+      const strings = (opts, dest) => [...Array(6)].map(() => new Tone.PluckSynth(opts).connect(dest));
+      const acousticBody = new Tone.Filter(5200, "lowpass").connect(reverb);
+      const acoustic = strings({ attackNoise: 1.2, dampening: 4200, resonance: 0.97 }, acousticBody);
+      acoustic.forEach((st) => { st.volume.value = -6; });
+      const cab = new Tone.Filter(3200, "lowpass").connect(bus);
+      const drive = new Tone.Distortion({ distortion: 0.65, wet: 1 }).connect(cab);
+      const electric = strings({ attackNoise: 2, dampening: 3000, resonance: 0.985 }, drive);
+      electric.forEach((st) => { st.volume.value = -14; });
+      strummers = { acoustic, electric };
+      audioNodes.push(reverb, synth, bus, kick, tom, snareFilter, snare, snareBody, clapFilter, clap, hat, openHat, crash,
+        acousticBody, cab, drive, ...acoustic, ...electric);
     };
 
-    // "UP" plays through SoundCloud's widget, hidden off-screen
-    let scWidget = null, scPlaying = false;
-    const scFrame = document.createElement("iframe");
-    scFrame.allow = "autoplay";
-    scFrame.title = "UP by gen.wav";
-    scFrame.style.cssText = "position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;border:0";
-    const loadSoundCloud = () => {
-      if (scFrame.src) return;
-      scFrame.src = `https://w.soundcloud.com/player/?url=${UP_TRACK.replace("https://", "https%3A//")}&auto_play=false&visual=false`;
-      document.body.appendChild(scFrame);
-      const ready = () => {
-        if (disposed || !window.SC) return;
-        scWidget = window.SC.Widget(scFrame);
-        const E = window.SC.Widget.Events;
-        scWidget.bind(E.PLAY, () => { scPlaying = true; setNowPlaying(true); });
-        scWidget.bind(E.PAUSE, () => { scPlaying = false; setNowPlaying(false); });
-        scWidget.bind(E.FINISH, () => { scPlaying = false; setNowPlaying(false); });
-      };
-      if (window.SC) ready();
-      else {
-        const s = document.createElement("script");
-        s.src = "https://w.soundcloud.com/player/api.js";
-        s.onload = ready;
-        document.head.appendChild(s);
+    // Chords, low string first (MIDI notes). Each strum moves to the next one.
+    const CHORDS = {
+      acoustic: [[43, 47, 50, 55, 59, 67], [50, 57, 62, 66], [40, 47, 52, 55, 59, 64], [48, 52, 55, 60, 64]], // G, D, Em, C
+      electric: [[40, 47, 52], [43, 50, 55], [45, 52, 57], [38, 45, 50]], // E5, G5, A5, D5
+    };
+    const chordIndex = { acoustic: 0, electric: 0 };
+    const strum = (kind) => {
+      if (!strummers) return; // audio isn't unlocked until the first click or key press
+      const chord = CHORDS[kind][chordIndex[kind]++ % CHORDS[kind].length];
+      const now = Tone.now();
+      chord.forEach((midi, i) => {
+        // downstroke: each string a little later, a touch of random timing like a hand
+        strummers[kind][i].triggerAttack(Tone.Frequency(midi, "midi").toFrequency(), now + i * 0.022 + Math.random() * 0.006);
+      });
+    };
+
+    // "UP" plays from the site itself (public/UP), not a third-party player, so
+    // it starts on the first tap everywhere, iPhone included. While it plays,
+    // an analyser measures its loudness and the speakers pump to it.
+    let scPlaying = false; // "is UP playing" (name kept for the test hook)
+    let upLevel = 0; // smoothed loudness 0..1
+    const upAudio = new Audio();
+    upAudio.preload = "none"; // 4 MB: only fetched when someone presses play
+    upAudio.src = UP_AUDIO;
+    upAudio.addEventListener("play", () => { scPlaying = true; setNowPlaying(true); });
+    upAudio.addEventListener("pause", () => { scPlaying = false; setNowPlaying(false); });
+    upAudio.addEventListener("ended", () => { scPlaying = false; setNowPlaying(false); upAudio.currentTime = 0; });
+    let upAnalyser = null, upBins = null;
+    const connectUpAnalyser = () => {
+      if (upAnalyser) return;
+      try {
+        const ctx = Tone.getContext().rawContext;
+        const src = ctx.createMediaElementSource(upAudio);
+        upAnalyser = ctx.createAnalyser();
+        upAnalyser.fftSize = 512;
+        upBins = new Uint8Array(upAnalyser.frequencyBinCount);
+        src.connect(upAnalyser);
+        upAnalyser.connect(ctx.destination);
+      } catch (e) {
+        console.warn("UP analyser unavailable; playing without it", e);
       }
     };
-    const toggleUp = () => { if (scWidget) scWidget.toggle(); };
+    const toggleUp = async () => {
+      if (!upAudio.paused) { upAudio.pause(); return; }
+      await startAudio(); // unlocks the audio context inside this click
+      connectUpAnalyser();
+      try { await upAudio.play(); } catch (e) { console.error("Couldn't play UP", e); }
+    };
 
     // ── model ──
     let room = null, akai = null, screen = null, akaiBox = null;
     const speakers = [];
     const plants = []; // leaves rustle when hovered/tapped
+    const guitars = []; // strum when hovered/tapped
     const highlights = [];
     const bubbles = [];
     const bubbleGeo = new THREE.SphereGeometry(1, 16, 12);
@@ -852,9 +929,11 @@ export default function Studio3D() {
         const sillPlant = succulent(tw * 0.22, 0x4f9a4a, 0x8fcf6e);
         sillPlant.position.set(win.position.x + winW * 0.29, sillY, wallZ + tw * 0.03);
         const pointy = pointySucculent(tw * 0.2);
-        pointy.position.set(win.position.x + winW * 0.02, sillY, wallZ + tw * 0.03);
+        const pointyHome = win.position.x - winW * 0.29; // left end of the sill
+        pointy.position.set(pointyHome, sillY, wallZ + tw * 0.03);
         env.add(sillPlant, pointy);
         plants.push(sillPlant, pointy);
+        keepOnScreen.push({ obj: pointy, homeX: pointyHome, fallbackX: win.position.x + winW * 0.02 });
       }
 
       // Neon signs either side of the monitor, level with the first row of foam
@@ -945,6 +1024,9 @@ export default function Studio3D() {
       g2.position.set(standX + tw * 0.2, standBase + tw * 0.13, standZ + tw * 0.01);
       g2.rotation.set(-0.18, -0.12, -0.03);
       env.add(stand, g1, g2);
+      g1.userData.kind = "acoustic";
+      g2.userData.kind = "electric";
+      guitars.push(g1, g2);
 
       // Plants: monsteras in the back corners
       const leafTex = monsteraTexture();
@@ -1161,7 +1243,6 @@ export default function Studio3D() {
           room.updateMatrixWorld(true);
         }
         setReady(true);
-        loadSoundCloud();
         if (debug) {
           // test hook: screen position of a point on the MPK (u, v) or of a named object
           window.__studio = {
@@ -1225,10 +1306,35 @@ export default function Studio3D() {
       return plants.find((pl) => isUnder(hit.object, pl)) ?? null;
     };
 
-    const onPointerDown = (e) => {
+    // Which guitar (if any) is under the pointer
+    const guitarAt = () => {
+      if (!guitars.length) return null;
+      const hit = raycaster.intersectObjects(guitars, true)[0];
+      if (!hit) return null;
+      return guitars.find((g) => isUnder(hit.object, g)) ?? null;
+    };
+    let hoverGuitar = null;
+    const STRUM_GAP_MS = 350; // so sweeping across a guitar doesn't machine-gun it
+    const playGuitar = (g) => {
+      const now = performance.now();
+      if (now - (g.userData.lastStrum || 0) < STRUM_GAP_MS) return;
+      g.userData.lastStrum = now;
+      g.userData.wobble = 1;
+      g.userData.pluckedAt = now;
+      strum(g.userData.kind);
+    };
+
+    const onPointerDown = async (e) => {
       const p = pick(e);
       const plant = plantAt(e);
       if (plant) plant.userData.rustle = 1;
+      const g = guitarAt();
+      if (g) {
+        await startAudio(); // a click unlocks audio, so this strum plays
+        g.userData.lastStrum = 0;
+        playGuitar(g);
+        return;
+      }
       if (!p) return;
       if (p.isScreen) { navigateRef.current("/OS"); return; }
       if (p.isSpeaker) { toggleUp(); return; }
@@ -1242,9 +1348,13 @@ export default function Studio3D() {
       const p = pick(e);
       const plant = plantAt(e);
       if (plant) plant.userData.rustle = 1;
+      // Strum when the pointer moves onto a guitar (once per visit)
+      const g = guitarAt();
+      if (g && g !== hoverGuitar) playGuitar(g);
+      hoverGuitar = g;
       const overScreen = !!p?.isScreen;
       hoverSpeaker = !!p?.isSpeaker;
-      const clickable = overScreen || !!p?.isSpeaker || !!(p?.isAkai && akaiBox && controlAt(p.hit));
+      const clickable = !!g || overScreen || !!p?.isSpeaker || !!(p?.isAkai && akaiBox && controlAt(p.hit));
       renderer.domElement.style.cursor = clickable ? "pointer" : "default";
       if (overScreen !== hoverScreen) {
         hoverScreen = overScreen;
@@ -1254,6 +1364,7 @@ export default function Studio3D() {
     };
     const onKeyDown = (e) => {
       if (e.repeat || e.metaKey || e.ctrlKey) return;
+      startAudio();
       // 1-8: drum pads, so you can play drums and melody together
       if (/^[1-8]$/.test(e.key)) { playPad(Number(e.key) - 1); return; }
       const idx = QWERTY[e.key.toLowerCase()];
@@ -1297,13 +1408,60 @@ export default function Studio3D() {
           bubbles.splice(i, 1);
         }
       }
+      // UP's loudness: average of the low half of the spectrum (kick + bass)
+      if (scPlaying && upAnalyser) {
+        upAnalyser.getByteFrequencyData(upBins);
+        let sum = 0;
+        const n = upBins.length >> 1;
+        for (let i = 0; i < n; i++) sum += upBins[i];
+        const level = sum / n / 255;
+        upLevel += (level - upLevel) * (level > upLevel ? 0.6 : 0.12); // fast attack, slow release
+      } else {
+        upLevel *= 0.9;
+      }
       // speakers grow (with a little bounce) on hover, and pump while UP plays
       hoverAmt += ((hoverSpeaker ? 1 : 0) - hoverAmt) * 0.18;
       for (const s of speakers) {
         if (!s.userData.base) s.userData.base = s.scale.clone();
         const hover = hoverAmt * (0.06 + Math.sin(now / 140) * 0.012);
-        const pump = scPlaying ? Math.max(0, Math.sin(now / 115)) * 0.035 : 0;
+        const pump = scPlaying ? upLevel * 0.06 : 0;
         s.scale.copy(s.userData.base).multiplyScalar(1 + hover + pump);
+      }
+      // Plucked strings: each bows sideways in its fundamental shape
+      // (sin(pi * position along the string)), oscillating and decaying.
+      // Strings start one after another like the strummed notes (22 ms
+      // apart) and the low strings swing slower than the high ones.
+      for (const g of guitars) {
+        const st = g.userData.strings;
+        if (!st || !g.userData.pluckedAt) continue;
+        const pos = st.geo.attributes.position.array;
+        const age = now - g.userData.pluckedAt;
+        const DURATION = 1400;
+        const done = age > DURATION + 6 * 22;
+        const perString = st.segments * 2; // vertices per string
+        for (let i = 0; i < 6; i++) {
+          const t = age - i * 22; // this string's own age
+          const amp = done || t < 0 ? 0 : 0.0045 * Math.exp(-t / 380);
+          const phase = t * (0.045 + i * 0.012); // radians per ms: low strings slower
+          const swing = amp * Math.sin(phase);
+          for (let v = 0; v < perString; v++) {
+            const k = (i * perString + v) * 3;
+            const along = (Math.floor(v / 2) + (v % 2)) / st.segments; // 0 at the bridge, 1 at the nut
+            pos[k] = st.rest[k] + swing * Math.sin(Math.PI * along);
+          }
+        }
+        st.geo.attributes.position.needsUpdate = true;
+        if (done) g.userData.pluckedAt = 0; // back at rest; stop updating
+      }
+      // strummed guitars rock on the stand and settle
+      for (const g of guitars) {
+        const w = g.userData.wobble || 0;
+        if (!g.userData.baseRot) g.userData.baseRot = g.rotation.clone();
+        if (w < 0.002) { if (g.userData.wobbling) { g.rotation.copy(g.userData.baseRot); g.userData.wobbling = false; } continue; }
+        g.userData.wobbling = true;
+        g.userData.wobble = w * 0.94;
+        g.rotation.z = g.userData.baseRot.z + Math.sin(now / 45) * 0.035 * w;
+        g.rotation.x = g.userData.baseRot.x + Math.sin(now / 70) * 0.015 * w;
       }
       // hovered plants rustle, settling back over a second or so
       for (const pl of plants) {
@@ -1331,8 +1489,9 @@ export default function Studio3D() {
       window.removeEventListener("keydown", onKeyDown);
       renderer.domElement.removeEventListener("pointerdown", onPointerDown);
       renderer.domElement.removeEventListener("pointermove", onPointerMove);
-      try { scWidget?.pause(); } catch { /* widget already gone */ }
-      scFrame.remove();
+      upAudio.pause();
+      upAudio.removeAttribute("src");
+      upAudio.load(); // stop any download
       scene.traverse((o) => {
         if (o.geometry) o.geometry.dispose();
         const mats = Array.isArray(o.material) ? o.material : o.material ? [o.material] : [];
@@ -1370,7 +1529,7 @@ export default function Studio3D() {
           <p style={{ color: "#73ecff", fontSize: "clamp(8px, 2.4vw, 13px)", whiteSpace: "nowrap", textAlign: "center", padding: "6px 12px", margin: "0 8px", background: "rgba(0,0,13,.72)", borderRadius: 999 }}>
             {nowPlaying
               ? "now playing: UP · tap the speakers to pause"
-              : touch ? "tap the keys & pads · tap the speakers to hear a masterpiece" : "keys: A–L · drums: 1–8 · click the speakers to hear a masterpiece"}
+              : touch ? "tap the keys, pads & guitars · tap the speakers to hear a masterpiece" : "keys: A–L · drums: 1–8 · strum the guitars · click the speakers to hear a masterpiece"}
           </p>
         </div>
       )}
