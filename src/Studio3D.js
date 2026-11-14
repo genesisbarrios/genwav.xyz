@@ -25,8 +25,8 @@ const MONITOR_STRETCH = 1.5; // make the (very wide) monitor closer to 16:9
 export const NEON_BLUE = 0x4fe3ff; // speakers, blue foam and the homepage menu text
 const SPEAKER_SCALE = 1.18;
 const KEYBOARD_SCALE = 1.2;
-const KEYBOARD_TILT = 0.32;
-const KEYBOARD_SHIFT = 0.06; // fraction of the desk width    // radians the MPK leans toward you on its stand
+const KEYBOARD_TILT = 0.32;   // radians the MPK leans toward you on its stand
+const KEYBOARD_SHIFT = 0.1;   // how far right it sits, as a fraction of the desk width
 
 // On the MPK Mini mesh, as fractions of its local bounding box:
 // u runs along the width (x), v from the back (0) to the front (1)
