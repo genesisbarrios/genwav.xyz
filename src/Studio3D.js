@@ -303,6 +303,42 @@ vec3 mk4Color() {
 
 const std = (color, extra = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.8, ...extra });
 
+// A glowing music note drawn on a canvas: "quarter" (head + stem) or
+// "eighth" (plus a flag). White, so sprites can tint it white or neon blue.
+function noteTexture(kind) {
+  const c = document.createElement("canvas");
+  c.width = c.height = 128;
+  const ctx = c.getContext("2d");
+  ctx.fillStyle = "#fff";
+  ctx.strokeStyle = "#fff";
+  ctx.shadowColor = "#fff";
+  ctx.shadowBlur = 14;
+  for (let pass = 0; pass < 2; pass++) { // twice: a stronger glow
+    // head: a tilted oval
+    ctx.save();
+    ctx.translate(50, 94);
+    ctx.rotate(-0.38);
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 21, 14, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+    // stem, rising from the right side of the head
+    ctx.fillRect(66, 22, 7, 70);
+    if (kind === "eighth") {
+      // flag curling down from the top of the stem
+      ctx.beginPath();
+      ctx.moveTo(73, 22);
+      ctx.bezierCurveTo(86, 34, 104, 42, 98, 70);
+      ctx.bezierCurveTo(96, 54, 86, 46, 73, 44);
+      ctx.closePath();
+      ctx.fill();
+    }
+  }
+  const tex = new THREE.CanvasTexture(c);
+  tex.encoding = THREE.sRGBEncoding;
+  return tex;
+}
+
 function neonTube(points, color, radius, closed = true) {
   const curve = new THREE.CatmullRomCurve3(points, closed, "catmullrom", 0.1);
   const group = new THREE.Group();
@@ -748,6 +784,39 @@ export default function Studio3D() {
     // an analyser measures its loudness and the speakers pump to it.
     let scPlaying = false; // "is UP playing" (name kept for the test hook)
     let upLevel = 0; // smoothed loudness 0..1
+    // Beat detection on the kick/bass band: a jump well above its running
+    // average counts as a beat (bounces the speakers, bursts out notes).
+    let bassAvg = 0, lastBeatMs = 0;
+    // Music notes floating out of the speakers while UP plays
+    const noteTextures = { quarter: noteTexture("quarter"), eighth: noteTexture("eighth") };
+    const NOTE_COLORS = [0xffffff, NEON_BLUE];
+    const notes = [];
+    const MAX_NOTES = 48;
+    const noteEmit = new Map(); // speaker → fractional notes owed
+    const spawnNote = (sp, now) => {
+      if (notes.length >= MAX_NOTES) return;
+      const box = new THREE.Box3().setFromObject(sp);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      const mat = new THREE.SpriteMaterial({
+        map: Math.random() < 0.5 ? noteTextures.quarter : noteTextures.eighth,
+        color: NOTE_COLORS[Math.random() < 0.5 ? 0 : 1],
+        transparent: true,
+        depthWrite: false,
+        toneMapped: false,
+      });
+      const sprite = new THREE.Sprite(mat);
+      // from the speaker's front, around the cone, drifting up and outward
+      sprite.position.set(center.x + (Math.random() - 0.5) * size.x * 0.5, box.min.y + size.y * (0.45 + Math.random() * 0.3), box.max.z + size.z * 0.05);
+      const outward = Math.sign(center.x) || (Math.random() < 0.5 ? -1 : 1); // away from the middle of the desk
+      scene.add(sprite);
+      notes.push({
+        sprite, mat, born: now, life: 1500 + Math.random() * 700,
+        size: size.y * (0.24 + Math.random() * 0.1),
+        v: new THREE.Vector3(outward * size.x * (0.15 + Math.random() * 0.35), size.y * (0.8 + Math.random() * 0.5), size.z * (0.3 + Math.random() * 0.4)),
+        sway: size.x * 0.08, phase: Math.random() * 6.28, spin: (Math.random() - 0.5) * 1.2,
+      });
+    };
     const upAudio = new Audio();
     upAudio.preload = "none"; // 4 MB: only fetched when someone presses play
     upAudio.src = UP_AUDIO;
@@ -1306,15 +1375,24 @@ export default function Studio3D() {
       return plants.find((pl) => isUnder(hit.object, pl)) ?? null;
     };
 
-    // Which guitar (if any) is under the pointer
+    // Which guitar (if any) is under the pointer, only if it's actually
+    // visible there: the guitar must be the first solid thing the ray hits.
+    // (On phones the guitars sit behind other parts of the room, and a tap on
+    // those must not strum them.)
+    const solid = (h) => h.object.visible && !h.object.isSprite && !highlights.includes(h.object)
+      && !(h.object.material?.transparent && h.object.material.opacity < 0.5);
     const guitarAt = () => {
       if (!guitars.length) return null;
       const hit = raycaster.intersectObjects(guitars, true)[0];
       if (!hit) return null;
+      const first = raycaster.intersectObjects(scene.children, true).find(solid);
+      if (!first || !guitars.some((g) => isUnder(first.object, g))) return null; // something is in front
       return guitars.find((g) => isUnder(hit.object, g)) ?? null;
     };
     let hoverGuitar = null;
-    const STRUM_GAP_MS = 350; // so sweeping across a guitar doesn't machine-gun it
+    const STRUM_GAP_MS = 200; // minimum time between strums of one guitar
+    const STRUM_TRAVEL_PX = 40; // pointer travel over a guitar that counts as another strum
+    let strumTravel = 0, lastPointer = null;
     const playGuitar = (g) => {
       const now = performance.now();
       if (now - (g.userData.lastStrum || 0) < STRUM_GAP_MS) return;
@@ -1348,9 +1426,21 @@ export default function Studio3D() {
       const p = pick(e);
       const plant = plantAt(e);
       if (plant) plant.userData.rustle = 1;
-      // Strum when the pointer moves onto a guitar (once per visit)
+      // Strum when the pointer moves onto a guitar, and again for every
+      // STRUM_TRAVEL_PX it moves across it, like sweeping a pick over the strings
       const g = guitarAt();
-      if (g && g !== hoverGuitar) playGuitar(g);
+      const moved = lastPointer ? Math.hypot(e.clientX - lastPointer.x, e.clientY - lastPointer.y) : 0;
+      lastPointer = { x: e.clientX, y: e.clientY };
+      if (g && g !== hoverGuitar) {
+        strumTravel = 0;
+        playGuitar(g);
+      } else if (g) {
+        strumTravel += moved;
+        if (strumTravel >= STRUM_TRAVEL_PX && performance.now() - (g.userData.lastStrum || 0) >= STRUM_GAP_MS) {
+          strumTravel = 0;
+          playGuitar(g);
+        }
+      }
       hoverGuitar = g;
       const overScreen = !!p?.isScreen;
       hoverSpeaker = !!p?.isSpeaker;
@@ -1408,7 +1498,10 @@ export default function Studio3D() {
           bubbles.splice(i, 1);
         }
       }
+      const dt = Math.min(0.05, (now - (tick.last || now)) / 1000); // seconds, capped after tab switches
+      tick.last = now;
       // UP's loudness: average of the low half of the spectrum (kick + bass)
+      let beat = false;
       if (scPlaying && upAnalyser) {
         upAnalyser.getByteFrequencyData(upBins);
         let sum = 0;
@@ -1416,6 +1509,13 @@ export default function Studio3D() {
         for (let i = 0; i < n; i++) sum += upBins[i];
         const level = sum / n / 255;
         upLevel += (level - upLevel) * (level > upLevel ? 0.6 : 0.12); // fast attack, slow release
+        // kick band: the lowest bins (~90-370 Hz at 48 kHz, 512-point FFT)
+        let bass = 0;
+        for (let i = 1; i <= 4; i++) bass += upBins[i];
+        bass /= 4 * 255;
+        beat = bass > 0.35 && bass > bassAvg * 1.22 && now - lastBeatMs > 200;
+        if (beat) lastBeatMs = now;
+        bassAvg += (bass - bassAvg) * 0.06;
       } else {
         upLevel *= 0.9;
       }
@@ -1423,9 +1523,37 @@ export default function Studio3D() {
       hoverAmt += ((hoverSpeaker ? 1 : 0) - hoverAmt) * 0.18;
       for (const s of speakers) {
         if (!s.userData.base) s.userData.base = s.scale.clone();
+        // Bounce: each beat kicks a damped spring; it stretches the speaker up
+        // and squashes it in (volume-ish preserving), then wobbles back.
+        const u = s.userData;
+        u.bv = (u.bv || 0) + (beat ? 7 : 0);
+        u.bv += (-140 * (u.bx || 0) - 9 * u.bv) * dt; // spring + damping
+        u.bx = (u.bx || 0) + u.bv * dt;
+        const bounce = Math.max(-0.08, Math.min(0.12, u.bx));
         const hover = hoverAmt * (0.06 + Math.sin(now / 140) * 0.012);
         const pump = scPlaying ? upLevel * 0.06 : 0;
-        s.scale.copy(s.userData.base).multiplyScalar(1 + hover + pump);
+        const k = 1 + hover + pump;
+        s.scale.set(u.base.x * k * (1 - bounce * 0.5), u.base.y * k * (1 + bounce), u.base.z * k * (1 - bounce * 0.5));
+        // Notes: a steady stream that follows the loudness, plus a burst per beat
+        if (scPlaying) {
+          const owed = (noteEmit.get(s) || 0) + dt * (0.6 + upLevel * 4) + (beat ? 1 + Math.random() : 0);
+          let whole = Math.floor(owed);
+          noteEmit.set(s, owed - whole);
+          while (whole-- > 0) spawnNote(s, now);
+        }
+      }
+      // Notes rise, drift and sway, grow in, spin a little, then fade out
+      for (let i = notes.length - 1; i >= 0; i--) {
+        const n = notes[i];
+        const age = now - n.born, t = age / n.life;
+        if (t >= 1) { scene.remove(n.sprite); n.mat.dispose(); notes.splice(i, 1); continue; }
+        n.sprite.position.addScaledVector(n.v, dt);
+        n.sprite.position.x += Math.sin(age / 240 + n.phase) * n.sway * dt * 3;
+        n.v.y *= 1 - dt * 0.6; // ease off as they rise
+        const grow = Math.min(1, age / 180);
+        n.sprite.scale.setScalar(n.size * (0.5 + 0.5 * grow));
+        n.mat.rotation = Math.sin(age / 300 + n.phase) * 0.35 + n.spin * t;
+        n.mat.opacity = (t < 0.65 ? 1 : 1 - (t - 0.65) / 0.35) * grow;
       }
       // Plucked strings: each bows sideways in its fundamental shape
       // (sin(pi * position along the string)), oscillating and decaying.
@@ -1500,6 +1628,8 @@ export default function Studio3D() {
       screenTexture.dispose();
       bubbleGeo.dispose();
       audioNodes.forEach((n) => n.dispose());
+      notes.forEach((n) => { scene.remove(n.sprite); n.mat.dispose(); });
+      Object.values(noteTextures).forEach((t) => t.dispose());
       renderer.dispose();
       renderer.domElement.remove();
     };
@@ -1526,10 +1656,12 @@ export default function Studio3D() {
 
       {ready && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 24, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, pointerEvents: "none", fontFamily: "'Courier New', monospace" }}>
-          <p style={{ color: "#73ecff", fontSize: "clamp(8px, 2.4vw, 13px)", whiteSpace: "nowrap", textAlign: "center", padding: "6px 12px", margin: "0 8px", background: "rgba(0,0,13,.72)", borderRadius: 999 }}>
+          {/* Fits the screen on phones: capped to the viewport (16 px side
+              margins) and allowed to wrap, with shorter wording on touch. */}
+          <p style={{ color: "#73ecff", fontSize: "clamp(11px, 3.2vw, 13px)", lineHeight: 1.35, whiteSpace: "normal", textAlign: "center", padding: "6px 14px", margin: 0, maxWidth: "calc(100vw - 32px)", boxSizing: "border-box", background: "rgba(0,0,13,.72)", borderRadius: 16 }}>
             {nowPlaying
-              ? "now playing: UP · tap the speakers to pause"
-              : touch ? "tap the keys, pads & guitars · tap the speakers to hear a masterpiece" : "keys: A–L · drums: 1–8 · strum the guitars · click the speakers to hear a masterpiece"}
+              ? touch ? "now playing: UP · tap the speakers to pause" : "now playing: UP · click the speakers to pause"
+              : touch ? "tap the keys, pads & guitars · speakers play UP" : "keys: A–L · drums: 1–8 · strum the guitars · click the speakers to hear a masterpiece"}
           </p>
         </div>
       )}

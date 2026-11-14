@@ -34,8 +34,8 @@ const Header = ({ transparent = false, hideMenu = false }) => {
           <ul style={{ display: 'flex', listStyleType: 'none', margin: 0, padding: 0 }}>
           <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/GENESIS">GENESIS</Link></li>
           <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/RELEASES">RELEASES</Link></li>
-          <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/SHOP">SHOP</Link></li>
           <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/EPK">EPK</Link></li>
+          <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/SHOP">SHOP</Link></li>
           {/* <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/newsletter">NEWSLETTER</Link></li> */}
           </ul>
         </nav>}
