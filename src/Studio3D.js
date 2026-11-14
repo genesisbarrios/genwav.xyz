@@ -32,12 +32,15 @@ const KEYBOARD_SHIFT = 0.2;   // how far right it sits, as a fraction of the des
 // u runs along the width (x), v from the back (0) to the front (1)
 // (measured from the mesh: the 10 black keys sit at u = 0.028 + n * 0.0617)
 const KEYS = { uStart: 0.028, uEnd: 0.953, vBack: 0.55, vFront: 0.995, blackDepth: 0.56 };
-const PADS = { uStart: 0.17, uEnd: 0.64, vBack: 0.03, vFront: 0.44, cols: 4, rows: 2 }; // measured from the mesh
+// The 8 pads and the small buttons, as [u0, u1, v0, v1] rectangles measured from the mesh
+const PAD_COLS = [[0.184, 0.269], [0.291, 0.376], [0.401, 0.486], [0.509, 0.594]];
+const PAD_ROWS = [[0.055, 0.205], [0.215, 0.405]]; // back row (pads 5-8), front row (pads 1-4)
+const BUTTON_RECTS = [[0.03, 0.165, 0.2, 0.42], [0.64, 0.975, 0.33, 0.445]]; // left grid, row under the knobs
 const WHITE_COUNT = 15; // C3..C5
 // Heights (0-1 of the keyboard's height) for the MK4 colors, measured from the mesh:
 // keys sit above the case front; pads, buttons and knobs rise from the deck (0.807),
 // and the accent color marks the tops of the tallest ones (knob caps, joystick)
-const MK4 = { keysAbove: 0.45, raisedAbove: 0.812, accentAbove: 0.95 };
+const MK4 = { keysAbove: 0.45, raisedAbove: 0.8085, knobAbove: 0.86, accentAbove: 0.95 };
 const WHITE_SEMITONES = [0, 2, 4, 5, 7, 9, 11];
 const HAS_BLACK_BEFORE = new Set([1, 2, 4, 5, 6]); // D, E, G, A, B have a sharp before them
 const BASE_MIDI = 48; // C3
@@ -78,11 +81,9 @@ function midiToKeyInfo(midi) {
 
 // Pad 0-7, MPK layout: front row 1-4, back row 5-8
 function padFromUV(u, v) {
-  const x = (u - PADS.uStart) / (PADS.uEnd - PADS.uStart);
-  const z = (v - PADS.vBack) / (PADS.vFront - PADS.vBack);
-  if (x < 0 || x >= 1 || z < 0 || z >= 1) return null;
-  const col = Math.floor(x * PADS.cols);
-  const row = Math.floor(z * PADS.rows); // 0 = back
+  const col = PAD_COLS.findIndex(([a, b]) => u >= a && u <= b);
+  const row = PAD_ROWS.findIndex(([a, b]) => v >= a && v <= b);
+  if (col < 0 || row < 0) return null;
   return (row === 1 ? 0 : 4) + col;
 }
 
@@ -247,6 +248,11 @@ function monsteraTexture(variegated = false) {
 // grey sides, grey pads, white and black keys, black buttons and knobs with neon
 // blue tops. Picked by
 // position on the keyboard, using the key layout measured from the mesh.
+// GLSL: is (u, v) inside any of these [u0, u1, v0, v1] rectangles (with a hair of margin)?
+function rectTest(rects, m = 0.004) {
+  return "(" + rects.map(([u0, u1, v0, v1]) => `(u > ${(u0 - m).toFixed(4)} && u < ${(u1 + m).toFixed(4)} && v > ${(v0 - m).toFixed(4)} && v < ${(v1 + m).toFixed(4)})`).join(" || ") + ")";
+}
+
 function mk4Material(box) {
   const mat = new THREE.MeshStandardMaterial({ roughness: 0.55, metalness: 0.05 });
   const c = (hex) => new THREE.Color(hex).convertSRGBToLinear(); // shader colors are linear
@@ -277,13 +283,13 @@ vec3 mk4Color() {
     bool black = kz < ${KEYS.blackDepth.toFixed(3)} && abs(w - b) < 0.3 && b > 0.0 && b < ${WHITE_COUNT}.0 && sharp;
     return black ? uBlack : uWhite;
   }
-  float px = (u - ${PADS.uStart.toFixed(3)}) / ${(PADS.uEnd - PADS.uStart).toFixed(3)};
-  float pz = (v - ${PADS.vBack.toFixed(3)}) / ${(PADS.vFront - PADS.vBack).toFixed(3)};
   bool raised = h > ${MK4.raisedAbove.toFixed(3)};                 // above the deck
-  // the 8 pads (tops and sides), not the deck around them
-  if (px >= 0.0 && px < 1.0 && pz >= 0.0 && pz < 1.0 && raised) return uPad;
-  // every other control (buttons, joystick, knobs): black, with neon blue tops
-  if (raised && v > 0.045 && v < 0.5) return h > ${MK4.accentAbove.toFixed(3)} ? uAccent : uButton; // (v > 0.045 skips the case's back rim)
+  // the 8 pads: whole pad grey, tops and sides
+  if (raised && ${rectTest(PAD_COLS.flatMap(([u0, u1]) => PAD_ROWS.map(([v0, v1]) => [u0, u1, v0, v1])))}) return uPad;
+  // small buttons: solid black
+  if (raised && ${rectTest(BUTTON_RECTS)}) return uButton;
+  // knobs and joystick (the tall controls): black with neon blue tops
+  if (h > ${MK4.knobAbove.toFixed(3)} && v < 0.5) return h > ${MK4.accentAbove.toFixed(3)} ? uAccent : uButton;
   if (abs(normalize(vLocalNormal).y) < 0.45) return uSide;        // sides of the case
   return uTop;
 }`)
@@ -424,7 +430,7 @@ function pot(radius, height, color) {
   return g;
 }
 
-function monstera(size, leafTex) {
+function monstera(size, leafTex, omit = []) {
   const g = new THREE.Group();
   const potH = 0.35 * size;
   g.add(pot(0.28 * size, potH, 0xd8d2c4));
@@ -434,6 +440,7 @@ function monstera(size, leafTex) {
   const stemMat = std(0x3c7a34);
   const leaves = 8;
   for (let i = 0; i < leaves; i++) {
+    if (omit.includes(i)) continue;
     const a = (i / leaves) * Math.PI * 2 + (i % 2) * 0.3;
     const h = (0.55 + (i % 3) * 0.22) * size;
     const r = (0.25 + (i % 2) * 0.12) * size;
@@ -449,6 +456,7 @@ function monstera(size, leafTex) {
     leaf.rotation.order = "YXZ";
     leaf.rotation.y = -a + Math.PI / 2;
     leaf.rotation.x = -0.9 + (i % 2) * 0.25; // tilt outward/down like a real monstera
+    leaf.userData.leaf = true;
     g.add(stem, leaf);
   }
   g.traverse((o) => { if (o.isMesh) o.castShadow = true; });
@@ -494,6 +502,7 @@ function fern(size, frondTex) {
     f.rotation.y = (i / 18) * Math.PI * 2 + (i % 3) * 0.2;
     f.rotation.x = 0.25 + (i % 4) * 0.12; // lean out
     f.scale.setScalar(0.75 + (i % 5) * 0.08);
+    f.userData.leaf = true;
     g.add(f);
   }
   return g;
@@ -515,9 +524,33 @@ function succulent(size, color, tip) {
     leaf.rotation.order = "YXZ";
     leaf.rotation.y = -a + Math.PI / 2;
     leaf.rotation.x = -0.25 - t * 0.9; // inner leaves point up
+    leaf.userData.leaf = true;
     g.add(leaf);
   }
   g.traverse((o) => { if (o.isMesh) o.castShadow = true; });
+  return g;
+}
+
+// Pointy dark green succulent (haworthia/aloe style)
+function pointySucculent(size) {
+  const g = new THREE.Group();
+  const potH = 0.2 * size;
+  g.add(pot(0.15 * size, potH, 0xe6e0d4));
+  const geo = new THREE.ConeGeometry(0.035 * size, 0.42 * size, 6);
+  geo.translate(0, 0.21 * size, 0); // pivot at the base
+  const mat = std(0x2c5a34, { roughness: 0.6, flatShading: true });
+  for (let i = 0; i < 16; i++) {
+    const leaf = new THREE.Mesh(geo, mat);
+    const a = i * 2.4, lean = 0.25 + (i % 4) * 0.18;
+    leaf.position.set(Math.cos(a) * 0.04 * size, potH * 0.95, Math.sin(a) * 0.04 * size);
+    leaf.rotation.order = "YXZ";
+    leaf.rotation.y = -a + Math.PI / 2;
+    leaf.rotation.x = lean;
+    leaf.scale.y = 0.7 + (i % 3) * 0.2;
+    leaf.userData.leaf = true;
+    leaf.castShadow = true;
+    g.add(leaf);
+  }
   return g;
 }
 
@@ -670,6 +703,7 @@ export default function Studio3D() {
     // ── model ──
     let room = null, akai = null, screen = null, akaiBox = null;
     const speakers = [];
+    const plants = []; // leaves rustle when hovered/tapped
     const highlights = [];
     const bubbles = [];
     const bubbleGeo = new THREE.SphereGeometry(1, 16, 12);
@@ -754,10 +788,9 @@ export default function Studio3D() {
     };
 
     const padFlash = (pad) => {
-      const col = pad % 4, row = pad < 4 ? 1 : 0;
-      const pw = (PADS.uEnd - PADS.uStart) / PADS.cols, pd = (PADS.vFront - PADS.vBack) / PADS.rows;
-      const y = surfaceFor("pad", [...Array(8)].map((_, i) => local(PADS.uStart + ((i % 4) + 0.5) * pw, PADS.vBack + ((i < 4 ? 1 : 0) + 0.5) * pd)));
-      flash(PADS.uStart + (col + 0.5) * pw, PADS.vBack + (row + 0.5) * pd, pw * 0.85, pd * 0.85, y, 0xff2fd1);
+      const [u0, u1] = PAD_COLS[pad % 4], [v0, v1] = PAD_ROWS[pad < 4 ? 1 : 0];
+      const y = surfaceFor("pad", PAD_COLS.flatMap(([a, b]) => PAD_ROWS.map(([c, d]) => local((a + b) / 2, (c + d) / 2))));
+      flash((u0 + u1) / 2, (v0 + v1) / 2, (u1 - u0) * 0.9, (v1 - v0) * 0.9, y, 0xff2fd1);
     };
 
     const playKey = async (info) => {
@@ -815,9 +848,13 @@ export default function Studio3D() {
       moon.position.set(win.position.x, win.position.y, wallZ + tw * 0.3);
       env.add(moon);
       if (!narrow) {
-        const sillPlant = succulent(tw * 0.22, 0x8fb8a0, 0xd88aa0);
-        sillPlant.position.set(win.position.x + winW * 0.29, win.position.y - winH / 2 - fb * 0.9, wallZ + tw * 0.03);
-        env.add(sillPlant);
+        const sillY = win.position.y - winH / 2 - fb * 0.9;
+        const sillPlant = succulent(tw * 0.22, 0x4f9a4a, 0x8fcf6e);
+        sillPlant.position.set(win.position.x + winW * 0.29, sillY, wallZ + tw * 0.03);
+        const pointy = pointySucculent(tw * 0.2);
+        pointy.position.set(win.position.x + winW * 0.02, sillY, wallZ + tw * 0.03);
+        env.add(sillPlant, pointy);
+        plants.push(sillPlant, pointy);
       }
 
       // Neon signs either side of the monitor, level with the first row of foam
@@ -913,26 +950,28 @@ export default function Studio3D() {
       const leafTex = monsteraTexture();
       const m1 = monstera(tw * 0.42, leafTex);
       m1.position.set(-tw * 0.86, floorY, wallZ + tw * 0.3);
-      const m2 = monstera(tw * 0.62, leafTex);
-      m2.position.set(tw * 1.04, floorY, wallZ + tw * 0.07); // tall, behind the guitars, leaves hanging over them
+      const m2 = monstera(tw * 0.62, leafTex, [5]); // without its tallest, out-of-place leaf
+      m2.position.set(tw * 0.9, floorY, wallZ + tw * 0.42); // in front of the guitars, leaves hanging over them
       m2.rotation.y = 0.6;
       [m1, m2].forEach((m) => m.traverse((o) => { o.castShadow = false; }));
       env.add(m1, m2);
+      plants.push(m1, m2);
       // and shorter ones under the desk hiding the cables: white monsteras and a fern,
       // sized to stay below the desk top
       const midZ = (table.min.z + table.max.z) / 2;
       const under = deskTop - floorY;
       const albo = monsteraTexture(true);
       const low = [
-        [-0.24, monstera(under * 0.34, albo), 0.4],
+        [-0.24, monstera(under * 0.44, albo), 0.4],
         [0.0, fern(under * 0.5, fernTexture()), 0],
-        [0.25, monstera(under * 0.3, albo), 3.6],
+        [0.25, monstera(under * 0.4, albo), 3.6],
       ];
       low.forEach(([x, plant, rot]) => {
         plant.position.set(tw * x, floorY, midZ - tw * 0.04);
         plant.rotation.y = rot;
         plant.traverse((o) => { o.castShadow = false; });
         env.add(plant);
+        plants.push(plant);
       });
 
       // Aim the front light from the viewer's side, over the desk
@@ -1005,6 +1044,18 @@ export default function Studio3D() {
         const tw = tableBox.max.x - tableBox.min.x;
         const standMat = std(0x111114, { metalness: 0.5, roughness: 0.45 });
         const props = new THREE.Group();
+
+        // Trackpad (aluminium base + white glass top): thicker, so it isn't paper-flat
+        const pad = room.children.filter((c) => ["object_4001", "object_5"].includes(c.name.toLowerCase()));
+        if (pad.length) {
+          const pb = new THREE.Box3(); pad.forEach((o) => pb.expandByObject(o));
+          const k = (tw * 0.014) / Math.max(pb.max.y - pb.min.y, 1e-6);
+          pad.forEach((o) => { o.scale.y *= k; });
+          room.updateMatrixWorld(true);
+          const nb = new THREE.Box3(); pad.forEach((o) => nb.expandByObject(o));
+          pad.forEach((o) => { o.position.y += (pb.min.y - nb.min.y) / fit; });
+          room.updateMatrixWorld(true);
+        }
 
         // Speakers a little bigger, on small desk stands
         for (const sp of speakers) {
@@ -1166,8 +1217,18 @@ export default function Studio3D() {
       return pad !== null ? { pad } : null;
     };
 
+    // Which plant (if any) is under the pointer
+    const plantAt = (e) => {
+      if (!plants.length) return null;
+      const hit = raycaster.intersectObjects(plants, true)[0];
+      if (!hit) return null;
+      return plants.find((pl) => isUnder(hit.object, pl)) ?? null;
+    };
+
     const onPointerDown = (e) => {
       const p = pick(e);
+      const plant = plantAt(e);
+      if (plant) plant.userData.rustle = 1;
       if (!p) return;
       if (p.isScreen) { navigateRef.current("/OS"); return; }
       if (p.isSpeaker) { toggleUp(); return; }
@@ -1179,6 +1240,8 @@ export default function Studio3D() {
     };
     const onPointerMove = (e) => {
       const p = pick(e);
+      const plant = plantAt(e);
+      if (plant) plant.userData.rustle = 1;
       const overScreen = !!p?.isScreen;
       hoverSpeaker = !!p?.isSpeaker;
       const clickable = overScreen || !!p?.isSpeaker || !!(p?.isAkai && akaiBox && controlAt(p.hit));
@@ -1241,6 +1304,20 @@ export default function Studio3D() {
         const hover = hoverAmt * (0.06 + Math.sin(now / 140) * 0.012);
         const pump = scPlaying ? Math.max(0, Math.sin(now / 115)) * 0.035 : 0;
         s.scale.copy(s.userData.base).multiplyScalar(1 + hover + pump);
+      }
+      // hovered plants rustle, settling back over a second or so
+      for (const pl of plants) {
+        const r = pl.userData.rustle || 0;
+        if (r < 0.002 && !pl.userData.moving) continue;
+        pl.userData.moving = r >= 0.002;
+        pl.userData.rustle = r * 0.97;
+        pl.traverse((o) => {
+          if (!o.userData.leaf) return;
+          if (!o.userData.base) { o.userData.base = o.rotation.clone(); o.userData.phase = Math.random() * 6.28; }
+          const w = Math.sin(now / 110 + o.userData.phase) * 0.14 * r;
+          o.rotation.x = o.userData.base.x + w;
+          o.rotation.z = o.userData.base.z + w * 0.6;
+        });
       }
       if (screen) screen.material.color.setScalar(0.94 + Math.sin(now / 90) * 0.03 + Math.random() * 0.03);
       renderer.render(scene, camera);
