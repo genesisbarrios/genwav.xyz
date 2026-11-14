@@ -219,9 +219,9 @@ const App = () => {
         {/* Include Header + Footer component */}
         <Routes>
           {/* <Route path="/" element={<><Header /><ExperienceWrapper /></>} /> */}
-          <Route path="/" element={<><Header /><GenWavOSComponent /><Footer /></>} />
+          <Route path="/" element={<><Header transparent /><Studio3D /></>} />
           <Route path="/OS" element={<><Header /><GenWavOSComponent /><Footer /></>} />
-          <Route path="/os2" element={<><Header /><Studio3D /></>} />
+          <Route path="/os2" element={<><Header transparent /><Studio3D /></>} />
           <Route path="/RELEASES" element={<><Header /><RELEASESComponent/><Footer /></>} />
           <Route path="/SINDESTINO" element={<><Header /><SINDESTINOComponent  /><Footer /></>} />
           <Route path="/AFTERALL" element={<><Header /><AFTERALLComponent  /><Footer /></>} />

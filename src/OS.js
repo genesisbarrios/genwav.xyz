@@ -365,7 +365,7 @@ const GenWavOS = (props) => {
                 <CardContent>
                 {/* <iframe width="100%" height="166" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/genesisbarrios/sets/my-music?si=62d1c9cdb8d54729a394f3c43d5d8d1b"></iframe>
                 */}
-                  <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+                  <iframe src="https://open.spotify.com/embed/artist/3YihJDU9YETUNDWO6pDuQG?utm_source=generator" width="100%" height="180" frameBorder="0" style={{border:"none", borderRadius:"12px"}} allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
                   <iframe width="100%" height="315" style={{borderRadius:"12px"}} src="https://www.youtube.com/embed/?list=PLcGBMxEyx5p8fc_zHMGJAUxLs94iw_puY&index=5&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                   <iframe 
                     title="SoundCloud Player"
