@@ -33,6 +33,7 @@ import MetaPixel from './MetaPixel';
 import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
 import MATRIX from './MATRIX';
 import RUNAWAY from './RUNAWAY';
+import Studio3D from './Studio3D';
 // Public ID (it's visible in page source anyway), kept here so it doesn't depend on Vercel env vars
 const META_PIXEL_ID = '1077030558456212';
 
@@ -220,6 +221,7 @@ const App = () => {
           {/* <Route path="/" element={<><Header /><ExperienceWrapper /></>} /> */}
           <Route path="/" element={<><Header /><GenWavOSComponent /><Footer /></>} />
           <Route path="/OS" element={<><Header /><GenWavOSComponent /><Footer /></>} />
+          <Route path="/os2" element={<><Header /><Studio3D /></>} />
           <Route path="/RELEASES" element={<><Header /><RELEASESComponent/><Footer /></>} />
           <Route path="/SINDESTINO" element={<><Header /><SINDESTINOComponent  /><Footer /></>} />
           <Route path="/AFTERALL" element={<><Header /><AFTERALLComponent  /><Footer /></>} />
