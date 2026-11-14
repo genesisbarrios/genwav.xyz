@@ -606,12 +606,25 @@ export default function Studio3D() {
   const mountRef = useRef(null);
   const navigate = useNavigate();
   const navigateRef = useRef(navigate);
+  const fadeRef = useRef(null); // full-screen fade at the end of the zoom into the monitor
   navigateRef.current = navigate;
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(0); // real download %, when the server sends a size
+  // The model's download often reports no total size, so the bar would sit at
+  // 0%. A time-based estimate steps forward every second, easing toward 95%
+  // (never claiming done); the bar shows whichever of the two is further.
+  const [timeProgress, setTimeProgress] = useState(0);
   const [ready, setReady] = useState(false);
+  useEffect(() => {
+    if (ready) return undefined;
+    const id = setInterval(() => setTimeProgress((p) => p + (95 - p) * 0.14), 1000);
+    return () => clearInterval(id);
+  }, [ready]);
+  const shownProgress = ready ? 100 : Math.round(Math.max(progress, timeProgress));
   const [error, setError] = useState("");
   const [nowPlaying, setNowPlaying] = useState(false);
   const [touch] = useState(() => window.matchMedia?.("(pointer: coarse)").matches);
+  // Phones (not tablets): the guitars are hidden there, so the hint skips them
+  const [phone] = useState(() => !!window.matchMedia?.("(pointer: coarse) and (max-width: 700px)").matches);
 
   useEffect(() => {
     const welcomeBox = document.getElementById("welcomeBox");
@@ -639,6 +652,7 @@ export default function Studio3D() {
     scene.background = new THREE.Color(0x0c0c0e);
     const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 200);
     let eye = null; // where to stand once the desk is placed
+    let zoom = null; // camera flight into the monitor, then genwavOS opens
 
     // Neon key lights from the original scene (no shadows: the lamp casts them)
     const blue = new THREE.DirectionalLight(0x00d4ff, 2.2);
@@ -687,7 +701,7 @@ export default function Studio3D() {
     const placeCamera = () => {
       const w = mount.clientWidth, h = mount.clientHeight;
       camera.aspect = w / h;
-      if (eye) {
+      if (eye && !zoom) {
         // Eye level with the screen; back far enough that the desk fills the width
         const hfov = 2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.aspect);
         const fitWidth = camera.aspect < 1 ? eye.fitWidthNarrow : eye.fitWidth;
@@ -951,6 +965,7 @@ export default function Studio3D() {
     };
 
     // ── the room around the desk ──
+    const isPhone = !!window.matchMedia?.("(pointer: coarse) and (max-width: 700px)").matches;
     const buildRoom = (table, monitorBox, speakerTop, narrow) => {
       const tw = table.max.x - table.min.x; // desk width; everything is sized from it
       const floorY = table.min.y;
@@ -1063,39 +1078,42 @@ export default function Studio3D() {
         env.add(boards, pyr);
       });
 
-      // Guitars on a stand, sitting on a guitar amp right of the desk
-      const standX = table.max.x + tw * 0.2, standZ = wallZ + tw * 0.2;
-      const ampH = tw * 0.3, ampW = tw * 0.46, ampD = tw * 0.24;
-      const amp = new THREE.Group();
-      const cab = new THREE.Mesh(new THREE.BoxGeometry(ampW, ampH, ampD), std(0x161618, { roughness: 0.7 }));
-      cab.position.y = ampH / 2;
-      const grille = new THREE.Mesh(new THREE.PlaneGeometry(ampW * 0.88, ampH * 0.62), std(0x2a2a2e, { roughness: 1 }));
-      grille.position.set(0, ampH * 0.4, ampD / 2 + 0.002);
-      const panel = new THREE.Mesh(new THREE.PlaneGeometry(ampW * 0.88, ampH * 0.16), std(0xcfc7b4, { roughness: 0.5, metalness: 0.4 }));
-      panel.position.set(0, ampH * 0.84, ampD / 2 + 0.002);
-      amp.add(cab, grille, panel);
-      for (let i = 0; i < 6; i++) {
-        const knob = new THREE.Mesh(new THREE.CylinderGeometry(ampH * 0.03, ampH * 0.03, ampH * 0.03, 12), std(0x111111));
-        knob.rotation.x = Math.PI / 2;
-        knob.position.set(-ampW * 0.3 + i * ampW * 0.12, ampH * 0.84, ampD / 2 + ampH * 0.016);
-        amp.add(knob);
+      // Guitars on a stand, sitting on a guitar amp right of the desk. Not on
+      // phones: they'd sit off to the side, out of view.
+      if (!isPhone) {
+        const standX = table.max.x + tw * 0.2, standZ = wallZ + tw * 0.2;
+        const ampH = tw * 0.3, ampW = tw * 0.46, ampD = tw * 0.24;
+        const amp = new THREE.Group();
+        const cab = new THREE.Mesh(new THREE.BoxGeometry(ampW, ampH, ampD), std(0x161618, { roughness: 0.7 }));
+        cab.position.y = ampH / 2;
+        const grille = new THREE.Mesh(new THREE.PlaneGeometry(ampW * 0.88, ampH * 0.62), std(0x2a2a2e, { roughness: 1 }));
+        grille.position.set(0, ampH * 0.4, ampD / 2 + 0.002);
+        const panel = new THREE.Mesh(new THREE.PlaneGeometry(ampW * 0.88, ampH * 0.16), std(0xcfc7b4, { roughness: 0.5, metalness: 0.4 }));
+        panel.position.set(0, ampH * 0.84, ampD / 2 + 0.002);
+        amp.add(cab, grille, panel);
+        for (let i = 0; i < 6; i++) {
+          const knob = new THREE.Mesh(new THREE.CylinderGeometry(ampH * 0.03, ampH * 0.03, ampH * 0.03, 12), std(0x111111));
+          knob.rotation.x = Math.PI / 2;
+          knob.position.set(-ampW * 0.3 + i * ampW * 0.12, ampH * 0.84, ampD / 2 + ampH * 0.016);
+          amp.add(knob);
+        }
+        amp.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+        amp.position.set(standX + tw * 0.07, floorY, standZ);
+        env.add(amp);
+        const standBase = floorY + ampH;
+        const stand = guitarStand(tw * 0.2);
+        stand.position.set(standX + tw * 0.11, standBase, standZ);
+        const g1 = guitar(tw * 0.28, { body: 0xa2551e, acoustic: true });
+        g1.position.set(standX - tw * 0.06, standBase + tw * 0.14, standZ + tw * 0.02);
+        g1.rotation.set(-0.18, 0.15, 0.03);
+        const g2 = guitar(tw * 0.26, { body: 0x111114, acoustic: false });
+        g2.position.set(standX + tw * 0.2, standBase + tw * 0.13, standZ + tw * 0.01);
+        g2.rotation.set(-0.18, -0.12, -0.03);
+        env.add(stand, g1, g2);
+        g1.userData.kind = "acoustic";
+        g2.userData.kind = "electric";
+        guitars.push(g1, g2);
       }
-      amp.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-      amp.position.set(standX + tw * 0.07, floorY, standZ);
-      env.add(amp);
-      const standBase = floorY + ampH;
-      const stand = guitarStand(tw * 0.2);
-      stand.position.set(standX + tw * 0.11, standBase, standZ);
-      const g1 = guitar(tw * 0.28, { body: 0xa2551e, acoustic: true });
-      g1.position.set(standX - tw * 0.06, standBase + tw * 0.14, standZ + tw * 0.02);
-      g1.rotation.set(-0.18, 0.15, 0.03);
-      const g2 = guitar(tw * 0.26, { body: 0x111114, acoustic: false });
-      g2.position.set(standX + tw * 0.2, standBase + tw * 0.13, standZ + tw * 0.01);
-      g2.rotation.set(-0.18, -0.12, -0.03);
-      env.add(stand, g1, g2);
-      g1.userData.kind = "acoustic";
-      g2.userData.kind = "electric";
-      guitars.push(g1, g2);
 
       // Plants: monsteras in the back corners
       const leafTex = monsteraTexture();
@@ -1402,7 +1420,33 @@ export default function Studio3D() {
       strum(g.userData.kind);
     };
 
+    // Clicking the monitor flies the camera into its screen until the screen
+    // fills the view, fades to the screen's color, then opens genwavOS.
+    const ZOOM_MS = 950;
+    const enterScreen = () => {
+      if (zoom) return;
+      const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+      if (!screen || !eye || reduceMotion) { navigateRef.current("/OS"); return; }
+      const box = new THREE.Box3().setFromObject(screen);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      // The monitor is tilted to face the camera, so come in along that line.
+      const dir = camera.position.clone().sub(center).normalize();
+      const halfFov = THREE.MathUtils.degToRad(camera.fov / 2);
+      const fill = Math.max(size.y, size.x / camera.aspect) / 2 / Math.tan(halfFov);
+      zoom = {
+        start: performance.now(),
+        from: camera.position.clone(),
+        to: center.clone().addScaledVector(dir, fill * 0.55), // a bit closer than "fills the view"
+        lookFrom: eye.target.clone(),
+        lookTo: center,
+        done: false,
+      };
+      renderer.domElement.style.cursor = "default";
+    };
+
     const onPointerDown = async (e) => {
+      if (zoom) return;
       const p = pick(e);
       const plant = plantAt(e);
       if (plant) plant.userData.rustle = 1;
@@ -1414,7 +1458,7 @@ export default function Studio3D() {
         return;
       }
       if (!p) return;
-      if (p.isScreen) { navigateRef.current("/OS"); return; }
+      if (p.isScreen) { enterScreen(); return; }
       if (p.isSpeaker) { toggleUp(); return; }
       if (p.isAkai && akaiBox) {
         const c = controlAt(p.hit);
@@ -1423,6 +1467,7 @@ export default function Studio3D() {
       }
     };
     const onPointerMove = (e) => {
+      if (zoom) return;
       const p = pick(e);
       const plant = plantAt(e);
       if (plant) plant.userData.rustle = 1;
@@ -1606,6 +1651,17 @@ export default function Studio3D() {
         });
       }
       if (screen) screen.material.color.setScalar(0.94 + Math.sin(now / 90) * 0.03 + Math.random() * 0.03);
+      if (zoom) {
+        const t = Math.min(1, (now - zoom.start) / ZOOM_MS);
+        const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // ease in-out
+        camera.position.lerpVectors(zoom.from, zoom.to, e);
+        camera.lookAt(new THREE.Vector3().lerpVectors(zoom.lookFrom, zoom.lookTo, e));
+        if (fadeRef.current) fadeRef.current.style.opacity = String(t < 0.6 ? 0 : (t - 0.6) / 0.4);
+        if (t >= 1 && !zoom.done) {
+          zoom.done = true;
+          navigateRef.current("/OS");
+        }
+      }
       renderer.render(scene, camera);
     };
     tick();
@@ -1638,6 +1694,7 @@ export default function Studio3D() {
   return (
     <div style={{ position: "relative", width: "100%", height: "100vh", minHeight: 480, background: "#0c0c0e", overflow: "hidden" }}>
       <div ref={mountRef} style={{ position: "absolute", inset: 0 }} />
+      <div ref={fadeRef} style={{ position: "absolute", inset: 0, background: "#00000d", opacity: 0, pointerEvents: "none" }} />
 
       {!ready && (
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "#73ecff", fontFamily: "'Courier New', monospace" }}>
@@ -1645,9 +1702,9 @@ export default function Studio3D() {
             <p>{error}</p>
           ) : (
             <>
-              <p style={{ marginBottom: 12 }}>loading studio… {progress}%</p>
+              <p style={{ marginBottom: 12 }}>loading studio… {shownProgress}%</p>
               <div style={{ width: 220, height: 6, border: "1px solid #73ecff", borderRadius: 3 }}>
-                <div style={{ width: `${progress}%`, height: "100%", background: "#73ecff", transition: "width .2s" }} />
+                <div style={{ width: `${shownProgress}%`, height: "100%", background: "#73ecff", transition: "width .6s ease-out" }} />
               </div>
             </>
           )}
@@ -1656,13 +1713,21 @@ export default function Studio3D() {
 
       {ready && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 24, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, pointerEvents: "none", fontFamily: "'Courier New', monospace" }}>
-          {/* Fits the screen on phones: capped to the viewport (16 px side
-              margins) and allowed to wrap, with shorter wording on touch. */}
-          <p style={{ color: "#73ecff", fontSize: "clamp(11px, 3.2vw, 13px)", lineHeight: 1.35, whiteSpace: "normal", textAlign: "center", padding: "6px 14px", margin: 0, maxWidth: "calc(100vw - 32px)", boxSizing: "border-box", background: "rgba(0,0,13,.72)", borderRadius: 16 }}>
-            {nowPlaying
+          {/* Always one line: the font shrinks on narrow screens so the whole
+              hint fits (Courier is ~0.6em per character), never above 13 px. */}
+          {(() => {
+            const hint = nowPlaying
               ? touch ? "now playing: UP · tap the speakers to pause" : "now playing: UP · click the speakers to pause"
-              : touch ? "tap the keys, pads & guitars · speakers play UP" : "keys: A–L · drums: 1–8 · strum the guitars · click the speakers to hear a masterpiece"}
-          </p>
+              : phone ? "tap the keys & pads · speakers play UP"
+              : touch ? "tap the keys, pads & guitars · speakers play UP"
+              : "keys: A–L · drums: 1–8 · strum the guitars · click the speakers to hear a masterpiece";
+            const em = Math.ceil(hint.length * 0.62);
+            return (
+              <p style={{ color: "#73ecff", fontSize: `min(13px, calc((100vw - 64px) / ${em}))`, whiteSpace: "nowrap", textAlign: "center", padding: "6px 14px", margin: 0, maxWidth: "calc(100vw - 32px)", boxSizing: "border-box", overflow: "hidden", background: "rgba(0,0,13,.72)", borderRadius: 999 }}>
+                {hint}
+              </p>
+            );
+          })()}
         </div>
       )}
     </div>
