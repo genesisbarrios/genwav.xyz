@@ -649,19 +649,20 @@ export default function Studio3D() {
     mount.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0c0c0e);
+    scene.background = new THREE.Color(0x100c08); // warm near-black
     const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 200);
     let eye = null; // where to stand once the desk is placed
     let zoom = null; // camera flight into the monitor, then genwavOS opens
 
     // Neon key lights from the original scene (no shadows: the lamp casts them)
-    const blue = new THREE.DirectionalLight(0x00d4ff, 2.2);
+    const blue = new THREE.DirectionalLight(0x00d4ff, 1.5); // toned down so the room reads warm
     blue.position.set(-1.5, 7, 3);
     const red = new THREE.DirectionalLight(0xff3300, 1.6);
     red.position.set(1.5, 7, 3);
-    scene.add(blue, red, new THREE.AmbientLight(0xffffff, 0.25), new THREE.HemisphereLight(0xffffff, 0x3a3a44, 0.6));
-    // Soft front light from behind the viewer, so the room isn't dark
-    const front = new THREE.DirectionalLight(0xfff4e8, 1.5);
+    // Warm, golden fill: amber sky, brown bounce from the floor
+    scene.add(blue, red, new THREE.AmbientLight(0xffd59a, 0.32), new THREE.HemisphereLight(0xffdca8, 0x4a3524, 0.75));
+    // Soft front light from behind the viewer, so the room isn't dark: warm yellow
+    const front = new THREE.DirectionalLight(0xffd27f, 1.8);
     front.castShadow = true;
     front.shadow.mapSize.set(2048, 2048);
     front.shadow.bias = -0.0004;
