@@ -32,12 +32,12 @@ const KEYBOARD_SHIFT = 0.2;   // how far right it sits, as a fraction of the des
 // u runs along the width (x), v from the back (0) to the front (1)
 // (measured from the mesh: the 10 black keys sit at u = 0.028 + n * 0.0617)
 const KEYS = { uStart: 0.028, uEnd: 0.953, vBack: 0.55, vFront: 0.995, blackDepth: 0.56 };
-const PADS = { uStart: 0.14, uEnd: 0.56, vBack: 0.06, vFront: 0.46, cols: 4, rows: 2 };
+const PADS = { uStart: 0.17, uEnd: 0.64, vBack: 0.03, vFront: 0.44, cols: 4, rows: 2 }; // measured from the mesh
 const WHITE_COUNT = 15; // C3..C5
 // Heights (0-1 of the keyboard's height) for the MK4 colors, measured from the mesh:
-// keys sit above the case front, pad buttons rise from the deck (0.807) to 0.873,
-// and the accent color marks the tallest controls
-const MK4 = { keysAbove: 0.45, padAbove: 0.815, accentAbove: 0.9 };
+// keys sit above the case front; pads, buttons and knobs rise from the deck (0.807),
+// and the accent color marks the tops of the tallest ones (knob caps, joystick)
+const MK4 = { keysAbove: 0.45, raisedAbove: 0.812, accentAbove: 0.95 };
 const WHITE_SEMITONES = [0, 2, 4, 5, 7, 9, 11];
 const HAS_BLACK_BEFORE = new Set([1, 2, 4, 5, 6]); // D, E, G, A, B have a sharp before them
 const BASE_MIDI = 48; // C3
@@ -145,8 +145,9 @@ function drawScreen(ctx, hover) {
 }
 
 // Miami at night: a few towers over Biscayne Bay, with a palm or two
-function windowTexture() {
-  return canvasTexture(512, 512, (ctx, W, H) => {
+function windowTexture(aspect = 1) {
+  return canvasTexture(512, Math.round(512 / aspect), (ctx, W, H) => {
+    const k = H / 512; // towers and palms scale with a shorter (landscape) window
     const sky = ctx.createLinearGradient(0, 0, 0, H * 0.72);
     sky.addColorStop(0, "#0a0b2e"); sky.addColorStop(0.65, "#3b1a5c"); sky.addColorStop(1, "#c2457a");
     ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
@@ -160,8 +161,8 @@ function windowTexture() {
       [166, 52, 300, "miami", "#ff4fd8"], [224, 40, 240, "ladder", "#ffd36b"], [270, 62, 200, "flat", "#9ff3ff"],
       [338, 44, 265, "spire", "#ffd36b"], [388, 56, 185, "flat", "#ff4fd8"], [450, 50, 225, "flat", "#ffd36b"],
     ];
-    for (const [x, w, h, top, lit] of towers) {
-      const y = shore - h;
+    for (const [x, w, h0, top, lit] of towers) {
+      const h = h0 * k, y = shore - h;
       ctx.fillStyle = "#0c0a1c"; ctx.fillRect(x, y, w, h);
       ctx.fillStyle = lit;
       for (let wy = y + 12; wy < shore - 6; wy += 13) for (let wx = x + 5; wx < x + w - 6; wx += 9) {
@@ -198,12 +199,13 @@ function windowTexture() {
         ctx.stroke();
       }
     };
-    palm(30, 190); palm(455, 160);
+    palm(30, 190 * k); palm(455, 160 * k);
   });
 }
 
-// Monstera leaf with its splits and holes cut out
-function monsteraTexture() {
+// Monstera leaf with its splits and holes cut out (`variegated`: white patches,
+// like a white/Albo monstera)
+function monsteraTexture(variegated = false) {
   return canvasTexture(512, 512, (ctx) => {
     ctx.beginPath();
     ctx.moveTo(256, 480);
@@ -226,6 +228,15 @@ function monsteraTexture() {
       }
     }
     ctx.globalCompositeOperation = "source-atop";
+    if (variegated) {
+      ctx.fillStyle = "#f3f6ee";
+      for (let i = 0; i < 9; i++) {
+        ctx.beginPath();
+        ctx.ellipse(70 + Math.random() * 370, 90 + Math.random() * 360, 30 + Math.random() * 70, 18 + Math.random() * 50, Math.random() * Math.PI, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.fillRect(256, 60, 256, 440); // one half-moon leaf side
+    }
     ctx.strokeStyle = "#7bc46a"; ctx.lineWidth = 6;
     ctx.beginPath(); ctx.moveTo(256, 480); ctx.lineTo(256, 70); ctx.stroke();
     ctx.globalCompositeOperation = "source-over";
@@ -233,7 +244,8 @@ function monsteraTexture() {
 }
 
 // MPK Mini MK4 look on the single-material keyboard mesh: light grey top, dark
-// grey sides, darker pads, white and black keys and neon blue accents. Picked by
+// grey sides, grey pads, white and black keys, black buttons and knobs with neon
+// blue tops. Picked by
 // position on the keyboard, using the key layout measured from the mesh.
 function mk4Material(box) {
   const mat = new THREE.MeshStandardMaterial({ roughness: 0.55, metalness: 0.05 });
@@ -242,7 +254,7 @@ function mk4Material(box) {
     Object.assign(shader.uniforms, {
       uMin: { value: box.min.clone() }, uSize: { value: box.getSize(new THREE.Vector3()) },
       uTop: { value: c(0xc4c7cc) }, uSide: { value: c(0x3c3e43) }, uPad: { value: c(0x5f6268) },
-      uWhite: { value: c(0xf6f6f4) }, uBlack: { value: c(0x111112) }, uAccent: { value: c(NEON_BLUE) },
+      uWhite: { value: c(0xf6f6f4) }, uBlack: { value: c(0x111112) }, uAccent: { value: c(NEON_BLUE) }, uButton: { value: c(0x141416) },
     });
     shader.vertexShader = shader.vertexShader
       .replace("#include <common>", "#include <common>\nvarying vec3 vLocal;\nvarying vec3 vLocalNormal;")
@@ -251,7 +263,7 @@ function mk4Material(box) {
       .replace("#include <common>", `#include <common>
 varying vec3 vLocal;
 varying vec3 vLocalNormal;
-uniform vec3 uMin, uSize, uTop, uSide, uPad, uWhite, uBlack, uAccent;
+uniform vec3 uMin, uSize, uTop, uSide, uPad, uWhite, uBlack, uAccent, uButton;
 vec3 mk4Color() {
   vec3 p = (vLocal - uMin) / uSize;           // x: along the keys, y: height, z: back(0) to front(1)
   float u = p.x, h = p.y, v = p.z;
@@ -265,11 +277,13 @@ vec3 mk4Color() {
     bool black = kz < ${KEYS.blackDepth.toFixed(3)} && abs(w - b) < 0.3 && b > 0.0 && b < ${WHITE_COUNT}.0 && sharp;
     return black ? uBlack : uWhite;
   }
-  if (h > ${MK4.accentAbove.toFixed(3)}) return uAccent;          // knob caps, joystick
   float px = (u - ${PADS.uStart.toFixed(3)}) / ${(PADS.uEnd - PADS.uStart).toFixed(3)};
   float pz = (v - ${PADS.vBack.toFixed(3)}) / ${(PADS.vFront - PADS.vBack).toFixed(3)};
-  // only the raised pad buttons (tops and sides), not the deck around them
-  if (px >= 0.0 && px < 1.0 && pz >= 0.0 && pz < 1.0 && h > ${MK4.padAbove.toFixed(3)}) return uPad;
+  bool raised = h > ${MK4.raisedAbove.toFixed(3)};                 // above the deck
+  // the 8 pads (tops and sides), not the deck around them
+  if (px >= 0.0 && px < 1.0 && pz >= 0.0 && pz < 1.0 && raised) return uPad;
+  // every other control (buttons, joystick, knobs): black, with neon blue tops
+  if (raised && v > 0.045 && v < 0.5) return h > ${MK4.accentAbove.toFixed(3)} ? uAccent : uButton; // (v > 0.045 skips the case's back rim)
   if (abs(normalize(vLocalNormal).y) < 0.45) return uSide;        // sides of the case
   return uTop;
 }`)
@@ -438,6 +452,50 @@ function monstera(size, leafTex) {
     g.add(stem, leaf);
   }
   g.traverse((o) => { if (o.isMesh) o.castShadow = true; });
+  return g;
+}
+
+// A fern frond: midrib with paired leaflets
+function fernTexture() {
+  return canvasTexture(128, 512, (ctx, W, H) => {
+    ctx.strokeStyle = "#4e8a3a"; ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.moveTo(W / 2, H); ctx.lineTo(W / 2, 8); ctx.stroke();
+    for (let y = H - 20; y > 14; y -= 14) {
+      const len = (W / 2 - 6) * Math.sin(((H - y) / H) * Math.PI) * 0.95 + 6;
+      ctx.fillStyle = y % 28 ? "#3f8f3a" : "#4fa346";
+      for (const side of [-1, 1]) {
+        ctx.beginPath();
+        ctx.ellipse(W / 2 + side * len / 2, y - 4, len / 2, 5, side * -0.35, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  });
+}
+
+// Boston fern: a low burst of arching fronds
+function fern(size, frondTex) {
+  const g = new THREE.Group();
+  const potH = 0.3 * size;
+  g.add(pot(0.3 * size, potH, 0x2b2b30));
+  const geo = new THREE.PlaneGeometry(0.28 * size, 1.1 * size, 1, 6);
+  geo.translate(0, 0.55 * size, 0);
+  // bend each frond so it arches over
+  const pos = geo.attributes.position;
+  for (let i = 0; i < pos.count; i++) {
+    const y = pos.getY(i) / (1.1 * size);
+    pos.setZ(i, -y * y * 0.6 * size);
+  }
+  geo.computeVertexNormals();
+  const mat = new THREE.MeshStandardMaterial({ map: frondTex, alphaTest: 0.5, side: THREE.DoubleSide, roughness: 0.7 });
+  for (let i = 0; i < 18; i++) {
+    const f = new THREE.Mesh(geo, mat);
+    f.position.y = potH * 0.95;
+    f.rotation.order = "YXZ";
+    f.rotation.y = (i / 18) * Math.PI * 2 + (i % 3) * 0.2;
+    f.rotation.x = 0.25 + (i % 4) * 0.12; // lean out
+    f.scale.setScalar(0.75 + (i % 5) * 0.08);
+    g.add(f);
+  }
   return g;
 }
 
@@ -714,7 +772,7 @@ export default function Studio3D() {
     };
 
     // ── the room around the desk ──
-    const buildRoom = (table, monitorBox, speakerTop) => {
+    const buildRoom = (table, monitorBox, speakerTop, narrow) => {
       const tw = table.max.x - table.min.x; // desk width; everything is sized from it
       const floorY = table.min.y;
       const wallZ = table.min.z - 0.15 * tw;
@@ -730,10 +788,16 @@ export default function Studio3D() {
       floor.receiveShadow = true;
       env.add(wall, floor);
 
-      // Window on the left
-      const winW = tw * 0.42, winH = tw * 0.5;
+      // Foam grid spacing (the signs line up with its first row)
+      const tile = tw * 0.14, gap = tw * 0.05, step = tile + gap;
+      const firstRow = monitorBox.max.y + gap + tile / 2;
+
+      // Window: on the left, or on phones a landscape one above the monitor in
+      // place of the 3x2 block of foam there
+      const winW = narrow ? 3 * step - gap : tw * 0.42;
+      const winH = narrow ? 2 * step - gap : tw * 0.5;
       const win = new THREE.Group();
-      const glass = new THREE.Mesh(new THREE.PlaneGeometry(winW, winH), new THREE.MeshBasicMaterial({ map: windowTexture(), toneMapped: false, color: 0xbbbbcc }));
+      const glass = new THREE.Mesh(new THREE.PlaneGeometry(winW, winH), new THREE.MeshBasicMaterial({ map: windowTexture(winW / winH), toneMapped: false, color: 0xbbbbcc }));
       const frameMat = std(0xe9e6df, { roughness: 0.6 });
       const bar = (w, h, x, y) => { const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, tw * 0.02), frameMat); b.position.set(x, y, tw * 0.01); win.add(b); };
       const fb = tw * 0.025;
@@ -742,19 +806,19 @@ export default function Studio3D() {
       bar(fb * 0.5, winH, 0, 0); bar(winW, fb * 0.5, 0, 0);
       const sill = new THREE.Mesh(new THREE.BoxGeometry(winW + fb * 4, fb * 0.8, tw * 0.07), frameMat);
       sill.position.set(0, -winH / 2 - fb * 1.3, tw * 0.03);
-      win.add(glass, sill);
-      win.position.set(-tw * 0.84, deskTop + tw * 0.34, wallZ + 0.002);
+      win.add(glass);
+      if (!narrow) win.add(sill); // phones: no sill (the window sits right above the monitor)
+      if (narrow) win.position.set(0, firstRow + step / 2, wallZ + 0.002);
+      else win.position.set(-tw * 0.84, deskTop + tw * 0.34, wallZ + 0.002);
       env.add(win);
       const moon = new THREE.PointLight(0x8a7cff, 6, tw * 1.6, 2);
-      moon.position.set(-tw * 0.84, deskTop + tw * 0.34, wallZ + tw * 0.3);
+      moon.position.set(win.position.x, win.position.y, wallZ + tw * 0.3);
       env.add(moon);
-      const sillPlant = succulent(tw * 0.22, 0x8fb8a0, 0xd88aa0);
-      sillPlant.position.set(-tw * 0.72, win.position.y - winH / 2 - fb * 0.9, wallZ + tw * 0.03);
-      env.add(sillPlant);
-
-      // Foam grid spacing (the signs line up with its first row)
-      const tile = tw * 0.14, gap = tw * 0.05, step = tile + gap;
-      const firstRow = monitorBox.max.y + gap + tile / 2;
+      if (!narrow) {
+        const sillPlant = succulent(tw * 0.22, 0x8fb8a0, 0xd88aa0);
+        sillPlant.position.set(win.position.x + winW * 0.29, win.position.y - winH / 2 - fb * 0.9, wallZ + tw * 0.03);
+        env.add(sillPlant);
+      }
 
       // Neon signs either side of the monitor, level with the first row of foam
       const signSize = tw * 0.128;
@@ -848,15 +912,30 @@ export default function Studio3D() {
       // Plants: monsteras in the back corners
       const leafTex = monsteraTexture();
       const m1 = monstera(tw * 0.42, leafTex);
-      m1.position.set(-tw * 0.97, floorY, wallZ + tw * 0.3);
-      const m2 = monstera(tw * 0.42, leafTex);
-      m2.position.set(tw * 1.0, floorY, wallZ + tw * 0.3);
+      m1.position.set(-tw * 0.86, floorY, wallZ + tw * 0.3);
+      const m2 = monstera(tw * 0.62, leafTex);
+      m2.position.set(tw * 1.04, floorY, wallZ + tw * 0.07); // tall, behind the guitars, leaves hanging over them
+      m2.rotation.y = 0.6;
       [m1, m2].forEach((m) => m.traverse((o) => { o.castShadow = false; }));
-      m2.rotation.y = 1.3;
       env.add(m1, m2);
+      // and shorter ones under the desk hiding the cables: white monsteras and a fern,
+      // sized to stay below the desk top
+      const midZ = (table.min.z + table.max.z) / 2;
+      const under = deskTop - floorY;
+      const albo = monsteraTexture(true);
+      const low = [
+        [-0.24, monstera(under * 0.34, albo), 0.4],
+        [0.0, fern(under * 0.5, fernTexture()), 0],
+        [0.25, monstera(under * 0.3, albo), 3.6],
+      ];
+      low.forEach(([x, plant, rot]) => {
+        plant.position.set(tw * x, floorY, midZ - tw * 0.04);
+        plant.rotation.y = rot;
+        plant.traverse((o) => { o.castShadow = false; });
+        env.add(plant);
+      });
 
       // Aim the front light from the viewer's side, over the desk
-      const midZ = (table.min.z + table.max.z) / 2;
       front.position.set(-tw * 0.4, deskTop + tw * 1.2, midZ + tw * 1.6);
       front.target.position.set(0, deskTop, midZ);
       const sc = front.shadow.camera;
@@ -1007,7 +1086,7 @@ export default function Studio3D() {
 
         const monitorBox = new THREE.Box3().setFromObject(monitor ?? tableObj);
         const speakerTop = Math.max(...speakers.map((sp) => new THREE.Box3().setFromObject(sp).max.y));
-        scene.add(buildRoom(tableBox, monitorBox, speakerTop));
+        scene.add(buildRoom(tableBox, monitorBox, speakerTop, mount.clientWidth < mount.clientHeight));
 
         const screenCenter = new THREE.Box3().setFromObject(screen ?? tableObj).getCenter(new THREE.Vector3());
         eye = {
@@ -1211,18 +1290,11 @@ export default function Studio3D() {
 
       {ready && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 24, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, pointerEvents: "none", fontFamily: "'Courier New', monospace" }}>
-          <p style={{ color: "#73ecff", fontSize: 13, textAlign: "center", padding: "6px 14px", margin: "0 16px", background: "rgba(0,0,13,.72)", borderRadius: 999 }}>
+          <p style={{ color: "#73ecff", fontSize: "clamp(8px, 2.4vw, 13px)", whiteSpace: "nowrap", textAlign: "center", padding: "6px 12px", margin: "0 8px", background: "rgba(0,0,13,.72)", borderRadius: 999 }}>
             {nowPlaying
               ? "now playing: UP · tap the speakers to pause"
-              : touch ? "tap the keys & pads · tap the speakers for UP" : "keys: A–L · drums: 1–8 · click the speakers for UP"}
+              : touch ? "tap the keys & pads · tap the speakers to hear a masterpiece" : "keys: A–L · drums: 1–8 · click the speakers to hear a masterpiece"}
           </p>
-          <button
-            type="button"
-            onClick={() => navigate("/OS")}
-            style={{ pointerEvents: "auto", background: "#00000d", color: "#73ecff", border: "1px solid #73ecff", borderRadius: 8, padding: "10px 22px", fontFamily: "inherit", fontWeight: 700, letterSpacing: 1, cursor: "pointer", boxShadow: "0 0 18px rgba(115,236,255,.35)" }}
-          >
-            ENTER genwavOS ▸
-          </button>
         </div>
       )}
     </div>

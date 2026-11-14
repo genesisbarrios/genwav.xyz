@@ -35,3 +35,9 @@
 a:hover{
     color:grey!important;
   }
+
+/* Nav links: darker neon blue when hovered or pressed (beats the grey above) */
+.nav-link:hover, .nav-link:active, .nav-link:focus-visible {
+    color: #00a3cc !important;
+    text-shadow: 0 0 4px #00a3cc, 0 0 10px rgba(0,163,204,.8), 0 0 2px #00303a !important;
+  }

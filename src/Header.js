@@ -15,7 +15,8 @@ const linkStyle = {
   textShadow: "0 0 4px #4fe3ff, 0 0 10px #4fe3ff, 0 0 22px rgba(79,227,255,.8), 0 0 2px #00303a",
 };
 
-const Header = ({ transparent = false }) => {
+// `hideMenu`: logo only (the 3D homepage)
+const Header = ({ transparent = false, hideMenu = false }) => {
   return (
     <AppBar
       position={transparent ? "absolute" : "static"}
@@ -29,15 +30,15 @@ const Header = ({ transparent = false }) => {
             <img src="https://dl.dropboxusercontent.com/s/e0in5yu3gqiidw7se0bte/wave-animation.gif?rlkey=s7dv6t1fyvoh17nn05m33wy7x&dl=0" alt="Logo" style={{ width: '50px', height: 'auto' }} />
           </Link>
         </Typography>
-        <nav style={{fontSize:"0.9rem"}}>
+        {!hideMenu && <nav style={{fontSize:"0.9rem"}}>
           <ul style={{ display: 'flex', listStyleType: 'none', margin: 0, padding: 0 }}>
-          <li style={{ marginRight: '10px'}}><Link style={linkStyle} to="/GENESIS">GENESIS</Link></li>
-          <li style={{ marginRight: '10px'}}><Link style={linkStyle} to="/RELEASES">RELEASES</Link></li>
-          <li style={{ marginRight: '10px'}}><Link style={linkStyle} to="/SHOP">SHOP</Link></li>
-          <li style={{ marginRight: '10px'}}><Link style={linkStyle} to="/EPK">EPK</Link></li>
-          {/* <li style={{ marginRight: '10px'}}><Link style={linkStyle} to="/newsletter">NEWSLETTER</Link></li> */}
+          <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/GENESIS">GENESIS</Link></li>
+          <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/RELEASES">RELEASES</Link></li>
+          <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/SHOP">SHOP</Link></li>
+          <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/EPK">EPK</Link></li>
+          {/* <li style={{ marginRight: '10px'}}><Link className="nav-link" style={linkStyle} to="/newsletter">NEWSLETTER</Link></li> */}
           </ul>
-        </nav>
+        </nav>}
       </Toolbar>
     </AppBar>
   );
