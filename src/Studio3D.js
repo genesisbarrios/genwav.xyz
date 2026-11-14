@@ -34,9 +34,10 @@ const KEYBOARD_SHIFT = 0.06; // fraction of the desk width    // radians the MPK
 const KEYS = { uStart: 0.028, uEnd: 0.953, vBack: 0.55, vFront: 0.995, blackDepth: 0.56 };
 const PADS = { uStart: 0.14, uEnd: 0.56, vBack: 0.06, vFront: 0.46, cols: 4, rows: 2 };
 const WHITE_COUNT = 15; // C3..C5
-// Heights (0-1 of the keyboard's height) for the MK4 colors: keys sit above the
-// case front, the accent color marks the tallest controls
-const MK4 = { keysAbove: 0.45, accentAbove: 0.9 };
+// Heights (0-1 of the keyboard's height) for the MK4 colors, measured from the mesh:
+// keys sit above the case front, pad buttons rise from the deck (0.807) to 0.873,
+// and the accent color marks the tallest controls
+const MK4 = { keysAbove: 0.45, padAbove: 0.815, accentAbove: 0.9 };
 const WHITE_SEMITONES = [0, 2, 4, 5, 7, 9, 11];
 const HAS_BLACK_BEFORE = new Set([1, 2, 4, 5, 6]); // D, E, G, A, B have a sharp before them
 const BASE_MIDI = 48; // C3
@@ -240,7 +241,7 @@ function mk4Material(box) {
   mat.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, {
       uMin: { value: box.min.clone() }, uSize: { value: box.getSize(new THREE.Vector3()) },
-      uTop: { value: c(0xc4c7cc) }, uSide: { value: c(0x3c3e43) }, uPad: { value: c(0x2a2c30) },
+      uTop: { value: c(0xc4c7cc) }, uSide: { value: c(0x3c3e43) }, uPad: { value: c(0x5f6268) },
       uWhite: { value: c(0xf6f6f4) }, uBlack: { value: c(0x111112) }, uAccent: { value: c(NEON_BLUE) },
     });
     shader.vertexShader = shader.vertexShader
@@ -265,10 +266,11 @@ vec3 mk4Color() {
     return black ? uBlack : uWhite;
   }
   if (h > ${MK4.accentAbove.toFixed(3)}) return uAccent;          // knob caps, joystick
-  if (abs(normalize(vLocalNormal).y) < 0.45) return uSide;        // sides of the case
   float px = (u - ${PADS.uStart.toFixed(3)}) / ${(PADS.uEnd - PADS.uStart).toFixed(3)};
   float pz = (v - ${PADS.vBack.toFixed(3)}) / ${(PADS.vFront - PADS.vBack).toFixed(3)};
-  if (px >= 0.0 && px < 1.0 && pz >= 0.0 && pz < 1.0) return uPad;
+  // only the raised pad buttons (tops and sides), not the deck around them
+  if (px >= 0.0 && px < 1.0 && pz >= 0.0 && pz < 1.0 && h > ${MK4.padAbove.toFixed(3)}) return uPad;
+  if (abs(normalize(vLocalNormal).y) < 0.45) return uSide;        // sides of the case
   return uTop;
 }`)
       .replace("vec4 diffuseColor = vec4( diffuse, opacity );", "vec4 diffuseColor = vec4( mk4Color(), opacity );");
