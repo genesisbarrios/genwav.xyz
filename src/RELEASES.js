@@ -146,57 +146,6 @@ const RELEASES = (props) => {
         <Grid item xs={12} sm={12}>
           <div style={{ display: "inline" }}>
             {/* Add your next card here */}
-            {/* Dizzy Smarp releases (from the Enigma Labs dizzysmarp site); they link to YouTube */}
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://www.youtube.com/watch?v=XDuqJH9VsHg" target="_blank" rel="noopener noreferrer">
-                <CardMedia
-                  component="img"
-                  alt="ROMPEDISCOTEKA (REGGAEKUNT)"
-                  height="250"
-                  image="https://i.ytimg.com/vi/XDuqJH9VsHg/hqdefault.jpg"
-                  title="ROMPEDISCOTEKA (REGGAEKUNT)"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)", textAlign: "center" }}>
-                  <Typography variant="h6" component="h6">
-                  ROMPEDISCOTEKA (REGGAEKUNT) - Dizzy Smarp ft. Ezmehfw &amp; Metacore
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://www.youtube.com/watch?v=0qUe5yHrXME" target="_blank" rel="noopener noreferrer">
-                <CardMedia
-                  component="img"
-                  alt="Yasuri Yamilet (BAD BITCH)"
-                  height="250"
-                  image="https://i.ytimg.com/vi/0qUe5yHrXME/hqdefault.jpg"
-                  title="Yasuri Yamilet (BAD BITCH)"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)", textAlign: "center" }}>
-                  <Typography variant="h6" component="h6">
-                  Yasuri Yamilet (BAD BITCH) - Dizzy Smarp
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://www.youtube.com/watch?v=Y0I3k4xsKxk" target="_blank" rel="noopener noreferrer">
-                <CardMedia
-                  component="img"
-                  alt="Yasuri Yamilet (Bad Bitches Only) Remix"
-                  height="250"
-                  image="https://i.ytimg.com/vi/Y0I3k4xsKxk/hqdefault.jpg"
-                  title="Yasuri Yamilet (Bad Bitches Only) Remix"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)", textAlign: "center" }}>
-                  <Typography variant="h6" component="h6">
-                  Yasuri Yamilet (Bad Bitches Only) [Remix] - Dizzy Smarp ft. Charlita, Fuega, Enesi M. &amp; Vértigo
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
 
             <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/RUNAWAY">
