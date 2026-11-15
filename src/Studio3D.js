@@ -1148,12 +1148,13 @@ export default function Studio3D() {
       const under = deskTop - floorY;
       const albo = monsteraTexture(true);
       const low = [
-        [-0.24, monstera(under * 0.44, albo), 0.4],
-        [0.0, fern(under * 0.5, fernTexture()), 0],
-        [0.25, monstera(under * 0.4, albo), 3.6],
+        // [x, plant, rotation, depth]: the middle fern sits further back so they aren't in one row
+        [-0.24, monstera(under * 0.44, albo), 0.4, -0.04],
+        [0.0, fern(under * 0.5, fernTexture()), 0, -0.17],
+        [0.25, monstera(under * 0.4, albo), 3.6, -0.04],
       ];
-      low.forEach(([x, plant, rot]) => {
-        plant.position.set(tw * x, floorY, midZ - tw * 0.04);
+      low.forEach(([x, plant, rot, z]) => {
+        plant.position.set(tw * x, floorY, midZ + tw * z);
         plant.rotation.y = rot;
         plant.traverse((o) => { o.castShadow = false; });
         env.add(plant);
