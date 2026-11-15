@@ -488,3 +488,10 @@ button.legend{
   }
 
 }
+
+/* Releases: 3-column grid on desktop */
+@media (min-width: 769px) {
+  .releasesGridContainer { max-width: 1100px !important; width: 90%; }
+  .releasesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .releasesGrid .MuiCard-root { margin-bottom: 0 !important; }
+}

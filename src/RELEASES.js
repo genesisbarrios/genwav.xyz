@@ -142,9 +142,9 @@ const RELEASES = (props) => {
         </Grid>
       </Grid>
     
-      <Grid className="linksContainer" container style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
+      <Grid className="linksContainer releasesGridContainer" container style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>
         <Grid item xs={12} sm={12}>
-          <div style={{ display: "inline" }}>
+          <div className="releasesGrid">
             {/* Add your next card here */}
 
             <Card style={{marginBottom:"2%"}}>
