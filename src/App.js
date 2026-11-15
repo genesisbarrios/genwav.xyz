@@ -1,39 +1,42 @@
 // App.js
-import React from 'react';
+// ExperienceWrapper (the old 3D homepage) isn't routed anymore; not imported so its code stays out of the bundle.
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import ExperienceWrapper from "./ExperienceWrapper";
-import GenWavOS from "./OS";
-import EPK from "./EPK";
-import GENESIS from "./GENESIS";
-import DALEMAMI from "./DALEMAMI";
-import HIKING from "./HIKING";
 import Header from "./Header"; // Import Header component
-import LOSIGNORO from "./LOSIGNORO";
-import RELEASES from './RELEASES';
-import TEXTINME from './3am';
-import PROBLEMAS from './PROBLEMAS';
-import LLAMAGEMELA from './LLAMAGEMELA';
-import ONEDAY from './oneday';
-import GAFAS from './GAFAS';
-import TRIPPIN from './TRIPPIN';
 import Footer from "./Footer"; // Import Header component
-import NEWSLETTER from './NEWSLETTER';
-import CURIOSO from './CURIOSO';
-import SOLYMAR from './SOLYMAR';
-import ORIGINAL from './ORIGINAL';
-import Twentyseven from './TwentySeven';
-import TwentyTwo from './TwentyTwo';
-import SINDESTINO from './SINDESTINO';
-import AFTERALL from './AFTERALL';
-import TURO from './TURO';
-import UP from './UP';
-import KEEPGRINDING from './KEEPGRINDING';
-import WORLD from './WORLD';
 import MetaPixel from './MetaPixel';
-import EmailTemplate from './EmailTemplate'; // Import the EmailTemplate component
-import MATRIX from './MATRIX';
-import RUNAWAY from './RUNAWAY';
 import Studio3D from './Studio3D';
+
+// Every page except the studio homepage loads on demand
+const GenWavOS = lazy(() => import("./OS"));
+const EPK = lazy(() => import("./EPK"));
+const GENESIS = lazy(() => import("./GENESIS"));
+const DALEMAMI = lazy(() => import("./DALEMAMI"));
+const HIKING = lazy(() => import("./HIKING"));
+const LOSIGNORO = lazy(() => import("./LOSIGNORO"));
+const RELEASES = lazy(() => import("./RELEASES"));
+const TEXTINME = lazy(() => import("./3am"));
+const PROBLEMAS = lazy(() => import("./PROBLEMAS"));
+const LLAMAGEMELA = lazy(() => import("./LLAMAGEMELA"));
+const ONEDAY = lazy(() => import("./oneday"));
+const GAFAS = lazy(() => import("./GAFAS"));
+const TRIPPIN = lazy(() => import("./TRIPPIN"));
+const NEWSLETTER = lazy(() => import("./NEWSLETTER"));
+const CURIOSO = lazy(() => import("./CURIOSO"));
+const SOLYMAR = lazy(() => import("./SOLYMAR"));
+const ORIGINAL = lazy(() => import("./ORIGINAL"));
+const Twentyseven = lazy(() => import("./TwentySeven"));
+const TwentyTwo = lazy(() => import("./TwentyTwo"));
+const SINDESTINO = lazy(() => import("./SINDESTINO"));
+const AFTERALL = lazy(() => import("./AFTERALL"));
+const TURO = lazy(() => import("./TURO"));
+const UP = lazy(() => import("./UP"));
+const KEEPGRINDING = lazy(() => import("./KEEPGRINDING"));
+const WORLD = lazy(() => import("./WORLD"));
+const EmailTemplate = lazy(() => import("./EmailTemplate"));
+const MATRIX = lazy(() => import("./MATRIX"));
+const RUNAWAY = lazy(() => import("./RUNAWAY"));
+
 // Public ID (it's visible in page source anyway), kept here so it doesn't depend on Vercel env vars
 const META_PIXEL_ID = '1077030558456212';
 
@@ -217,6 +220,8 @@ const App = () => {
       <div>
         <MetaPixel pixelId={META_PIXEL_ID} />
         {/* Include Header + Footer component */}
+        {/* Pages other than the studio load on demand (React.lazy) */}
+        <Suspense fallback={<div style={{ minHeight: "100vh", background: "#0c0c0e" }} />}>
         <Routes>
           {/* <Route path="/" element={<><Header /><ExperienceWrapper /></>} /> */}
           <Route path="/" element={<><Header transparent hideMenu /><Studio3D /></>} />
@@ -252,6 +257,7 @@ const App = () => {
           <Route path="/SHOP" element={<ShopRedirect />} />
           <Route path="/emailtemplate" element={<><Header /><EmailTemplateComponent /><Footer /></>} /> 
         </Routes>
+        </Suspense>
         
       </div>
     </BrowserRouter>

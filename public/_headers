@@ -1,0 +1,10 @@
+# Netlify response headers.
+# CRA's hashed build files never change, so they cache for a year.
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 3D models and audio: cached a week. Give a changed file a new name.
+/models/*
+  Cache-Control: public, max-age=604800
+/UP/*
+  Cache-Control: public, max-age=604800

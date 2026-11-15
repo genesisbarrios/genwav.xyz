@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import * as Tone from "tone";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+// Tone.js (~300 KB) loads on the first tap or key press, not with the page.
+let Tone = null;
 
 // The 3D studio homepage. The desk comes from the original workspace model; the
 // room around it (wall, foam, window, neon signs, guitars, plants, lamp) is built
@@ -10,7 +12,19 @@ import * as Tone from "tone";
 // (hover strums too, once audio is unlocked), the speakers for "UP", and the
 // monitor to open genwavOS.
 
-const MODEL_URL = "/models/workspace2.glb";
+// The studio model, compressed (WebP textures, Draco geometry) from the
+// original 45 MB workspace2.glb: 1024 px textures for desktop, 512 px for
+// phones and slow or low-memory devices (also far less GPU memory).
+const MODEL_URL_DESKTOP = "/models/workspace-desktop.glb";
+const MODEL_URL_MOBILE = "/models/workspace-mobile.glb";
+function pickModelUrl() {
+  const nav = typeof navigator !== "undefined" ? navigator : {};
+  const conn = nav.connection || {};
+  const smallTouch = window.matchMedia?.("(pointer: coarse)").matches && Math.min(window.screen.width, window.screen.height) <= 820;
+  const lowMemory = typeof nav.deviceMemory === "number" && nav.deviceMemory <= 4;
+  const slowNet = conn.saveData || /(^|-)2g|3g/.test(conn.effectiveType || "");
+  return smallTouch || lowMemory || slowNet ? MODEL_URL_MOBILE : MODEL_URL_DESKTOP;
+}
 const UP_AUDIO = "/UP/UP%20-%20gen.wav%20(Master).mp3"; // "UP" by gen.wav, served from public/UP
 
 // Objects from the model that the original scene showed; the rest are hidden
@@ -732,6 +746,8 @@ export default function Studio3D() {
     let synth = null, drums = null, strummers = null;
     const startAudio = async () => {
       if (synth) return;
+      if (!Tone) Tone = await import("tone");
+      if (synth) return; // another call finished while Tone was loading
       await Tone.start();
       const reverb = new Tone.Reverb({ decay: 2.5, wet: 0.22 }).toDestination();
       synth = new Tone.PolySynth(Tone.Synth, {
@@ -1155,8 +1171,12 @@ export default function Studio3D() {
     };
 
     const loader = new GLTFLoader();
+    // Draco decodes to plain float attributes, so the materials this file
+    // swaps in (screen, desk top) work unchanged. Decoder files: public/draco/
+    const draco = new DRACOLoader().setDecoderPath("/draco/");
+    loader.setDRACOLoader(draco);
     loader.load(
-      MODEL_URL,
+      pickModelUrl(),
       (gltf) => {
         if (disposed) return;
         room = gltf.scene;
