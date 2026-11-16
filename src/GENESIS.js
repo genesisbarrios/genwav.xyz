@@ -104,13 +104,21 @@ const GENESIS = (props) => {
   return(
     <div id="GENESIS">
     <div style={{ textAlign: "center" }}>
-      <div id="GenesisImageDiv">
+      <div className="release-hero release-hero--top">
+      <div id="GenesisImageDiv" className="release-hero__cover">
         <img 
           src="https://dl.dropboxusercontent.com/s/h6t8dvgtzzj8f069s0ma4/GENESIS_ANI.gif?rlkey=i1x2657yni0v3dyhhe8fjixvs&st=8dpg1ttt&dl=0"
           alt="GENESIS Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
+        <div className="aboutAlbum release-hero__about">
+      <h2>About the Album</h2>
+      <p>I had no idea what I was getting myself into when I started this project, but it was so worth the blood, sweat, and tears. What started as an EP with a couple features on it ended up being my debut album and it wouldn’t have been possible without all my friends and colleagues. I'm not an artist that's bound to one genre, that's why this project is packed with different genres, and fusions. Although I stick true to my Cuban roots, I'm sure there's a song for everyone in it. It was created over the past year, while still releasing singles monthly and I would appreciate from the bottom of my heart if you took a listen 🙏🏽🫶🏽🌊</p>
+      <br></br>
+      <p>GENESIS is about self reflection through relationship, self awareness, transformation, and coming back to yourself and your purpose. ⭐</p>    
+      <p> gen.wav (5.30.24)</p>
+        </div>
       </div>
-      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"2%", marginBottom:"2%"}}>
+      <Grid className="linksContainer release-hero__links" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"2%", marginBottom:"2%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -155,7 +163,7 @@ const GENESIS = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="/pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.pandora.com/artist/genwav/genesis/ALVK52vZZ46mn7q?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A34977410&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A34977410&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=7d58c687eeff1763f79f5c3638b3da52&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%201e32aa2b-5540-4eef-8a89-c5baf73558a2&sharedId=7d58c687eeff1763f79f5c3638b3da52&_branch_match_id=1309723444836776967&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%201e32aa2b-5540-4eef-8a89-c5baf73558a2&_branch_referrer=H4sIAAAAAAAAA62Py2rDMBBFv8beGOdhWZZTMMU0DYSGEih0kU0YS%2BMHtiVVUuLfr9xHusymMIvLcOccqXVO24flUoMUysACtF4MneyXj0GSCrS9U%2Fp8MUPRzsWAlEGy8zNN0%2BL3hKvRb8C4zjofGpQTXL8D2s76VB7eX2hyPZ3SbJTsI%2FToTtmzQNSz66zBtcUP7preJBXw3jpocMYP1WUMyM6pHmVAtuXB10i6YSxdr2agvzaqE%2F8JZc%2B8BSlxKI7%2BdxJN9AQOBtVEbwiGt1F53EdxdPC2ujMYat8qhjrkypiCCZrzLGeIdb1mGanZpqacZCSviACafLU98xVGLG6I2Qmjhq6Rf9KLdWr0Yb%2F1tjWSBCCpYkrTVZx6fJxDvok5raBmhNIcktC2YFDsxd1XfAJVa1qo%2FwEAAA%3D%3D" onClick={() => trackStreamingClick('GENESIS', 'Pandora')}><button className="pre-save-button">Stream</button></a>
@@ -163,7 +171,7 @@ const GENESIS = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://genwav.bandcamp.com/album/genesis" onClick={() => trackMerchClick('GENESIS', 'Bandcamp')}><button className="pre-save-button">Buy / Merch</button></a>
@@ -179,6 +187,7 @@ const GENESIS = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      </div>
 
       <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
       <Grid container spacing={3} style={{width:"80%", margin:"0 auto"}}>
@@ -229,11 +238,7 @@ const GENESIS = (props) => {
           `}
         </style>
       
-      <h2>About the Album</h2>
-      <p>I had no idea what I was getting myself into when I started this project, but it was so worth the blood, sweat, and tears. What started as an EP with a couple features on it ended up being my debut album and it wouldn’t have been possible without all my friends and colleagues. I'm not an artist that's bound to one genre, that's why this project is packed with different genres, and fusions. Although I stick true to my Cuban roots, I'm sure there's a song for everyone in it. It was created over the past year, while still releasing singles monthly and I would appreciate from the bottom of my heart if you took a listen 🙏🏽🫶🏽🌊</p>
-      <br></br>
-      <p>GENESIS is about self reflection through relationship, self awareness, transformation, and coming back to yourself and your purpose. ⭐</p>    
-      <p> gen.wav (5.30.24)</p>    
+    
       <br></br>
     </div>
 

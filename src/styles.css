@@ -495,3 +495,40 @@ button.legend{
   .releasesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .releasesGrid .MuiCard-root { margin-bottom: 0 !important; }
 }
+
+/* Release pages on desktop: album art on the left, as big as fits with a
+   margin; streaming links on the right; any video full width underneath. */
+.release-hero__about { width: 100% !important; margin: 20px auto 0; padding: 0 20px; box-sizing: border-box; }
+@media (min-width: 969px) {
+  .release-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "cover links" "video video";
+    column-gap: 4vw;
+    row-gap: 32px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4vh 5vw;
+  }
+  .release-hero__cover { grid-area: cover; padding: 0 !important; }
+  .release-hero__cover > img {
+    display: block;
+    width: min(100%, calc(100vh - 160px)) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+  .release-hero .release-hero__links {
+    grid-area: links;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+  }
+  .release-hero #NEWVideo { grid-area: video; justify-self: center; margin: 0 !important; }
+  /* Genesis: the about text sits under the art, so start both columns at the top */
+  .release-hero--top { align-items: start; }
+  .release-hero--top .release-hero__links { margin-top: 0 !important; }
+  .release-hero__about { padding: 0; text-align: left; }
+}

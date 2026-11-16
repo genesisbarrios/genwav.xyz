@@ -127,13 +127,14 @@ const SOLYMAR = (props) => {
         <meta id="og-image" property="og:image" content="https://genwav.xyz/SOLYMAR.jpg" />
       </MetaTags>
     <div style={{ textAlign: "center" }}>
-      <div id="GenesisImageDiv">
+      <div className="release-hero">
+      <div id="GenesisImageDiv" className="release-hero__cover">
         <img 
-          src="SOLYMAR.jpg"
+          src="/SOLYMAR.jpg"
           alt="SOLYMAR Album" type="gif"
           style={{ height: "auto", width: "auto", maxWidth: "25%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
-      <Grid className="linksContainer" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"3%", marginBottom:"8%"}}>
+      <Grid className="linksContainer release-hero__links" container spacing={2} style={{width: "35%", margin:"0 auto", paddingLeft:"3%", marginBottom:"8%"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -178,7 +179,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="/pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://pandora.app.link/GMQOTsZnvUb" onClick={() => trackStreamingClick('SOLYMAR', 'Pandora')}><button className="pre-save-button">Stream</button></a>
@@ -194,7 +195,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.deezer.com/en/album/772485441" onClick={() => trackStreamingClick('SOLYMAR', 'Deezer')}><button className="pre-save-button">Stream</button></a>
@@ -202,7 +203,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://genwav.bandcamp.com/album/solymar" onClick={() => trackMerchClick('SOLYMAR', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
@@ -211,6 +212,7 @@ const SOLYMAR = (props) => {
         </Grid>
        
       </Grid>
+      </div>
 
          <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/anFyHr6d" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
              <style>

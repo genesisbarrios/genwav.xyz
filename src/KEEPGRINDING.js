@@ -91,7 +91,8 @@ const KEEPGRINDING = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
+      <div className="release-hero">
+      <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img
           src="/KEEPGRINDING/keepgrindingart.jpg"
           alt="KEEP GRINDIN" type="img"
@@ -101,7 +102,7 @@ const KEEPGRINDING = (props) => {
       {/* <h4 style={{margin:"0 20px 10px"}}>KEEP GRINDIN (SYRE) | gen.wav</h4> */}
        <iframe id="NEWVideo" width="50%" height="515" src="https://www.youtube.com/embed/UHvLtJjzu7A?si=FjzyIlI5P6xoaF74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
 
-      <div className="linksContainer" style={{width: "25%", margin:"20px auto"}}>
+      <div className="linksContainer release-hero__links" style={{width: "25%", margin:"20px auto"}}>
         <div className="logo-button-container logo-row">
           <div className="logo-label"><SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "8px" }} size={50} /><p style={{ color: '#1DD15E', fontWeight:"600", margin:0}}>Spotify</p></div>
           <a target="_blank" href="https://open.spotify.com/album/5BRFGMIjFhjR77ku4EAkos" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Spotify')}><button className="pre-save-button">Stream</button></a>
@@ -146,6 +147,7 @@ const KEEPGRINDING = (props) => {
           <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/Bandcamp.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Bandcamp</p></div>
           <a target="_blank" href="https://genwav.bandcamp.com/album/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
         </div>
+      </div>
       </div>
 
       <div className="embla" ref={emblaRef} style={{marginTop:"5%"}}>

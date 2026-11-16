@@ -118,7 +118,8 @@ const UP = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
+      <div className="release-hero">
+      <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="/UPCoverArt.png"
           alt="UP" type="img"
@@ -127,7 +128,7 @@ const UP = (props) => {
 
       <iframe id="NEWVideo" width="50%" height="515" src="https://www.youtube.com/embed/73bsecH1N2c?si=UmfGlBOqOxoiMv9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
 
-      <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
+      <Grid className="linksContainer release-hero__links" container spacing={2} style={{width: "25%", margin:"0 auto", marginBottom:"20px"}}>
         <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -205,6 +206,7 @@ const UP = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      </div>
 
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
