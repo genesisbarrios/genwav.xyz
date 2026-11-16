@@ -114,14 +114,15 @@ const GAFAS = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv" style={{padding:"1% 0"}}>
+      <div className="release-hero">
+      <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://genwav.xyz/GAFAS.png"
           alt="GAFAS" type="png"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px" }}></img>
       </div>
       {/* <iframe id="NEWVideo" style={{margin:"0 auto"}} width="50%" height="315" src="https://www.youtube.com/embed/8td_ueaxld0?si=zvdodxPa47Qy0zVi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-       <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
+       <Grid className="linksContainer release-hero__links" container spacing={2} style={{width: "25%", margin:"0 auto"}}>
        <Grid item xs={12} sm={12}>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -201,7 +202,8 @@ const GAFAS = (props) => {
           </Grid>
           
         </Grid>
-      </Grid> 
+      </Grid>
+      </div> 
       
       
         <div className="aboutNEW" style={{marginTop:"10%", textAlign:"center", width:"60%"}}>

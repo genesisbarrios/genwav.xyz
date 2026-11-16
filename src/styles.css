@@ -496,16 +496,18 @@ button.legend{
   .releasesGrid .MuiCard-root { margin-bottom: 0 !important; }
 }
 
-/* Release pages on desktop: album art on the left, as big as fits with a
-   margin; streaming links on the right; any video full width underneath. */
+/* Release pages on desktop: album art (and the video, if there is one) on
+   the left, as big as fits with a margin; streaming links on the right,
+   centered. Genesis adds an about row with the mini CD beside it. */
 .release-hero__about { width: 100% !important; margin: 20px auto 0; padding: 0 20px; box-sizing: border-box; }
+.release-hero__extra { display: block; text-align: center; margin: 24px auto 0; }
 @media (min-width: 969px) {
   .release-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas: "cover links" "video video";
+    grid-template-areas: "cover links" "video links";
     column-gap: 4vw;
-    row-gap: 32px;
+    row-gap: 24px;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
@@ -521,14 +523,25 @@ button.legend{
   }
   .release-hero .release-hero__links {
     grid-area: links;
+    align-self: center;
     width: 100% !important;
     max-width: 520px !important;
     margin: 0 auto !important;
     padding-left: 0 !important;
   }
-  .release-hero #NEWVideo { grid-area: video; justify-self: center; margin: 0 !important; }
-  /* Genesis: the about text sits under the art, so start both columns at the top */
-  .release-hero--top { align-items: start; }
-  .release-hero--top .release-hero__links { margin-top: 0 !important; }
-  .release-hero__about { padding: 0; text-align: left; }
+  .release-hero #NEWVideo {
+    grid-area: video;
+    width: min(100%, calc(100vh - 160px)) !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    justify-self: center;
+    margin: 0 !important;
+  }
+  /* Genesis: about text under the art, mini CD beside it */
+  .release-hero--top { grid-template-areas: "cover links" "about extra"; }
+  .release-hero--top .release-hero__cover { display: contents; }
+  .release-hero--top .release-hero__cover > img { grid-area: cover; }
+  .release-hero__about { grid-area: about; align-self: start; margin-top: 48px; padding: 0; text-align: left; }
+  .release-hero__extra { grid-area: extra; align-self: start; margin-top: 48px; }
+  .release-hero__extra .mini-cd { width: 70% !important; }
 }

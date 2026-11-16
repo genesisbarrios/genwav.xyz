@@ -187,6 +187,34 @@ const GENESIS = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="release-hero__extra">
+         <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/bB1nh5QB" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
+             <style>
+            {`
+              /* make the two merch h3s smaller on mobile */
+              @media (max-width: 768px) {
+                .genesis-mini-h3 {
+                  font-size: 14px !important;
+                  margin-top: 8px !important;
+                  margin-bottom: 8px !important;
+                }
+                    .mini-cd {
+                  width: 50% !important;
+                  border-radius: 10px !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .genesis-mini-h3 {
+                  font-size: 12px !important;
+                }
+              }
+            `}
+           </style>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GET YOUR MINI CD Keychain 🔑🔗</h3>
+            <img className="mini-cd" src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
+            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>Tap to download all 13 tracks on the album 🎵</h3>
+          </a>
+      </div>
       </div>
 
       <h2 style={{paddingTop:"5%"}}>Music Videos</h2>
@@ -308,32 +336,6 @@ const GENESIS = (props) => {
           </div>
         </div>
 
-         <a target="_blank" style={{color:"white", margin:"0 auto", textAlign:"center", textDecoration:"none"}} href="https://square.link/u/bB1nh5QB" onClick={() => trackMerchClick('SOLYMAR', 'NFC Album')}>
-             <style>
-            {`
-              /* make the two merch h3s smaller on mobile */
-              @media (max-width: 768px) {
-                .genesis-mini-h3 {
-                  font-size: 14px !important;
-                  margin-top: 8px !important;
-                  margin-bottom: 8px !important;
-                }
-                    .mini-cd {
-                  width: 50% !important;
-                  border-radius: 10px !important;
-                }
-              }
-              @media (max-width: 480px) {
-                .genesis-mini-h3 {
-                  font-size: 12px !important;
-                }
-              }
-            `}
-           </style>
-            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>GET YOUR MINI CD Keychain 🔑🔗</h3>
-            <img className="mini-cd" src="/GENESIS-MINICD-SQUARE.jpg" width="30%" style={{borderRadius:"10px"}}></img>
-            <h3 className="genesis-mini-h3" style={{marginTop:"2%", marginBottom:"2%"}}>Tap to download all 13 tracks on the album 🎵</h3>
-          </a>
 
         <iframe width="90%" height="300" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1827273363&color=%234c647c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif", fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/sets/genesis-414993647" title="GENESIS" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>GENESIS</a></div>
       
