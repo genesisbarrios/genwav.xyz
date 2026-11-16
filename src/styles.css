@@ -542,6 +542,18 @@ button.legend{
   .release-hero--top .release-hero__cover { display: contents; }
   .release-hero--top .release-hero__cover > img { grid-area: cover; }
   .release-hero__about { grid-area: about; align-self: start; margin-top: 48px; padding: 0; text-align: left; }
-  .release-hero__extra { grid-area: extra; align-self: start; margin-top: 48px; }
-  .release-hero__extra .mini-cd { width: 70% !important; }
+  /* mini CD: exactly as tall as the about text beside it; the image takes
+     whatever height the two lines of text leave (flex-basis 0, so it never
+     makes the row taller) */
+  .release-hero__extra { grid-area: extra; align-self: stretch; margin: 48px 0 0; position: relative; }
+  .release-hero__extra > a { position: absolute; inset: 0; margin: 0 !important; display: flex; flex-direction: column; align-items: center; }
+  .release-hero__extra .genesis-mini-h3 { margin: 0 0 10px !important; }
+  .release-hero__extra .genesis-mini-h3:last-of-type { margin: 10px 0 0 !important; }
+  .release-hero__extra .mini-cd {
+    flex: 1 1 0;
+    min-height: 0;
+    width: auto !important;
+    max-width: 100%;
+    object-fit: contain;
+  }
 }
