@@ -506,6 +506,23 @@ const RELEASES = (props) => {
             </Card>
 
             <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/CACHUMBAMBE">
+                <CardMedia
+                  component="img"
+                  alt="Cachumbambé ALBUM ART"
+                  height="250"
+                  image="/GENESIS/CachumbambeAni.gif"
+                  title="Cachumbambé"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    Cachumbambé - El Igor, gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/GENESIS">
                 <CardMedia
                   component="img"

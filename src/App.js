@@ -32,6 +32,7 @@ const AFTERALL = lazy(() => import("./AFTERALL"));
 const TURO = lazy(() => import("./TURO"));
 const UP = lazy(() => import("./UP"));
 const KEEPGRINDING = lazy(() => import("./KEEPGRINDING"));
+const CACHUMBAMBE = lazy(() => import("./CACHUMBAMBE"));
 const WORLD = lazy(() => import("./WORLD"));
 const EmailTemplate = lazy(() => import("./EmailTemplate"));
 const MATRIX = lazy(() => import("./MATRIX"));
@@ -179,6 +180,12 @@ const App = () => {
     )
   }
 
+  const CACHUMBAMBEComponent = () => {
+    return (
+      <CACHUMBAMBE></CACHUMBAMBE>
+    )
+  }
+
   const EmailTemplateComponent = () => { // Define component for /email-template route
     return (
       <EmailTemplate />
@@ -248,6 +255,7 @@ const App = () => {
           <Route path="/TURO" element={<><Header /><TUROComponent  /><Footer /></>} />
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
           <Route path="/KEEPGRINDING" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
+          <Route path="/CACHUMBAMBE" element={<><Header /><CACHUMBAMBEComponent  /><Footer /></>} />
           <Route path="/syre" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/RUNAWAY" element={<><Header /><RUNAWAYComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />
