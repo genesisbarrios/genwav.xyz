@@ -523,7 +523,7 @@ button.legend{
   }
   .release-hero .release-hero__links {
     grid-area: links;
-    align-self: center;
+    align-self: start; /* top lines up with the top of the album art */
     width: 100% !important;
     max-width: 520px !important;
     margin: 0 auto !important;

@@ -141,7 +141,6 @@ const CACHUMBAMBE = (props) => {
       </div>
       </div>
 
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/genwav/cachumbambe&color=%237c9cac&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc",lineBreak: "anywhere",wordBreak: "normal",overflow: "hidden",whiteSpace: "nowrap",textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/cachumbambe" title="Cachumbambé" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>Cachumbambé</a></div>
 
       <div className="aboutNEW">
         <h2>Credits</h2>
@@ -221,6 +220,9 @@ const CACHUMBAMBE = (props) => {
               </div>
             </Grid>
           </Grid>
+      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 16px 5%" }}>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/genwav/cachumbambe&color=%237c9cac&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: "10px", color: "#cccccc",lineBreak: "anywhere",wordBreak: "normal",overflow: "hidden",whiteSpace: "nowrap",textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/cachumbambe" title="Cachumbambé" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>Cachumbambé</a></div>
+      </div>
       </div>
     );
 
