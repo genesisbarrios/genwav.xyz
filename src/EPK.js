@@ -219,7 +219,7 @@ const EPK = (props) => {
     <div id="EPK" style={{paddingBottom:"5%"}}>
       <style>{`
         .epk-mobile-photos { display: none; }
-        .epk-newsletter { width: 50%; }
+        .epk-newsletter { width: 85%; }
         .epk-signup-mobile { display: none; }
         .epk-mobile-hero { display: none; }
         .epk-bookings-mobile { display: none; }
