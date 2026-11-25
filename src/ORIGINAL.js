@@ -92,7 +92,7 @@ const ORIGINAL = (props) => {
         </div>
     <div style={{ textAlign: "center" }}>
       <p>ORIGINAL - gen.wav, Kiento. O</p>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="ORIGINAL.jpeg"
@@ -172,10 +172,7 @@ const ORIGINAL = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      </div>
-      
-      
-      <div className="aboutNEW">
+      <div className="aboutNEW release-hero__credits">
         <h2>Credits</h2>
         <h4>Original</h4>
         Written and Performed by <a href="https://www.instagram.com/kiento.o/" target="_blank">Kiento. O</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>
@@ -183,6 +180,9 @@ const ORIGINAL = (props) => {
         <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
         <br></br>
       </div>
+      </div>
+      
+      
       
     </div>
 

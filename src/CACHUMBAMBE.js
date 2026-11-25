@@ -84,7 +84,7 @@ const CACHUMBAMBE = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img
           src="/GENESIS/CachumbambeAni.gif"
@@ -139,16 +139,16 @@ const CACHUMBAMBE = (props) => {
           <a target="_blank" href="https://genwav.bandcamp.com/track/cachumbamb" onClick={() => trackStreamingClick('Cachumbambé', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
         </div>
       </div>
-      </div>
-
-
-      <div className="aboutNEW">
+      <div className="aboutNEW release-hero__credits">
         <h2>Credits</h2>
         <h4>Cachumbambé</h4>
         <p><a href="https://www.instagram.com/igorcentrism" target="_blank">El Igor</a> &amp; <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
         <p>Also on gen.wav's debut album <a href="/GENESIS">GENESIS</a></p>
         <br></br>
       </div>
+      </div>
+
+
     </div>
 
     <div

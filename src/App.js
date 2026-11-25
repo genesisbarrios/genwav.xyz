@@ -33,6 +33,12 @@ const TURO = lazy(() => import("./TURO"));
 const UP = lazy(() => import("./UP"));
 const KEEPGRINDING = lazy(() => import("./KEEPGRINDING"));
 const CACHUMBAMBE = lazy(() => import("./CACHUMBAMBE"));
+const NMLQ = lazy(() => import("./NMLQ"));
+const SOLTERO = lazy(() => import("./SOLTERO"));
+const LAPLAYA = lazy(() => import("./LAPLAYA"));
+const SMS = lazy(() => import("./SMS"));
+const AGAIN = lazy(() => import("./AGAIN"));
+const CAMBIE = lazy(() => import("./CAMBIE"));
 const WORLD = lazy(() => import("./WORLD"));
 const EmailTemplate = lazy(() => import("./EmailTemplate"));
 const MATRIX = lazy(() => import("./MATRIX"));
@@ -186,6 +192,42 @@ const App = () => {
     )
   }
 
+  const NMLQComponent = () => {
+    return (
+      <NMLQ></NMLQ>
+    )
+  }
+
+  const SOLTEROComponent = () => {
+    return (
+      <SOLTERO></SOLTERO>
+    )
+  }
+
+  const LAPLAYAComponent = () => {
+    return (
+      <LAPLAYA></LAPLAYA>
+    )
+  }
+
+  const SMSComponent = () => {
+    return (
+      <SMS></SMS>
+    )
+  }
+
+  const AGAINComponent = () => {
+    return (
+      <AGAIN></AGAIN>
+    )
+  }
+
+  const CAMBIEComponent = () => {
+    return (
+      <CAMBIE></CAMBIE>
+    )
+  }
+
   const EmailTemplateComponent = () => { // Define component for /email-template route
     return (
       <EmailTemplate />
@@ -256,6 +298,12 @@ const App = () => {
           <Route path="/UP" element={<><Header /><UPComponent  /><Footer /></>} />
           <Route path="/KEEPGRINDING" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/CACHUMBAMBE" element={<><Header /><CACHUMBAMBEComponent  /><Footer /></>} />
+          <Route path="/NMLQ" element={<><Header /><NMLQComponent  /><Footer /></>} />
+          <Route path="/SOLTERO" element={<><Header /><SOLTEROComponent  /><Footer /></>} />
+          <Route path="/LAPLAYA" element={<><Header /><LAPLAYAComponent  /><Footer /></>} />
+          <Route path="/SMS" element={<><Header /><SMSComponent  /><Footer /></>} />
+          <Route path="/AGAIN" element={<><Header /><AGAINComponent  /><Footer /></>} />
+          <Route path="/CAMBIE" element={<><Header /><CAMBIEComponent  /><Footer /></>} />
           <Route path="/syre" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/RUNAWAY" element={<><Header /><RUNAWAYComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />

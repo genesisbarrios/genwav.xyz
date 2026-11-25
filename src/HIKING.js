@@ -93,7 +93,7 @@ const HIKING = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://dl.dropboxusercontent.com/s/5mk5qbo4su7b69y3m3wyg/HIKING.png?rlkey=60ohqe8ivpuvzro66xrlfyc6u&st=yhv64yog&dl=0"
@@ -171,6 +171,14 @@ const HIKING = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>Hiking Por Mi Mente</h4>
+        <a href="https://www.instagram.com/kiento.o/" target="_blank">Kiento. O</a> x <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>
+        <p>Produced by <a href="https://www.instagram.com/prod.kissin" target="_blank">kissin</a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/genwav" target="_blank">gen.wav</a></p>
+        <br></br>
+      </div>
       </div>
 
       <div
@@ -191,14 +199,6 @@ const HIKING = (props) => {
         </div>
       </div>
       
-      <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>Hiking Por Mi Mente</h4>
-        <a href="https://www.instagram.com/kiento.o/" target="_blank">Kiento. O</a> x <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>
-        <p>Produced by <a href="https://www.instagram.com/prod.kissin" target="_blank">kissin</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/genwav" target="_blank">gen.wav</a></p>
-        <br></br>
-      </div>
       
     </div>
 

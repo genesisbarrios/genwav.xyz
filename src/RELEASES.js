@@ -300,41 +300,6 @@ const RELEASES = (props) => {
               </CardActionArea>
             </Card>
 
-
-             <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/SOLYMAR">
-                <CardMedia
-                  component="img"
-                  alt="SOLYMAR ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/SOLYMAR.jpg"
-                  title="SOLYMAR"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                  SolyMar - gen.wav, KHR!S Joao
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-             <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/CURIOSO">
-                <CardMedia
-                  component="img"
-                  alt="CURIOSO ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/CURIOSO.jpg"
-                  title="CURIOSO"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                  CURIOSO - gen.wav, KHR!S Joao
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
             <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/TRIPPIN">
                 <CardMedia
@@ -353,57 +318,6 @@ const RELEASES = (props) => {
             </Card>
 
             <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/GAFAS">
-                <CardMedia
-                  component="img"
-                  alt="GAFAS ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/GAFAS.png"
-                  title="GAFAS"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                  GAFAS - KHR!S Joao, gen.wav
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/oneday">
-                <CardMedia
-                  component="img"
-                  alt="Pay Off One Day ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/ONEDAY.png"
-                  title="Pay Off One Day"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                  Pay Off One Day - KHR!S Joao, gen.wav
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/LLAMAGEMELA">
-                <CardMedia
-                  component="img"
-                  alt="LLAMA GEMELA ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/llamagemela.png"
-                  title="LLAMA GEMELA"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                  Llama Gemela - KHR!S Joao, gen.wav
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
               <CardActionArea href="https://genwav.xyz/PROBLEMAS">
                 <CardMedia
                   component="img"
@@ -415,40 +329,6 @@ const RELEASES = (props) => {
                 <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
                   <Typography variant="h6" component="h6">
                   Problemas - Jo Merino, KHR!S Joao, gen.wav, Dani Mako
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/3am">
-                <CardMedia
-                  component="img"
-                  alt="TEXTIN ME ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/TEXTINMECOVER.jpg"
-                  title="TEXTIN ME"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                    Textin' Me - gen.wav x KHR!S João
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card style={{marginBottom:"2%"}}>
-              <CardActionArea href="https://genwav.xyz/LOSIGNORO">
-                <CardMedia
-                  component="img"
-                  alt="LOS IGNORO ALBUM ART"
-                  height="250"
-                  image="https://genwav.xyz/LOSIGNOROCOVER.jpg"
-                  title="LOS IGNORO"
-                />
-                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-                  <Typography variant="h6" component="h6">
-                    Los Ignoro - gen.wav x KHR!S João
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -585,6 +465,108 @@ const RELEASES = (props) => {
                 <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
                   <Typography variant="h6" component="h6">
                     TODAVIA - gen.wav x Kiento. O
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/NMLQ">
+                <CardMedia
+                  component="img"
+                  alt="NMLQ ALBUM ART"
+                  height="250"
+                  image="/nmlq.jpg"
+                  title="NMLQ"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    NMLQ - gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/SOLTERO">
+                <CardMedia
+                  component="img"
+                  alt="Soltero ALBUM ART"
+                  height="250"
+                  image="/soltero.jpg"
+                  title="Soltero"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    Soltero - gen.wav, El Igor
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/LAPLAYA">
+                <CardMedia
+                  component="img"
+                  alt="La Playa ALBUM ART"
+                  height="250"
+                  image="/laplaya.jpg"
+                  title="La Playa"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    La Playa - gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/SMS">
+                <CardMedia
+                  component="img"
+                  alt="SMS ALBUM ART"
+                  height="250"
+                  image="/sms.jpg"
+                  title="SMS"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    SMS - gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/AGAIN">
+                <CardMedia
+                  component="img"
+                  alt="Again ALBUM ART"
+                  height="250"
+                  image="/again.jpg"
+                  title="Again"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    Again - gen.wav
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+
+            <Card style={{marginBottom:"2%"}}>
+              <CardActionArea href="https://genwav.xyz/CAMBIE">
+                <CardMedia
+                  component="img"
+                  alt="Cambié ALBUM ART"
+                  height="250"
+                  image="/cambie.jpg"
+                  title="Cambié"
+                />
+                <CardContent style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <Typography variant="h6" component="h6">
+                    Cambié - gen.wav
                   </Typography>
                 </CardContent>
               </CardActionArea>

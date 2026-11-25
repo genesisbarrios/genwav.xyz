@@ -118,7 +118,7 @@ const UP = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="/UPCoverArt.png"
@@ -206,6 +206,12 @@ const UP = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>UP</h4>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <br></br>
+      </div>
       </div>
 
       <div className="embla" ref={emblaRef}>
@@ -245,12 +251,6 @@ const UP = (props) => {
 
       <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2240742677&color=%23997a59&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style={{fontSize: 10, color: "#cccccc", lineBreak: "anywhere", wordBreak: "normal", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif", fontWeight: 100}}><a href="https://soundcloud.com/genwav" title="gen.wav" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>gen.wav</a> · <a href="https://soundcloud.com/genwav/up" title="UP" target="_blank" style={{color: "#cccccc", textDecoration: "none"}}>UP</a></div>
 
-      <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>UP</h4>
-        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
-        <br></br>
-      </div>
     </div>
 
     <div

@@ -93,7 +93,7 @@ const DALEMAMI = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://dl.dropboxusercontent.com/s/5f62vzertqlizupyest37/DALE-MAMI-COVER-ARTWORK.jpg?rlkey=45wrmjerbuz3rhnkrjycvu7yj&st=nc8nj56b&dl=0"
@@ -179,6 +179,14 @@ const DALEMAMI = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>DALE MAMI</h4>
+        <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
+        <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
+        <br></br>
+      </div>
       </div>
       
     </div>
@@ -236,12 +244,6 @@ const DALEMAMI = (props) => {
     </div>
   </div>
 
-  <h2>Credits</h2>
-  <h4>DALE MAMI</h4>
-  <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/nickgarcia305/" target="_blank">Nick Garcia</a>, <a href="https://www.instagram.com/igorcentrism/" target="_blank">El Igor</a>
-  <p>Produced by <a href="https://www.instagram.com/dluxe_the_producer" target="_blank">dluxe_the_producer</a></p>
-  <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
-  <br></br>
 </div>
 
       <Grid className="linksContainer" container spacing={3} style={{maxWidth: "35%", margin:"0 auto", paddingTop:"2%", paddingBottom:"5%"}}>

@@ -514,6 +514,17 @@ button.legend{
     padding: 4vh 5vw;
   }
   .release-hero__cover { grid-area: cover; padding: 0 !important; }
+  /* a video and credits (no about text): credits sit beside the video */
+  .release-hero--credits { grid-template-areas: "cover links" "video credits"; }
+  .release-hero__credits {
+    grid-area: credits;
+    align-self: center;
+    width: 100% !important;
+    max-width: 520px;
+    margin: 0 auto !important;
+    padding-top: 0 !important;
+    font-size: 1em !important;
+  }
   .release-hero__cover > img {
     display: block;
     width: min(100%, calc(100vh - 160px)) !important;

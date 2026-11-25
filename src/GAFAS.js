@@ -114,7 +114,7 @@ const GAFAS = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://genwav.xyz/GAFAS.png"
@@ -203,6 +203,14 @@ const GAFAS = (props) => {
           
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>GAFAS</h4>
+        <p>Produced by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <p>Artwork by <a href="https://www.instagram.com/moartmoproblemz" target="_blank">Mo Art</a></p>
+        <br></br>
+      </div>
       </div> 
       
       
@@ -238,12 +246,6 @@ const GAFAS = (props) => {
           <h3 style={{marginTop:"2%", textAlign:"center", marginBottom:"15%"}}>GET YOURS NOW</h3>
         </a>
 
-        <h2>Credits</h2>
-        <h4>GAFAS</h4>
-        <p>Produced by <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
-        <p>Artwork by <a href="https://www.instagram.com/moartmoproblemz" target="_blank">Mo Art</a></p>
-        <br></br>
       </div>
 
       <div

@@ -67,7 +67,7 @@ const Twentyseven = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="22art.png"
@@ -154,6 +154,13 @@ const Twentyseven = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>22</h4>
+        <p>Written by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/cueemusic" target="_blank">Cuee</a></p>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <br></br>
+      </div>
       </div>
 
       <div
@@ -174,13 +181,6 @@ const Twentyseven = (props) => {
         </div>
       </div>
       
-      <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>22</h4>
-        <p>Written by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a> & <a href="https://www.instagram.com/cueemusic" target="_blank">Cuee</a></p>
-        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
-        <br></br>
-      </div>
       
     </div>
 

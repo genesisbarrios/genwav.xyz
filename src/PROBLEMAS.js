@@ -93,7 +93,7 @@ useEffect(() => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://dl.dropboxusercontent.com/s/omt3zurkh90gk4sbonqia/PROBLEMAS-ARTFINAL.png?rlkey=6qwyi5ofxnu9s1joki49wqd7i&st=rcelsd27&dl=0"
@@ -179,6 +179,14 @@ useEffect(() => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>Problemas</h4>
+        <a href="https://www.instagram.com/iamjomerino/" target="_blank">Jo Merino</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/itsdanimako/" target="_blank">Dani Mako</a>
+        <p>Produced by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
+        <br></br>
+      </div>
       </div>
       
     
@@ -232,12 +240,6 @@ useEffect(() => {
           </div>
         </div>
   
-        <h2>Credits</h2>
-        <h4>Problemas</h4>
-        <a href="https://www.instagram.com/iamjomerino/" target="_blank">Jo Merino</a>, <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>, <a href="https://www.instagram.com/itsdanimako/" target="_blank">Dani Mako</a>
-        <p>Produced by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
-        <p>Mixed and Mastered by <a href="https://www.instagram.com/mixedbyedwn/?hl=en" target="_blank">Edwin Estacio</a></p>
-        <br></br>
       </div>
       
     </div>

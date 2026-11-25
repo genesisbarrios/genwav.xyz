@@ -93,7 +93,7 @@ const TEXTINME = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://genwav.xyz/TEXTINMECOVER.jpg"
@@ -171,9 +171,7 @@ const TEXTINME = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      </div>
-      
-      <div className="aboutNEW">
+      <div className="aboutNEW release-hero__credits">
         <h2>Credits</h2>
         <h4>Textin' Me</h4>
         <a href="https://www.instagram.com/genwav/" target="_blank">gen.wav</a> x <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S João</a> 
@@ -181,6 +179,8 @@ const TEXTINME = (props) => {
         <p>Mixed and Mastered by gen.wav</p>
         <br></br>
       </div>
+      </div>
+      
       
     </div>
 

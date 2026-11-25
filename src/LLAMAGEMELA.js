@@ -76,7 +76,7 @@ const LLAMAGEMELA = (props) => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover" style={{padding:"1% 0"}}>
         <img 
           src="https://genwav.xyz/llamagemela.png"
@@ -164,6 +164,13 @@ const LLAMAGEMELA = (props) => {
           </Grid>
         </Grid>
       </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>Llama Gemela</h4>
+        <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>
+        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
+        <br></br>
+      </div>
       </div> 
       
 <div
@@ -184,13 +191,6 @@ const LLAMAGEMELA = (props) => {
   </div>
 </div>
 
-      <div className="aboutNEW">
-        <h2>Credits</h2>
-        <h4>Llama Gemela</h4>
-        <a href="https://www.instagram.com/khrissosick/" target="_blank">KHR!S Joao</a>, <a href="https://www.instagram.com/gen.wav/" target="_blank">gen.wav</a>
-        <p>Produced, Mixed and Mastered by <a href="https://www.instagram.com/gen.wav" target="_blank">gen.wav</a></p>
-        <br></br>
-      </div>
       
     </div>
 
