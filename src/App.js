@@ -39,6 +39,7 @@ const LAPLAYA = lazy(() => import("./LAPLAYA"));
 const SMS = lazy(() => import("./SMS"));
 const AGAIN = lazy(() => import("./AGAIN"));
 const CAMBIE = lazy(() => import("./CAMBIE"));
+const PENSE = lazy(() => import("./PENSE"));
 const WORLD = lazy(() => import("./WORLD"));
 const EmailTemplate = lazy(() => import("./EmailTemplate"));
 const MATRIX = lazy(() => import("./MATRIX"));
@@ -228,6 +229,12 @@ const App = () => {
     )
   }
 
+  const PENSEComponent = () => {
+    return (
+      <PENSE></PENSE>
+    )
+  }
+
   const EmailTemplateComponent = () => { // Define component for /email-template route
     return (
       <EmailTemplate />
@@ -304,6 +311,7 @@ const App = () => {
           <Route path="/SMS" element={<><Header /><SMSComponent  /><Footer /></>} />
           <Route path="/AGAIN" element={<><Header /><AGAINComponent  /><Footer /></>} />
           <Route path="/CAMBIE" element={<><Header /><CAMBIEComponent  /><Footer /></>} />
+          <Route path="/PENSE" element={<><Header /><PENSEComponent  /><Footer /></>} />
           <Route path="/syre" element={<><Header /><KEEPGRINDINGComponent  /><Footer /></>} />
           <Route path="/RUNAWAY" element={<><Header /><RUNAWAYComponent  /><Footer /></>} />
           <Route path="/MATRIX" element={<><Header /><MATRIXComponent  /><Footer /></>} />

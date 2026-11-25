@@ -99,6 +99,17 @@ const ROUTES = {
     description: "Pre-save Run Away, the new single by gen.wav, a trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer from Miami.",
   }),
   "/runaway": { alias: "/RUNAWAY" },
+  "/PENSE": release("Pensé", "gen.wav", "PENSE", {
+    description: "Pre-save Pensé, the new single by gen.wav, out November 27. gen.wav is a trans Cuban-Nicaraguan-American singer, multi-instrumentalist, and producer from Miami.",
+  }),
+  "/pense": { alias: "/PENSE" },
+  "/CACHUMBAMBE": release("Cachumbambé", "El Igor, gen.wav", "CACHUMBAMBE"),
+  "/NMLQ": release("NMLQ", "gen.wav", "NMLQ"),
+  "/SOLTERO": release("Soltero", "gen.wav, El Igor", "SOLTERO"),
+  "/LAPLAYA": release("La Playa", "gen.wav", "LAPLAYA"),
+  "/SMS": release("SMS", "gen.wav", "SMS"),
+  "/AGAIN": release("Again", "gen.wav", "AGAIN"),
+  "/CAMBIE": release("Cambié", "gen.wav", "CAMBIE"),
   "/MATRIX": release("THE MATRIX", "gen.wav", "RENACI"),
   "/WORLD": release("The World is a Stage", "gen.wav", "RENACI"),
 };
