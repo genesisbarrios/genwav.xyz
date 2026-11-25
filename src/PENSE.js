@@ -2,11 +2,10 @@ import { useEffect } from "react";
 import './styles.css'
 import Grid from '@material-ui/core/Grid'
 import MetaTags from 'react-meta-tags';
-import { trackReleasePageView, trackStreamingClick } from "./MetaPixel";
+import { trackReleasePageView } from "./MetaPixel";
 import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo } from "@phosphor-icons/react";
 
-// Pre-save page for Pensé (out Nov 27, 2026): cover, pre-save sign-up, and
-// Apple Music pre-add.
+// Pre-save page for Pensé (out Nov 27, 2026): cover and pre-save sign-up.
 const PENSE = () => {
 
   useEffect(() => {
@@ -56,13 +55,6 @@ const PENSE = () => {
       <p id="pensePresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Out November 27 · Sign up to pre-save
       </p>
-
-      <div className="linksContainer" style={{width: "25%", margin:"0 auto 2%"}}>
-        <div className="logo-button-container logo-row">
-          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Apple</p></div>
-          <a target="_blank" rel="noopener noreferrer" href="https://music.apple.com/us/album/pens%C3%A9-single/6834978135" onClick={() => trackStreamingClick('Pensé', 'Apple')}><button className="pre-save-button">Pre-add</button></a>
-        </div>
-      </div>
 
       <div
         className="card"
