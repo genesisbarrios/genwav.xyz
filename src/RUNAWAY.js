@@ -49,7 +49,7 @@ const RUNAWAY = () => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div className="release-hero">
+      <div className="release-hero release-hero--credits">
       <div id="NEWImageDiv" className="release-hero__cover">
         <style>
           {`
@@ -145,6 +145,13 @@ const RUNAWAY = () => {
             </Grid>
           </Grid>
         </Grid>
+      <div className="aboutNEW release-hero__credits">
+        <h2>Credits</h2>
+        <h4>Run Away</h4>
+        <p>Produced, Written &amp; Performed by <a href="https://www.instagram.com/gen.wav" target="_blank" rel="noopener noreferrer">gen.wav</a></p>
+        <p>Mixed and Mastered by <a href="https://www.instagram.com/richi_envoy/" target="_blank" rel="noopener noreferrer">Richi Envoy</a></p>
+        <br></br>
+      </div>
       </div>
 
 
