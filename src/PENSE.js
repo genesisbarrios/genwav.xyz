@@ -3,9 +3,23 @@ import './styles.css'
 import Grid from '@material-ui/core/Grid'
 import MetaTags from 'react-meta-tags';
 import { trackReleasePageView } from "./MetaPixel";
-import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, SpotifyLogo, AppleLogo, YoutubeLogo, TidalLogo, AmazonLogo } from "@phosphor-icons/react";
 
 // Pre-save page for Pensé (out Nov 27, 2026): cover and pre-save sign-up.
+
+// Streaming links, filled in once Pensé is out. Hidden until LINKS_LIVE is true.
+const LINKS_LIVE = false;
+const LINKS = [
+  { name: "Spotify", href: "", icon: <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} />, color: '#1DD15E' },
+  { name: "Apple", href: "", icon: <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /> },
+  { name: "Soundcloud", href: "", icon: <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
+  { name: "Tidal", href: "", icon: <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /> },
+  { name: "YouTube", href: "", icon: <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /> },
+  { name: "Deezer", href: "", icon: <img className="logoSize" style={{ marginRight: "5px", display: "inline-block" }} src="/deezer.png" width={50} alt="Deezer" /> },
+  { name: "Pandora", href: "", icon: <img className="logoSize" style={{ marginRight: "5px" }} src="/pandora.png" width={50} alt="Pandora" /> },
+  { name: "Amazon", href: "", icon: <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
+  { name: "Bandcamp", href: "", icon: <img className="logoSize" style={{ marginRight: "5px" }} src="/Bandcamp.png" width={50} alt="Bandcamp" /> },
+];
 const PENSE = () => {
 
   useEffect(() => {
@@ -51,6 +65,23 @@ const PENSE = () => {
           alt="Pensé by gen.wav cover art"
           style={{ height: "auto", width: "auto", maxWidth: "15%", objectFit: "cover", margin: "2% 0", borderRadius:"15px"}}></img>
       </div>
+
+      {LINKS_LIVE && (
+        <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto 2%", paddingLeft:"5%"}}>
+          <Grid item xs={12} sm={12}>
+            {LINKS.filter((l) => l.href).map((l) => (
+              <Grid key={l.name} container spacing={2} className="logo-button-container">
+                <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
+                  {l.icon}<p style={{ color: l.color, marginRight: "5px", fontWeight:"600"}}>{l.name}</p>
+                </Grid>
+                <Grid item xs={6} sm={6}>
+                  <a target="_blank" rel="noopener noreferrer" href={l.href}><button className="pre-save-button">Stream</button></a>
+                </Grid>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      )}
 
       <p id="pensePresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
         Out November 27 · Sign up to pre-save
