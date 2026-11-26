@@ -12,7 +12,7 @@ const LINKS_LIVE = false;
 const LINKS = [
   { name: "Spotify", href: "", icon: <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} />, color: '#1DD15E' },
   { name: "Apple", href: "", icon: <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /> },
-  { name: "Soundcloud", href: "", icon: <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
+  { name: "Soundcloud", href: "https://soundcloud.com/genwav/pense", icon: <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
   { name: "Tidal", href: "", icon: <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /> },
   { name: "YouTube", href: "", icon: <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /> },
   { name: "Deezer", href: "", icon: <img className="logoSize" style={{ marginRight: "5px", display: "inline-block" }} src="/deezer.png" width={50} alt="Deezer" /> },
