@@ -8,14 +8,14 @@ import { InstagramLogo, TwitterLogo, TiktokLogo, SoundcloudLogo, DiscordLogo, Sp
 // Pre-save page for Pensé (out Nov 27, 2026): cover and pre-save sign-up.
 
 // Streaming links, filled in once Pensé is out. Hidden until LINKS_LIVE is true.
-const LINKS_LIVE = false;
+const LINKS_LIVE = true;
 const LINKS = [
-  { name: "Spotify", href: "", icon: <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} />, color: '#1DD15E' },
-  { name: "Apple", href: "", icon: <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /> },
+  { name: "Spotify", href: "https://open.spotify.com/track/1HpFUHMp00yDH0FIxXKP6D", icon: <SpotifyLogo className="logoSize" style={{ color: '#1DD15E', marginRight: "5px" }} size={50} />, color: '#1DD15E' },
+  { name: "Apple", href: "https://music.apple.com/us/album/pens%C3%A9/6834978135?i=6834978136", icon: <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /> },
   { name: "Soundcloud", href: "https://soundcloud.com/genwav/pense", icon: <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
   { name: "Tidal", href: "", icon: <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /> },
-  { name: "YouTube", href: "", icon: <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /> },
-  { name: "Deezer", href: "", icon: <img className="logoSize" style={{ marginRight: "5px", display: "inline-block" }} src="/deezer.png" width={50} alt="Deezer" /> },
+  { name: "YouTube", href: "https://www.youtube.com/watch?v=dYx0bxCdg-k", icon: <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /> },
+  { name: "Deezer", href: "https://www.deezer.com/track/4415019821", icon: <img className="logoSize" style={{ marginRight: "5px", display: "inline-block" }} src="/deezer.png" width={50} alt="Deezer" /> },
   { name: "Pandora", href: "", icon: <img className="logoSize" style={{ marginRight: "5px" }} src="/pandora.png" width={50} alt="Pandora" /> },
   { name: "Amazon", href: "", icon: <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
   { name: "Bandcamp", href: "", icon: <img className="logoSize" style={{ marginRight: "5px" }} src="/Bandcamp.png" width={50} alt="Bandcamp" /> },
