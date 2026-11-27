@@ -15,7 +15,7 @@ const LINKS = [
   { name: "Soundcloud", href: "https://soundcloud.com/genwav/pense", icon: <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
   { name: "Tidal", href: "https://tidal.com/album/pens%C3%A9/579224851", icon: <TidalLogo className="logoSize" style={{ color: 'white', marginRight: "5px" }} size={50} /> },
   { name: "YouTube", href: "https://www.youtube.com/watch?v=dYx0bxCdg-k", icon: <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /> },
-  { name: "Deezer", href: "https://www.deezer.com/track/4415019821", icon: <img className="logoSize" style={{ marginRight: "5px", display: "inline-block" }} src="/deezer.png" width={50} alt="Deezer" /> },
+  { name: "Deezer", href: "https://www.deezer.com/us/album/1147249151", icon: <img className="logoSize" style={{ marginRight: "5px", display: "inline-block" }} src="/deezer.png" width={50} alt="Deezer" /> },
   { name: "Pandora", href: "https://www.pandora.com/artist/genwav/pense/ALn764vbJrt3J3K", icon: <img className="logoSize" style={{ marginRight: "5px" }} src="/pandora.png" width={50} alt="Pandora" /> },
   { name: "Amazon", href: "", icon: <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /> },
   { name: "Bandcamp", href: "", icon: <img className="logoSize" style={{ marginRight: "5px" }} src="/Bandcamp.png" width={50} alt="Bandcamp" /> },
