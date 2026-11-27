@@ -83,6 +83,13 @@ const PENSE = () => {
       )}
       </div>
 
+      <div className="aboutNEW" style={{marginBottom:"3%"}}>
+        <h2>Credits</h2>
+        <h4>Pensé</h4>
+        <p>Produced by <a href="https://www.instagram.com/gen.wav" target="_blank" rel="noopener noreferrer">gen.wav</a> &amp; <a href="https://www.instagram.com/xaviermderio/" target="_blank" rel="noopener noreferrer">Xideral</a></p>
+        <p>Cover art by <a href="https://www.instagram.com/dizzy_smarp/" target="_blank" rel="noopener noreferrer">Dizzy Smarp</a></p>
+      </div>
+
       <div
         className="card"
         style={{
