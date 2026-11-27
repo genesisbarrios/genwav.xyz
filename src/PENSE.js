@@ -55,6 +55,14 @@ const PENSE = () => {
                 margin: 2% 0 0.5% !important;
               }
             }
+            /* desktop: buttons flush right so the rows span the column and
+               line up under the centered title */
+            @media (min-width: 969px) {
+              .pense-stream-cell {
+                display: flex;
+                justify-content: flex-end;
+              }
+            }
           `}
         </style>
         <img
@@ -73,7 +81,7 @@ const PENSE = () => {
                 <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
                   {l.icon}<p style={{ color: l.color, marginRight: "5px", fontWeight:"600"}}>{l.name}</p>
                 </Grid>
-                <Grid item xs={6} sm={6}>
+                <Grid item xs={6} sm={6} className="pense-stream-cell">
                   <a target="_blank" rel="noopener noreferrer" href={l.href}><button className="pre-save-button">Stream</button></a>
                 </Grid>
               </Grid>
