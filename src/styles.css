@@ -514,6 +514,9 @@ button.legend{
     padding: 4vh 5vw;
   }
   .release-hero__cover { grid-area: cover; padding: 0 !important; }
+  /* just the art and the links (no video): links centered beside the art */
+  .release-hero--single { grid-template-areas: "cover links"; }
+  .release-hero--single .release-hero__links { align-self: center !important; }
   /* a video and credits (no about text): credits sit beside the video */
   .release-hero--credits { grid-template-areas: "cover links" "video credits"; }
   .release-hero__credits {

@@ -46,15 +46,13 @@ const PENSE = () => {
           </MetaTags>
         </div>
     <div style={{ textAlign: "center" }}>
-      <div id="NEWImageDiv">
+      <div className="release-hero release-hero--single">
+      <div id="NEWImageDiv" className="release-hero__cover">
         <style>
           {`
             @media (min-width: 769px) {
               #penseCover {
                 margin: 2% 0 0.5% !important;
-              }
-              #pensePresave {
-                margin: 0 0 0.75% !important;
               }
             }
           `}
@@ -67,8 +65,9 @@ const PENSE = () => {
       </div>
 
       {LINKS_LIVE && (
-        <Grid className="linksContainer" container spacing={2} style={{width: "25%", margin:"0 auto 2%", paddingLeft:"5%"}}>
+        <Grid className="linksContainer release-hero__links" container spacing={2} style={{width: "25%", margin:"0 auto 2%", paddingLeft:"5%"}}>
           <Grid item xs={12} sm={12}>
+            <h2 style={{textAlign:"center", margin:"0 0 16px", fontWeight:"700"}}>Pensé - gen.wav</h2>
             {LINKS.filter((l) => l.href).map((l) => (
               <Grid key={l.name} container spacing={2} className="logo-button-container">
                 <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
@@ -82,10 +81,7 @@ const PENSE = () => {
           </Grid>
         </Grid>
       )}
-
-      <p id="pensePresave" style={{margin:"0 0 2%", fontWeight:"400", fontSize:"1em"}}>
-        Out November 27 · Sign up to pre-save
-      </p>
+      </div>
 
       <div
         className="card"
