@@ -136,7 +136,7 @@ const SINDESTINO = (props) => {
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{ color: '#FA4C64',marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://music.apple.com/us/album/sin-destino/1734504080" onClick={() => trackStreamingClick('SIN DESTINO', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
@@ -146,7 +146,7 @@ const SINDESTINO = (props) => {
 
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
+              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ color: 'red', marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://music.youtube.com/watch?v=k8dis7WeE0I" onClick={() => trackStreamingClick('SIN DESTINO', 'YouTube')} ><button className="pre-save-button">Stream</button></a>
@@ -155,7 +155,7 @@ const SINDESTINO = (props) => {
 
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
+              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://soundcloud.com/genwav/sin-destino-khrs-joao-genwav" onClick={() => trackStreamingClick('SIN DESTINO', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
@@ -172,7 +172,7 @@ const SINDESTINO = (props) => {
 
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img><p style={{ color: '#A238FF',marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.deezer.com/track/269094306" onClick={() => trackStreamingClick('SIN DESTINO', 'Deezer')}><button className="pre-save-button">Stream</button></a>
@@ -180,7 +180,7 @@ const SINDESTINO = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{ color: '#00A0EE',marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Fkhr-s-joao-and-genwav%2Fsin-destino-khrs-joao-genwav%2Fsin-destino%2FTRJthj2Kht92qKq" onClick={() => trackStreamingClick('SIN DESTINO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
@@ -188,7 +188,7 @@ const SINDESTINO = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://music.amazon.com/albums/B0CX726Q4X" onClick={() => trackStreamingClick('SIN DESTINO', 'Amazon')}><button className="pre-save-button">Stream</button></a>

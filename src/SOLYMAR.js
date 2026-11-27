@@ -146,7 +146,7 @@ const SOLYMAR = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{ color: '#FA4C64',marginRight: "5px", fontWeight:"600"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://music.apple.com/us/album/solymar/1820587247" onClick={() => trackStreamingClick('SOLYMAR', 'Apple')}><button className="pre-save-button">Stream</button></a>
@@ -155,7 +155,7 @@ const SOLYMAR = (props) => {
           
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
+              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ color: 'red', marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.youtube.com/watch?v=933mrl_VLyE&list=PLcGBMxEyx5p9cfbXNscaNm6tjNaOoWGBP" onClick={() => trackStreamingClick('SOLYMAR', 'YouTube')}><button className="pre-save-button">Stream</button></a>
@@ -163,7 +163,7 @@ const SOLYMAR = (props) => {
           </Grid>
             <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
+              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://soundcloud.com/genwav/sets/solymar-3?si=455c02308de54148a00be23130555718&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('SOLYMAR', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
@@ -179,7 +179,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="/pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="/pandora.png" width={50}></img><p style={{ color: '#00A0EE',marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://pandora.app.link/GMQOTsZnvUb" onClick={() => trackStreamingClick('SOLYMAR', 'Pandora')}><button className="pre-save-button">Stream</button></a>
@@ -187,7 +187,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.amazon.com/music/player/albums/B0FD7FD95M" onClick={() => trackStreamingClick('SOLYMAR', 'Amazon')}><button className="pre-save-button">Stream</button></a>
@@ -195,7 +195,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="/deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/deezer.png" width={50}></img><p style={{ color: '#A238FF',marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.deezer.com/en/album/772485441" onClick={() => trackStreamingClick('SOLYMAR', 'Deezer')}><button className="pre-save-button">Stream</button></a>
@@ -203,7 +203,7 @@ const SOLYMAR = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
+              <img className="logoSize" style={{marginRight: "5px" }} src="/Bandcamp.png" width={50}></img><p style={{ color: '#17A0C4',marginRight: "5px", fontWeight:"600"}}>Bandcamp</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://genwav.bandcamp.com/album/solymar" onClick={() => trackMerchClick('SOLYMAR', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>

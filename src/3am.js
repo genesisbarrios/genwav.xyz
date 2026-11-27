@@ -113,7 +113,7 @@ const TEXTINME = (props) => {
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{ color: '#FA4C64',marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://music.apple.com/us/album/textin-me-single/1785307972"><button className="pre-save-button">Stream</button></a>
@@ -122,7 +122,7 @@ const TEXTINME = (props) => {
           
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
+              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ color: 'red', marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://youtu.be/Zge6XKlx9UI"><button className="pre-save-button">Stream</button></a>
@@ -130,7 +130,7 @@ const TEXTINME = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
+              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://soundcloud.com/genwav/textin-me?si=ca1dcc4324fc48d4a62a953fa97042f7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><button className="pre-save-button">Stream</button></a>
@@ -147,7 +147,7 @@ const TEXTINME = (props) => {
          
           {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img><p style={{ color: '#A238FF',marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F%7E%2Fprerelease%2Fdeezer&state=bFVybD1WZW5pY2UubG5rLnRvJTJGbG9zLWlnbm9ybyZzSWQ9ZmFlOTc2YzAtZWI0Ni00YjNlLWI4YWQtMGJlOTFlYWMxZDcwJnRJZD0wYmU4N2RhNS01NTFjLTRjMGItYTVkZC0xMGE1ZDc5NWYyNGMmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZsb3MtaWdub3JvJnZ0PWNlOWMxZmVhOWY4ODUwZWQ1NjhkM2IzNDRlYjE4Yjg3JnZ1PTY3MTY5NTY5ZWJhZjc2LjQzNjc1Mjcy"><button className="pre-save-button">Stream</button></a>
@@ -155,7 +155,7 @@ const TEXTINME = (props) => {
           </Grid> */}
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{ color: '#00A0EE',marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/textin-me/ALtbdz5p5rmlgvP?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A42292863&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A42292863&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=c6a3d93431788452e368eb63c2c21669&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20ab5bda72-b645-485b-b2e5-25a9fc5e6b36&sharedId=c6a3d93431788452e368eb63c2c21669&_branch_match_id=1309723444836776967&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%20ab5bda72-b645-485b-b2e5-25a9fc5e6b36&_branch_referrer=H4sIAAAAAAAAA62P0WrjMBBFv8Z5U7KVLNUpmCW0FAKhBPYDwkia2F7bkhgpcdmHfPtOSrfs274sSMNl5s49Ul9Kyk%2BbTYLgI8EaUlpPQxg33ytZe8xjiel0oant78ZK7Sr5ymdZlvWfFRdn7gCVIRcWHYYFroKHYuxJZPEzQuR%2BwfcyBDEj692hWP9LJ03z1F2PK2YNMZ88YrrDTwlK337mX%2BsvqgU35gLdPQIme5kr9VriiKFSL7sD22opt7Ix6h7I2xQH%2Fx9Db66HEHBqj%2FzZgFTJb89QYIodqx8I5HoWu%2BOeq%2BB7YOp5IFwl9rfTeeUiUesMKL9VtXp4bJpaS1SmQWuUk04%2BGLP9cHP6G8zYfkXcHMwJhi78Db%2FkEucPuX%2F5ZILV1sOjFNbUWtSNtsJK1EJq2J6dRmOVWeUeCP3e%2F%2FstN8IzEg2hO1mKS0Zqn3ti6G92uMvqOAIAAA%3D%3D"><button className="pre-save-button">Stream</button></a>
@@ -163,7 +163,7 @@ const TEXTINME = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.amazon.com/music/player/albums/B0DQFPT5SY"><button className="pre-save-button">Stream</button></a>

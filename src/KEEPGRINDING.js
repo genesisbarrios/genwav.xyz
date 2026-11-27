@@ -109,7 +109,7 @@ const KEEPGRINDING = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", fontSize:"0.8em", margin:0}}>Apple</p></div>
+          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{ color: '#FA4C64',fontWeight:"600", fontSize:"0.8em", margin:0}}>Apple</p></div>
           <a target="_blank" href="https://music.apple.com/us/album/keep-grindin-syre-ep/6808668965" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Apple')}><button className="pre-save-button">Stream</button></a>
         </div>
 
@@ -119,17 +119,17 @@ const KEEPGRINDING = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>SoundCloud</p></div>
+          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{ color: 'orange',fontWeight:"600", margin:0}}>SoundCloud</p></div>
           <a target="_blank" href="https://soundcloud.com/genwav/sets/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>YouTube</p></div>
+          <div className="logo-label"><YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "8px" }} size={50} /><p style={{ color: 'red',fontWeight:"600", margin:0}}>YouTube</p></div>
           <a target="_blank" href="https://www.youtube.com/watch?v=R-TIAj2xXfo&list=OLAK5uy_m4KqfqbJieqihtWL4dqjSYrUx_U5bQ3Ik" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'YouTube')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Deezer</p></div>
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{ color: '#A238FF',fontWeight:"600", margin:0}}>Deezer</p></div>
           <a target="_blank" href="https://www.deezer.com/us/album/1070969142" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Deezer')}><button className="pre-save-button">Stream</button></a>
         </div>
 
@@ -139,12 +139,12 @@ const KEEPGRINDING = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Amazon</p></div>
+          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{ color: '#FF7000',fontWeight:"600", margin:0}}>Amazon</p></div>
           <a target="_blank" href="https://www.amazon.com/music/player/albums/B0HHSD8W62" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/Bandcamp.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Bandcamp</p></div>
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/Bandcamp.png" width={50}></img><p style={{ color: '#17A0C4',fontWeight:"600", margin:0}}>Bandcamp</p></div>
           <a target="_blank" href="https://genwav.bandcamp.com/album/keep-grindin-syre" onClick={() => trackStreamingClick('KEEP GRINDIN (SYRE)', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
         </div>
       </div>

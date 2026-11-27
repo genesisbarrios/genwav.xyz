@@ -137,7 +137,7 @@ const AFTERALL = (props) => {
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{ color: '#FA4C64',marginRight: "5px", fontWeight:"600", fontSize:"0.8em"}}>Apple</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://geo.music.apple.com/us/album/after-all-feat-gen-wav/1754661520?i=1754661526&app=music&ls=1" onClick={() => trackStreamingClick('AFTER ALL', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
@@ -147,7 +147,7 @@ const AFTERALL = (props) => {
 
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
+              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ color: 'red', marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://music.youtube.com/watch?v=LZ5Ya8OJLrc" onClick={() => trackStreamingClick('AFTER ALL', 'YouTube')} ><button className="pre-save-button">Stream</button></a>
@@ -165,7 +165,7 @@ const AFTERALL = (props) => {
 
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://music.amazon.com/albums/B0D885RVXF?trackAsin=B0D88G425C" onClick={() => trackStreamingClick('AFTER ALL', 'Amazon')}><button className="pre-save-button">Stream</button></a>
@@ -174,7 +174,7 @@ const AFTERALL = (props) => {
 
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{ color: '#00A0EE',marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.pandora.com/artist/grimegrrrl/9-15-21/after-all-feat-genwav/TRKkcnk4qcJxv3K?part=ug-desktop&corr=175280847312663819" onClick={() => trackStreamingClick('AFTER ALL', 'Pandora')}><button className="pre-save-button">Stream</button></a>

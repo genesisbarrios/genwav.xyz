@@ -113,7 +113,7 @@ const NEW = (props) => {
           </Grid>
          <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
+              <AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "5px" }} size={50} /><p style={{ color: '#FA4C64',marginRight: "5px", fontWeight:"600"}}>Apple Music</p>
             </Grid>
             <Grid item xs={6} sm={6}>
               <a target="_blank" href="https://music.apple.com/us/album/los-ignoro-single/1774130821?at=1l3vpUI&ct=LFV_23843f014d653a354d05cd84947a7b70&itsct=catchall_p3&itscg=30440&ls=1" onClick={() => trackStreamingClick('LOS IGNORO', 'Apple Music')}><button className="pre-save-button">Stream</button></a>
@@ -122,7 +122,7 @@ const NEW = (props) => {
           
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ marginRight: "5px", fontWeight:"600"}}>YouTube</p>
+              <YoutubeLogo className="logoSize" style={{ color: 'red', marginRight: "5px" }} size={50} /><p style={{ color: 'red', marginRight: "5px", fontWeight:"600"}}>YouTube</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.youtube.com/watch?v=yHeAn_iziDQ&feature=youtu.be" onClick={() => trackStreamingClick('LOS IGNORO', 'YouTube')}><button className="pre-save-button">Stream</button></a>
@@ -130,7 +130,7 @@ const NEW = (props) => {
           </Grid>
           <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
+              <SoundcloudLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Soundcloud</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://soundcloud.com/genwav/los-ignoro?si=dd7994b0233944ffb69e68b860353be6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" onClick={() => trackStreamingClick('LOS IGNORO', 'Soundcloud')}><button className="pre-save-button">Stream</button></a>
@@ -147,7 +147,7 @@ const NEW = (props) => {
          
           {/* <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Deezer</p>
+            <img className="logoSize" style={{marginRight: "5px", display:"inline-block" }} src="deezer.png" width={50}></img><p style={{ color: '#A238FF',marginRight: "5px", fontWeight:"600"}}>Deezer</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://connect.deezer.com/oauth/auth.php?app_id=384124&perms=basic_access%2Cemail%2Cmanage_library%2Cmanage_community%2Coffline_access&redirect_uri=https%3A%2F%2Flnk.to%2F%7E%2Fprerelease%2Fdeezer&state=bFVybD1WZW5pY2UubG5rLnRvJTJGbG9zLWlnbm9ybyZzSWQ9ZmFlOTc2YzAtZWI0Ni00YjNlLWI4YWQtMGJlOTFlYWMxZDcwJnRJZD0wYmU4N2RhNS01NTFjLTRjMGItYTVkZC0xMGE1ZDc5NWYyNGMmdT1odHRwcyUzQSUyRiUyRnZlbmljZS5sbmsudG8lMkZsb3MtaWdub3JvJnZ0PWNlOWMxZmVhOWY4ODUwZWQ1NjhkM2IzNDRlYjE4Yjg3JnZ1PTY3MTY5NTY5ZWJhZjc2LjQzNjc1Mjcy"><button className="pre-save-button">Stream</button></a>
@@ -155,7 +155,7 @@ const NEW = (props) => {
           </Grid> */}
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{marginRight: "5px", fontWeight:"600"}}>Pandora</p>
+             <img className="logoSize" style={{marginRight: "5px" }} src="pandora.png" width={50}></img><p style={{ color: '#00A0EE',marginRight: "5px", fontWeight:"600"}}>Pandora</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://www.pandora.com/artist/genwav-and-khr-s-joao/los-ignoro/ALcnj5pZwcv5fdm?%24ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&%24android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A40334290&~channel=Partner%20Catalog%20Search%20API%20-%20Linkfire&part=lf&corr=23843f014d653a354d05cd84947a7b70&partnerName=Linkfire&~campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&sharedId=23843f014d653a354d05cd84947a7b70&_branch_match_id=1246765915340556405&utm_source=Partner%20Catalog%20Search%20API%20-%20Linkfire&utm_campaign=Partner%20Customer%20ID%20-%20a663e3e0-6490-4cdd-ba02-c5abdfd6d921&_branch_referrer=H4sIAAAAAAAAA62QT0vEMBDFP033lt3YpF1XKLIowsIigjcvyzSZ%2FrFtEibZ7W0%2Fu1NR8eZFSMLL5M37JelSCvFuswngrCdYQwjrsXfD5j7LtcU4JB9OZxqrbjFmap%2FlTzzmeV5%2Ftxg%2FcQUo9TGxaNHNcBF8KIaORBTvHjzXRx9F3zpPy2Z%2FNO69CG%2BzuRSNnVYM6308WcSw0E8BUld9AS76B1uDGWKCFhfgWJ%2BnTD0lP6DL1OP%2ByDYtldL5Ti6B3E2%2Bt%2F8YejUdOIdj9cKvdUhZLh8gwehbVq8IZDoW%2B5cDr4LnkalNT7gK7K%2FGZmU8UZWrW60aeaNtWShQhbayMPZW7%2FQWtvVWfro5%2FRkmrH4irgamAPyBv%2BHnmPz0KQ%2BPX0woS4UKpSj1TgptrBU1yFyYAmrb2NLu8ptV7IDQHuzfd7kSNkjUu%2FZUk58jUvXQEUM%2FAKDA%2F9w5AgAA" onClick={() => trackStreamingClick('LOS IGNORO', 'Pandora')}><button className="pre-save-button">Stream</button></a>
@@ -163,7 +163,7 @@ const NEW = (props) => {
           </Grid>
            <Grid container spacing={2} className="logo-button-container">
             <Grid item xs={6} sm={6} style={{display:"flex", alignItems: "center"}}>
-              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{marginRight: "5px", fontWeight:"600"}}>Amazon</p>
+              <AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "5px" }} size={50} /><p style={{ color: '#FF7000',marginRight: "5px", fontWeight:"600"}}>Amazon</p>
             </Grid>
             <Grid item xs={6} sm={6}>
             <a target="_blank" href="https://music.amazon.com/albums/B0DK4L3J74?tag=linkfiregen&ie=UTF8&linkCode=as2&ascsubtag=23843f014d653a354d05cd84947a7b70&ref=dmm_acq_soc_us_u_lfire_lp_x_23843f014d653a354d05cd84947a7b70" onClick={() => trackStreamingClick('LOS IGNORO', 'Amazon')}><button className="pre-save-button">Stream</button></a>

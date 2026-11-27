@@ -99,7 +99,7 @@ const SOLTERO = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Apple</p></div>
+          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{ color: '#FA4C64',fontWeight:"600", margin:0}}>Apple</p></div>
           <a target="_blank" href="https://music.apple.com/us/album/soltero-single/1736454927" onClick={() => trackStreamingClick('Soltero', 'Apple')}><button className="pre-save-button">Stream</button></a>
         </div>
 
@@ -109,17 +109,17 @@ const SOLTERO = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>SoundCloud</p></div>
+          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{ color: 'orange',fontWeight:"600", margin:0}}>SoundCloud</p></div>
           <a target="_blank" href="https://soundcloud.com/genwav/soltero" onClick={() => trackStreamingClick('Soltero', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Deezer</p></div>
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{ color: '#A238FF',fontWeight:"600", margin:0}}>Deezer</p></div>
           <a target="_blank" href="https://www.deezer.com/us/album/561631222" onClick={() => trackStreamingClick('Soltero', 'Deezer')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Amazon</p></div>
+          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{ color: '#FF7000',fontWeight:"600", margin:0}}>Amazon</p></div>
           <a target="_blank" href="https://music.amazon.com/albums/B0CYC5C5J3" onClick={() => trackStreamingClick('Soltero', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
         </div>
       </div>

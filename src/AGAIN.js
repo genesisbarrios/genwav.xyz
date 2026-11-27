@@ -99,7 +99,7 @@ const AGAIN = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Apple</p></div>
+          <div className="logo-label"><AppleLogo className="logoSize" style={{ color: '#FA4C64', marginRight: "8px" }} size={50} /><p style={{ color: '#FA4C64',fontWeight:"600", margin:0}}>Apple</p></div>
           <a target="_blank" href="https://music.apple.com/us/album/again/1747843334" onClick={() => trackStreamingClick('Again', 'Apple')}><button className="pre-save-button">Stream</button></a>
         </div>
 
@@ -109,22 +109,22 @@ const AGAIN = (props) => {
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>SoundCloud</p></div>
+          <div className="logo-label"><SoundcloudLogo className="logoSize" style={{ color: 'orange', marginRight: "8px" }} size={50} /><p style={{ color: 'orange',fontWeight:"600", margin:0}}>SoundCloud</p></div>
           <a target="_blank" href="https://soundcloud.com/genwav/again" onClick={() => trackStreamingClick('Again', 'SoundCloud')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Deezer</p></div>
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/deezer.png" width={50}></img><p style={{ color: '#A238FF',fontWeight:"600", margin:0}}>Deezer</p></div>
           <a target="_blank" href="https://www.deezer.com/us/album/590917042" onClick={() => trackStreamingClick('Again', 'Deezer')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{fontWeight:"600", margin:0}}>Amazon</p></div>
+          <div className="logo-label"><AmazonLogo className="logoSize" style={{ color: '#FF7000', marginRight: "8px" }} size={50} /><p style={{ color: '#FF7000',fontWeight:"600", margin:0}}>Amazon</p></div>
           <a target="_blank" href="https://music.amazon.com/albums/B0D4YL6F9Z" onClick={() => trackStreamingClick('Again', 'Amazon Music')}><button className="pre-save-button">Stream</button></a>
         </div>
 
         <div className="logo-button-container logo-row">
-          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/Bandcamp.png" width={50}></img><p style={{fontWeight:"600", margin:0}}>Bandcamp</p></div>
+          <div className="logo-label"><img className="logoSize" style={{marginRight: "8px", display:"inline-block" }} src="/Bandcamp.png" width={50}></img><p style={{ color: '#17A0C4',fontWeight:"600", margin:0}}>Bandcamp</p></div>
           <a target="_blank" href="https://genwav.bandcamp.com/track/again" onClick={() => trackStreamingClick('Again', 'Bandcamp')}><button className="pre-save-button">Buy</button></a>
         </div>
       </div>
